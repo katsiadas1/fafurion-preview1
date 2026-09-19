@@ -108,6 +108,117 @@ a{color:inherit;text-decoration:none}.app{min-height:100vh}.topbar{position:stic
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
 }
 
+
+/* Account Command Center v2 */
+#page-account{background:
+  radial-gradient(circle at 85% 8%,rgba(66,181,207,.09),transparent 28%),
+  linear-gradient(180deg,#030b10 0%,#061018 52%,#03090d 100%);
+  min-height:calc(100svh - 68px);
+}
+.account-v2{grid-template-columns:250px 1fr;max-width:1320px;gap:18px;margin-top:24px}
+.account-v2 .sidebar{
+  background:linear-gradient(180deg,rgba(6,20,28,.97),rgba(4,13,19,.96));
+  border-color:rgba(109,217,231,.17);
+  box-shadow:0 18px 60px rgba(0,0,0,.28),inset 0 1px rgba(255,255,255,.025)
+}
+.account-profile{display:flex;align-items:center;gap:11px;padding:10px 8px 17px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:10px}
+.account-avatar{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;font-family:Georgia,serif;font-size:18px;color:#dffbff;border:1px solid rgba(109,217,231,.34);background:linear-gradient(145deg,rgba(109,217,231,.14),rgba(8,26,36,.35));box-shadow:0 0 24px rgba(79,190,210,.08)}
+.account-profile b{display:block;color:#eefcff}
+.account-profile span{font-size:11px;color:#6f8d96;display:block;margin-top:3px}
+.side-link{position:relative}
+.side-link .side-icon{width:22px;height:22px;display:grid;place-items:center;border:1px solid rgba(109,217,231,.12);border-radius:7px;font-size:10px;color:#76cfd9;background:rgba(109,217,231,.03)}
+.side-link.active .side-icon{box-shadow:0 0 18px rgba(109,217,231,.13);border-color:rgba(109,217,231,.35)}
+.side-link .soon{margin-left:auto;font-size:8px;letter-spacing:.08em;color:#536b73;border:1px solid rgba(255,255,255,.06);padding:2px 5px;border-radius:999px}
+.account-content{min-width:0}
+.account-hero{
+  min-height:245px;position:relative;overflow:hidden;border:1px solid rgba(109,217,231,.2);border-radius:18px;
+  display:flex;align-items:flex-end;justify-content:space-between;gap:24px;padding:30px;
+  background-image:linear-gradient(90deg,rgba(2,12,17,.94) 0%,rgba(2,12,17,.73) 44%,rgba(2,12,17,.22) 100%),url("assets/fafurion-bg.jpg");
+  background-size:cover;background-position:69% 40%;
+  box-shadow:0 22px 70px rgba(0,0,0,.32),inset 0 0 80px rgba(43,167,191,.035)
+}
+.account-hero:before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 20%,rgba(113,227,240,.055) 48%,transparent 76%);transform:translateX(-110%);animation:accountSweep 7s ease-in-out infinite;pointer-events:none}
+.account-hero:after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(180,245,255,.015);pointer-events:none}
+.account-hero-copy{position:relative;z-index:1;max-width:660px}
+.account-hero h2{font-family:Georgia,serif;font-size:clamp(31px,4vw,47px);margin:7px 0 8px;color:#effdff}
+.account-hero p{max-width:580px;color:#829da6;line-height:1.65;margin:0}
+.account-status-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.account-chip{display:inline-flex;align-items:center;gap:7px;padding:7px 10px;border-radius:999px;background:rgba(3,15,21,.55);border:1px solid rgba(109,217,231,.14);font-size:11px;color:#a8c1c8;backdrop-filter:blur(5px)}
+.account-chip i{width:6px;height:6px;border-radius:50%;background:#62dda3;box-shadow:0 0 10px #62dda3}
+.power-orb{position:relative;z-index:1;width:128px;height:128px;border-radius:50%;display:grid;place-items:center;flex:0 0 auto;background:conic-gradient(#6dd9e7 0 82%,rgba(109,217,231,.12) 82% 100%);box-shadow:0 0 42px rgba(109,217,231,.11);animation:powerPulse 3.2s ease-in-out infinite}
+.power-orb:before{content:"";position:absolute;inset:8px;border-radius:50%;background:rgba(4,15,22,.95);border:1px solid rgba(109,217,231,.13)}
+.power-orb>div{position:relative;text-align:center}
+.power-orb strong{display:block;font-family:Georgia,serif;font-size:34px;line-height:1;color:#e5fbff}
+.power-orb span{display:block;margin-top:5px;font-size:8px;letter-spacing:.18em;color:#6f929c;text-transform:uppercase}
+.account-stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:14px 0}
+.account-stat{position:relative;overflow:hidden;padding:17px 18px;border:1px solid rgba(109,217,231,.12);border-radius:14px;background:linear-gradient(180deg,rgba(10,29,39,.83),rgba(5,18,25,.8));min-height:105px}
+.account-stat:before{content:"";position:absolute;left:0;top:0;width:2px;height:100%;background:linear-gradient(180deg,transparent,#63d4e1,transparent);opacity:.45}
+.account-stat-label{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#617f88}
+.account-stat-value{font-family:Georgia,serif;font-size:30px;margin-top:8px;color:#e6f9fb}
+.account-stat-foot{font-size:10px;color:#526e77;margin-top:3px}
+.account-dashboard-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:14px;margin-top:14px}
+.dashboard-card{border:1px solid rgba(109,217,231,.12);border-radius:15px;background:linear-gradient(180deg,rgba(8,25,34,.84),rgba(5,16,23,.82));padding:19px;box-shadow:0 14px 45px rgba(0,0,0,.16)}
+.dashboard-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:15px}
+.dashboard-title h3{font-family:Georgia,serif;margin:3px 0 0;font-size:23px}
+.dashboard-title small{font-size:9px;letter-spacing:.16em;color:#5e7d86}
+.detail-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+.detail-item{padding:13px;border:1px solid rgba(255,255,255,.055);border-radius:11px;background:rgba(255,255,255,.017)}
+.detail-item span{display:block;font-size:9px;letter-spacing:.13em;color:#5f7c85;text-transform:uppercase;margin-bottom:6px}
+.detail-item b{font-size:13px;color:#c6dade;font-weight:800}
+.verified{color:#68dda7!important}
+.quick-action-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+.quick-btn{display:flex;align-items:center;gap:10px;min-height:66px;text-align:left;border:1px solid rgba(109,217,231,.1);border-radius:11px;background:rgba(8,25,34,.62);color:#c5d8dc;padding:11px;cursor:pointer;transition:.22s ease}
+.quick-btn:hover{transform:translateY(-2px);border-color:rgba(109,217,231,.31);background:rgba(13,38,49,.76);box-shadow:0 10px 30px rgba(0,0,0,.2)}
+.quick-btn-icon{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;flex:0 0 auto;border:1px solid rgba(109,217,231,.18);color:#7fe4ef;background:rgba(109,217,231,.06);font-size:13px}
+.quick-btn b{display:block;font-size:12px}
+.quick-btn span{display:block;font-size:9px;color:#5d7982;margin-top:3px}
+.quick-btn.wide{grid-column:1/-1}
+.event-strip{margin-top:14px;border:1px solid rgba(216,181,107,.18);border-radius:14px;background:linear-gradient(100deg,rgba(77,60,28,.13),rgba(6,20,28,.76) 42%,rgba(6,20,28,.84));padding:15px 18px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.event-meta{display:flex;align-items:center;gap:12px}
+.event-rune{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(216,181,107,.35);color:#d8b56b;box-shadow:0 0 22px rgba(216,181,107,.07)}
+.event-strip b{display:block;color:#dcecef}
+.event-strip small{color:#607b84}
+.event-clock{font-family:Georgia,serif;font-size:25px;color:#d9b86f;letter-spacing:.04em;white-space:nowrap}
+.account-progress{margin-top:14px}
+.progress-summary{font-size:12px;color:#8ba3aa;line-height:1.6;margin-bottom:15px}
+.progress-summary b{color:#d8edf0}
+.progress-row{margin-top:12px}
+.progress-head{display:flex;justify-content:space-between;font-size:10px;color:#77939c;margin-bottom:6px}
+.progress-track{height:6px;border-radius:999px;background:#0a1820;overflow:hidden;border:1px solid rgba(255,255,255,.04)}
+.progress-fill{height:100%;width:0;border-radius:inherit;background:linear-gradient(90deg,#388e9c,#73deea);box-shadow:0 0 15px rgba(109,217,231,.18);transition:width 1.1s cubic-bezier(.2,.7,.2,1)}
+.demo-toast{position:fixed;right:18px;bottom:18px;z-index:90;max-width:320px;padding:13px 15px;border-radius:12px;background:rgba(7,22,30,.96);border:1px solid rgba(109,217,231,.25);box-shadow:0 18px 55px rgba(0,0,0,.45);color:#cce2e6;font-size:12px;transform:translateY(18px);opacity:0;pointer-events:none;transition:.25s ease}
+.demo-toast.show{transform:none;opacity:1}
+@keyframes accountSweep{0%,62%{transform:translateX(-110%)}100%{transform:translateX(110%)}}
+@keyframes powerPulse{0%,100%{filter:drop-shadow(0 0 0 rgba(109,217,231,0))}50%{filter:drop-shadow(0 0 12px rgba(109,217,231,.16))}}
+@media(max-width:1100px){
+  .account-v2{grid-template-columns:1fr}
+  .account-v2 .sidebar{display:none}
+  .account-hero{min-height:310px;padding:20px;background-position:72% center;align-items:flex-end}
+  .account-hero h2{font-size:34px}
+  .power-orb{width:96px;height:96px}
+  .power-orb strong{font-size:27px}
+  .account-stat-grid{grid-template-columns:repeat(2,1fr)}
+  .account-dashboard-grid{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  .account-hero{min-height:360px;padding:17px;align-items:flex-end;background-position:72% center}
+  .account-hero:after{background:linear-gradient(180deg,rgba(3,11,16,.06),rgba(3,11,16,.86))}
+  .account-hero{display:block;padding-top:162px}
+  .account-hero-copy{position:relative;z-index:2}
+  .power-orb{position:absolute;right:15px;top:15px;width:80px;height:80px}
+  .power-orb strong{font-size:23px}
+  .power-orb span{font-size:6px}
+  .account-status-row{gap:6px}
+  .account-chip{font-size:9px;padding:6px 8px}
+  .account-stat-grid{grid-template-columns:1fr 1fr;gap:8px}
+  .account-stat{padding:14px;min-height:92px}
+  .account-stat-value{font-size:25px}
+  .detail-grid,.quick-action-grid{grid-template-columns:1fr}
+  .quick-btn.wide{grid-column:auto}
+  .event-strip{align-items:flex-start;flex-direction:column}
+  .event-clock{font-size:23px}
+}
+
 </style>
 </head>
 <body>
@@ -162,37 +273,112 @@ a{color:inherit;text-decoration:none}.app{min-height:100vh}.topbar{position:stic
   </div>
 </section>
 
+
 <section class="page" id="page-account">
-  <div class="panel-shell">
+  <div class="panel-shell account-v2">
     <aside class="sidebar">
-      <div class="userbox"><b>DemoAccount</b><span data-i18n="accountPanel">Account Panel</span></div>
-      <button class="side-link active">◈ <span data-i18n="characters">Characters</span></button>
-      <button class="side-link">◇ <span data-i18n="donations">Donations</span></button>
-      <button class="side-link">◇ <span data-i18n="settings">Settings</span></button>
-      <button class="side-link">◇ <span data-i18n="loginHistory">Login history</span></button>
-      <button class="side-link">↗ <span data-i18n="website">Website</span></button>
+      <div class="account-profile">
+        <div class="account-avatar">II</div>
+        <div><b>DemoAccount</b><span data-i18n="accountPanel">Account Panel</span></div>
+      </div>
+      <button class="side-link active"><span class="side-icon">⌂</span><span data-i18n="dashboard">Dashboard</span></button>
+      <button class="side-link"><span class="side-icon">⚔</span><span data-i18n="characters">Characters</span><span class="soon">NEXT</span></button>
+      <button class="side-link"><span class="side-icon">✦</span><span data-i18n="rewards">Rewards</span><span class="soon">SOON</span></button>
+      <button class="side-link"><span class="side-icon">◇</span><span data-i18n="wallet">Wallet</span><span class="soon">SOON</span></button>
+      <button class="side-link"><span class="side-icon">◉</span><span data-i18n="security">Security</span><span class="soon">SOON</span></button>
+      <button class="side-link"><span class="side-icon">?</span><span data-i18n="supportCenter">Support</span><span class="soon">SOON</span></button>
+      <button class="side-link" onclick="showPage('home')"><span class="side-icon">↗</span><span data-i18n="website">Website</span></button>
     </aside>
-    <div class="content">
-      <div class="welcome"><div><div class="eyebrow" data-i18n="accountPanel">ACCOUNT PANEL</div><h2><span data-i18n="welcome">Welcome back</span>, DemoAccount</h2><div class="muted" data-i18n="demoNote">Demo data only — no real account actions are performed.</div></div><div><small class="muted" data-i18n="balance">AVAILABLE BALANCE</small><div class="balance">€125.00</div></div></div>
-      <div class="account-grid">
-        <div>
-          <div class="section-head"><div><div class="eyebrow" data-i18n="characters">CHARACTERS</div><h2 data-i18n="yourCharacters">Your characters</h2></div></div>
-          <div class="table-wrap"><table><thead><tr><th data-i18n="name">Name</th><th data-i18n="class">Class</th><th data-i18n="level">Level</th><th data-i18n="status">Status</th><th data-i18n="lastLogin">Last login</th></tr></thead><tbody>
-            <tr><td>FafurionKnight</td><td>Duelist</td><td>85</td><td class="online" data-i18n="online">Online</td><td>Now</td></tr>
-            <tr><td>OceanSoul</td><td>Cardinal</td><td>84</td><td class="offline" data-i18n="offline">Offline</td><td>18 min</td></tr>
-            <tr><td>SilverStorm</td><td>Sagittarius</td><td>83</td><td class="offline" data-i18n="offline">Offline</td><td>2 h</td></tr>
-          </tbody></table></div>
+
+    <div class="account-content">
+      <div class="account-hero">
+        <div class="account-hero-copy">
+          <div class="eyebrow" data-i18n="commandCenter">PLAYER COMMAND CENTER</div>
+          <h2><span data-i18n="welcome">Welcome back</span>, DemoAccount</h2>
+          <p data-i18n="dashboardIntro">Everything important about your account, rewards and progress in one place.</p>
+          <div class="account-status-row">
+            <span class="account-chip"><i></i><span data-i18n="accountActive">Account Active</span></span>
+            <span class="account-chip"><i></i><span data-i18n="emailVerified">Email Verified</span></span>
+            <span class="account-chip"><span data-i18n="lastLoginShort">Last login</span>: 14:31</span>
+          </div>
         </div>
-        <div>
-          <div class="section-head"><div><div class="eyebrow" data-i18n="actions">ACTIONS</div><h2 data-i18n="quickActions">Quick actions</h2></div></div>
-          <div class="mini-actions">
-            <div class="action-card"><b data-i18n="changePassword">Change password</b><span data-i18n="changePasswordSub">Update your account password securely.</span></div>
-            <div class="action-card"><b data-i18n="changeEmail">Change email</b><span data-i18n="changeEmailSub">Manage the email linked to your account.</span></div>
-            <div class="action-card"><b data-i18n="unstuck">Unstuck character</b><span data-i18n="unstuckSub">Move a stuck character to a safe location.</span></div>
-            <div class="action-card"><b data-i18n="addBalance">Add balance</b><span data-i18n="addBalanceSub">Open the donation and balance page.</span></div>
+        <div class="power-orb" title="Demo Account Power">
+          <div><strong>82</strong><span data-i18n="accountPower">Account Power</span></div>
+        </div>
+      </div>
+
+      <div class="account-stat-grid">
+        <div class="account-stat">
+          <div class="account-stat-label" data-i18n="donateCoins">Donate Coins</div>
+          <div class="account-stat-value" data-count="3250">0</div>
+          <div class="account-stat-foot" data-i18n="walletBalance">available in wallet</div>
+        </div>
+        <div class="account-stat">
+          <div class="account-stat-label" data-i18n="votePoints">Vote Points</div>
+          <div class="account-stat-value" data-count="640">0</div>
+          <div class="account-stat-foot" data-i18n="readyClaim">ready for rewards</div>
+        </div>
+        <div class="account-stat">
+          <div class="account-stat-label" data-i18n="characters">Characters</div>
+          <div class="account-stat-value" data-count="3">0</div>
+          <div class="account-stat-foot" data-i18n="accountRoster">on this account</div>
+        </div>
+        <div class="account-stat">
+          <div class="account-stat-label" data-i18n="highestLevel">Highest Level</div>
+          <div class="account-stat-value" data-count="85">0</div>
+          <div class="account-stat-foot">FafurionKnight · Duelist</div>
+        </div>
+      </div>
+
+      <div class="account-dashboard-grid">
+        <div class="dashboard-card">
+          <div class="dashboard-title">
+            <div><small data-i18n="accountOverview">ACCOUNT OVERVIEW</small><h3 data-i18n="accountDetails">Account details</h3></div>
+            <span class="account-chip"><i></i><span data-i18n="secure">Secure</span></span>
+          </div>
+          <div class="detail-grid">
+            <div class="detail-item"><span data-i18n="username">Username</span><b>DemoAccount</b></div>
+            <div class="detail-item"><span data-i18n="email">Email</span><b>de***@example.com</b></div>
+            <div class="detail-item"><span data-i18n="status">Status</span><b class="verified" data-i18n="active">Active</b></div>
+            <div class="detail-item"><span data-i18n="verification">Verification</span><b class="verified" data-i18n="emailVerified">Email Verified</b></div>
+            <div class="detail-item"><span data-i18n="lastLoginShort">Last login</span><b data-i18n="today1431">Today · 14:31</b></div>
+            <div class="detail-item"><span data-i18n="region">Region</span><b>Europe</b></div>
+          </div>
+
+          <div class="account-progress">
+            <div class="dashboard-title" style="margin-top:19px">
+              <div><small data-i18n="progress">PROGRESS</small><h3 data-i18n="accountPower">Account Power</h3></div>
+              <b style="color:#7ce2ed">82%</b>
+            </div>
+            <div class="progress-summary"><b>3 <span data-i18n="characters">Characters</span></b> · <b>Lv. 85</b> · <b>1,482 PvP</b> · <b>Immortals</b></div>
+            <div class="progress-row"><div class="progress-head"><span data-i18n="profileSecurity">Profile & Security</span><span>92%</span></div><div class="progress-track"><div class="progress-fill" data-progress="92"></div></div></div>
+            <div class="progress-row"><div class="progress-head"><span data-i18n="characterProgress">Character Progress</span><span>86%</span></div><div class="progress-track"><div class="progress-fill" data-progress="86"></div></div></div>
+            <div class="progress-row"><div class="progress-head"><span data-i18n="communityProgress">Community Progress</span><span>68%</span></div><div class="progress-track"><div class="progress-fill" data-progress="68"></div></div></div>
+          </div>
+        </div>
+
+        <div class="dashboard-card">
+          <div class="dashboard-title">
+            <div><small data-i18n="actions">ACTIONS</small><h3 data-i18n="quickActions">Quick actions</h3></div>
+          </div>
+          <div class="quick-action-grid">
+            <button class="quick-btn" onclick="demoAction('password')"><span class="quick-btn-icon">◆</span><span><b data-i18n="changePassword">Change password</b><span data-i18n="secureAction">Secure account action</span></span></button>
+            <button class="quick-btn" onclick="demoAction('vote')"><span class="quick-btn-icon">★</span><span><b data-i18n="voteClaim">Vote & Claim</b><span data-i18n="claimRewards">Claim server rewards</span></span></button>
+            <button class="quick-btn" onclick="showPage('donate')"><span class="quick-btn-icon">◇</span><span><b data-i18n="donate">Donate</b><span data-i18n="openWallet">Open wallet & packages</span></span></button>
+            <button class="quick-btn" onclick="demoAction('support')"><span class="quick-btn-icon">?</span><span><b data-i18n="supportCenter">Support</b><span data-i18n="contactStaff">Contact the staff team</span></span></button>
+            <button class="quick-btn wide" onclick="demoAction('patch')"><span class="quick-btn-icon">↓</span><span><b data-i18n="downloadPatch">Download Patch</b><span data-i18n="patchDesc">Get the latest Fafurion client patch</span></span></button>
           </div>
         </div>
       </div>
+
+      <div class="event-strip">
+        <div class="event-meta">
+          <div class="event-rune">Ω</div>
+          <div><b data-i18n="olympiadEnds">Olympiad ends in</b><small data-i18n="olympiadDesc">Seasonal competition countdown · demo timer</small></div>
+        </div>
+        <div class="event-clock" id="olympiadClock">02:14:38</div>
+      </div>
+
       <div class="note" data-i18n="previewOnly">LIVE PREVIEW: this public page contains only demo data. Passwords, MySQL credentials and server secrets are never stored here.</div>
     </div>
   </div>
@@ -227,18 +413,69 @@ a{color:inherit;text-decoration:none}.app{min-height:100vh}.topbar{position:stic
 </div>
 <script>
 const langs={
-en:{name:"English",flag:"gb",t:{navHome:"Home",navAccount:"Account",navRankings:"Rankings",navDonate:"Donate",download:"Download",start:"START PLAYING",chaotic:"THE CHAOTIC THRONE · A NEW CHAPTER BEGINS",heroText:"The ocean awakens. Beyond the storm, your legend awaits. Enter a realm shaped for competitive PvP, long-term progression and a community-first experience.",journey:"BEGIN YOUR JOURNEY →",explore:"EXPLORE THE REALM",realmTitle:"The Water Dragon Realm",serverOnline:"Server Online · Demo preview",playersOnline:"Players Online",liveDemo:"live demo data",accounts:"Accounts",registered:"registered heroes",clans:"Active Clans",siege:"preparing for siege",accountPanel:"Account Panel",characters:"Characters",donations:"Donations",settings:"Settings",loginHistory:"Login history",website:"Website",welcome:"Welcome back",demoNote:"Demo data only — no real account actions are performed.",balance:"AVAILABLE BALANCE",yourCharacters:"Your characters",name:"Name",class:"Class",level:"Level",status:"Status",lastLogin:"Last login",online:"Online",offline:"Offline",actions:"Actions",quickActions:"Quick actions",changePassword:"Change password",changePasswordSub:"Update your account password securely.",changeEmail:"Change email",changeEmailSub:"Manage the email linked to your account.",unstuck:"Unstuck character",unstuckSub:"Move a stuck character to a safe location.",addBalance:"Add balance",addBalanceSub:"Open the donation and balance page.",previewOnly:"LIVE PREVIEW: this public page contains only demo data. Passwords, MySQL credentials and server secrets are never stored here.",rankTitle:"Realm Rankings",updated:"Updated moments ago · demo",player:"Player",clan:"Clan",donateTitle:"Donation Packages",donateSub:"Demo presentation only. No payment is processed on this preview.",instant:"Instant delivery",history:"Order history",support:"Account support",choose:"CHOOSE PACKAGE",popular:"POPULAR",donateSafety:"Preview only. The real donation flow stays in the private project and will connect to the game server through the protected delivery service."}},
-el:{name:"Ελληνικά",flag:"gr",t:{navHome:"Αρχική",navAccount:"Λογαριασμός",navRankings:"Κατάταξη",navDonate:"Δωρεές",download:"Λήψη",start:"ΞΕΚΙΝΑ ΠΑΙΧΝΙΔΙ",chaotic:"THE CHAOTIC THRONE · ΕΝΑ ΝΕΟ ΚΕΦΑΛΑΙΟ ΑΡΧΙΖΕΙ",heroText:"Ο ωκεανός ξυπνά. Πέρα από την καταιγίδα, ο θρύλος σου περιμένει. Μπες σε έναν κόσμο φτιαγμένο για ανταγωνιστικό PvP, εξέλιξη και δυνατή κοινότητα.",journey:"ΞΕΚΙΝΑ ΤΟ ΤΑΞΙΔΙ →",explore:"ΕΞΕΡΕΥΝΗΣΕ ΤΟΝ ΚΟΣΜΟ",realmTitle:"Ο Κόσμος του Water Dragon",serverOnline:"Server Online · Demo preview",playersOnline:"Παίκτες Online",liveDemo:"δοκιμαστικά live δεδομένα",accounts:"Λογαριασμοί",registered:"εγγεγραμμένοι ήρωες",clans:"Ενεργά Clans",siege:"ετοιμάζονται για siege",accountPanel:"Πίνακας Λογαριασμού",characters:"Χαρακτήρες",donations:"Δωρεές",settings:"Ρυθμίσεις",loginHistory:"Ιστορικό σύνδεσης",website:"Ιστοσελίδα",welcome:"Καλώς ήρθες",demoNote:"Μόνο δοκιμαστικά δεδομένα — δεν εκτελούνται πραγματικές ενέργειες.",balance:"ΔΙΑΘΕΣΙΜΟ ΥΠΟΛΟΙΠΟ",yourCharacters:"Οι χαρακτήρες σου",name:"Όνομα",class:"Κλάση",level:"Επίπεδο",status:"Κατάσταση",lastLogin:"Τελευταία σύνδεση",online:"Online",offline:"Offline",actions:"Ενέργειες",quickActions:"Γρήγορες ενέργειες",changePassword:"Αλλαγή κωδικού",changePasswordSub:"Ενημέρωσε με ασφάλεια τον κωδικό του λογαριασμού.",changeEmail:"Αλλαγή email",changeEmailSub:"Διαχειρίσου το email του λογαριασμού.",unstuck:"Unstuck χαρακτήρα",unstuckSub:"Μετακίνησε κολλημένο χαρακτήρα σε ασφαλές σημείο.",addBalance:"Προσθήκη υπολοίπου",addBalanceSub:"Άνοιξε τη σελίδα δωρεών και υπολοίπου.",previewOnly:"LIVE PREVIEW: εδώ υπάρχουν μόνο demo δεδομένα. Κωδικοί, MySQL στοιχεία και server secrets δεν αποθηκεύονται ποτέ εδώ.",rankTitle:"Κατάταξη Κόσμου",updated:"Ενημερώθηκε πριν λίγο · demo",player:"Παίκτης",clan:"Clan",donateTitle:"Πακέτα Δωρεών",donateSub:"Μόνο δοκιμαστική παρουσίαση. Δεν γίνεται πραγματική πληρωμή στο preview.",instant:"Άμεση παράδοση",history:"Ιστορικό παραγγελιών",support:"Υποστήριξη λογαριασμού",choose:"ΕΠΙΛΟΓΗ ΠΑΚΕΤΟΥ",popular:"ΔΗΜΟΦΙΛΕΣ",donateSafety:"Μόνο preview. Η πραγματική ροή δωρεών παραμένει στο private project και θα συνδέεται με τον game server μέσω της προστατευμένης υπηρεσίας παράδοσης."}},
-pt:{name:"Português (Brasil)",flag:"br",t:{navHome:"Início",navAccount:"Conta",navRankings:"Ranking",navDonate:"Doações",download:"Download",start:"COMEÇAR A JOGAR",chaotic:"THE CHAOTIC THRONE · UM NOVO CAPÍTULO COMEÇA",heroText:"O oceano desperta. Além da tempestade, sua lenda espera. Entre em um reino criado para PvP competitivo, progressão duradoura e uma comunidade forte.",journey:"COMECE SUA JORNADA →",explore:"EXPLORE O REINO",realmTitle:"O Reino do Dragão da Água",serverOnline:"Servidor Online · Prévia demo",playersOnline:"Jogadores Online",liveDemo:"dados demonstrativos",accounts:"Contas",registered:"heróis registrados",clans:"Clãs Ativos",siege:"preparando-se para siege",accountPanel:"Painel da Conta",characters:"Personagens",donations:"Doações",settings:"Configurações",loginHistory:"Histórico de login",website:"Site",welcome:"Bem-vindo de volta",demoNote:"Somente dados de demonstração — nenhuma ação real é executada.",balance:"SALDO DISPONÍVEL",yourCharacters:"Seus personagens",name:"Nome",class:"Classe",level:"Nível",status:"Status",lastLogin:"Último login",online:"Online",offline:"Offline",actions:"Ações",quickActions:"Ações rápidas",changePassword:"Alterar senha",changePasswordSub:"Atualize a senha da conta com segurança.",changeEmail:"Alterar email",changeEmailSub:"Gerencie o email vinculado à sua conta.",unstuck:"Destravar personagem",unstuckSub:"Mova um personagem travado para um local seguro.",addBalance:"Adicionar saldo",addBalanceSub:"Abra a página de doações e saldo.",previewOnly:"LIVE PREVIEW: esta página pública contém apenas dados demo. Senhas, credenciais MySQL e segredos do servidor nunca são armazenados aqui.",rankTitle:"Ranking do Reino",updated:"Atualizado há instantes · demo",player:"Jogador",clan:"Clã",donateTitle:"Pacotes de Doação",donateSub:"Apenas apresentação demo. Nenhum pagamento é processado nesta prévia.",instant:"Entrega instantânea",history:"Histórico de pedidos",support:"Suporte da conta",choose:"ESCOLHER PACOTE",popular:"POPULAR",donateSafety:"Somente prévia. O fluxo real de doações permanece no projeto privado e se conectará ao servidor do jogo pelo serviço protegido de entrega."}},
-ru:{name:"Русский",flag:"ru",t:{navHome:"Главная",navAccount:"Аккаунт",navRankings:"Рейтинг",navDonate:"Пожертвования",download:"Скачать",start:"НАЧАТЬ ИГРАТЬ",chaotic:"THE CHAOTIC THRONE · НАЧИНАЕТСЯ НОВАЯ ГЛАВА",heroText:"Океан пробуждается. За бурей ждёт ваша легенда. Войдите в мир соревновательного PvP, долгого развития и сильного сообщества.",journey:"НАЧАТЬ ПУТЬ →",explore:"ИССЛЕДОВАТЬ МИР",realmTitle:"Мир Водного Дракона",serverOnline:"Сервер онлайн · Демо",playersOnline:"Игроки онлайн",liveDemo:"демо-данные",accounts:"Аккаунты",registered:"зарегистрированных героев",clans:"Активные кланы",siege:"готовятся к осаде",accountPanel:"Панель аккаунта",characters:"Персонажи",donations:"Пожертвования",settings:"Настройки",loginHistory:"История входов",website:"Сайт",welcome:"С возвращением",demoNote:"Только демо-данные — реальные действия не выполняются.",balance:"ДОСТУПНЫЙ БАЛАНС",yourCharacters:"Ваши персонажи",name:"Имя",class:"Класс",level:"Уровень",status:"Статус",lastLogin:"Последний вход",online:"Онлайн",offline:"Оффлайн",actions:"Действия",quickActions:"Быстрые действия",changePassword:"Сменить пароль",changePasswordSub:"Безопасно обновите пароль аккаунта.",changeEmail:"Сменить email",changeEmailSub:"Управляйте email вашего аккаунта.",unstuck:"Освободить персонажа",unstuckSub:"Переместите застрявшего персонажа в безопасное место.",addBalance:"Пополнить баланс",addBalanceSub:"Откройте страницу пожертвований и баланса.",previewOnly:"LIVE PREVIEW: на этой публичной странице только демо-данные. Пароли, MySQL-данные и секреты сервера здесь не хранятся.",rankTitle:"Рейтинг мира",updated:"Обновлено только что · демо",player:"Игрок",clan:"Клан",donateTitle:"Пакеты пожертвований",donateSub:"Только демонстрация. В этом превью платежи не обрабатываются.",instant:"Мгновенная доставка",history:"История заказов",support:"Поддержка аккаунта",choose:"ВЫБРАТЬ ПАКЕТ",popular:"ПОПУЛЯРНО",donateSafety:"Только превью. Реальная система пожертвований остаётся в приватном проекте и будет подключена к игровому серверу через защищённую службу доставки."}}
+en:{name:"English",flag:"gb",t:{navHome:"Home",navAccount:"Account",navRankings:"Rankings",navDonate:"Donate",download:"Download",start:"START PLAYING",chaotic:"THE CHAOTIC THRONE · A NEW CHAPTER BEGINS",heroText:"The ocean awakens. Beyond the storm, your legend awaits. Enter a realm shaped for competitive PvP, long-term progression and a community-first experience.",journey:"BEGIN YOUR JOURNEY →",explore:"EXPLORE THE REALM",realmTitle:"The Water Dragon Realm",serverOnline:"Server Online · Demo preview",playersOnline:"Players Online",liveDemo:"live demo data",accounts:"Accounts",registered:"registered heroes",clans:"Active Clans",siege:"preparing for siege",accountPanel:"Account Panel",dashboard:"Dashboard",rewards:"Rewards",wallet:"Wallet",security:"Security",supportCenter:"Support",commandCenter:"PLAYER COMMAND CENTER",dashboardIntro:"Everything important about your account, rewards and progress in one place.",accountActive:"Account Active",emailVerified:"Email Verified",lastLoginShort:"Last login",accountPower:"Account Power",donateCoins:"Donate Coins",votePoints:"Vote Points",walletBalance:"available in wallet",readyClaim:"ready for rewards",accountRoster:"on this account",highestLevel:"Highest Level",accountOverview:"ACCOUNT OVERVIEW",accountDetails:"Account details",secure:"Secure",username:"Username",email:"Email",active:"Active",verification:"Verification",today1431:"Today · 14:31",region:"Region",progress:"PROGRESS",profileSecurity:"Profile & Security",characterProgress:"Character Progress",communityProgress:"Community Progress",secureAction:"Secure account action",voteClaim:"Vote & Claim",claimRewards:"Claim server rewards",donate:"Donate",openWallet:"Open wallet & packages",contactStaff:"Contact the staff team",downloadPatch:"Download Patch",patchDesc:"Get the latest Fafurion client patch",olympiadEnds:"Olympiad ends in",olympiadDesc:"Seasonal competition countdown · demo timer",characters:"Characters",donations:"Donations",settings:"Settings",loginHistory:"Login history",website:"Website",welcome:"Welcome back",demoNote:"Demo data only — no real account actions are performed.",balance:"AVAILABLE BALANCE",yourCharacters:"Your characters",name:"Name",class:"Class",level:"Level",status:"Status",lastLogin:"Last login",online:"Online",offline:"Offline",actions:"Actions",quickActions:"Quick actions",changePassword:"Change password",changePasswordSub:"Update your account password securely.",changeEmail:"Change email",changeEmailSub:"Manage the email linked to your account.",unstuck:"Unstuck character",unstuckSub:"Move a stuck character to a safe location.",addBalance:"Add balance",addBalanceSub:"Open the donation and balance page.",previewOnly:"LIVE PREVIEW: this public page contains only demo data. Passwords, MySQL credentials and server secrets are never stored here.",rankTitle:"Realm Rankings",updated:"Updated moments ago · demo",player:"Player",clan:"Clan",donateTitle:"Donation Packages",donateSub:"Demo presentation only. No payment is processed on this preview.",instant:"Instant delivery",history:"Order history",support:"Account support",choose:"CHOOSE PACKAGE",popular:"POPULAR",donateSafety:"Preview only. The real donation flow stays in the private project and will connect to the game server through the protected delivery service."}},
+el:{name:"Ελληνικά",flag:"gr",t:{navHome:"Αρχική",navAccount:"Λογαριασμός",navRankings:"Κατάταξη",navDonate:"Δωρεές",download:"Λήψη",start:"ΞΕΚΙΝΑ ΠΑΙΧΝΙΔΙ",chaotic:"THE CHAOTIC THRONE · ΕΝΑ ΝΕΟ ΚΕΦΑΛΑΙΟ ΑΡΧΙΖΕΙ",heroText:"Ο ωκεανός ξυπνά. Πέρα από την καταιγίδα, ο θρύλος σου περιμένει. Μπες σε έναν κόσμο φτιαγμένο για ανταγωνιστικό PvP, εξέλιξη και δυνατή κοινότητα.",journey:"ΞΕΚΙΝΑ ΤΟ ΤΑΞΙΔΙ →",explore:"ΕΞΕΡΕΥΝΗΣΕ ΤΟΝ ΚΟΣΜΟ",realmTitle:"Ο Κόσμος του Water Dragon",serverOnline:"Server Online · Demo preview",playersOnline:"Παίκτες Online",liveDemo:"δοκιμαστικά live δεδομένα",accounts:"Λογαριασμοί",registered:"εγγεγραμμένοι ήρωες",clans:"Ενεργά Clans",siege:"ετοιμάζονται για siege",accountPanel:"Πίνακας Λογαριασμού",dashboard:"Dashboard",rewards:"Ανταμοιβές",wallet:"Πορτοφόλι",security:"Ασφάλεια",supportCenter:"Υποστήριξη",commandCenter:"PLAYER COMMAND CENTER",dashboardIntro:"Όλα τα σημαντικά για τον λογαριασμό, τις ανταμοιβές και την πρόοδό σου σε ένα σημείο.",accountActive:"Ενεργός λογαριασμός",emailVerified:"Επιβεβαιωμένο Email",lastLoginShort:"Τελευταία σύνδεση",accountPower:"Account Power",donateCoins:"Donate Coins",votePoints:"Vote Points",walletBalance:"διαθέσιμα στο πορτοφόλι",readyClaim:"έτοιμα για ανταμοιβές",accountRoster:"σε αυτόν τον λογαριασμό",highestLevel:"Υψηλότερο Level",accountOverview:"ΣΥΝΟΨΗ ΛΟΓΑΡΙΑΣΜΟΥ",accountDetails:"Στοιχεία λογαριασμού",secure:"Ασφαλής",username:"Όνομα χρήστη",email:"Email",active:"Ενεργός",verification:"Επιβεβαίωση",today1431:"Σήμερα · 14:31",region:"Περιοχή",progress:"ΠΡΟΟΔΟΣ",profileSecurity:"Προφίλ & Ασφάλεια",characterProgress:"Πρόοδος Χαρακτήρων",communityProgress:"Πρόοδος Κοινότητας",secureAction:"Ασφαλής ενέργεια λογαριασμού",voteClaim:"Vote & Claim",claimRewards:"Πάρε τις ανταμοιβές του server",donate:"Δωρεά",openWallet:"Άνοιγμα wallet & πακέτων",contactStaff:"Επικοινωνία με το staff",downloadPatch:"Λήψη Patch",patchDesc:"Κατέβασε το τελευταίο Fafurion patch",olympiadEnds:"Το Olympiad τελειώνει σε",olympiadDesc:"Αντίστροφη μέτρηση σεζόν · demo timer",characters:"Χαρακτήρες",donations:"Δωρεές",settings:"Ρυθμίσεις",loginHistory:"Ιστορικό σύνδεσης",website:"Ιστοσελίδα",welcome:"Καλώς ήρθες",demoNote:"Μόνο δοκιμαστικά δεδομένα — δεν εκτελούνται πραγματικές ενέργειες.",balance:"ΔΙΑΘΕΣΙΜΟ ΥΠΟΛΟΙΠΟ",yourCharacters:"Οι χαρακτήρες σου",name:"Όνομα",class:"Κλάση",level:"Επίπεδο",status:"Κατάσταση",lastLogin:"Τελευταία σύνδεση",online:"Online",offline:"Offline",actions:"Ενέργειες",quickActions:"Γρήγορες ενέργειες",changePassword:"Αλλαγή κωδικού",changePasswordSub:"Ενημέρωσε με ασφάλεια τον κωδικό του λογαριασμού.",changeEmail:"Αλλαγή email",changeEmailSub:"Διαχειρίσου το email του λογαριασμού.",unstuck:"Unstuck χαρακτήρα",unstuckSub:"Μετακίνησε κολλημένο χαρακτήρα σε ασφαλές σημείο.",addBalance:"Προσθήκη υπολοίπου",addBalanceSub:"Άνοιξε τη σελίδα δωρεών και υπολοίπου.",previewOnly:"LIVE PREVIEW: εδώ υπάρχουν μόνο demo δεδομένα. Κωδικοί, MySQL στοιχεία και server secrets δεν αποθηκεύονται ποτέ εδώ.",rankTitle:"Κατάταξη Κόσμου",updated:"Ενημερώθηκε πριν λίγο · demo",player:"Παίκτης",clan:"Clan",donateTitle:"Πακέτα Δωρεών",donateSub:"Μόνο δοκιμαστική παρουσίαση. Δεν γίνεται πραγματική πληρωμή στο preview.",instant:"Άμεση παράδοση",history:"Ιστορικό παραγγελιών",support:"Υποστήριξη λογαριασμού",choose:"ΕΠΙΛΟΓΗ ΠΑΚΕΤΟΥ",popular:"ΔΗΜΟΦΙΛΕΣ",donateSafety:"Μόνο preview. Η πραγματική ροή δωρεών παραμένει στο private project και θα συνδέεται με τον game server μέσω της προστατευμένης υπηρεσίας παράδοσης."}},
+pt:{name:"Português (Brasil)",flag:"br",t:{navHome:"Início",navAccount:"Conta",navRankings:"Ranking",navDonate:"Doações",download:"Download",start:"COMEÇAR A JOGAR",chaotic:"THE CHAOTIC THRONE · UM NOVO CAPÍTULO COMEÇA",heroText:"O oceano desperta. Além da tempestade, sua lenda espera. Entre em um reino criado para PvP competitivo, progressão duradoura e uma comunidade forte.",journey:"COMECE SUA JORNADA →",explore:"EXPLORE O REINO",realmTitle:"O Reino do Dragão da Água",serverOnline:"Servidor Online · Prévia demo",playersOnline:"Jogadores Online",liveDemo:"dados demonstrativos",accounts:"Contas",registered:"heróis registrados",clans:"Clãs Ativos",siege:"preparando-se para siege",accountPanel:"Painel da Conta",dashboard:"Dashboard",rewards:"Recompensas",wallet:"Carteira",security:"Segurança",supportCenter:"Suporte",commandCenter:"PLAYER COMMAND CENTER",dashboardIntro:"Tudo o que importa sobre sua conta, recompensas e progresso em um só lugar.",accountActive:"Conta Ativa",emailVerified:"Email Verificado",lastLoginShort:"Último login",accountPower:"Account Power",donateCoins:"Donate Coins",votePoints:"Vote Points",walletBalance:"disponível na carteira",readyClaim:"prontos para recompensas",accountRoster:"nesta conta",highestLevel:"Maior Nível",accountOverview:"VISÃO GERAL DA CONTA",accountDetails:"Detalhes da conta",secure:"Seguro",username:"Usuário",email:"Email",active:"Ativa",verification:"Verificação",today1431:"Hoje · 14:31",region:"Região",progress:"PROGRESSO",profileSecurity:"Perfil & Segurança",characterProgress:"Progresso dos Personagens",communityProgress:"Progresso da Comunidade",secureAction:"Ação segura da conta",voteClaim:"Votar & Resgatar",claimRewards:"Resgatar recompensas do servidor",donate:"Doar",openWallet:"Abrir carteira e pacotes",contactStaff:"Falar com a equipe",downloadPatch:"Baixar Patch",patchDesc:"Baixe o patch mais recente do Fafurion",olympiadEnds:"Olympiad termina em",olympiadDesc:"Contagem regressiva da temporada · demo",characters:"Personagens",donations:"Doações",settings:"Configurações",loginHistory:"Histórico de login",website:"Site",welcome:"Bem-vindo de volta",demoNote:"Somente dados de demonstração — nenhuma ação real é executada.",balance:"SALDO DISPONÍVEL",yourCharacters:"Seus personagens",name:"Nome",class:"Classe",level:"Nível",status:"Status",lastLogin:"Último login",online:"Online",offline:"Offline",actions:"Ações",quickActions:"Ações rápidas",changePassword:"Alterar senha",changePasswordSub:"Atualize a senha da conta com segurança.",changeEmail:"Alterar email",changeEmailSub:"Gerencie o email vinculado à sua conta.",unstuck:"Destravar personagem",unstuckSub:"Mova um personagem travado para um local seguro.",addBalance:"Adicionar saldo",addBalanceSub:"Abra a página de doações e saldo.",previewOnly:"LIVE PREVIEW: esta página pública contém apenas dados demo. Senhas, credenciais MySQL e segredos do servidor nunca são armazenados aqui.",rankTitle:"Ranking do Reino",updated:"Atualizado há instantes · demo",player:"Jogador",clan:"Clã",donateTitle:"Pacotes de Doação",donateSub:"Apenas apresentação demo. Nenhum pagamento é processado nesta prévia.",instant:"Entrega instantânea",history:"Histórico de pedidos",support:"Suporte da conta",choose:"ESCOLHER PACOTE",popular:"POPULAR",donateSafety:"Somente prévia. O fluxo real de doações permanece no projeto privado e se conectará ao servidor do jogo pelo serviço protegido de entrega."}},
+ru:{name:"Русский",flag:"ru",t:{navHome:"Главная",navAccount:"Аккаунт",navRankings:"Рейтинг",navDonate:"Пожертвования",download:"Скачать",start:"НАЧАТЬ ИГРАТЬ",chaotic:"THE CHAOTIC THRONE · НАЧИНАЕТСЯ НОВАЯ ГЛАВА",heroText:"Океан пробуждается. За бурей ждёт ваша легенда. Войдите в мир соревновательного PvP, долгого развития и сильного сообщества.",journey:"НАЧАТЬ ПУТЬ →",explore:"ИССЛЕДОВАТЬ МИР",realmTitle:"Мир Водного Дракона",serverOnline:"Сервер онлайн · Демо",playersOnline:"Игроки онлайн",liveDemo:"демо-данные",accounts:"Аккаунты",registered:"зарегистрированных героев",clans:"Активные кланы",siege:"готовятся к осаде",accountPanel:"Панель аккаунта",dashboard:"Панель",rewards:"Награды",wallet:"Кошелёк",security:"Безопасность",supportCenter:"Поддержка",commandCenter:"PLAYER COMMAND CENTER",dashboardIntro:"Всё важное об аккаунте, наградах и прогрессе в одном месте.",accountActive:"Аккаунт активен",emailVerified:"Email подтверждён",lastLoginShort:"Последний вход",accountPower:"Account Power",donateCoins:"Donate Coins",votePoints:"Vote Points",walletBalance:"доступно в кошельке",readyClaim:"готово к наградам",accountRoster:"на этом аккаунте",highestLevel:"Макс. уровень",accountOverview:"ОБЗОР АККАУНТА",accountDetails:"Данные аккаунта",secure:"Защищено",username:"Логин",email:"Email",active:"Активен",verification:"Подтверждение",today1431:"Сегодня · 14:31",region:"Регион",progress:"ПРОГРЕСС",profileSecurity:"Профиль и безопасность",characterProgress:"Прогресс персонажей",communityProgress:"Прогресс сообщества",secureAction:"Безопасное действие",voteClaim:"Vote & Claim",claimRewards:"Получить награды сервера",donate:"Пожертвовать",openWallet:"Открыть кошелёк и пакеты",contactStaff:"Связаться с командой",downloadPatch:"Скачать Patch",patchDesc:"Скачать последний патч Fafurion",olympiadEnds:"Olympiad закончится через",olympiadDesc:"Таймер сезонного соревнования · демо",characters:"Персонажи",donations:"Пожертвования",settings:"Настройки",loginHistory:"История входов",website:"Сайт",welcome:"С возвращением",demoNote:"Только демо-данные — реальные действия не выполняются.",balance:"ДОСТУПНЫЙ БАЛАНС",yourCharacters:"Ваши персонажи",name:"Имя",class:"Класс",level:"Уровень",status:"Статус",lastLogin:"Последний вход",online:"Онлайн",offline:"Оффлайн",actions:"Действия",quickActions:"Быстрые действия",changePassword:"Сменить пароль",changePasswordSub:"Безопасно обновите пароль аккаунта.",changeEmail:"Сменить email",changeEmailSub:"Управляйте email вашего аккаунта.",unstuck:"Освободить персонажа",unstuckSub:"Переместите застрявшего персонажа в безопасное место.",addBalance:"Пополнить баланс",addBalanceSub:"Откройте страницу пожертвований и баланса.",previewOnly:"LIVE PREVIEW: на этой публичной странице только демо-данные. Пароли, MySQL-данные и секреты сервера здесь не хранятся.",rankTitle:"Рейтинг мира",updated:"Обновлено только что · демо",player:"Игрок",clan:"Клан",donateTitle:"Пакеты пожертвований",donateSub:"Только демонстрация. В этом превью платежи не обрабатываются.",instant:"Мгновенная доставка",history:"История заказов",support:"Поддержка аккаунта",choose:"ВЫБРАТЬ ПАКЕТ",popular:"ПОПУЛЯРНО",donateSafety:"Только превью. Реальная система пожертвований остаётся в приватном проекте и будет подключена к игровому серверу через защищённую службу доставки."}}
 };
 let lang=localStorage.getItem("fafurion_lang")||"en";
 function applyLang(code){lang=langs[code]?code:"en";localStorage.setItem("fafurion_lang",lang);const L=langs[lang];document.documentElement.lang=lang;document.getElementById("currentFlag").src="https://flagcdn.com/w40/"+L.flag+".png";document.getElementById("currentLang").textContent=L.name;document.querySelectorAll("[data-i18n]").forEach(el=>{const k=el.dataset.i18n;if(L.t[k])el.textContent=L.t[k]});document.querySelectorAll(".lang-option").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));document.getElementById("langBox").classList.remove("open")}
-function showPage(page){document.querySelectorAll(".page").forEach(p=>p.classList.toggle("active",p.id==="page-"+page));document.querySelectorAll("[data-page]").forEach(b=>b.classList.toggle("active",b.dataset.page===page));window.scrollTo({top:0,behavior:"smooth"})}
+function showPage(page){document.querySelectorAll(".page").forEach(p=>p.classList.toggle("active",p.id==="page-"+page));document.querySelectorAll("[data-page]").forEach(b=>b.classList.toggle("active",b.dataset.page===page));window.scrollTo({top:0,behavior:"smooth"});if(page==="account")setTimeout(runAccountAnimations,80)}
 document.querySelectorAll("[data-page]").forEach(b=>b.addEventListener("click",()=>showPage(b.dataset.page)));
 document.getElementById("langBtn").addEventListener("click",e=>{e.stopPropagation();document.getElementById("langBox").classList.toggle("open")});
 document.querySelectorAll(".lang-option").forEach(b=>b.addEventListener("click",()=>applyLang(b.dataset.lang)));
 document.addEventListener("click",()=>document.getElementById("langBox").classList.remove("open"));
+
+
+function runAccountAnimations(){
+  document.querySelectorAll("#page-account [data-count]").forEach(el=>{
+    const target=Number(el.dataset.count||0);
+    const start=performance.now();
+    const duration=850;
+    function tick(now){
+      const p=Math.min((now-start)/duration,1);
+      const eased=1-Math.pow(1-p,3);
+      el.textContent=Math.round(target*eased).toLocaleString();
+      if(p<1)requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  });
+  document.querySelectorAll("#page-account [data-progress]").forEach(el=>{
+    el.style.width="0%";
+    requestAnimationFrame(()=>requestAnimationFrame(()=>el.style.width=el.dataset.progress+"%"));
+  });
+}
+let olympiadSeconds=2*3600+14*60+38;
+function updateOlympiadClock(){
+  const el=document.getElementById("olympiadClock");
+  if(!el)return;
+  const h=String(Math.floor(olympiadSeconds/3600)).padStart(2,"0");
+  const m=String(Math.floor((olympiadSeconds%3600)/60)).padStart(2,"0");
+  const s=String(olympiadSeconds%60).padStart(2,"0");
+  el.textContent=h+":"+m+":"+s;
+  olympiadSeconds=Math.max(0,olympiadSeconds-1);
+}
+setInterval(updateOlympiadClock,1000);
+updateOlympiadClock();
+function demoAction(type){
+  const labels={
+    password:"Change Password",
+    vote:"Vote & Claim",
+    support:"Support Center",
+    patch:"Download Patch"
+  };
+  let toast=document.getElementById("demoToast");
+  if(!toast){
+    toast=document.createElement("div");
+    toast.id="demoToast";
+    toast.className="demo-toast";
+    document.body.appendChild(toast);
+  }
+  toast.textContent=(labels[type]||"Action")+" · Demo preview only";
+  toast.classList.add("show");
+  clearTimeout(window.__demoToastTimer);
+  window.__demoToastTimer=setTimeout(()=>toast.classList.remove("show"),2200);
+}
 
 function initRevealAnimations(){
   const els=[...document.querySelectorAll(".card,.podium,.action-card,.table-wrap,.welcome,.section-head")];
