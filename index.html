@@ -219,6 +219,64 @@ a{color:inherit;text-decoration:none}.app{min-height:100vh}.topbar{position:stic
   .event-clock{font-size:23px}
 }
 
+
+/* Account Characters v2 */
+.account-subnav{display:none;gap:7px;overflow-x:auto;margin-bottom:12px;padding-bottom:2px}
+.account-subnav button{white-space:nowrap;border:1px solid rgba(109,217,231,.12);background:rgba(7,21,29,.82);color:#718e97;padding:9px 12px;border-radius:9px;font-size:11px;font-weight:800;cursor:pointer}
+.account-subnav button.active{color:#e6fbff;border-color:rgba(109,217,231,.34);background:rgba(109,217,231,.085)}
+.account-view{display:none}.account-view.active{display:block;animation:accountViewIn .34s ease both}
+.characters-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:16px}
+.characters-head h2{font-family:Georgia,serif;font-size:35px;margin:6px 0 0}
+.roster-summary{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.roster-pill{border:1px solid rgba(109,217,231,.12);background:rgba(8,24,33,.72);border-radius:999px;padding:7px 10px;font-size:10px;color:#77949d}
+.character-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.character-card{position:relative;min-height:385px;overflow:hidden;border:1px solid rgba(109,217,231,.13);border-radius:17px;background:linear-gradient(180deg,rgba(11,32,43,.92),rgba(5,16,23,.96));box-shadow:0 18px 55px rgba(0,0,0,.18);cursor:pointer;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.character-card:hover{transform:translateY(-5px);border-color:rgba(109,217,231,.34);box-shadow:0 24px 70px rgba(0,0,0,.3),0 0 35px rgba(77,196,215,.045)}
+.character-card.online-char{border-color:rgba(98,221,163,.2)}
+.character-card.online-char:after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 34px rgba(74,218,153,.03);pointer-events:none}
+.character-art{height:155px;position:relative;display:flex;align-items:flex-end;padding:15px;background:
+radial-gradient(circle at 70% 28%,rgba(109,217,231,.13),transparent 32%),
+linear-gradient(145deg,rgba(8,31,43,.84),rgba(5,14,20,.4)),
+url("assets/fafurion-bg.jpg");background-size:cover;background-position:70% 28%}
+.character-art:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 38%,rgba(5,16,23,.98) 100%)}
+.class-emblem{position:relative;z-index:2;width:66px;height:66px;border-radius:18px;display:grid;place-items:center;font-family:Georgia,serif;font-size:20px;letter-spacing:.04em;color:#daf8fb;border:1px solid rgba(125,226,238,.29);background:linear-gradient(145deg,rgba(84,195,211,.18),rgba(7,24,32,.83));box-shadow:0 8px 30px rgba(0,0,0,.25),0 0 24px rgba(89,203,220,.08)}
+.class-emblem.cardinal{border-color:rgba(216,181,107,.31);color:#edd5a0;background:linear-gradient(145deg,rgba(216,181,107,.13),rgba(24,20,12,.82))}
+.class-emblem.sagittarius{border-color:rgba(122,219,164,.27);color:#b8efcf;background:linear-gradient(145deg,rgba(88,194,137,.13),rgba(8,25,19,.82))}
+.char-status{position:absolute;right:14px;top:14px;z-index:3;display:flex;align-items:center;gap:6px;padding:6px 9px;border-radius:999px;background:rgba(3,12,17,.72);backdrop-filter:blur(4px);font-size:9px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#718991;border:1px solid rgba(255,255,255,.06)}
+.char-status.online{color:#78e4af;border-color:rgba(98,221,163,.2)}.char-status.online i{background:#62dda3;box-shadow:0 0 11px #62dda3}
+.char-status i{width:6px;height:6px;border-radius:50%;background:#617780}
+.character-body{padding:0 17px 17px;position:relative;z-index:2}
+.character-name-row{display:flex;align-items:start;justify-content:space-between;gap:10px;margin-top:-2px}
+.character-name{font-family:Georgia,serif;font-size:23px;color:#e5f7fa;margin:0}
+.character-class{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#68909a;margin-top:3px}
+.char-level{font-family:Georgia,serif;color:#d8b56b;font-size:26px;line-height:1}.char-level small{font-family:Arial,sans-serif;font-size:7px;display:block;color:#6b838b;text-transform:uppercase;letter-spacing:.14em}
+.char-divider{height:1px;background:linear-gradient(90deg,rgba(109,217,231,.15),transparent);margin:13px 0}
+.char-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.char-stat{padding:9px 10px;border-radius:9px;background:rgba(255,255,255,.018);border:1px solid rgba(255,255,255,.045)}
+.char-stat span{display:block;font-size:8px;color:#536f78;text-transform:uppercase;letter-spacing:.12em;margin-bottom:3px}.char-stat b{font-size:12px;color:#b6ccd1}
+.char-footer{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:12px}
+.char-clan{font-size:10px;color:#78949c}.char-clan b{color:#aec6cb}
+.profile-link{border:0;background:transparent;color:#71dce8;font-size:10px;font-weight:900;letter-spacing:.08em;cursor:pointer;padding:6px 0}
+.characters-note{margin-top:14px;padding:13px 15px;border-radius:11px;border:1px dashed rgba(109,217,231,.14);color:#607d86;font-size:11px}
+.character-modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(0,5,8,.78);backdrop-filter:blur(7px)}
+.character-modal.open{display:flex;animation:modalFade .22s ease both}
+.character-profile{width:min(760px,100%);max-height:90svh;overflow:auto;border:1px solid rgba(109,217,231,.22);border-radius:20px;background:linear-gradient(180deg,#0a1d27,#051018 65%,#040d12);box-shadow:0 30px 100px rgba(0,0,0,.62);position:relative}
+.profile-hero{min-height:185px;padding:22px;display:flex;align-items:flex-end;gap:17px;background:linear-gradient(180deg,rgba(4,14,20,.25),rgba(4,14,20,.97)),url("assets/fafurion-bg.jpg");background-size:cover;background-position:68% 32%}
+.profile-emblem{width:82px;height:82px;border-radius:21px;font-size:25px}
+.profile-title h2{font-family:Georgia,serif;font-size:31px;margin:0 0 4px}.profile-title p{margin:0;color:#78959e;font-size:12px}
+.modal-close{position:absolute;right:14px;top:14px;z-index:5;width:35px;height:35px;border-radius:50%;border:1px solid rgba(255,255,255,.1);background:rgba(3,12,17,.72);color:#c8dde1;cursor:pointer;font-size:17px}
+.profile-content{padding:20px}
+.profile-stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+.profile-stat{padding:13px;border-radius:10px;background:rgba(255,255,255,.018);border:1px solid rgba(255,255,255,.055)}.profile-stat span{font-size:8px;letter-spacing:.12em;color:#5b7881;text-transform:uppercase;display:block}.profile-stat b{display:block;margin-top:5px;color:#cbe0e4;font-size:13px}
+.profile-sections{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.profile-box{padding:15px;border-radius:12px;border:1px solid rgba(109,217,231,.09);background:rgba(7,22,30,.72)}.profile-box h4{margin:0 0 11px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#84a5ae}.profile-row{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.045);font-size:11px}.profile-row:last-child{border-bottom:0}.profile-row span{color:#617d85}.profile-row b{color:#b8cdd2}
+.character-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}.character-actions button{flex:1;min-width:150px}
+.cooldown{font-size:9px;color:#657e86;margin-top:8px}
+@keyframes accountViewIn{from{opacity:.25;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes modalFade{from{opacity:0}to{opacity:1}}
+@media(max-width:1100px){.account-subnav{display:flex}.character-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.characters-head{align-items:flex-start;flex-direction:column}.roster-summary{justify-content:flex-start}.character-grid{grid-template-columns:1fr}.character-card{min-height:auto}.profile-stat-grid{grid-template-columns:1fr 1fr}.profile-sections{grid-template-columns:1fr}.profile-hero{min-height:165px}.profile-emblem{width:66px;height:66px}.profile-title h2{font-size:25px}}
+
 </style>
 </head>
 <body>
@@ -274,15 +332,13 @@ a{color:inherit;text-decoration:none}.app{min-height:100vh}.topbar{position:stic
 </section>
 
 
+
 <section class="page" id="page-account">
   <div class="panel-shell account-v2">
     <aside class="sidebar">
-      <div class="account-profile">
-        <div class="account-avatar">II</div>
-        <div><b>DemoAccount</b><span data-i18n="accountPanel">Account Panel</span></div>
-      </div>
-      <button class="side-link active"><span class="side-icon">⌂</span><span data-i18n="dashboard">Dashboard</span></button>
-      <button class="side-link"><span class="side-icon">⚔</span><span data-i18n="characters">Characters</span><span class="soon">NEXT</span></button>
+      <div class="account-profile"><div class="account-avatar">II</div><div><b>DemoAccount</b><span data-i18n="accountPanel">Account Panel</span></div></div>
+      <button class="side-link active" data-account-tab="dashboard" onclick="showAccountTab('dashboard')"><span class="side-icon">⌂</span><span data-i18n="dashboard">Dashboard</span></button>
+      <button class="side-link" data-account-tab="characters" onclick="showAccountTab('characters')"><span class="side-icon">⚔</span><span data-i18n="characters">Characters</span></button>
       <button class="side-link"><span class="side-icon">✦</span><span data-i18n="rewards">Rewards</span><span class="soon">SOON</span></button>
       <button class="side-link"><span class="side-icon">◇</span><span data-i18n="wallet">Wallet</span><span class="soon">SOON</span></button>
       <button class="side-link"><span class="side-icon">◉</span><span data-i18n="security">Security</span><span class="soon">SOON</span></button>
@@ -291,95 +347,111 @@ a{color:inherit;text-decoration:none}.app{min-height:100vh}.topbar{position:stic
     </aside>
 
     <div class="account-content">
-      <div class="account-hero">
-        <div class="account-hero-copy">
-          <div class="eyebrow" data-i18n="commandCenter">PLAYER COMMAND CENTER</div>
-          <h2><span data-i18n="welcome">Welcome back</span>, DemoAccount</h2>
-          <p data-i18n="dashboardIntro">Everything important about your account, rewards and progress in one place.</p>
-          <div class="account-status-row">
-            <span class="account-chip"><i></i><span data-i18n="accountActive">Account Active</span></span>
-            <span class="account-chip"><i></i><span data-i18n="emailVerified">Email Verified</span></span>
-            <span class="account-chip"><span data-i18n="lastLoginShort">Last login</span>: 14:31</span>
-          </div>
-        </div>
-        <div class="power-orb" title="Demo Account Power">
-          <div><strong>82</strong><span data-i18n="accountPower">Account Power</span></div>
-        </div>
+      <div class="account-subnav">
+        <button class="active" data-account-tab-mobile="dashboard" onclick="showAccountTab('dashboard')" data-i18n="dashboard">Dashboard</button>
+        <button data-account-tab-mobile="characters" onclick="showAccountTab('characters')" data-i18n="characters">Characters</button>
+        <button data-i18n="rewards">Rewards</button><button data-i18n="wallet">Wallet</button><button data-i18n="security">Security</button>
       </div>
 
-      <div class="account-stat-grid">
-        <div class="account-stat">
-          <div class="account-stat-label" data-i18n="donateCoins">Donate Coins</div>
-          <div class="account-stat-value" data-count="3250">0</div>
-          <div class="account-stat-foot" data-i18n="walletBalance">available in wallet</div>
-        </div>
-        <div class="account-stat">
-          <div class="account-stat-label" data-i18n="votePoints">Vote Points</div>
-          <div class="account-stat-value" data-count="640">0</div>
-          <div class="account-stat-foot" data-i18n="readyClaim">ready for rewards</div>
-        </div>
-        <div class="account-stat">
-          <div class="account-stat-label" data-i18n="characters">Characters</div>
-          <div class="account-stat-value" data-count="3">0</div>
-          <div class="account-stat-foot" data-i18n="accountRoster">on this account</div>
-        </div>
-        <div class="account-stat">
-          <div class="account-stat-label" data-i18n="highestLevel">Highest Level</div>
-          <div class="account-stat-value" data-count="85">0</div>
-          <div class="account-stat-foot">FafurionKnight · Duelist</div>
-        </div>
-      </div>
-
-      <div class="account-dashboard-grid">
-        <div class="dashboard-card">
-          <div class="dashboard-title">
-            <div><small data-i18n="accountOverview">ACCOUNT OVERVIEW</small><h3 data-i18n="accountDetails">Account details</h3></div>
-            <span class="account-chip"><i></i><span data-i18n="secure">Secure</span></span>
-          </div>
-          <div class="detail-grid">
-            <div class="detail-item"><span data-i18n="username">Username</span><b>DemoAccount</b></div>
-            <div class="detail-item"><span data-i18n="email">Email</span><b>de***@example.com</b></div>
-            <div class="detail-item"><span data-i18n="status">Status</span><b class="verified" data-i18n="active">Active</b></div>
-            <div class="detail-item"><span data-i18n="verification">Verification</span><b class="verified" data-i18n="emailVerified">Email Verified</b></div>
-            <div class="detail-item"><span data-i18n="lastLoginShort">Last login</span><b data-i18n="today1431">Today · 14:31</b></div>
-            <div class="detail-item"><span data-i18n="region">Region</span><b>Europe</b></div>
-          </div>
-
-          <div class="account-progress">
-            <div class="dashboard-title" style="margin-top:19px">
-              <div><small data-i18n="progress">PROGRESS</small><h3 data-i18n="accountPower">Account Power</h3></div>
-              <b style="color:#7ce2ed">82%</b>
+      <div class="account-view active" id="account-dashboard-view">
+        <div class="account-hero">
+          <div class="account-hero-copy">
+            <div class="eyebrow" data-i18n="commandCenter">PLAYER COMMAND CENTER</div>
+            <h2><span data-i18n="welcome">Welcome back</span>, DemoAccount</h2>
+            <p data-i18n="dashboardIntro">Everything important about your account, rewards and progress in one place.</p>
+            <div class="account-status-row">
+              <span class="account-chip"><i></i><span data-i18n="accountActive">Account Active</span></span>
+              <span class="account-chip"><i></i><span data-i18n="emailVerified">Email Verified</span></span>
+              <span class="account-chip"><span data-i18n="lastLoginShort">Last login</span>: 14:31</span>
             </div>
-            <div class="progress-summary"><b>3 <span data-i18n="characters">Characters</span></b> · <b>Lv. 85</b> · <b>1,482 PvP</b> · <b>Immortals</b></div>
-            <div class="progress-row"><div class="progress-head"><span data-i18n="profileSecurity">Profile & Security</span><span>92%</span></div><div class="progress-track"><div class="progress-fill" data-progress="92"></div></div></div>
-            <div class="progress-row"><div class="progress-head"><span data-i18n="characterProgress">Character Progress</span><span>86%</span></div><div class="progress-track"><div class="progress-fill" data-progress="86"></div></div></div>
-            <div class="progress-row"><div class="progress-head"><span data-i18n="communityProgress">Community Progress</span><span>68%</span></div><div class="progress-track"><div class="progress-fill" data-progress="68"></div></div></div>
           </div>
+          <div class="power-orb"><div><strong>82</strong><span data-i18n="accountPower">Account Power</span></div></div>
         </div>
 
-        <div class="dashboard-card">
-          <div class="dashboard-title">
-            <div><small data-i18n="actions">ACTIONS</small><h3 data-i18n="quickActions">Quick actions</h3></div>
+        <div class="account-stat-grid">
+          <div class="account-stat"><div class="account-stat-label" data-i18n="donateCoins">Donate Coins</div><div class="account-stat-value" data-count="3250">0</div><div class="account-stat-foot" data-i18n="walletBalance">available in wallet</div></div>
+          <div class="account-stat"><div class="account-stat-label" data-i18n="votePoints">Vote Points</div><div class="account-stat-value" data-count="640">0</div><div class="account-stat-foot" data-i18n="readyClaim">ready for rewards</div></div>
+          <div class="account-stat"><div class="account-stat-label" data-i18n="characters">Characters</div><div class="account-stat-value" data-count="3">0</div><div class="account-stat-foot" data-i18n="accountRoster">on this account</div></div>
+          <div class="account-stat"><div class="account-stat-label" data-i18n="highestLevel">Highest Level</div><div class="account-stat-value" data-count="85">0</div><div class="account-stat-foot">FafurionKnight · Duelist</div></div>
+        </div>
+
+        <div class="account-dashboard-grid">
+          <div class="dashboard-card">
+            <div class="dashboard-title"><div><small data-i18n="accountOverview">ACCOUNT OVERVIEW</small><h3 data-i18n="accountDetails">Account details</h3></div><span class="account-chip"><i></i><span data-i18n="secure">Secure</span></span></div>
+            <div class="detail-grid">
+              <div class="detail-item"><span data-i18n="username">Username</span><b>DemoAccount</b></div><div class="detail-item"><span data-i18n="email">Email</span><b>de***@example.com</b></div>
+              <div class="detail-item"><span data-i18n="status">Status</span><b class="verified" data-i18n="active">Active</b></div><div class="detail-item"><span data-i18n="verification">Verification</span><b class="verified" data-i18n="emailVerified">Email Verified</b></div>
+              <div class="detail-item"><span data-i18n="lastLoginShort">Last login</span><b data-i18n="today1431">Today · 14:31</b></div><div class="detail-item"><span data-i18n="region">Region</span><b>Europe</b></div>
+            </div>
+            <div class="account-progress">
+              <div class="dashboard-title" style="margin-top:19px"><div><small data-i18n="progress">PROGRESS</small><h3 data-i18n="accountPower">Account Power</h3></div><b style="color:#7ce2ed">82%</b></div>
+              <div class="progress-summary"><b>3 <span data-i18n="characters">Characters</span></b> · <b>Lv. 85</b> · <b>1,482 PvP</b> · <b>Immortals</b></div>
+              <div class="progress-row"><div class="progress-head"><span data-i18n="profileSecurity">Profile & Security</span><span>92%</span></div><div class="progress-track"><div class="progress-fill" data-progress="92"></div></div></div>
+              <div class="progress-row"><div class="progress-head"><span data-i18n="characterProgress">Character Progress</span><span>86%</span></div><div class="progress-track"><div class="progress-fill" data-progress="86"></div></div></div>
+              <div class="progress-row"><div class="progress-head"><span data-i18n="communityProgress">Community Progress</span><span>68%</span></div><div class="progress-track"><div class="progress-fill" data-progress="68"></div></div></div>
+            </div>
           </div>
-          <div class="quick-action-grid">
-            <button class="quick-btn" onclick="demoAction('password')"><span class="quick-btn-icon">◆</span><span><b data-i18n="changePassword">Change password</b><span data-i18n="secureAction">Secure account action</span></span></button>
-            <button class="quick-btn" onclick="demoAction('vote')"><span class="quick-btn-icon">★</span><span><b data-i18n="voteClaim">Vote & Claim</b><span data-i18n="claimRewards">Claim server rewards</span></span></button>
-            <button class="quick-btn" onclick="showPage('donate')"><span class="quick-btn-icon">◇</span><span><b data-i18n="donate">Donate</b><span data-i18n="openWallet">Open wallet & packages</span></span></button>
-            <button class="quick-btn" onclick="demoAction('support')"><span class="quick-btn-icon">?</span><span><b data-i18n="supportCenter">Support</b><span data-i18n="contactStaff">Contact the staff team</span></span></button>
-            <button class="quick-btn wide" onclick="demoAction('patch')"><span class="quick-btn-icon">↓</span><span><b data-i18n="downloadPatch">Download Patch</b><span data-i18n="patchDesc">Get the latest Fafurion client patch</span></span></button>
+          <div class="dashboard-card">
+            <div class="dashboard-title"><div><small data-i18n="actions">ACTIONS</small><h3 data-i18n="quickActions">Quick actions</h3></div></div>
+            <div class="quick-action-grid">
+              <button class="quick-btn" onclick="demoAction('password')"><span class="quick-btn-icon">◆</span><span><b data-i18n="changePassword">Change password</b><span data-i18n="secureAction">Secure account action</span></span></button>
+              <button class="quick-btn" onclick="demoAction('vote')"><span class="quick-btn-icon">★</span><span><b data-i18n="voteClaim">Vote & Claim</b><span data-i18n="claimRewards">Claim server rewards</span></span></button>
+              <button class="quick-btn" onclick="showPage('donate')"><span class="quick-btn-icon">◇</span><span><b data-i18n="donate">Donate</b><span data-i18n="openWallet">Open wallet & packages</span></span></button>
+              <button class="quick-btn" onclick="demoAction('support')"><span class="quick-btn-icon">?</span><span><b data-i18n="supportCenter">Support</b><span data-i18n="contactStaff">Contact the staff team</span></span></button>
+              <button class="quick-btn wide" onclick="demoAction('patch')"><span class="quick-btn-icon">↓</span><span><b data-i18n="downloadPatch">Download Patch</b><span data-i18n="patchDesc">Get the latest Fafurion client patch</span></span></button>
+            </div>
           </div>
         </div>
+        <div class="event-strip"><div class="event-meta"><div class="event-rune">Ω</div><div><b data-i18n="olympiadEnds">Olympiad ends in</b><small data-i18n="olympiadDesc">Seasonal competition countdown · demo timer</small></div></div><div class="event-clock" id="olympiadClock">02:14:38</div></div>
+        <div class="note" data-i18n="previewOnly">LIVE PREVIEW: this public page contains only demo data. Passwords, MySQL credentials and server secrets are never stored here.</div>
       </div>
 
-      <div class="event-strip">
-        <div class="event-meta">
-          <div class="event-rune">Ω</div>
-          <div><b data-i18n="olympiadEnds">Olympiad ends in</b><small data-i18n="olympiadDesc">Seasonal competition countdown · demo timer</small></div>
+      <div class="account-view" id="account-characters-view">
+        <div class="characters-head">
+          <div><div class="eyebrow" data-i18n="roster">CHARACTER ROSTER</div><h2 data-i18n="yourCharacters">Your characters</h2><div class="muted" data-i18n="characterIntro">Select a character to view detailed stats and account services.</div></div>
+          <div class="roster-summary"><span class="roster-pill">3 <span data-i18n="characters">Characters</span></span><span class="roster-pill">1 <span data-i18n="online">Online</span></span><span class="roster-pill">Lv. 85 MAX</span></div>
         </div>
-        <div class="event-clock" id="olympiadClock">02:14:38</div>
-      </div>
 
-      <div class="note" data-i18n="previewOnly">LIVE PREVIEW: this public page contains only demo data. Passwords, MySQL credentials and server secrets are never stored here.</div>
+        <div class="character-grid">
+          <article class="character-card online-char" onclick="openCharacter('knight')">
+            <div class="character-art"><div class="char-status online"><i></i><span data-i18n="online">Online</span></div><div class="class-emblem">DU</div></div>
+            <div class="character-body"><div class="character-name-row"><div><h3 class="character-name">FafurionKnight</h3><div class="character-class">Duelist</div></div><div class="char-level"><small>Level</small>85</div></div>
+            <div class="char-divider"></div><div class="char-stats"><div class="char-stat"><span>PvP</span><b>1,482</b></div><div class="char-stat"><span>PK</span><b>37</b></div><div class="char-stat"><span data-i18n="playtime">Playtime</span><b>412 h</b></div><div class="char-stat"><span data-i18n="location">Location</span><b>Giran</b></div></div>
+            <div class="char-footer"><div class="char-clan"><span data-i18n="clan">Clan</span>: <b>Immortals</b></div><button class="profile-link" data-i18n="viewProfile">VIEW PROFILE →</button></div></div>
+          </article>
+
+          <article class="character-card" onclick="openCharacter('soul')">
+            <div class="character-art" style="background-position:54% 36%"><div class="char-status"><i></i><span data-i18n="offline">Offline</span></div><div class="class-emblem cardinal">CA</div></div>
+            <div class="character-body"><div class="character-name-row"><div><h3 class="character-name">OceanSoul</h3><div class="character-class">Cardinal</div></div><div class="char-level"><small>Level</small>84</div></div>
+            <div class="char-divider"></div><div class="char-stats"><div class="char-stat"><span>PvP</span><b>268</b></div><div class="char-stat"><span>PK</span><b>4</b></div><div class="char-stat"><span data-i18n="playtime">Playtime</span><b>226 h</b></div><div class="char-stat"><span data-i18n="location">Location</span><b>Aden</b></div></div>
+            <div class="char-footer"><div class="char-clan"><span data-i18n="clan">Clan</span>: <b>Immortals</b></div><button class="profile-link" data-i18n="viewProfile">VIEW PROFILE →</button></div></div>
+          </article>
+
+          <article class="character-card" onclick="openCharacter('storm')">
+            <div class="character-art" style="background-position:83% 30%"><div class="char-status"><i></i><span data-i18n="offline">Offline</span></div><div class="class-emblem sagittarius">SA</div></div>
+            <div class="character-body"><div class="character-name-row"><div><h3 class="character-name">SilverStorm</h3><div class="character-class">Sagittarius</div></div><div class="char-level"><small>Level</small>83</div></div>
+            <div class="char-divider"></div><div class="char-stats"><div class="char-stat"><span>PvP</span><b>731</b></div><div class="char-stat"><span>PK</span><b>12</b></div><div class="char-stat"><span data-i18n="playtime">Playtime</span><b>301 h</b></div><div class="char-stat"><span data-i18n="location">Location</span><b>Rune</b></div></div>
+            <div class="char-footer"><div class="char-clan"><span data-i18n="clan">Clan</span>: <b>Northwind</b></div><button class="profile-link" data-i18n="viewProfile">VIEW PROFILE →</button></div></div>
+          </article>
+        </div>
+        <div class="characters-note" data-i18n="characterDemoNote">Demo roster. Later these cards will load the real characters directly from the game database.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="character-modal" id="characterModal" onclick="if(event.target===this)closeCharacter()">
+    <div class="character-profile">
+      <button class="modal-close" onclick="closeCharacter()">×</button>
+      <div class="profile-hero"><div class="class-emblem profile-emblem" id="profileEmblem">DU</div><div class="profile-title"><h2 id="profileName">FafurionKnight</h2><p><span id="profileClass">Duelist</span> · Lv. <span id="profileLevel">85</span> · <span id="profileStatus">Online</span></p></div></div>
+      <div class="profile-content">
+        <div class="profile-stat-grid"><div class="profile-stat"><span>PvP</span><b id="profilePvp">1,482</b></div><div class="profile-stat"><span>PK</span><b id="profilePk">37</b></div><div class="profile-stat"><span data-i18n="playtime">Playtime</span><b id="profilePlaytime">412 h</b></div><div class="profile-stat"><span data-i18n="clan">Clan</span><b id="profileClan">Immortals</b></div></div>
+        <div class="profile-sections">
+          <div class="profile-box"><h4 data-i18n="characterDetails">Character details</h4><div class="profile-row"><span data-i18n="location">Location</span><b id="profileLocation">Giran</b></div><div class="profile-row"><span data-i18n="noblesse">Noblesse</span><b id="profileNoble">Yes</b></div><div class="profile-row"><span data-i18n="heroStatus">Hero Status</span><b id="profileHero">No</b></div><div class="profile-row"><span data-i18n="lastSeen">Last Seen</span><b id="profileSeen">Now</b></div></div>
+          <div class="profile-box"><h4 data-i18n="combatOverview">Combat overview</h4><div class="profile-row"><span data-i18n="fame">Fame</span><b id="profileFame">8,420</b></div><div class="profile-row"><span data-i18n="reputation">Reputation</span><b id="profileRep">+2,180</b></div><div class="profile-row"><span data-i18n="clan">Clan</span><b id="profileClan2">Immortals</b></div><div class="profile-row"><span data-i18n="alliance">Alliance</span><b id="profileAlliance">Aegis</b></div></div>
+        </div>
+        <div class="character-actions"><button class="primary" onclick="demoAction('unstuck')" data-i18n="unstuck">Unstuck character</button><button class="secondary" onclick="demoAction('characterService')" data-i18n="characterServices">Character services</button></div>
+        <div class="cooldown" data-i18n="unstuckCooldown">Unstuck will use a protected cooldown in the live version. Demo action only.</div>
+      </div>
     </div>
   </div>
 </section>
@@ -413,10 +485,10 @@ a{color:inherit;text-decoration:none}.app{min-height:100vh}.topbar{position:stic
 </div>
 <script>
 const langs={
-en:{name:"English",flag:"gb",t:{navHome:"Home",navAccount:"Account",navRankings:"Rankings",navDonate:"Donate",download:"Download",start:"START PLAYING",chaotic:"THE CHAOTIC THRONE · A NEW CHAPTER BEGINS",heroText:"The ocean awakens. Beyond the storm, your legend awaits. Enter a realm shaped for competitive PvP, long-term progression and a community-first experience.",journey:"BEGIN YOUR JOURNEY →",explore:"EXPLORE THE REALM",realmTitle:"The Water Dragon Realm",serverOnline:"Server Online · Demo preview",playersOnline:"Players Online",liveDemo:"live demo data",accounts:"Accounts",registered:"registered heroes",clans:"Active Clans",siege:"preparing for siege",accountPanel:"Account Panel",dashboard:"Dashboard",rewards:"Rewards",wallet:"Wallet",security:"Security",supportCenter:"Support",commandCenter:"PLAYER COMMAND CENTER",dashboardIntro:"Everything important about your account, rewards and progress in one place.",accountActive:"Account Active",emailVerified:"Email Verified",lastLoginShort:"Last login",accountPower:"Account Power",donateCoins:"Donate Coins",votePoints:"Vote Points",walletBalance:"available in wallet",readyClaim:"ready for rewards",accountRoster:"on this account",highestLevel:"Highest Level",accountOverview:"ACCOUNT OVERVIEW",accountDetails:"Account details",secure:"Secure",username:"Username",email:"Email",active:"Active",verification:"Verification",today1431:"Today · 14:31",region:"Region",progress:"PROGRESS",profileSecurity:"Profile & Security",characterProgress:"Character Progress",communityProgress:"Community Progress",secureAction:"Secure account action",voteClaim:"Vote & Claim",claimRewards:"Claim server rewards",donate:"Donate",openWallet:"Open wallet & packages",contactStaff:"Contact the staff team",downloadPatch:"Download Patch",patchDesc:"Get the latest Fafurion client patch",olympiadEnds:"Olympiad ends in",olympiadDesc:"Seasonal competition countdown · demo timer",characters:"Characters",donations:"Donations",settings:"Settings",loginHistory:"Login history",website:"Website",welcome:"Welcome back",demoNote:"Demo data only — no real account actions are performed.",balance:"AVAILABLE BALANCE",yourCharacters:"Your characters",name:"Name",class:"Class",level:"Level",status:"Status",lastLogin:"Last login",online:"Online",offline:"Offline",actions:"Actions",quickActions:"Quick actions",changePassword:"Change password",changePasswordSub:"Update your account password securely.",changeEmail:"Change email",changeEmailSub:"Manage the email linked to your account.",unstuck:"Unstuck character",unstuckSub:"Move a stuck character to a safe location.",addBalance:"Add balance",addBalanceSub:"Open the donation and balance page.",previewOnly:"LIVE PREVIEW: this public page contains only demo data. Passwords, MySQL credentials and server secrets are never stored here.",rankTitle:"Realm Rankings",updated:"Updated moments ago · demo",player:"Player",clan:"Clan",donateTitle:"Donation Packages",donateSub:"Demo presentation only. No payment is processed on this preview.",instant:"Instant delivery",history:"Order history",support:"Account support",choose:"CHOOSE PACKAGE",popular:"POPULAR",donateSafety:"Preview only. The real donation flow stays in the private project and will connect to the game server through the protected delivery service."}},
-el:{name:"Ελληνικά",flag:"gr",t:{navHome:"Αρχική",navAccount:"Λογαριασμός",navRankings:"Κατάταξη",navDonate:"Δωρεές",download:"Λήψη",start:"ΞΕΚΙΝΑ ΠΑΙΧΝΙΔΙ",chaotic:"THE CHAOTIC THRONE · ΕΝΑ ΝΕΟ ΚΕΦΑΛΑΙΟ ΑΡΧΙΖΕΙ",heroText:"Ο ωκεανός ξυπνά. Πέρα από την καταιγίδα, ο θρύλος σου περιμένει. Μπες σε έναν κόσμο φτιαγμένο για ανταγωνιστικό PvP, εξέλιξη και δυνατή κοινότητα.",journey:"ΞΕΚΙΝΑ ΤΟ ΤΑΞΙΔΙ →",explore:"ΕΞΕΡΕΥΝΗΣΕ ΤΟΝ ΚΟΣΜΟ",realmTitle:"Ο Κόσμος του Water Dragon",serverOnline:"Server Online · Demo preview",playersOnline:"Παίκτες Online",liveDemo:"δοκιμαστικά live δεδομένα",accounts:"Λογαριασμοί",registered:"εγγεγραμμένοι ήρωες",clans:"Ενεργά Clans",siege:"ετοιμάζονται για siege",accountPanel:"Πίνακας Λογαριασμού",dashboard:"Dashboard",rewards:"Ανταμοιβές",wallet:"Πορτοφόλι",security:"Ασφάλεια",supportCenter:"Υποστήριξη",commandCenter:"PLAYER COMMAND CENTER",dashboardIntro:"Όλα τα σημαντικά για τον λογαριασμό, τις ανταμοιβές και την πρόοδό σου σε ένα σημείο.",accountActive:"Ενεργός λογαριασμός",emailVerified:"Επιβεβαιωμένο Email",lastLoginShort:"Τελευταία σύνδεση",accountPower:"Account Power",donateCoins:"Donate Coins",votePoints:"Vote Points",walletBalance:"διαθέσιμα στο πορτοφόλι",readyClaim:"έτοιμα για ανταμοιβές",accountRoster:"σε αυτόν τον λογαριασμό",highestLevel:"Υψηλότερο Level",accountOverview:"ΣΥΝΟΨΗ ΛΟΓΑΡΙΑΣΜΟΥ",accountDetails:"Στοιχεία λογαριασμού",secure:"Ασφαλής",username:"Όνομα χρήστη",email:"Email",active:"Ενεργός",verification:"Επιβεβαίωση",today1431:"Σήμερα · 14:31",region:"Περιοχή",progress:"ΠΡΟΟΔΟΣ",profileSecurity:"Προφίλ & Ασφάλεια",characterProgress:"Πρόοδος Χαρακτήρων",communityProgress:"Πρόοδος Κοινότητας",secureAction:"Ασφαλής ενέργεια λογαριασμού",voteClaim:"Vote & Claim",claimRewards:"Πάρε τις ανταμοιβές του server",donate:"Δωρεά",openWallet:"Άνοιγμα wallet & πακέτων",contactStaff:"Επικοινωνία με το staff",downloadPatch:"Λήψη Patch",patchDesc:"Κατέβασε το τελευταίο Fafurion patch",olympiadEnds:"Το Olympiad τελειώνει σε",olympiadDesc:"Αντίστροφη μέτρηση σεζόν · demo timer",characters:"Χαρακτήρες",donations:"Δωρεές",settings:"Ρυθμίσεις",loginHistory:"Ιστορικό σύνδεσης",website:"Ιστοσελίδα",welcome:"Καλώς ήρθες",demoNote:"Μόνο δοκιμαστικά δεδομένα — δεν εκτελούνται πραγματικές ενέργειες.",balance:"ΔΙΑΘΕΣΙΜΟ ΥΠΟΛΟΙΠΟ",yourCharacters:"Οι χαρακτήρες σου",name:"Όνομα",class:"Κλάση",level:"Επίπεδο",status:"Κατάσταση",lastLogin:"Τελευταία σύνδεση",online:"Online",offline:"Offline",actions:"Ενέργειες",quickActions:"Γρήγορες ενέργειες",changePassword:"Αλλαγή κωδικού",changePasswordSub:"Ενημέρωσε με ασφάλεια τον κωδικό του λογαριασμού.",changeEmail:"Αλλαγή email",changeEmailSub:"Διαχειρίσου το email του λογαριασμού.",unstuck:"Unstuck χαρακτήρα",unstuckSub:"Μετακίνησε κολλημένο χαρακτήρα σε ασφαλές σημείο.",addBalance:"Προσθήκη υπολοίπου",addBalanceSub:"Άνοιξε τη σελίδα δωρεών και υπολοίπου.",previewOnly:"LIVE PREVIEW: εδώ υπάρχουν μόνο demo δεδομένα. Κωδικοί, MySQL στοιχεία και server secrets δεν αποθηκεύονται ποτέ εδώ.",rankTitle:"Κατάταξη Κόσμου",updated:"Ενημερώθηκε πριν λίγο · demo",player:"Παίκτης",clan:"Clan",donateTitle:"Πακέτα Δωρεών",donateSub:"Μόνο δοκιμαστική παρουσίαση. Δεν γίνεται πραγματική πληρωμή στο preview.",instant:"Άμεση παράδοση",history:"Ιστορικό παραγγελιών",support:"Υποστήριξη λογαριασμού",choose:"ΕΠΙΛΟΓΗ ΠΑΚΕΤΟΥ",popular:"ΔΗΜΟΦΙΛΕΣ",donateSafety:"Μόνο preview. Η πραγματική ροή δωρεών παραμένει στο private project και θα συνδέεται με τον game server μέσω της προστατευμένης υπηρεσίας παράδοσης."}},
-pt:{name:"Português (Brasil)",flag:"br",t:{navHome:"Início",navAccount:"Conta",navRankings:"Ranking",navDonate:"Doações",download:"Download",start:"COMEÇAR A JOGAR",chaotic:"THE CHAOTIC THRONE · UM NOVO CAPÍTULO COMEÇA",heroText:"O oceano desperta. Além da tempestade, sua lenda espera. Entre em um reino criado para PvP competitivo, progressão duradoura e uma comunidade forte.",journey:"COMECE SUA JORNADA →",explore:"EXPLORE O REINO",realmTitle:"O Reino do Dragão da Água",serverOnline:"Servidor Online · Prévia demo",playersOnline:"Jogadores Online",liveDemo:"dados demonstrativos",accounts:"Contas",registered:"heróis registrados",clans:"Clãs Ativos",siege:"preparando-se para siege",accountPanel:"Painel da Conta",dashboard:"Dashboard",rewards:"Recompensas",wallet:"Carteira",security:"Segurança",supportCenter:"Suporte",commandCenter:"PLAYER COMMAND CENTER",dashboardIntro:"Tudo o que importa sobre sua conta, recompensas e progresso em um só lugar.",accountActive:"Conta Ativa",emailVerified:"Email Verificado",lastLoginShort:"Último login",accountPower:"Account Power",donateCoins:"Donate Coins",votePoints:"Vote Points",walletBalance:"disponível na carteira",readyClaim:"prontos para recompensas",accountRoster:"nesta conta",highestLevel:"Maior Nível",accountOverview:"VISÃO GERAL DA CONTA",accountDetails:"Detalhes da conta",secure:"Seguro",username:"Usuário",email:"Email",active:"Ativa",verification:"Verificação",today1431:"Hoje · 14:31",region:"Região",progress:"PROGRESSO",profileSecurity:"Perfil & Segurança",characterProgress:"Progresso dos Personagens",communityProgress:"Progresso da Comunidade",secureAction:"Ação segura da conta",voteClaim:"Votar & Resgatar",claimRewards:"Resgatar recompensas do servidor",donate:"Doar",openWallet:"Abrir carteira e pacotes",contactStaff:"Falar com a equipe",downloadPatch:"Baixar Patch",patchDesc:"Baixe o patch mais recente do Fafurion",olympiadEnds:"Olympiad termina em",olympiadDesc:"Contagem regressiva da temporada · demo",characters:"Personagens",donations:"Doações",settings:"Configurações",loginHistory:"Histórico de login",website:"Site",welcome:"Bem-vindo de volta",demoNote:"Somente dados de demonstração — nenhuma ação real é executada.",balance:"SALDO DISPONÍVEL",yourCharacters:"Seus personagens",name:"Nome",class:"Classe",level:"Nível",status:"Status",lastLogin:"Último login",online:"Online",offline:"Offline",actions:"Ações",quickActions:"Ações rápidas",changePassword:"Alterar senha",changePasswordSub:"Atualize a senha da conta com segurança.",changeEmail:"Alterar email",changeEmailSub:"Gerencie o email vinculado à sua conta.",unstuck:"Destravar personagem",unstuckSub:"Mova um personagem travado para um local seguro.",addBalance:"Adicionar saldo",addBalanceSub:"Abra a página de doações e saldo.",previewOnly:"LIVE PREVIEW: esta página pública contém apenas dados demo. Senhas, credenciais MySQL e segredos do servidor nunca são armazenados aqui.",rankTitle:"Ranking do Reino",updated:"Atualizado há instantes · demo",player:"Jogador",clan:"Clã",donateTitle:"Pacotes de Doação",donateSub:"Apenas apresentação demo. Nenhum pagamento é processado nesta prévia.",instant:"Entrega instantânea",history:"Histórico de pedidos",support:"Suporte da conta",choose:"ESCOLHER PACOTE",popular:"POPULAR",donateSafety:"Somente prévia. O fluxo real de doações permanece no projeto privado e se conectará ao servidor do jogo pelo serviço protegido de entrega."}},
-ru:{name:"Русский",flag:"ru",t:{navHome:"Главная",navAccount:"Аккаунт",navRankings:"Рейтинг",navDonate:"Пожертвования",download:"Скачать",start:"НАЧАТЬ ИГРАТЬ",chaotic:"THE CHAOTIC THRONE · НАЧИНАЕТСЯ НОВАЯ ГЛАВА",heroText:"Океан пробуждается. За бурей ждёт ваша легенда. Войдите в мир соревновательного PvP, долгого развития и сильного сообщества.",journey:"НАЧАТЬ ПУТЬ →",explore:"ИССЛЕДОВАТЬ МИР",realmTitle:"Мир Водного Дракона",serverOnline:"Сервер онлайн · Демо",playersOnline:"Игроки онлайн",liveDemo:"демо-данные",accounts:"Аккаунты",registered:"зарегистрированных героев",clans:"Активные кланы",siege:"готовятся к осаде",accountPanel:"Панель аккаунта",dashboard:"Панель",rewards:"Награды",wallet:"Кошелёк",security:"Безопасность",supportCenter:"Поддержка",commandCenter:"PLAYER COMMAND CENTER",dashboardIntro:"Всё важное об аккаунте, наградах и прогрессе в одном месте.",accountActive:"Аккаунт активен",emailVerified:"Email подтверждён",lastLoginShort:"Последний вход",accountPower:"Account Power",donateCoins:"Donate Coins",votePoints:"Vote Points",walletBalance:"доступно в кошельке",readyClaim:"готово к наградам",accountRoster:"на этом аккаунте",highestLevel:"Макс. уровень",accountOverview:"ОБЗОР АККАУНТА",accountDetails:"Данные аккаунта",secure:"Защищено",username:"Логин",email:"Email",active:"Активен",verification:"Подтверждение",today1431:"Сегодня · 14:31",region:"Регион",progress:"ПРОГРЕСС",profileSecurity:"Профиль и безопасность",characterProgress:"Прогресс персонажей",communityProgress:"Прогресс сообщества",secureAction:"Безопасное действие",voteClaim:"Vote & Claim",claimRewards:"Получить награды сервера",donate:"Пожертвовать",openWallet:"Открыть кошелёк и пакеты",contactStaff:"Связаться с командой",downloadPatch:"Скачать Patch",patchDesc:"Скачать последний патч Fafurion",olympiadEnds:"Olympiad закончится через",olympiadDesc:"Таймер сезонного соревнования · демо",characters:"Персонажи",donations:"Пожертвования",settings:"Настройки",loginHistory:"История входов",website:"Сайт",welcome:"С возвращением",demoNote:"Только демо-данные — реальные действия не выполняются.",balance:"ДОСТУПНЫЙ БАЛАНС",yourCharacters:"Ваши персонажи",name:"Имя",class:"Класс",level:"Уровень",status:"Статус",lastLogin:"Последний вход",online:"Онлайн",offline:"Оффлайн",actions:"Действия",quickActions:"Быстрые действия",changePassword:"Сменить пароль",changePasswordSub:"Безопасно обновите пароль аккаунта.",changeEmail:"Сменить email",changeEmailSub:"Управляйте email вашего аккаунта.",unstuck:"Освободить персонажа",unstuckSub:"Переместите застрявшего персонажа в безопасное место.",addBalance:"Пополнить баланс",addBalanceSub:"Откройте страницу пожертвований и баланса.",previewOnly:"LIVE PREVIEW: на этой публичной странице только демо-данные. Пароли, MySQL-данные и секреты сервера здесь не хранятся.",rankTitle:"Рейтинг мира",updated:"Обновлено только что · демо",player:"Игрок",clan:"Клан",donateTitle:"Пакеты пожертвований",donateSub:"Только демонстрация. В этом превью платежи не обрабатываются.",instant:"Мгновенная доставка",history:"История заказов",support:"Поддержка аккаунта",choose:"ВЫБРАТЬ ПАКЕТ",popular:"ПОПУЛЯРНО",donateSafety:"Только превью. Реальная система пожертвований остаётся в приватном проекте и будет подключена к игровому серверу через защищённую службу доставки."}}
+en:{name:"English",flag:"gb",t:{navHome:"Home",navAccount:"Account",navRankings:"Rankings",navDonate:"Donate",download:"Download",start:"START PLAYING",chaotic:"THE CHAOTIC THRONE · A NEW CHAPTER BEGINS",heroText:"The ocean awakens. Beyond the storm, your legend awaits. Enter a realm shaped for competitive PvP, long-term progression and a community-first experience.",journey:"BEGIN YOUR JOURNEY →",explore:"EXPLORE THE REALM",realmTitle:"The Water Dragon Realm",serverOnline:"Server Online · Demo preview",playersOnline:"Players Online",liveDemo:"live demo data",accounts:"Accounts",registered:"registered heroes",clans:"Active Clans",siege:"preparing for siege",accountPanel:"Account Panel",dashboard:"Dashboard",rewards:"Rewards",wallet:"Wallet",security:"Security",supportCenter:"Support",commandCenter:"PLAYER COMMAND CENTER",dashboardIntro:"Everything important about your account, rewards and progress in one place.",accountActive:"Account Active",emailVerified:"Email Verified",lastLoginShort:"Last login",accountPower:"Account Power",donateCoins:"Donate Coins",votePoints:"Vote Points",walletBalance:"available in wallet",readyClaim:"ready for rewards",accountRoster:"on this account",highestLevel:"Highest Level",accountOverview:"ACCOUNT OVERVIEW",accountDetails:"Account details",secure:"Secure",username:"Username",email:"Email",active:"Active",verification:"Verification",today1431:"Today · 14:31",region:"Region",progress:"PROGRESS",profileSecurity:"Profile & Security",characterProgress:"Character Progress",communityProgress:"Community Progress",secureAction:"Secure account action",voteClaim:"Vote & Claim",claimRewards:"Claim server rewards",donate:"Donate",openWallet:"Open wallet & packages",contactStaff:"Contact the staff team",downloadPatch:"Download Patch",patchDesc:"Get the latest Fafurion client patch",olympiadEnds:"Olympiad ends in",olympiadDesc:"Seasonal competition countdown · demo timer",characters:"Characters",roster:"CHARACTER ROSTER",characterIntro:"Select a character to view detailed stats and account services.",playtime:"Playtime",location:"Location",viewProfile:"VIEW PROFILE →",characterDemoNote:"Demo roster. Later these cards will load the real characters directly from the game database.",characterDetails:"Character details",noblesse:"Noblesse",heroStatus:"Hero Status",lastSeen:"Last Seen",combatOverview:"Combat overview",fame:"Fame",reputation:"Reputation",alliance:"Alliance",characterServices:"Character services",unstuckCooldown:"Unstuck will use a protected cooldown in the live version. Demo action only.",donations:"Donations",settings:"Settings",loginHistory:"Login history",website:"Website",welcome:"Welcome back",demoNote:"Demo data only — no real account actions are performed.",balance:"AVAILABLE BALANCE",yourCharacters:"Your characters",name:"Name",class:"Class",level:"Level",status:"Status",lastLogin:"Last login",online:"Online",offline:"Offline",actions:"Actions",quickActions:"Quick actions",changePassword:"Change password",changePasswordSub:"Update your account password securely.",changeEmail:"Change email",changeEmailSub:"Manage the email linked to your account.",unstuck:"Unstuck character",unstuckSub:"Move a stuck character to a safe location.",addBalance:"Add balance",addBalanceSub:"Open the donation and balance page.",previewOnly:"LIVE PREVIEW: this public page contains only demo data. Passwords, MySQL credentials and server secrets are never stored here.",rankTitle:"Realm Rankings",updated:"Updated moments ago · demo",player:"Player",clan:"Clan",donateTitle:"Donation Packages",donateSub:"Demo presentation only. No payment is processed on this preview.",instant:"Instant delivery",history:"Order history",support:"Account support",choose:"CHOOSE PACKAGE",popular:"POPULAR",donateSafety:"Preview only. The real donation flow stays in the private project and will connect to the game server through the protected delivery service."}},
+el:{name:"Ελληνικά",flag:"gr",t:{navHome:"Αρχική",navAccount:"Λογαριασμός",navRankings:"Κατάταξη",navDonate:"Δωρεές",download:"Λήψη",start:"ΞΕΚΙΝΑ ΠΑΙΧΝΙΔΙ",chaotic:"THE CHAOTIC THRONE · ΕΝΑ ΝΕΟ ΚΕΦΑΛΑΙΟ ΑΡΧΙΖΕΙ",heroText:"Ο ωκεανός ξυπνά. Πέρα από την καταιγίδα, ο θρύλος σου περιμένει. Μπες σε έναν κόσμο φτιαγμένο για ανταγωνιστικό PvP, εξέλιξη και δυνατή κοινότητα.",journey:"ΞΕΚΙΝΑ ΤΟ ΤΑΞΙΔΙ →",explore:"ΕΞΕΡΕΥΝΗΣΕ ΤΟΝ ΚΟΣΜΟ",realmTitle:"Ο Κόσμος του Water Dragon",serverOnline:"Server Online · Demo preview",playersOnline:"Παίκτες Online",liveDemo:"δοκιμαστικά live δεδομένα",accounts:"Λογαριασμοί",registered:"εγγεγραμμένοι ήρωες",clans:"Ενεργά Clans",siege:"ετοιμάζονται για siege",accountPanel:"Πίνακας Λογαριασμού",dashboard:"Dashboard",rewards:"Ανταμοιβές",wallet:"Πορτοφόλι",security:"Ασφάλεια",supportCenter:"Υποστήριξη",commandCenter:"PLAYER COMMAND CENTER",dashboardIntro:"Όλα τα σημαντικά για τον λογαριασμό, τις ανταμοιβές και την πρόοδό σου σε ένα σημείο.",accountActive:"Ενεργός λογαριασμός",emailVerified:"Επιβεβαιωμένο Email",lastLoginShort:"Τελευταία σύνδεση",accountPower:"Account Power",donateCoins:"Donate Coins",votePoints:"Vote Points",walletBalance:"διαθέσιμα στο πορτοφόλι",readyClaim:"έτοιμα για ανταμοιβές",accountRoster:"σε αυτόν τον λογαριασμό",highestLevel:"Υψηλότερο Level",accountOverview:"ΣΥΝΟΨΗ ΛΟΓΑΡΙΑΣΜΟΥ",accountDetails:"Στοιχεία λογαριασμού",secure:"Ασφαλής",username:"Όνομα χρήστη",email:"Email",active:"Ενεργός",verification:"Επιβεβαίωση",today1431:"Σήμερα · 14:31",region:"Περιοχή",progress:"ΠΡΟΟΔΟΣ",profileSecurity:"Προφίλ & Ασφάλεια",characterProgress:"Πρόοδος Χαρακτήρων",communityProgress:"Πρόοδος Κοινότητας",secureAction:"Ασφαλής ενέργεια λογαριασμού",voteClaim:"Vote & Claim",claimRewards:"Πάρε τις ανταμοιβές του server",donate:"Δωρεά",openWallet:"Άνοιγμα wallet & πακέτων",contactStaff:"Επικοινωνία με το staff",downloadPatch:"Λήψη Patch",patchDesc:"Κατέβασε το τελευταίο Fafurion patch",olympiadEnds:"Το Olympiad τελειώνει σε",olympiadDesc:"Αντίστροφη μέτρηση σεζόν · demo timer",characters:"Χαρακτήρες",roster:"CHARACTER ROSTER",characterIntro:"Επίλεξε χαρακτήρα για αναλυτικά stats και υπηρεσίες λογαριασμού.",playtime:"Χρόνος παιχνιδιού",location:"Τοποθεσία",viewProfile:"ΠΡΟΒΟΛΗ ΠΡΟΦΙΛ →",characterDemoNote:"Demo roster. Αργότερα οι κάρτες θα φορτώνουν τους πραγματικούς χαρακτήρες απευθείας από τη βάση του game server.",characterDetails:"Στοιχεία χαρακτήρα",noblesse:"Noblesse",heroStatus:"Hero Status",lastSeen:"Τελευταία εμφάνιση",combatOverview:"Combat overview",fame:"Fame",reputation:"Reputation",alliance:"Alliance",characterServices:"Υπηρεσίες χαρακτήρα",unstuckCooldown:"Το Unstuck θα έχει προστατευμένο cooldown στη live έκδοση. Εδώ είναι μόνο demo.",donations:"Δωρεές",settings:"Ρυθμίσεις",loginHistory:"Ιστορικό σύνδεσης",website:"Ιστοσελίδα",welcome:"Καλώς ήρθες",demoNote:"Μόνο δοκιμαστικά δεδομένα — δεν εκτελούνται πραγματικές ενέργειες.",balance:"ΔΙΑΘΕΣΙΜΟ ΥΠΟΛΟΙΠΟ",yourCharacters:"Οι χαρακτήρες σου",name:"Όνομα",class:"Κλάση",level:"Επίπεδο",status:"Κατάσταση",lastLogin:"Τελευταία σύνδεση",online:"Online",offline:"Offline",actions:"Ενέργειες",quickActions:"Γρήγορες ενέργειες",changePassword:"Αλλαγή κωδικού",changePasswordSub:"Ενημέρωσε με ασφάλεια τον κωδικό του λογαριασμού.",changeEmail:"Αλλαγή email",changeEmailSub:"Διαχειρίσου το email του λογαριασμού.",unstuck:"Unstuck χαρακτήρα",unstuckSub:"Μετακίνησε κολλημένο χαρακτήρα σε ασφαλές σημείο.",addBalance:"Προσθήκη υπολοίπου",addBalanceSub:"Άνοιξε τη σελίδα δωρεών και υπολοίπου.",previewOnly:"LIVE PREVIEW: εδώ υπάρχουν μόνο demo δεδομένα. Κωδικοί, MySQL στοιχεία και server secrets δεν αποθηκεύονται ποτέ εδώ.",rankTitle:"Κατάταξη Κόσμου",updated:"Ενημερώθηκε πριν λίγο · demo",player:"Παίκτης",clan:"Clan",donateTitle:"Πακέτα Δωρεών",donateSub:"Μόνο δοκιμαστική παρουσίαση. Δεν γίνεται πραγματική πληρωμή στο preview.",instant:"Άμεση παράδοση",history:"Ιστορικό παραγγελιών",support:"Υποστήριξη λογαριασμού",choose:"ΕΠΙΛΟΓΗ ΠΑΚΕΤΟΥ",popular:"ΔΗΜΟΦΙΛΕΣ",donateSafety:"Μόνο preview. Η πραγματική ροή δωρεών παραμένει στο private project και θα συνδέεται με τον game server μέσω της προστατευμένης υπηρεσίας παράδοσης."}},
+pt:{name:"Português (Brasil)",flag:"br",t:{navHome:"Início",navAccount:"Conta",navRankings:"Ranking",navDonate:"Doações",download:"Download",start:"COMEÇAR A JOGAR",chaotic:"THE CHAOTIC THRONE · UM NOVO CAPÍTULO COMEÇA",heroText:"O oceano desperta. Além da tempestade, sua lenda espera. Entre em um reino criado para PvP competitivo, progressão duradoura e uma comunidade forte.",journey:"COMECE SUA JORNADA →",explore:"EXPLORE O REINO",realmTitle:"O Reino do Dragão da Água",serverOnline:"Servidor Online · Prévia demo",playersOnline:"Jogadores Online",liveDemo:"dados demonstrativos",accounts:"Contas",registered:"heróis registrados",clans:"Clãs Ativos",siege:"preparando-se para siege",accountPanel:"Painel da Conta",dashboard:"Dashboard",rewards:"Recompensas",wallet:"Carteira",security:"Segurança",supportCenter:"Suporte",commandCenter:"PLAYER COMMAND CENTER",dashboardIntro:"Tudo o que importa sobre sua conta, recompensas e progresso em um só lugar.",accountActive:"Conta Ativa",emailVerified:"Email Verificado",lastLoginShort:"Último login",accountPower:"Account Power",donateCoins:"Donate Coins",votePoints:"Vote Points",walletBalance:"disponível na carteira",readyClaim:"prontos para recompensas",accountRoster:"nesta conta",highestLevel:"Maior Nível",accountOverview:"VISÃO GERAL DA CONTA",accountDetails:"Detalhes da conta",secure:"Seguro",username:"Usuário",email:"Email",active:"Ativa",verification:"Verificação",today1431:"Hoje · 14:31",region:"Região",progress:"PROGRESSO",profileSecurity:"Perfil & Segurança",characterProgress:"Progresso dos Personagens",communityProgress:"Progresso da Comunidade",secureAction:"Ação segura da conta",voteClaim:"Votar & Resgatar",claimRewards:"Resgatar recompensas do servidor",donate:"Doar",openWallet:"Abrir carteira e pacotes",contactStaff:"Falar com a equipe",downloadPatch:"Baixar Patch",patchDesc:"Baixe o patch mais recente do Fafurion",olympiadEnds:"Olympiad termina em",olympiadDesc:"Contagem regressiva da temporada · demo",characters:"Personagens",roster:"CHARACTER ROSTER",characterIntro:"Selecione um personagem para ver estatísticas detalhadas e serviços da conta.",playtime:"Tempo de jogo",location:"Localização",viewProfile:"VER PERFIL →",characterDemoNote:"Roster de demonstração. Depois, estes cards carregarão os personagens reais diretamente do banco do servidor.",characterDetails:"Detalhes do personagem",noblesse:"Noblesse",heroStatus:"Status de Herói",lastSeen:"Visto por último",combatOverview:"Visão de combate",fame:"Fama",reputation:"Reputação",alliance:"Aliança",characterServices:"Serviços do personagem",unstuckCooldown:"O Unstuck usará cooldown protegido na versão live. Ação apenas demonstrativa.",donations:"Doações",settings:"Configurações",loginHistory:"Histórico de login",website:"Site",welcome:"Bem-vindo de volta",demoNote:"Somente dados de demonstração — nenhuma ação real é executada.",balance:"SALDO DISPONÍVEL",yourCharacters:"Seus personagens",name:"Nome",class:"Classe",level:"Nível",status:"Status",lastLogin:"Último login",online:"Online",offline:"Offline",actions:"Ações",quickActions:"Ações rápidas",changePassword:"Alterar senha",changePasswordSub:"Atualize a senha da conta com segurança.",changeEmail:"Alterar email",changeEmailSub:"Gerencie o email vinculado à sua conta.",unstuck:"Destravar personagem",unstuckSub:"Mova um personagem travado para um local seguro.",addBalance:"Adicionar saldo",addBalanceSub:"Abra a página de doações e saldo.",previewOnly:"LIVE PREVIEW: esta página pública contém apenas dados demo. Senhas, credenciais MySQL e segredos do servidor nunca são armazenados aqui.",rankTitle:"Ranking do Reino",updated:"Atualizado há instantes · demo",player:"Jogador",clan:"Clã",donateTitle:"Pacotes de Doação",donateSub:"Apenas apresentação demo. Nenhum pagamento é processado nesta prévia.",instant:"Entrega instantânea",history:"Histórico de pedidos",support:"Suporte da conta",choose:"ESCOLHER PACOTE",popular:"POPULAR",donateSafety:"Somente prévia. O fluxo real de doações permanece no projeto privado e se conectará ao servidor do jogo pelo serviço protegido de entrega."}},
+ru:{name:"Русский",flag:"ru",t:{navHome:"Главная",navAccount:"Аккаунт",navRankings:"Рейтинг",navDonate:"Пожертвования",download:"Скачать",start:"НАЧАТЬ ИГРАТЬ",chaotic:"THE CHAOTIC THRONE · НАЧИНАЕТСЯ НОВАЯ ГЛАВА",heroText:"Океан пробуждается. За бурей ждёт ваша легенда. Войдите в мир соревновательного PvP, долгого развития и сильного сообщества.",journey:"НАЧАТЬ ПУТЬ →",explore:"ИССЛЕДОВАТЬ МИР",realmTitle:"Мир Водного Дракона",serverOnline:"Сервер онлайн · Демо",playersOnline:"Игроки онлайн",liveDemo:"демо-данные",accounts:"Аккаунты",registered:"зарегистрированных героев",clans:"Активные кланы",siege:"готовятся к осаде",accountPanel:"Панель аккаунта",dashboard:"Панель",rewards:"Награды",wallet:"Кошелёк",security:"Безопасность",supportCenter:"Поддержка",commandCenter:"PLAYER COMMAND CENTER",dashboardIntro:"Всё важное об аккаунте, наградах и прогрессе в одном месте.",accountActive:"Аккаунт активен",emailVerified:"Email подтверждён",lastLoginShort:"Последний вход",accountPower:"Account Power",donateCoins:"Donate Coins",votePoints:"Vote Points",walletBalance:"доступно в кошельке",readyClaim:"готово к наградам",accountRoster:"на этом аккаунте",highestLevel:"Макс. уровень",accountOverview:"ОБЗОР АККАУНТА",accountDetails:"Данные аккаунта",secure:"Защищено",username:"Логин",email:"Email",active:"Активен",verification:"Подтверждение",today1431:"Сегодня · 14:31",region:"Регион",progress:"ПРОГРЕСС",profileSecurity:"Профиль и безопасность",characterProgress:"Прогресс персонажей",communityProgress:"Прогресс сообщества",secureAction:"Безопасное действие",voteClaim:"Vote & Claim",claimRewards:"Получить награды сервера",donate:"Пожертвовать",openWallet:"Открыть кошелёк и пакеты",contactStaff:"Связаться с командой",downloadPatch:"Скачать Patch",patchDesc:"Скачать последний патч Fafurion",olympiadEnds:"Olympiad закончится через",olympiadDesc:"Таймер сезонного соревнования · демо",characters:"Персонажи",roster:"CHARACTER ROSTER",characterIntro:"Выберите персонажа, чтобы посмотреть подробные характеристики и услуги аккаунта.",playtime:"Время игры",location:"Локация",viewProfile:"ОТКРЫТЬ ПРОФИЛЬ →",characterDemoNote:"Демо-состав. Позже карточки будут загружать реальных персонажей прямо из базы игрового сервера.",characterDetails:"Данные персонажа",noblesse:"Noblesse",heroStatus:"Статус героя",lastSeen:"Последний вход",combatOverview:"Боевой обзор",fame:"Слава",reputation:"Репутация",alliance:"Альянс",characterServices:"Услуги персонажа",unstuckCooldown:"В live-версии Unstuck будет защищён кулдауном. Сейчас это только демо.",donations:"Пожертвования",settings:"Настройки",loginHistory:"История входов",website:"Сайт",welcome:"С возвращением",demoNote:"Только демо-данные — реальные действия не выполняются.",balance:"ДОСТУПНЫЙ БАЛАНС",yourCharacters:"Ваши персонажи",name:"Имя",class:"Класс",level:"Уровень",status:"Статус",lastLogin:"Последний вход",online:"Онлайн",offline:"Оффлайн",actions:"Действия",quickActions:"Быстрые действия",changePassword:"Сменить пароль",changePasswordSub:"Безопасно обновите пароль аккаунта.",changeEmail:"Сменить email",changeEmailSub:"Управляйте email вашего аккаунта.",unstuck:"Освободить персонажа",unstuckSub:"Переместите застрявшего персонажа в безопасное место.",addBalance:"Пополнить баланс",addBalanceSub:"Откройте страницу пожертвований и баланса.",previewOnly:"LIVE PREVIEW: на этой публичной странице только демо-данные. Пароли, MySQL-данные и секреты сервера здесь не хранятся.",rankTitle:"Рейтинг мира",updated:"Обновлено только что · демо",player:"Игрок",clan:"Клан",donateTitle:"Пакеты пожертвований",donateSub:"Только демонстрация. В этом превью платежи не обрабатываются.",instant:"Мгновенная доставка",history:"История заказов",support:"Поддержка аккаунта",choose:"ВЫБРАТЬ ПАКЕТ",popular:"ПОПУЛЯРНО",donateSafety:"Только превью. Реальная система пожертвований остаётся в приватном проекте и будет подключена к игровому серверу через защищённую службу доставки."}}
 };
 let lang=localStorage.getItem("fafurion_lang")||"en";
 function applyLang(code){lang=langs[code]?code:"en";localStorage.setItem("fafurion_lang",lang);const L=langs[lang];document.documentElement.lang=lang;document.getElementById("currentFlag").src="https://flagcdn.com/w40/"+L.flag+".png";document.getElementById("currentLang").textContent=L.name;document.querySelectorAll("[data-i18n]").forEach(el=>{const k=el.dataset.i18n;if(L.t[k])el.textContent=L.t[k]});document.querySelectorAll(".lang-option").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));document.getElementById("langBox").classList.remove("open")}
@@ -426,6 +498,32 @@ document.getElementById("langBtn").addEventListener("click",e=>{e.stopPropagatio
 document.querySelectorAll(".lang-option").forEach(b=>b.addEventListener("click",()=>applyLang(b.dataset.lang)));
 document.addEventListener("click",()=>document.getElementById("langBox").classList.remove("open"));
 
+
+
+const demoCharacters={
+  knight:{name:"FafurionKnight",className:"Duelist",level:"85",status:"Online",emblem:"DU",pvp:"1,482",pk:"37",playtime:"412 h",clan:"Immortals",location:"Giran",noble:"Yes",hero:"No",seen:"Now",fame:"8,420",rep:"+2,180",alliance:"Aegis",tone:"duelist"},
+  soul:{name:"OceanSoul",className:"Cardinal",level:"84",status:"Offline",emblem:"CA",pvp:"268",pk:"4",playtime:"226 h",clan:"Immortals",location:"Aden",noble:"Yes",hero:"No",seen:"18 min ago",fame:"3,190",rep:"+1,040",alliance:"Aegis",tone:"cardinal"},
+  storm:{name:"SilverStorm",className:"Sagittarius",level:"83",status:"Offline",emblem:"SA",pvp:"731",pk:"12",playtime:"301 h",clan:"Northwind",location:"Rune",noble:"No",hero:"No",seen:"2 h ago",fame:"5,870",rep:"+1,560",alliance:"Northstar",tone:"sagittarius"}
+};
+function showAccountTab(tab){
+  document.querySelectorAll(".account-view").forEach(v=>v.classList.toggle("active",v.id==="account-"+tab+"-view"));
+  document.querySelectorAll("[data-account-tab]").forEach(b=>b.classList.toggle("active",b.dataset.accountTab===tab));
+  document.querySelectorAll("[data-account-tab-mobile]").forEach(b=>b.classList.toggle("active",b.dataset.accountTabMobile===tab));
+  if(tab==="dashboard")runAccountAnimations();
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+function openCharacter(key){
+  const c=demoCharacters[key]; if(!c)return;
+  const set=(id,val)=>{const el=document.getElementById(id);if(el)el.textContent=val};
+  set("profileName",c.name);set("profileClass",c.className);set("profileLevel",c.level);set("profileStatus",c.status);
+  set("profileEmblem",c.emblem);set("profilePvp",c.pvp);set("profilePk",c.pk);set("profilePlaytime",c.playtime);
+  set("profileClan",c.clan);set("profileClan2",c.clan);set("profileLocation",c.location);set("profileNoble",c.noble);
+  set("profileHero",c.hero);set("profileSeen",c.seen);set("profileFame",c.fame);set("profileRep",c.rep);set("profileAlliance",c.alliance);
+  const em=document.getElementById("profileEmblem"); if(em)em.className="class-emblem profile-emblem "+(c.tone==="cardinal"?"cardinal":c.tone==="sagittarius"?"sagittarius":"");
+  document.getElementById("characterModal").classList.add("open");document.body.style.overflow="hidden";
+}
+function closeCharacter(){const m=document.getElementById("characterModal");if(m)m.classList.remove("open");document.body.style.overflow=""}
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeCharacter()});
 
 function runAccountAnimations(){
   document.querySelectorAll("#page-account [data-count]").forEach(el=>{
