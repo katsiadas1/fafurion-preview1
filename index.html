@@ -3,16 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#07131b">
-<link rel="icon" type="image/svg+xml" href="assets/counter-dragon-mark.svg?v=1">
+<meta name="theme-color" content="#07131b">\n<link rel="icon" type="image/svg+xml" href="assets/counter-mark.svg?v=1">
 <title>L2Counter • Lineage II</title>
 <link rel="stylesheet" href="portal.css?v=13"><link rel="stylesheet" href="portal-bridge.css?v=11">
 <link rel="stylesheet" href="home-rankings.css?v=12">
-<link rel="stylesheet" href="realm-theme.css?v=15"><link rel="stylesheet" href="home-counter.css?v=5"><script src="home-counter.js?v=1" defer></script></head>
+<link rel="stylesheet" href="realm-theme.css?v=14"><link rel="stylesheet" href="home-counter.css?v=4"><script src="home-counter.js?v=1" defer></script></head>
 <body data-current-page="home">
 <div class="app">
 <header class="topbar">
-  <a class="brand" href="#" onclick="showPage('home')"><img class="counter-brand-mark" src="assets/counter-dragon-mark.svg?v=1" alt=""><div><strong>COUNTER</strong><small>LINEAGE II</small></div></a>
+  <a class="brand" href="#" onclick="showPage('home')"><img class="counter-brand-mark" src="assets/counter-mark.svg?v=1" alt=""><div><strong>COUNTER</strong><small>LINEAGE II</small></div></a>
   <nav class="nav">
     <button data-page="home" class="active" data-i18n="navHome">Home</button>
     <button onclick="location.href='info.html'" data-i18n="navInfo">Info</button>
@@ -81,28 +80,138 @@
 
 <main>
 <section class="page active counter-home" id="page-home">
-  <div class="counter-hero counter-hero-v5">
-    <div class="counter-hero-bg-v5" aria-hidden="true"></div>
-    <div class="counter-hero-mask-v5" aria-hidden="true"></div>
-    <div class="counter-hero-light-v5" aria-hidden="true"></div>
+  <div class="counter-hero">
+    <div class="counter-hero-bg" aria-hidden="true"></div>
+    <div class="counter-lightning" aria-hidden="true"></div>
+    <div class="counter-fog" aria-hidden="true"></div>
 
-    <div class="counter-title-lockup-v5" aria-label="Lineage II Counter">
-      <span class="counter-title-small-v5">LINEAGE II</span>
-      <h1 class="counter-title-main-v5">COUNTER</h1>
+    <div class="counter-hero-inner">
+      <div class="counter-overline">L2COUNTER.COM · FAFURION CHRONICLE</div>
+
+      <h1 class="counter-sr-title">Lineage II Counter</h1>
+
+      <div class="counter-actions">
+        <a class="counter-btn primary" href="#" onclick="showPage('account');return false;"><span>Enter the Realm</span><span aria-hidden="true">⟶</span></a>
+        <a class="counter-btn gold" href="download.html"><span>Download</span><span aria-hidden="true">↓</span></a>
+        <a class="counter-btn" href="info.html"><span>Server Info</span><span aria-hidden="true">◇</span></a>
+      </div>
     </div>
 
-    <div class="counter-actions-v5">
-      <a class="counter-btn-v5 primary" href="#" onclick="showPage('account');return false;">
-        <span>ENTER THE REALM</span><span aria-hidden="true">⟶</span>
-      </a>
-      <a class="counter-btn-v5 gold" href="download.html">
-        <span>DOWNLOAD</span><span aria-hidden="true">↓</span>
-      </a>
-      <a class="counter-btn-v5 dark" href="info.html">
-        <span>SERVER INFO</span><span aria-hidden="true">◇</span>
-      </a>
-    </div>
+    <div class="counter-scroll"><span>Discover the realm</span><i></i></div>
   </div>
+
+  <div class="counter-status-bar counter-reveal" aria-label="Realm highlights">
+    <div class="counter-status-item"><small>Chronicle</small><strong class="ice">Fafurion</strong></div>
+    <div class="counter-status-item"><small>Class Path</small><strong>3rd Class</strong></div>
+    <div class="counter-status-item"><small>Max Enchant</small><strong class="gold">+16</strong></div>
+    <div class="counter-status-item"><small>Realm Status</small><strong class="ice">In Development</strong></div>
+  </div>
+
+  <section class="counter-section">
+    <div class="counter-section-head counter-reveal">
+      <div>
+        <div class="counter-kicker">BUILT DIFFERENT</div>
+        <h2>More than another private server.</h2>
+      </div>
+      <p>Systems designed to give every character an identity, every PvP fight weight, and every login something worth checking.</p>
+    </div>
+
+    <div class="counter-feature-grid">
+      <article class="counter-feature-card counter-reveal">
+        <div class="counter-feature-icon">I</div>
+        <h3>Custom Progression</h3>
+        <p>Third-class focused progression, custom mastery ideas, equipment evolution and a cleaner long-term path.</p>
+        <a href="info.html">Explore systems →</a>
+      </article>
+      <article class="counter-feature-card counter-reveal">
+        <div class="counter-feature-icon">II</div>
+        <h3>Competitive Rankings</h3>
+        <p>PvP, clans, profiles, streaks and deeper player statistics designed to make reputation visible.</p>
+        <a href="#" onclick="showPage('rankings');return false;">Open rankings →</a>
+      </article>
+      <article class="counter-feature-card counter-reveal">
+        <div class="counter-feature-icon">III</div>
+        <h3>Custom Events</h3>
+        <p>Battle-focused event concepts, rotating objectives and server activities beyond the standard event loop.</p>
+        <a href="info.html#events">View events →</a>
+      </article>
+      <article class="counter-feature-card counter-reveal">
+        <div class="counter-feature-icon">IV</div>
+        <h3>Player Command Center</h3>
+        <p>Characters, rewards, wallet, security, support and account tools from one premium interface.</p>
+        <a href="#" onclick="showPage('account');return false;">Open account →</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="counter-section">
+    <div class="counter-section-head counter-reveal">
+      <div>
+        <div class="counter-kicker">REALM INTELLIGENCE</div>
+        <h2>Know who controls the server.</h2>
+      </div>
+      <p>Rankings and public profiles are built to become part of the game itself, not just another table hidden on a website.</p>
+    </div>
+
+    <div class="counter-dual">
+      <div class="counter-ranking-card counter-reveal">
+        <div class="counter-kicker">LIVE RANKING EXPERIENCE</div>
+        <div class="counter-mini-tabs">
+          <button class="active" data-counter-rank-tab="pvp">PvP</button>
+          <button data-counter-rank-tab="clans">Clans</button>
+        </div>
+
+        <div class="counter-rank-row">
+          <span class="counter-rank-num">01</span>
+          <span class="counter-rank-copy"><b>PvP Leaderboard</b><small>Top players · profile cards · K/D & streaks</small></span>
+          <span class="counter-rank-score">TOP 15</span>
+        </div>
+        <div class="counter-rank-row">
+          <span class="counter-rank-num">02</span>
+          <span class="counter-rank-copy"><b>Clan Leaderboard</b><small>Reputation · leader · castle ownership</small></span>
+          <span class="counter-rank-score">TOP 10</span>
+        </div>
+        <div class="counter-rank-row">
+          <span class="counter-rank-num">03</span>
+          <span class="counter-rank-copy"><b>Public Profiles</b><small>Character identity beyond a simple name</small></span>
+          <span class="counter-rank-score">PROFILE</span>
+        </div>
+        <div class="counter-rank-row">
+          <span class="counter-rank-num">04</span>
+          <span class="counter-rank-copy"><b>Combat History</b><small>Deaths · streaks · achievements · activity</small></span>
+          <span class="counter-rank-score">STATS</span>
+        </div>
+
+        <a class="counter-ranking-more" href="#" onclick="showPage('rankings');return false;">Enter rankings →</a>
+      </div>
+
+      <div class="counter-world-card counter-reveal">
+        <div class="counter-world-copy">
+          <div class="counter-kicker">THE FAFURION ERA</div>
+          <h3>A familiar world, rebuilt around your character.</h3>
+          <p>Keep the feeling of Lineage II while making progression, PvP, events and account systems feel more modern and connected.</p>
+          <div class="counter-world-badges">
+            <span>3rd Class Focus</span>
+            <span>Custom PvP</span>
+            <span>Player Profiles</span>
+            <span>Season Systems</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="counter-cta counter-reveal">
+    <div class="counter-cta-copy">
+      <div class="counter-kicker">YOUR STORY STARTS HERE</div>
+      <h2>Enter. Compete. Be remembered.</h2>
+      <p>The realm is still being forged. Explore the systems and prepare for what comes next.</p>
+    </div>
+    <div class="counter-cta-actions">
+      <a class="counter-btn primary" href="download.html">Prepare Client <span aria-hidden="true">⟶</span></a>
+      <a class="counter-btn" href="info.html">Read Server Info</a>
+    </div>
+  </section>
 </section>
 
 
