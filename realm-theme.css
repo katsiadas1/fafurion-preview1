@@ -468,3 +468,37 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
   .inner-page .compact-specs{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){.character-card,.realm-class-icon,.realm-clan-crest{transition:none!important}.character-card:hover{transform:none}}
+
+
+/* L2Counter shared brand mark */
+.counter-brand-mark{
+  width:42px;
+  height:42px;
+  flex:0 0 42px;
+  display:block;
+  object-fit:contain;
+  filter:drop-shadow(0 0 12px rgba(87,211,233,.22));
+}
+.topbar .counter-brand-mark{
+  width:40px;
+  height:40px;
+  flex-basis:40px;
+}
+.inner-page .header .counter-brand-mark{
+  width:44px;
+  height:44px;
+  flex-basis:44px;
+}
+footer .counter-brand-mark{
+  width:36px;
+  height:36px;
+  flex-basis:36px;
+}
+@media(max-width:700px){
+  .counter-brand-mark,
+  .inner-page .header .counter-brand-mark{
+    width:36px;
+    height:36px;
+    flex-basis:36px;
+  }
+}
