@@ -1,0 +1,26 @@
+/* Keep every restored panel reachable on narrow screens and by keyboard. */
+.mobile-tabs button,
+.admin-mobile-tabs button,
+.account-subnav button {
+  min-height: 44px;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+.nav button,
+.lang-btn,
+.admin-side-link,
+.side-link {
+  min-height: 44px;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #8ae8f5;
+  outline-offset: 3px;
+}
+@media (max-width: 1100px) {
+  .mobile-tabs { scroll-padding-inline: 12px; }
+  .mobile-tabs .admin-nav-btn { border-color: rgba(109,217,231,.35); }
+}

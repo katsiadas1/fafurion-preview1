@@ -1,0 +1,470 @@
+/* Shared Fafurion type, controls and heraldry. Uses the icon font already in this Site. */
+@font-face{font-family:FafurionGlyphs;src:url('panel-preview/assets/webfonts/fa-solid-900.woff2') format('woff2');font-style:normal;font-weight:900;font-display:block}
+:root{color-scheme:dark;--realm-surface:#0a1c28;--realm-raised:#102b39;--realm-border:#35515f;--realm-text:#e1edf2;--realm-muted:#a3bcc7;--realm-cyan:#8bdae5;--realm-gold:#d5b675;--realm-silver:#c2d6e5;--realm-bronze:#c79371}
+body{font-size:1rem;line-height:1.55}
+button,input,select,textarea{font-family:inherit}
+button,a,input,select,textarea{-webkit-tap-highlight-color:transparent}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:2px solid #91e4ef;outline-offset:3px}
+.realm-icon{font-family:FafurionGlyphs!important;font-style:normal!important;font-weight:900!important;font-variant:normal!important;line-height:1!important;text-transform:none!important;letter-spacing:0!important;display:inline-block;font-size:1em;speak:none;-webkit-font-smoothing:antialiased}
+.realm-class-icon,.realm-clan-crest{--emblem:#8bdae5;color:var(--emblem)!important;display:inline-grid;place-items:center;flex-shrink:0;background:linear-gradient(140deg,#1a3746,#08151e)!important;border:1px solid color-mix(in srgb,var(--emblem) 60%,transparent)!important;box-shadow:inset 0 0 0 3px #020b1355,0 6px 20px #00000030!important}
+.realm-class-icon[data-role="duelist"],.realm-clan-crest[data-clan="immortals"]{--emblem:#e0c184}
+.realm-class-icon[data-role="titan"]{--emblem:#db9c7b}
+.realm-class-icon[data-role="healer"]{--emblem:#bde4d6}
+.realm-class-icon[data-role="assassin"]{--emblem:#c5a1e3}
+.realm-class-icon[data-role="archer"],.realm-clan-crest[data-clan="northwind"]{--emblem:#a8d7be}
+.realm-clan-crest[data-clan="olympus"]{--emblem:#b5a0e2}
+.realm-clan-crest[data-clan="eclipse"]{--emblem:#dc9daf}
+.realm-clan-crest{border-radius:7px 7px 15px 15px!important}
+.realm-class-icon>.realm-icon,.realm-clan-crest>.realm-icon{font-size:55%}
+.realm-rank-emblem{--rank-metal:var(--realm-gold);display:inline-flex;align-items:center;justify-content:center;gap:6px;color:var(--rank-metal)!important;border-color:color-mix(in srgb,var(--rank-metal) 55%,transparent)!important;background:linear-gradient(135deg,color-mix(in srgb,var(--rank-metal) 13%,#10222d),#07151e)!important;box-shadow:inset 0 0 0 2px #08151f,0 5px 16px #00000020}
+.realm-rank-emblem[data-rank="2"]{--rank-metal:var(--realm-silver)}
+.realm-rank-emblem[data-rank="3"]{--rank-metal:var(--realm-bronze)}
+.realm-rank-emblem .realm-icon{font-size:1rem}
+.realm-rank-emblem .realm-rank-value{font:700 .875rem/1.2 system-ui,sans-serif}
+
+/* Readable navigation and controls across the portal. */
+.topbar{min-height:78px;padding:14px 24px;gap:16px;background:#06121bec;border-bottom-color:var(--realm-border)}
+.brand strong,.header .brand{color:#e7e9d8}
+.brand small{font-size:.75rem;letter-spacing:.16em;color:#a5bfcb}
+.crest{color:var(--realm-gold);border-color:#ad925b70;background:#d5b67508}
+.nav button,.ghost,.lang-btn,.cta{font-size:.875rem;min-height:44px;padding:10px 14px;line-height:1.4}
+.nav button,.ghost{color:#abc4cf}
+.nav button:hover,.nav button.active{color:#e6faff;background:#193642}
+.lang-btn{border-color:#3d5d6c;background:#0e2532}
+.lang-option{min-height:48px;padding:12px 14px;font-size:.875rem}
+.notification-btn{width:44px;height:44px;min-width:44px;color:var(--realm-gold);border-color:#3b5965;background:#102631}
+.notification-btn .bell{font-size:1.125rem}
+.notification-count{min-width:18px;height:18px;font-size:.75rem;line-height:18px}
+.mobile-tabs{gap:8px;scrollbar-width:thin;border-color:#35515f;background:#071722f5}
+.mobile-tabs button{min-height:46px;font-size:.875rem;padding:10px 15px;border:1px solid #2f4d5d;color:#adcad5;background:#0b202d}
+.mobile-tabs button.active{background:linear-gradient(125deg,#204758,#102a39);border-color:#6aafbf;color:#ecfbff}
+#page-account :is(button,input,select,textarea),#page-admin :is(button,input,select,textarea){font-size:.875rem;line-height:1.4}
+#page-account :is(input:not([type="checkbox"]),select,textarea),#page-admin :is(input:not([type="checkbox"]),select,textarea){min-height:44px;padding:11px 13px;border-color:#3b5968;background-color:#081a26;color:#e0edf3;max-width:100%}
+#page-account :is(button):not(.toggle-switch),#page-admin :is(button):not(.toggle-switch){min-height:44px}
+:is(#page-account,#page-admin) :is(.primary,.admin-primary){padding:12px 18px;border-radius:9px;border-color:#bc9b61;background:linear-gradient(125deg,#987b42,#665331);color:#fff0cf;box-shadow:inset 0 1px #f4dba43d,0 5px 20px #00000025;font-weight:700}
+:is(#page-account,#page-admin) :is(.secondary,.ghost-mini,.danger-ghost,.danger-admin){padding:11px 16px;border-radius:9px}
+:is(#page-account,#page-admin) :is(.secondary,.ghost-mini){color:#bedde7;background:#112d3b;border-color:#467081}
+:is(#page-account,#page-admin) :is(.danger-ghost,.danger-admin){background:#411f2b;color:#f1b4bc;border-color:#a464744d}
+:is(#page-account,#page-admin) :is(button:disabled,input:disabled){cursor:not-allowed;opacity:.65}
+.account-v2{max-width:1440px;grid-template-columns:256px minmax(0,1fr);gap:24px;padding:0 28px;margin-top:30px}
+.account-content,.admin-main{min-width:0}
+.account-v2 .sidebar,.admin-sidebar{border-color:#365562;border-radius:14px;background:linear-gradient(160deg,#102635,#06131e);box-shadow:0 18px 45px #00000026}
+.account-v2 .sidebar{padding:18px;top:98px}
+.side-link,.admin-side-link{font-size:.875rem;min-height:48px;padding:12px;gap:12px;color:#aec5ce;border-radius:8px;line-height:1.4}
+.side-link .side-icon,.admin-side-link>span:first-child{width:24px;min-width:24px;display:inline-grid;place-items:center;font-size:1rem;color:#91b9c8}
+.side-link.active,.admin-side-link.active{color:#e0f7fc;background:linear-gradient(105deg,#23516470,#142c39);box-shadow:inset 3px 0 #d5b675}
+.side-link.active .side-icon,.admin-side-link.active>span:first-child{color:var(--realm-gold)}
+.admin-section-label{font-size:.75rem;letter-spacing:.12em;color:#8cabb9;margin:22px 10px 9px}
+.admin-side-link small,.side-link small{font-size:.75rem;min-width:24px;padding:3px 5px}
+.account-subnav,.admin-mobile-tabs{gap:8px;margin-bottom:22px;padding-bottom:6px;scrollbar-width:thin}
+.account-subnav button,.admin-mobile-tabs button{min-height:46px;padding:12px 16px;border:1px solid #385665;border-radius:9px;background:#0b202c;color:#acc7d2;font-size:.875rem;white-space:nowrap;flex-shrink:0}
+.account-subnav button.active,.admin-mobile-tabs button.active{background:linear-gradient(120deg,#214657,#102a37);border-color:#7cb9c8;color:#e6fbff;box-shadow:inset 0 -2px #d5b675}
+:is(.combat-character-tabs,.event-filters,.ticket-filters,.support-admin-tabs,.segment-control) button{min-height:44px!important;font-size:.875rem!important;padding:10px 15px!important;line-height:1.4;flex-shrink:0}
+:is(.combat-character-tabs,.event-filters,.ticket-filters,.support-admin-tabs){gap:8px;overflow-x:auto;padding-bottom:4px}
+:is(.combat-character-tabs,.event-filters,.ticket-filters,.support-admin-tabs,.segment-control) button.active{border-color:#83b7c7;background:#1b4051;color:#edfbff}
+
+/* Panels get room to grow with their text. */
+:is(#page-account,#page-admin) :is(p,.note,.muted){line-height:1.65}
+:is(#page-account,#page-admin) :is(.eyebrow,[class$="-head"] small,[class$="-title"] small){font-size:.75rem;letter-spacing:.1em;color:#b1cbd5}
+:is(#page-account,#page-admin) :is(h2,h3){line-height:1.25}
+:is(#page-account,#page-admin) h2{font-size:clamp(1.75rem,2.5vw,2.4rem)}
+:is(#page-account,#page-admin) :is(.dashboard-card,.reward-panel,.wallet-panel,.security-panel,.support-panel,.settings-panel,.clan-panel,.admin-panel,.wheel-panel,.wheel-info-card,.events-side-panel){padding:22px;border-color:#35515f;border-radius:14px;background:linear-gradient(145deg,#102735e8,#081a27f2);box-shadow:inset 0 1px #9bcdd409,0 10px 28px #00000018;min-width:0}
+:is(#page-account,#page-admin) :is(.dashboard-title,.wallet-panel-title,.security-panel-title,.support-panel-title,.settings-panel-title,.clan-panel-title,.admin-panel-head,.wheel-panel-head){gap:14px;margin-bottom:20px;flex-wrap:wrap}
+:is(#page-account,#page-admin) :is(.dashboard-title,.wallet-panel-title,.security-panel-title,.support-panel-title,.settings-panel-title,.clan-panel-title,.admin-panel-head) h3{font-size:1.25rem}
+.account-hero,.clan-hero{padding:32px;border-color:#486271;border-radius:15px;gap:24px;min-height:260px}
+.account-status-row,.clan-tags,.account-chip{font-size:.8125rem;line-height:1.5;flex-wrap:wrap}
+.account-status-row,.clan-tags{gap:10px}
+.account-chip{padding:7px 11px}
+.today-panel{margin-top:22px;padding:22px;border-color:#35515f;background:#0b202d}
+.today-grid{grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.today-item{min-height:84px;padding:16px;gap:12px;align-items:center}
+.today-copy b{font-size:.875rem;line-height:1.45}
+.today-copy small{font-size:.75rem;line-height:1.5;color:#9ebac8}
+.account-stat-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:22px 0}
+.account-stat{padding:20px 18px;border-color:#35515f;background:#0c2432}
+.account-stat-label{font-size:.75rem;min-height:36px;color:#abc6d1;line-height:1.5;letter-spacing:.04em}
+.account-stat-value{font-size:1.875rem;line-height:1.2;margin:10px 0}
+.account-stat-foot{font-size:.75rem;color:#91b2c1;line-height:1.5}
+.account-dashboard-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:22px}
+.detail-item{min-width:0;padding:14px;overflow-wrap:anywhere}
+.detail-item span{font-size:.75rem;color:#9fbac6}
+.detail-item b{font-size:.875rem;line-height:1.5}
+.quick-action-grid{gap:10px}
+.quick-btn{gap:12px;padding:15px;min-height:64px;text-align:left}
+.badge-panel{padding:22px;margin:22px 0;border-color:#35515f;background:#0b202d}
+.badge-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(108px,1fr));gap:12px}
+.account-badge{padding:16px 10px;min-height:138px;border-color:#45627050;background:#132b3650}
+.account-badge>span{font-size:1.5rem;color:#d6bb83}
+.account-badge b{font-size:.8125rem;line-height:1.5;display:block;margin:12px 0 6px}
+.account-badge small{font-size:.75rem;line-height:1.5;color:#a0bac5}
+.account-badge.locked{opacity:.58}
+.activity-records-grid,.clan-main-grid,.clan-secondary-grid,.calendar-bottom-grid,.support-faq-grid,.settings-grid,.wallet-grid,.security-grid,.reward-grid,.promo-grid{gap:20px;margin-top:20px;min-width:0}
+.activity-item,.transaction-item,.session-row,.security-action-row,.setting-group,.connection-row,.login-entry{padding-block:16px;gap:14px}
+.activity-item small,.transaction-item small,.session-row small,.connection-row small{color:#9ab7c5;line-height:1.5}
+.activity-item p,.transaction-item p{line-height:1.6}
+.setting-languages{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.setting-lang{padding:12px;gap:8px;justify-content:center;border-color:#3e5e6b}
+.setting-languages .flag{width:24px;height:16px}
+.settings-two-col{gap:16px}
+.setting-group label{font-size:.875rem;line-height:1.5;margin-bottom:9px;display:block;color:#bed6e0}
+.switch-row{gap:18px;padding:16px 0}
+.switch-row b{font-size:.875rem}
+.switch-row small{font-size:.8125rem;line-height:1.55;color:#9db8c5}
+#page-account .toggle-switch,#page-admin .toggle-switch{position:relative;min-width:52px;width:52px;height:44px;min-height:44px;flex-shrink:0;border:0!important;background:transparent!important;padding:0!important;box-shadow:none}
+.toggle-switch::before{content:'';position:absolute;inset:9px 0;border-radius:20px;border:1px solid #577584;background:#162f3d}
+.toggle-switch.on::before{background:#2e6875;border-color:#78c6d0}
+.toggle-switch span{position:absolute;top:13px;left:5px;width:18px;height:18px;border-radius:50%;background:#b7cbd6;transform:none}
+.toggle-switch.on span{left:29px;background:#d8fcff;transform:none}
+.notification-menu{top:54px;max-height:min(640px,calc(100dvh - 110px));overflow:auto;border-color:#486778}
+.notification-menu-head{padding:20px;gap:16px;flex-wrap:wrap}
+.notification-menu-head>b,.notification-menu-head b{font-size:1rem}
+.notification-menu-head span{font-size:.8125rem;line-height:1.5}
+.notification-menu button{min-height:44px;font-size:.8125rem}
+.notification-item{padding:16px;gap:12px}
+.notification-item b{font-size:.875rem;line-height:1.5}
+.notification-item small,.notification-item em{font-size:.75rem;line-height:1.6}
+
+/* Character and clan cards. */
+.character-grid{grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:20px}
+.character-card{border-color:#47636e;border-radius:14px;background:linear-gradient(165deg,#183242,#081a28);box-shadow:0 14px 32px #00000025;transition:transform .2s,border-color .2s;cursor:pointer}
+.character-card:hover{border-color:#9ebebf;transform:translateY(-3px)}
+.character-card:focus-visible{outline:2px solid #8bdae5;outline-offset:4px}
+.character-art{height:168px;padding:20px;background-position:75% 42%}
+.character-art::after{background:linear-gradient(transparent,#0c2030)}
+.class-emblem.realm-class-icon{width:76px;height:76px;font-size:3.6rem;border-radius:11px;transform:translateY(8px);box-shadow:inset 0 0 0 4px #07172190,0 12px 30px #0007!important}
+.character-body{padding:6px 20px 20px}
+.character-name-row{gap:12px;align-items:flex-start}
+.character-name{font-size:1.5rem;overflow-wrap:anywhere;line-height:1.3}
+.character-class{font-size:.875rem;color:#a6c2ce;margin-top:6px}
+.char-level{flex-shrink:0;min-width:42px;font-size:1.375rem;line-height:1.3}
+.char-level small{font-size:.75rem}
+.char-status{min-height:28px;font-size:.75rem;padding:5px 10px;line-height:1.4}
+.char-stats{gap:10px}
+.char-stats.combat-trio{grid-template-columns:repeat(3,minmax(0,1fr))}
+.char-stats.info-trio{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:12px}
+.char-stats.info-trio .char-stat:last-child{grid-column:1/-1}
+.char-stat{padding:12px 9px;min-width:0;background:#0717216b;border-color:#39576766}
+.char-stat span{font-size:.75rem;color:#a4bfcb}
+.char-stat b{font-size:1.125rem;line-height:1.5;overflow-wrap:anywhere}
+.info-trio .char-stat b{font-size:.875rem}
+.char-footer{padding-top:16px;margin-top:16px;gap:12px;flex-wrap:wrap}
+.char-footer .profile-link{font-size:.875rem;min-height:44px;display:inline-flex;align-items:center;color:#ddc58e}
+.char-clan{font-size:.8125rem;color:#b8d1dc}
+.clan-crest-large.realm-clan-crest{width:100px;height:114px;font-size:5rem}
+.clan-hero h2{font-size:2.25rem}
+.clan-stat-grid{gap:14px;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));margin-top:20px}
+.clan-stat{padding:18px;border-color:#385563;background:#0c2534}
+.clan-stat span{font-size:.75rem;color:#a3bfcc}
+.clan-stat b{font-size:1.75rem}
+.clan-member{gap:14px;padding:17px 0}
+.clan-member b{font-size:.9375rem;line-height:1.5}
+.clan-member small{font-size:.75rem;line-height:1.6;color:#a0bac7}
+.clan-member>strong{font-size:.875rem;color:#d9c28e}
+.member-avatar.realm-class-icon{width:46px;height:46px;border-radius:10px;font-size:2.5rem}
+.member-status{font-size:.75rem}
+.war-crest.realm-clan-crest{width:52px;height:58px;font-size:2.75rem}
+.war-clan b{font-size:1rem}
+.war-clan small{font-size:.8125rem;line-height:1.5}
+.war-score{gap:12px;flex-wrap:wrap}
+#page-rankings .rank-avatar.realm-class-icon,#page-rankings .clan-rank-crest.realm-clan-crest{width:48px;height:48px;font-size:2.8rem}
+#page-rankings .rank-number.realm-rank-emblem{width:64px;height:38px;gap:7px}
+#page-rankings .podium-medal.realm-rank-emblem{position:absolute;top:18px;right:20px;min-width:64px;height:42px;padding:8px 10px;border:1px solid;border-radius:9px;font-size:1rem;opacity:1}
+#page-rankings .rank-podium-button{padding-top:28px}
+#page-rankings .rank-podium-button .place{padding-right:76px}
+.public-profile-card,.public-clan-card,.character-profile{border-color:#54717d;box-shadow:0 28px 90px #0009;background:#091b28}
+.public-avatar.realm-class-icon{width:92px;height:92px;font-size:5.2rem;border-radius:14px}
+.public-clan-crest.realm-clan-crest{width:94px;height:105px;font-size:5rem}
+.public-clan-leader-avatar.realm-class-icon,.public-clan-member-avatar.realm-class-icon{width:48px;height:48px;font-size:2.7rem}
+.public-profile-rank strong.realm-rank-emblem,.public-clan-rank strong.realm-rank-emblem{min-width:74px;min-height:42px;padding:9px;border:1px solid;border-radius:9px}
+.public-profile-title h2,.public-clan-title h2,.profile-title h2{font-size:2rem}
+.public-profile-title p,.public-clan-title p{font-size:.875rem;line-height:1.6}
+.public-profile-body,.public-clan-body,.profile-content{padding:26px}
+.public-main-stats,.public-clan-stats,.profile-stat-grid{gap:12px}
+.public-main-stats>div,.public-clan-stats>div,.profile-stat{padding:16px;min-width:0}
+.public-main-stats small,.public-clan-stats small,.profile-stat small{font-size:.75rem;line-height:1.5}
+.public-main-stats strong,.public-clan-stats strong{font-size:1.75rem}
+.public-profile-panel,.public-clan-panel,.profile-box{padding:20px;border-color:#365563;background:#0e2635}
+.public-profile-grid,.public-clan-grid,.public-expanded-grid{gap:18px}
+.public-panel-head{gap:14px;margin-bottom:18px}
+.public-panel-head h3{font-size:1.375rem}
+.public-detail-row,.public-combat-line,.profile-row{font-size:.875rem;padding-block:12px;gap:16px;line-height:1.5}
+.public-detail-row span,.profile-row span{color:#a4c0ce}
+.public-clan-member b,.public-clan-leader b{font-size:1rem}
+.public-clan-member small,.public-clan-leader small{font-size:.8125rem;line-height:1.5}
+.public-clan-member button,.public-clan-leader em,.public-profile-actions button,.public-clan-actions button,.character-actions button{font-size:.875rem;min-height:44px;padding:12px 16px;line-height:1.4}
+.public-profile-clan,.public-clan-castle{padding:14px 18px}
+.public-profile-clan small,.public-clan-castle small{font-size:.75rem}
+.public-profile-clan b,.public-clan-castle b{font-size:1rem}
+.public-profile-privacy{font-size:.75rem;line-height:1.65}
+
+/* Admin uses the same spacing and controls, with readable data tables. */
+.admin-wrap{max-width:1540px;grid-template-columns:260px minmax(0,1fr);padding:0 28px;gap:24px;margin-top:30px}
+.admin-sidebar{top:98px;height:calc(100dvh - 120px);min-height:0;padding:18px;overflow-y:auto;scrollbar-width:thin}
+.admin-brand{margin-bottom:16px;padding:8px 5px 18px}
+.admin-brand b{font-size:1rem}
+.admin-brand small{font-size:.75rem}
+.admin-profile{margin-top:22px;padding-top:18px}
+.admin-topline,.admin-section-head{align-items:center;flex-wrap:wrap;gap:18px;margin-bottom:24px}
+.admin-topline h1,.admin-topline h2{margin:6px 0;font-size:2rem}
+.admin-top-actions{gap:10px;flex-wrap:wrap}
+.admin-top-actions .admin-live{font-size:.75rem;line-height:1.5}
+.admin-icon-btn{width:44px;height:44px}
+.admin-kpi-grid{grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:14px;margin-bottom:22px}
+.admin-kpi{padding:20px 18px;border-color:#3a5968;border-radius:12px;background:linear-gradient(145deg,#102c3c,#091b29)}
+.kpi-top{gap:10px;min-height:40px;align-items:flex-start}
+.kpi-top small{font-size:.75rem;line-height:1.5;letter-spacing:.05em;color:#a9c6d3}
+.admin-kpi>strong{font-size:1.875rem;line-height:1.3;margin:12px 0;display:block}
+.admin-kpi>div:last-child{display:flex;gap:6px;flex-wrap:wrap;line-height:1.5}
+.admin-kpi>div:last-child :is(b,span){font-size:.75rem}
+.admin-overview-grid{grid-template-columns:minmax(0,1.2fr) minmax(270px,.8fr);gap:20px}
+.admin-triple-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:20px}
+.admin-mini-list>div,.admin-health-list>div{gap:12px;padding-block:14px;line-height:1.5}
+.admin-mini-list b,.admin-health-list b{font-size:.875rem}
+.admin-mini-list small{font-size:.75rem;color:#9fbac8}
+.admin-risk-strip{padding:22px;gap:24px;flex-wrap:wrap}
+.admin-risk-strip small{font-size:.75rem;line-height:1.6}
+.risk-strip-stats{flex-wrap:wrap;gap:16px}
+.admin-toolbar{gap:12px;padding:16px;flex-wrap:wrap;background:#0a202d;border-color:#35515f}
+.admin-search{min-width:min(240px,100%);flex:1 1 260px}
+.admin-search input{width:100%;font-size:.875rem!important}
+.admin-table-wrap,.permission-table-wrap{border-color:#375664;border-radius:12px;overflow:auto;max-width:100%;scrollbar-color:#52798a #0a1b29}
+.admin-table{min-width:1040px;width:100%;font-size:.875rem;line-height:1.6}
+.admin-table th,.permission-table th{font-size:.75rem;line-height:1.5;padding:15px;background:#102936;color:#abc8d5;letter-spacing:.06em;white-space:nowrap}
+.admin-table td,.permission-table td{font-size:.875rem;line-height:1.6;padding:16px 15px;border-bottom-color:#294855;vertical-align:middle}
+.admin-table td small{font-size:.75rem;line-height:1.6;color:#9db9c8;display:block;margin-top:4px}
+.admin-table td button{padding:9px 13px;min-width:60px}
+.admin-table tbody tr:hover,.permission-table tbody tr:hover{background:#173241}
+.admin-status,.ticket-priority,.case-risk,.staff-session{font-size:.75rem;line-height:1.5;min-height:26px;padding:5px 9px;white-space:nowrap}
+.permission-table{min-width:800px}
+.admin-note,.admin-global-note,.permission-note{font-size:.8125rem;line-height:1.65;color:#98b7c5;padding:16px;margin-top:20px}
+.content-admin-grid,.server-admin-grid,.moderation-layout,.economy-grid,.economy-bottom-grid,.staff-overview-grid,.support-admin-layout{gap:20px;min-width:0}
+.composer-row{margin-bottom:18px}
+.composer-row label{font-size:.875rem;display:block;margin-bottom:8px;color:#b2ccd7}
+.composer-two{gap:16px}
+.admin-ticket-list>button,.case-row,.staff-row,.staff-session-row{padding:16px;gap:14px;line-height:1.5}
+.admin-ticket-list b,.case-row b,.staff-row b{font-size:.875rem}
+.admin-ticket-list small,.case-row small,.staff-row small{font-size:.75rem;line-height:1.6}
+.ticket-preview-message,.ticket-preview-order{padding:18px;font-size:.9375rem;line-height:1.7}
+.case-evidence-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.moderation-actions,.ticket-admin-actions,.wheel-editor-actions,.launcher-actions,.order-actions,.admin-modal-actions{flex-wrap:wrap;gap:10px}
+.wheel-admin-layout{grid-template-columns:minmax(0,1.4fr) minmax(310px,1fr);gap:20px}
+.wheel-admin-columns,.wheel-admin-row{grid-template-columns:24px minmax(74px,.6fr) minmax(140px,1.6fr) minmax(68px,.6fr) minmax(68px,.6fr) 44px;gap:8px}
+.wheel-admin-columns{font-size:.75rem;padding-bottom:12px;color:#a4c0cc}
+#page-admin .wheel-admin-row input{padding:10px 8px;min-width:0;width:100%;font-size:.875rem}
+.wheel-admin-row>span{font-size:.75rem;color:#9cbdcc}
+.wheel-admin-row>button{width:44px;min-width:44px;min-height:44px;font-size:1.25rem}
+.wheel-admin-kpis{gap:14px;grid-template-columns:repeat(4,minmax(0,1fr))}
+.wheel-admin-kpis>div{padding:16px}
+.wheel-admin-kpis small{font-size:.75rem;line-height:1.6}
+.wheel-admin-kpis strong{font-size:1.5rem}
+.wheel-hero-grid{gap:22px;grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr)}
+.wheel-controls{gap:12px;flex-wrap:wrap}
+.wheel-controls label{flex:1 1 210px}
+.wheel-controls select{width:100%}
+.wheel-reward-grid{grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:12px}
+.wheel-reward-card{padding:16px;min-width:0}
+.wheel-reward-card :is(b,small){line-height:1.5}
+.wheel-rule-list li{line-height:1.65;font-size:.875rem}
+
+/* Dialogs remain usable with enlarged text. */
+:is(.support-modal-card,.security-modal-card,.admin-modal-card,.wheel-result-card,.character-profile,.public-profile-card,.public-clan-card){max-height:calc(100dvh - 48px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
+:is(.support-modal,.security-modal,.admin-modal,.wheel-result-pop,.character-modal,.public-profile-modal,.public-clan-modal){padding:24px}
+.modal-close{width:44px;height:44px;min-height:44px;font-size:1.5rem;top:12px;right:12px;line-height:1;border-color:#577582;background:#0c2232e8}
+:is(.support-modal-card,.security-modal-card,.admin-modal-card){padding:32px;border-color:#4c6979;background:linear-gradient(140deg,#153043,#071924)}
+:is(.support-modal-card,.security-modal-card,.admin-modal-card) :is(p,label){font-size:.9375rem;line-height:1.65}
+:is(.support-modal-card,.security-modal-card,.admin-modal-card) :is(input,select,textarea,button){min-height:44px;font-size:.875rem}
+
+/* Existing Info, Download and community pages share the same scale and palette. */
+.inner-page .header{height:auto;min-height:84px;background:#06141ff0;border-color:#35515f;padding:18px 4%;gap:22px}
+.inner-page .header nav{height:auto;gap:22px}
+.inner-page .header nav a{font-size:.875rem;min-height:44px;display:inline-flex;align-items:center}
+.inner-page .header nav a.active::after{bottom:-19px}
+.inner-page .small-button,.inner-page .button{min-height:46px;font-size:.875rem;padding:12px 18px;line-height:1.5}
+.inner-page .header .brand{font-size:1.125rem}
+.inner-page .header .brand small{font-size:.75rem}
+.inner-page .page-heading{padding-top:54px;padding-bottom:36px}
+.inner-page .page-heading h1{font-size:clamp(2rem,4vw,3.25rem)}
+.inner-page .page-heading p{font-size:1rem;line-height:1.7;color:#a4bdc9}
+.inner-page :is(.info-card,.download-card,.profile-card,.clan-card){border-color:#3b5b6c;background:linear-gradient(145deg,#112b3b,#081a28);border-radius:13px}
+.inner-page .info-card{padding:28px}
+.inner-page .card-heading h2{font-size:1.5rem}
+.inner-page .info-shortcuts{gap:10px}
+.inner-page .info-shortcuts a{min-height:44px;display:inline-flex;align-items:center;padding:10px 17px;border-radius:8px;border-color:#3f6170;font-size:.875rem}
+.inner-page :is(.rates-table,.compact-specs,.command-list,.event-tags){font-size:.875rem;line-height:1.65}
+.inner-page :is(.rates-table th,.rates-table td,.compact-specs dt,.compact-specs dd,.command-list span,.command-list code){font-size:.875rem;line-height:1.6;padding-block:13px}
+.inner-page :is(.card-note,.draft-notice p,.schedule){font-size:.8125rem;line-height:1.7;color:#a0bcc9}
+.inner-page .draft-notice{padding:20px 22px;border-radius:10px;border-color:#c3a2685c;background:#ad915411}
+.inner-page .download-card{padding:28px;min-height:120px;gap:20px}
+.inner-page .download-card strong{font-size:1.125rem}
+.inner-page .download-card small,.inner-page .availability{font-size:.875rem;line-height:1.6}
+.inner-page .language-picker summary{min-height:44px;display:flex;align-items:center;font-size:.875rem}
+.inner-page .language-options button{min-height:46px;font-size:.875rem}
+
+@media (max-width:1350px){
+  .admin-overview-grid{grid-template-columns:1fr}
+  .admin-triple-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .wheel-admin-layout{grid-template-columns:1fr}
+  .wheel-preview-panel{max-width:none}
+  .nav button,.ghost{padding-inline:10px}
+  .inner-page .small-button{display:none}
+}
+@media (max-width:1150px){
+  .admin-wrap{grid-template-columns:1fr;padding:0 22px}
+  .admin-sidebar{display:none}
+  .admin-mobile-tabs{display:flex}
+  .admin-kpi-grid{grid-template-columns:repeat(auto-fit,minmax(165px,1fr))}
+  .account-v2{grid-template-columns:1fr}
+  .account-v2 .sidebar{display:none}
+  .account-subnav{display:flex}
+}
+@media (max-width:1100px){
+  .topbar{min-height:76px;padding:12px 18px}
+  .mobile-tabs{top:76px;z-index:25}
+  .inner-page .header{flex-wrap:wrap}
+  .inner-page .header nav{order:3;width:100%;height:auto;overflow:auto;white-space:nowrap;padding-top:8px;gap:22px}
+  .inner-page .header nav a.active::after{bottom:-7px}
+  .inner-page .header-actions{margin-left:auto}
+  .account-v2{padding:0 22px}
+  .wheel-hero-grid{grid-template-columns:1fr}
+  .notification-menu{right:-100px}
+}
+@media (max-width:850px){
+  .account-dashboard-grid,.activity-records-grid,.clan-main-grid,.clan-secondary-grid,.calendar-bottom-grid,.support-main-grid,.support-faq-grid,.settings-grid,.wallet-grid,.security-grid,.reward-grid,.promo-grid,.content-admin-grid,.server-admin-grid,.moderation-layout,.economy-grid,.economy-bottom-grid,.staff-overview-grid,.support-admin-layout{grid-template-columns:1fr}
+  .admin-triple-grid{grid-template-columns:1fr}
+  .account-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .admin-kpi-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .service-grid{grid-template-columns:1fr}
+  .event-filters{max-width:100%;flex-wrap:nowrap}
+  .events-toolbar{flex-wrap:wrap;gap:14px}
+  .week-calendar{grid-template-columns:repeat(7,minmax(66px,1fr));overflow-x:auto;padding-bottom:8px}
+  .day-track{grid-template-columns:repeat(7,minmax(70px,1fr));overflow-x:auto;padding-bottom:10px}
+  .public-main-stats,.public-clan-stats,.profile-stat-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (max-width:700px){
+  body[data-current-page="home"] .topbar{min-height:76px}
+  body[data-current-page="home"] .mobile-tabs{margin-top:76px;top:0}
+  .topbar{gap:10px;padding-inline:14px}
+  .topbar .right{gap:8px}
+  .topbar .brand strong{font-size:1rem}
+  .topbar .brand .crest{width:32px;height:36px}
+  .topbar .lang-btn{padding:9px 10px;font-size:.875rem;gap:7px}
+  .topbar .cta{display:none}
+  .topbar .lang-btn .flag{width:22px;height:15px}
+  .topbar #currentLang{max-width:80px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .mobile-tabs{padding:10px 14px}
+  .account-v2,.admin-wrap{padding:0 14px;margin-top:20px;gap:18px}
+  .account-subnav,.admin-mobile-tabs{margin-bottom:18px}
+  :is(#page-account,#page-admin) :is(.dashboard-card,.reward-panel,.wallet-panel,.security-panel,.support-panel,.settings-panel,.clan-panel,.admin-panel,.wheel-panel,.wheel-info-card,.events-side-panel){padding:18px}
+  .account-hero,.clan-hero{padding:24px 20px;min-height:250px;flex-wrap:wrap}
+  .account-hero h2{font-size:1.875rem}
+  .account-hero .power-orb{display:none}
+  .account-status-row{max-width:100%}
+  .account-stat-grid{gap:10px}
+  .account-stat{padding:16px 13px}
+  .account-stat-value{font-size:1.625rem}
+  .today-panel,.badge-panel{padding:18px}
+  .today-panel-head{align-items:flex-start;gap:10px;flex-wrap:wrap}
+  .today-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .today-item{padding:12px;gap:8px;flex-wrap:wrap}
+  .today-copy{min-width:0;flex:1 1 86px}
+  .today-arrow{display:none}
+  .detail-grid,.quick-action-grid{grid-template-columns:1fr}
+  .quick-btn.wide{grid-column:auto}
+  .detail-item b{overflow-wrap:anywhere}
+  .character-grid{grid-template-columns:1fr}
+  .character-art{height:170px}
+  .character-body{padding-inline:20px}
+  .character-name{font-size:1.625rem}
+  .character-head,.characters-head,.rewards-head,.wallet-head,.security-head,.support-head,.settings-head,.events-head,.wheel-page-head{gap:14px;flex-wrap:wrap}
+  .character-head p,.characters-head p,.rewards-head p,.wallet-head p,.security-head p,.support-head p,.settings-head p{font-size:.9375rem;line-height:1.65}
+  .clan-crest-large.realm-clan-crest{width:78px;height:88px;font-size:4rem}
+  .clan-hero h2{font-size:1.875rem}
+  .clan-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .clan-member{grid-template-columns:46px minmax(0,1fr) auto;gap:12px}
+  .clan-member>strong{grid-column:2;font-size:.8125rem}
+  .clan-member .member-status{grid-column:3;grid-row:1 / span 2;white-space:nowrap}
+  .session-row,.security-action-row,.connection-row,.setting-group{flex-wrap:wrap;gap:12px}
+  .session-device{min-width:0;flex:1 1 180px}
+  .session-location{margin-left:0}
+  .session-row .session-revoke{margin-left:auto}
+  .ticket-row{gap:12px;flex-wrap:wrap}
+  .ticket-main{min-width:0;flex:1 1 150px}
+  .ticket-date{font-size:.75rem;white-space:normal}
+  .settings-two-col,.privacy-grid{grid-template-columns:1fr}
+  .admin-topline{align-items:flex-start}
+  .admin-top-actions{width:100%}
+  .admin-kpi-grid{gap:10px}
+  .admin-kpi{padding:16px 13px}
+  .admin-kpi>strong{font-size:1.625rem}
+  .kpi-top{gap:8px}
+  .admin-kpi-grid .admin-kpi:last-child:nth-child(odd){grid-column:1/-1}
+  .admin-risk-strip{padding:18px;gap:18px}
+  .risk-strip-stats{width:100%;justify-content:space-between}
+  .admin-toolbar{padding:12px}
+  .admin-toolbar>*{max-width:100%}
+  .admin-search{width:100%;min-width:0;flex-basis:100%}
+  .admin-toolbar select{flex:1 1 150px}
+  .case-evidence-grid{grid-template-columns:1fr 1fr}
+  .case-preview-top{flex-wrap:wrap;gap:16px}
+  .composer-two{grid-template-columns:1fr}
+  .wheel-admin-kpis{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .wheel-admin-columns{display:none}
+  .wheel-admin-row{grid-template-columns:24px minmax(0,1fr) minmax(0,1fr) 44px;gap:10px;padding:16px 0}
+  .wheel-admin-row>span{grid-column:1;grid-row:1}
+  .wheel-admin-row>[data-field="id"]{grid-column:2;grid-row:1}
+  .wheel-admin-row>[data-field="name"]{grid-column:2 / 4;grid-row:2}
+  .wheel-admin-row>[data-field="amount"]{grid-column:3;grid-row:1}
+  .wheel-admin-row>[data-field="chance"]{grid-column:2;grid-row:3}
+  .wheel-admin-row>button{grid-column:4;grid-row:1 / span 2;align-self:start}
+  .wheel-reward-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .wheel-stage-panel{padding:22px 12px}
+  .wheel-info-card{padding:18px}
+  .wheel-controls select{width:100%}
+  .wheel-controls .wheel-spin-button{width:100%;min-height:58px}
+  .notification-menu{position:fixed;top:84px;left:12px;right:12px;width:auto;max-height:calc(100dvh - 100px)}
+  .notification-menu-head{padding:18px}
+  :is(.support-modal,.security-modal,.admin-modal,.wheel-result-pop,.character-modal,.public-profile-modal,.public-clan-modal){padding:12px}
+  :is(.support-modal-card,.security-modal-card,.admin-modal-card,.wheel-result-card,.character-profile,.public-profile-card,.public-clan-card){max-height:calc(100dvh - 24px);margin:0;width:100%}
+  :is(.support-modal-card,.security-modal-card,.admin-modal-card){padding:28px 20px}
+  .profile-hero,.public-profile-banner,.public-clan-banner{padding:68px 20px 24px;gap:16px;min-height:235px}
+  .public-profile-banner,.public-clan-banner{grid-template-columns:auto minmax(0,1fr)}
+  .public-profile-rank,.public-clan-rank{top:14px;left:20px}
+  .public-profile-rank small,.public-clan-rank small{font-size:.75rem}
+  .public-profile-title h2,.public-clan-title h2,.profile-title h2{font-size:1.625rem;overflow-wrap:anywhere}
+  .public-profile-title p,.public-clan-title p{font-size:.8125rem}
+  .public-avatar.realm-class-icon{width:68px;height:68px;font-size:3.8rem}
+  .public-clan-crest.realm-clan-crest{width:66px;height:78px;font-size:3.6rem}
+  .public-profile-clan,.public-clan-castle{grid-column:1/-1;max-width:none;width:100%;padding:13px 16px}
+  .public-profile-body,.public-clan-body,.profile-content{padding:18px}
+  .public-main-stats,.public-clan-stats,.profile-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .public-main-stats>div,.public-clan-stats>div,.profile-stat{padding:14px 12px}
+  .public-main-stats>div:last-child:nth-child(odd),.public-clan-stats>div:last-child:nth-child(odd){grid-column:1/-1}
+  .public-main-stats strong,.public-clan-stats strong{font-size:1.5rem}
+  .public-profile-grid,.public-clan-grid,.public-expanded-grid,.profile-sections{grid-template-columns:1fr;gap:14px}
+  .public-profile-panel,.public-clan-panel,.profile-box{padding:18px}
+  .public-clan-member,.public-clan-leader{gap:12px;flex-wrap:wrap}
+  .public-clan-member>div{min-width:0;flex:1 1 130px}
+  .public-clan-member button{margin-left:60px}
+  .public-badges{grid-template-columns:1fr}
+  .public-badge{padding:14px}
+  #page-rankings .podium-medal.realm-rank-emblem{top:12px;right:12px;min-width:42px;height:36px;padding:6px;gap:4px}
+  #page-rankings .podium-medal .realm-icon{font-size:.75rem}
+  #page-rankings .podium-medal .realm-rank-value{font-size:.75rem}
+  #page-rankings .rank-podium-button{padding-top:58px}
+  #page-rankings .rank-podium-button .place{padding-right:0}
+  .inner-page .header{min-height:78px;padding:16px 6%;gap:16px}
+  .inner-page .header nav{display:none;position:absolute;top:100%;left:0;right:0;padding:16px 6%;background:#081c2afa;border-bottom:1px solid #3c6172;z-index:50;max-height:calc(100dvh - 100px);overflow:auto;white-space:normal}
+  .inner-page .header nav.open{display:flex;gap:6px}
+  .inner-page .header nav a{width:100%;padding:8px 12px;border-radius:8px;min-height:44px}
+  .inner-page .header nav a.active{background:#1e3e4d;color:#e8d6af}
+  .inner-page .header nav a.active::after{display:none}
+  .inner-page .header .menu{min-width:44px;min-height:44px;display:block;border:1px solid #355967;border-radius:8px;font-size:1.5rem}
+  .inner-page .header .brand{font-size:1rem}
+  .inner-page .header .crest{font-size:2rem}
+  .inner-page .header .brand small{font-size:.625rem;letter-spacing:.14em}
+  .inner-page .info-card{padding:22px}
+  .inner-page .download-card{padding:22px;gap:16px;flex-wrap:wrap}
+  .inner-page .download-card .availability{margin-left:64px}
+  .inner-page .compact-specs{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){.character-card,.realm-class-icon,.realm-clan-crest{transition:none!important}.character-card:hover{transform:none}}

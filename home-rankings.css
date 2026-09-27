@@ -1,0 +1,247 @@
+/* The original full-width Fafurion landing scene, isolated from the portal. */
+body[data-current-page="home"] { background: #050d14; }
+body[data-current-page="home"]::before { display: none; }
+body[data-current-page="home"] .topbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding-inline: 5%;
+  background: linear-gradient(#050d14e8, #050d1460);
+  border-bottom-color: #b4ddec1c;
+  backdrop-filter: blur(6px);
+}
+body[data-current-page="home"] .nav button.active {
+  color: #e3d1aa;
+  background: #c7ad7710;
+  box-shadow: inset 0 -2px #c7ad77;
+}
+#page-home { background: #050d14; }
+.home-scene {
+  position: relative;
+  isolation: isolate;
+  min-height: 730px;
+  height: 860px;
+  overflow: hidden;
+  color: #e9eff1;
+}
+.home-art {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  background-color: #050d14;
+  background-image: url('assets/dragon-selected.webp');
+  background-position: center top;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+.home-scene::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(0deg, #050d14, transparent 32%, transparent 85%, #030c1460);
+}
+.home-light {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 70% 40%, #00d9ff17, transparent 40%);
+  mix-blend-mode: screen;
+}
+.home-top {
+  position: absolute;
+  top: 140px;
+  left: 5%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #a2b7c2;
+  font-size: 12px;
+  letter-spacing: .2em;
+}
+.home-top > span { width: 36px; height: 1px; background: #a39473; }
+.home-copy { position: absolute; top: clamp(450px, 32vw, 610px); left: 5%; width: 650px; max-width: 60%; }
+.home-eyebrow { margin-bottom: 12px; color: #c1d7de; font-size: 12px; letter-spacing: .2em; line-height: 1.6; }
+.home-title { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.home-subtitle { font: 400 32px/1.3 Georgia, serif; color: #ded4ba; }
+.home-copy p { margin: 14px 0 0; color: #b2c4cf; font-size: 16px; line-height: 1.7; max-width: 420px; }
+.home-buttons { display: flex; gap: 16px; margin-top: 32px; }
+.home-button {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  min-height: 58px;
+  padding: 16px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  text-align: center;
+  line-height: 1.4;
+  transition: transform .2s, box-shadow .2s, background .2s;
+}
+.home-primary { color: #f7eaca; background: linear-gradient(115deg, #a48a4e, #69562f); border: 1px solid #e1c787; box-shadow: 0 0 28px #ad894325; text-shadow: 0 1px 2px #342d1c; }
+.home-primary::after { content: ''; position: absolute; inset: 3px; border: 1px solid #dfc28240; pointer-events: none; }
+.home-secondary { border: 1px solid #779aa680; background: #091a24b8; color: #cee3e9; }
+.home-button:hover { transform: translateY(-3px); box-shadow: 0 0 35px #cdb27235; }
+.home-discover { position: absolute; bottom: 37px; left: 5%; display: flex; align-items: center; gap: 18px; min-height: 44px; color: #aac2cd; font-size: 12px; letter-spacing: .15em; }
+.home-discover i { height: 1px; width: 65px; background: linear-gradient(90deg, #a4b7b8, transparent); }
+.home-side { position: absolute; right: 30px; top: 40%; writing-mode: vertical-rl; display: flex; align-items: center; gap: 25px; font-size: 12px; letter-spacing: .2em; color: #b5cbd4; }
+.home-side span:first-child { color: #e2d4b2; font-size: 14px; }
+.home-side i { height: 90px; width: 1px; background: #99c4cd50; }
+.home-caption { position: absolute; bottom: 50px; right: 5%; text-align: right; }
+.home-caption span { display: block; color: #97bdc6; font-size: 12px; letter-spacing: .15em; }
+.home-caption span + span { margin-top: 9px; font: 18px Georgia, serif; letter-spacing: 0; color: #c2d7dd; }
+
+/* Larger ranking controls and a readable leaderboard in the existing palette. */
+#page-rankings .rankings-v2 { max-width: 1240px; padding: 50px 28px 80px; }
+#page-rankings .section-head { gap: 24px; margin-bottom: 30px; align-items: center; }
+#page-rankings .section-head h2 { font-size: clamp(30px, 3.5vw, 44px); margin: 10px 0 12px; color: #edf5f5; }
+#page-rankings .section-head .eyebrow { font-size: 12px; color: #d4b779; letter-spacing: .2em; }
+#page-rankings .rank-profile-hint { gap: 9px; color: #9db7c1; font-size: 14px; line-height: 1.6; }
+#page-rankings .section-head .status { font-size: 13px; color: #b1c8cf; line-height: 1.5; flex-shrink: 0; }
+#page-rankings .ranking-mode-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: min(660px, 100%);
+  gap: 8px;
+  padding: 7px;
+  margin-bottom: 28px;
+  border: 1px solid #34515d;
+  border-radius: 16px;
+  background: #06131ccf;
+  box-shadow: 0 12px 35px #00000020;
+}
+#page-rankings .ranking-mode-tabs button {
+  position: relative;
+  justify-content: center;
+  gap: 14px;
+  min-height: 76px;
+  padding: 18px 24px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: #b5cbd3;
+  background: transparent;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.4;
+  text-align: left;
+}
+#page-rankings .ranking-mode-tabs button > span { font-size: 27px; color: #8eb5c1; }
+#page-rankings .ranking-mode-tabs button b { font-weight: 600; }
+#page-rankings .ranking-mode-tabs button:hover { background: #152e3d; color: #f0fbff; }
+#page-rankings .ranking-mode-tabs button.active {
+  background: linear-gradient(115deg, #173d4e, #102633);
+  border-color: #68b9cb;
+  color: #e3fbff;
+  box-shadow: inset 0 1px #abe7f31f, 0 4px 22px #2aa4c51a;
+}
+#page-rankings .ranking-mode-tabs button.active > span { color: #ecd194; }
+#page-rankings .public-podium { gap: 18px; margin-bottom: 28px; }
+#page-rankings .rank-podium-button {
+  min-height: 185px;
+  padding: 26px;
+  border: 1px solid #38525f;
+  border-radius: 14px;
+  background: linear-gradient(125deg, #172a35, #091721);
+  box-shadow: 0 14px 32px #00000020;
+}
+#page-rankings .rank-podium-button:first-child { border-color: #a88b54; background: linear-gradient(125deg, #332e22, #10212a 78%); }
+#page-rankings .rank-podium-button:nth-child(3) { border-color: #775745; }
+#page-rankings .rank-podium-button .place { color: #c8c5b4; font-size: 12px; letter-spacing: .16em; }
+#page-rankings .rank-podium-button strong { font-size: 28px; margin: 12px 0 9px; color: #f0f1ea; }
+#page-rankings .rank-podium-button .muted { color: #b7cbd2; font-size: 16px; }
+#page-rankings .rank-podium-button em { margin-top: 20px; font-size: 12px; color: #d7bd85; letter-spacing: .05em; line-height: 1.5; }
+#page-rankings .podium-medal { top: 20px; right: 24px; font-size: 52px; color: #d8b56b33; }
+#page-rankings .rank-podium-button:nth-child(2) .podium-medal { color: #c4d8e23b; }
+#page-rankings .rank-podium-button:nth-child(3) .podium-medal { color: #d191673f; }
+#page-rankings .rank-table-wrap { border: 1px solid #36515e; border-radius: 14px; background: #0a1822ed; box-shadow: 0 18px 44px #00000024; scrollbar-color: #487282 #081720; }
+#page-rankings .rank-table-wrap table { width: 100%; min-width: 860px; border-collapse: collapse; }
+#page-rankings .rank-table-wrap th { background: #112632; color: #9eb9c6; padding: 18px; font-size: 12px; letter-spacing: .08em; white-space: nowrap; }
+#page-rankings .rank-table-wrap td { padding: 19px 18px; color: #c7dbe3; font-size: 15px; border-bottom: 1px solid #26404c; }
+#page-rankings .rank-table-wrap tr:last-child td { border-bottom: 0; }
+#page-rankings .rank-table-wrap tbody tr:hover { background: #18303d; }
+#page-rankings .rank-table-wrap tbody tr:first-child { background: #d8b56b06; }
+#page-rankings .rank-number { width: 34px; height: 34px; border-radius: 9px; font-size: 14px; color: #a5bec8; border-color: #34515e; }
+#page-rankings .rank-number.top { color: #efd39a; border-color: #b38e5559; background: #d8b56b0c; }
+#page-rankings .rank-player-link { gap: 12px; min-height: 46px; }
+#page-rankings .rank-player-link b,
+#page-rankings .clan-rank-link b { font-size: 16px; color: #e0eef2; display: block; }
+#page-rankings .rank-player-link small,
+#page-rankings .clan-rank-link small { font-size: 12px; color: #96b3c0; margin-top: 5px; display: block; line-height: 1.5; }
+#page-rankings .rank-avatar,
+#page-rankings .clan-rank-crest { width: 44px; height: 44px; flex-shrink: 0; border-radius: 11px; font-size: 13px; background: #15344180; border-color: #477181; }
+#page-rankings .rank-online,
+#page-rankings .rank-offline { font-size: 13px; gap: 7px; }
+#page-rankings .rank-offline { color: #98aeb9; }
+#page-rankings .rank-table-wrap td strong { font-variant-numeric: tabular-nums; }
+#page-rankings .ranking-panel .clan-ranking-head { padding: 24px; margin: 0 0 22px; border: 1px solid #8d784343; border-left: 3px solid #c3a368; border-radius: 12px; background: linear-gradient(100deg, #39332370, #102431b3); }
+#page-rankings .clan-ranking-head .eyebrow { font-size: 12px; color: #d2b779; }
+#page-rankings .clan-ranking-head h3 { margin: 10px 0; font-size: 28px; }
+#page-rankings .clan-ranking-head p { font-size: 14px; line-height: 1.6; color: #a0bac6; }
+#page-rankings .clan-rank-live { font-size: 12px; gap: 8px; color: #97c4ac; }
+#page-rankings .clan-rank-table table { min-width: 960px; }
+#page-rankings .clan-rank-name { gap: 12px; min-height: 46px; }
+#page-rankings .clan-rank-link em { padding-left: 8px; font-size: 20px; color: #80b8c8; }
+#page-rankings .rank-leader-link,
+#page-rankings .rank-leader-static { font-size: 14px; color: #b3d3de; min-height: 44px; }
+#page-rankings .rank-leader-link span { font-size: 14px; color: #86b6c6; }
+#page-rankings .clan-level-badge { height: 34px; min-width: 34px; font-size: 14px; color: #e0c488; border-color: #a78d514a; }
+#page-rankings .castle-owned,
+#page-rankings .castle-none { font-size: 14px; }
+#page-rankings .clan-ranking-note,
+#page-rankings .rank-public-note { padding: 18px 20px; margin-top: 22px; gap: 12px; color: #9bb5c0; font-size: 13px; line-height: 1.65; border-color: #34505b; }
+#page-rankings .rank-public-note p,
+#page-rankings .clan-ranking-note p { font-size: inherit; line-height: inherit; }
+#page-rankings .rank-public-note b { color: #c4dce5; font-size: inherit; }
+
+@media (min-width: 1600px) {
+  .home-scene { height: 950px; }
+  .home-copy { top: 540px; }
+}
+@media (max-width: 1100px) {
+  body[data-current-page="home"] .topbar { min-height: 72px; padding-inline: 18px; }
+  body[data-current-page="home"] .mobile-tabs { margin-top: 72px; top: 0; }
+  .home-scene { height: 730px; min-height: 0; }
+  .home-top { top: 30px; }
+  .home-copy { top: 350px; max-width: 80%; }
+  #page-rankings .section-head { align-items: flex-start; flex-direction: column; gap: 16px; }
+}
+@media (max-width: 700px) {
+  .home-scene { height: auto; min-height: calc(66.67vw + 360px); padding: calc(66.67vw + 22px) 6% 105px; }
+  .home-top { top: 14px; left: 6%; font-size: 10px; letter-spacing: .16em; }
+  .home-top > span { width: 24px; }
+  .home-copy { position: relative; top: auto; left: auto; width: auto; max-width: none; }
+  .home-eyebrow { font-size: 12px; margin-bottom: 14px; }
+  .home-subtitle { font-size: 28px; }
+  .home-copy p { font-size: 16px; }
+  .home-buttons { margin-top: 24px; gap: 12px; flex-wrap: wrap; }
+  .home-button { flex: 1 1 150px; padding: 14px; min-height: 58px; font-size: 14px; gap: 10px; }
+  .home-discover { left: 6%; right: 6%; bottom: 24px; font-size: 12px; }
+  .home-side, .home-caption { display: none; }
+  #page-rankings .rankings-v2 { padding: 32px 16px 50px; }
+  #page-rankings .section-head { margin-bottom: 22px; }
+  #page-rankings .ranking-mode-tabs { width: 100%; gap: 6px; padding: 6px; margin-bottom: 22px; }
+  #page-rankings .ranking-mode-tabs button { min-height: 80px; padding: 15px 10px; font-size: 16px; gap: 9px; }
+  #page-rankings .ranking-mode-tabs button > span { font-size: 23px; }
+  #page-rankings .public-podium { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-bottom: 22px; }
+  #page-rankings .rank-podium-button { min-height: 172px; padding: 18px 11px; border-radius: 11px; }
+  #page-rankings .rank-podium-button strong { font-size: clamp(16px, 4.2vw, 24px); margin: 12px 0 8px; }
+  #page-rankings .rank-podium-button .place { font-size: 12px; letter-spacing: 0; }
+  #page-rankings .rank-podium-button .muted { font-size: 13px; }
+  #page-rankings .rank-podium-button em { font-size: 12px; letter-spacing: 0; margin-top: 15px; overflow-wrap: anywhere; }
+  #page-rankings .podium-medal { top: 9px; right: 8px; font-size: 27px; }
+  #page-rankings .rank-table-wrap td, #page-rankings .rank-table-wrap th { padding: 16px 14px; }
+  #page-rankings .ranking-panel .clan-ranking-head { padding: 20px; }
+  #page-rankings .clan-ranking-head h3 { font-size: 24px; }
+  #page-rankings .clan-ranking-note, #page-rankings .rank-public-note { padding: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #page-home, #page-rankings .ranking-panel { animation: none; }
+  .home-button, #page-rankings .rank-podium-button, #page-rankings .ranking-mode-tabs button { transition: none; }
+}

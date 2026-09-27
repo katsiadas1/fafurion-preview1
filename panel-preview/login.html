@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Fafurion">
+
+    <title>Login - Fafurion</title>
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+<link href="assets/css/fafurion-theme.css?v=1" rel="stylesheet">
+<script src="assets/js/fafurion-theme.js?v=1" defer></script>
+<link rel="stylesheet" href="assets/css/preview.css"><link rel="stylesheet" href="../community.css?v=10"><script src="../translations.js?v=10" defer></script><script src="../i18n.js?v=10" defer></script><script src="../config.js?v=10" defer></script><script src="../community-data.js?v=10" defer></script><script src="../community.js?v=10" defer></script><script src="legacy-preview.js?v=10" defer></script></head>
+
+<body class="bg-gradient-primary fafurion-theme fafurion-auth"><aside class="preview-banner"><p><strong>DESIGN PREVIEW</strong> · Demo data only. Login, account changes and payments are disabled.</p><nav aria-label="Preview pages"><a href="index.html">Interactive demo</a><a href="login.html">Login / Register</a><a href="characters.html">Characters</a><a href="donations.html">Donations</a><a href="reset.html">Reset password</a><a href="../index.html">Website</a></nav></aside>
+
+    <div class="container">
+
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-12 col-md-9">
+				<div class="ff-auth-brand">
+<span class="ff-crest" aria-hidden="true">II</span><span class="ff-wordmark">Fafurion<small>ACCOUNT PANEL</small></span>
+				</div>
+				                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image" role="img" aria-label="Fafurion water dragon"><div class="ff-art-caption"><span>LINEAGE II</span><strong>Fafurion</strong></div></div>
+                            <div class="col-lg-6" id="login-div">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">Login to Fafurion</h1>
+                                    </div>
+                                    <form data-demo-only="true" class="user" method="post" id="login-form">
+                                        <div class="form-group">
+                                            <input disabled type="text" class="form-control form-control-user" placeholder="Account name" value="DemoAccount" name="login_name" autocomplete="username" aria-label="Account name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input disabled type="password" class="form-control form-control-user"
+                                                placeholder="Password" value="PreviewOnly123" name="password" autocomplete="current-password" aria-label="Password" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-control custom-checkbox small">
+                                                <input disabled type="checkbox" class="custom-control-input" id="rememberMe" name="rememberme" value="1">
+                                                <label class="custom-control-label" for="rememberMe">Remember Me</label>
+                                            </div>
+                                        </div>
+                                        <button disabled type="submit" class="btn btn-primary btn-user btn-block">
+                                            Login                                        </button>
+                                    </form>
+                                    <hr>
+                                    <div class="text-center">
+                                        <a class="small reset-btn" href="#">Forgot Password?</a>
+                                    </div>
+                                    <div class="text-center mt-3">
+                                        <a href="#" class="btn btn-secondary btn-user btn-block bordered-btn register-btn">Create a new account</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-none" id="register-div">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">Register at Fafurion</h1>
+                                    </div>
+                                    <form data-demo-only="true" class="user" method="post" id="register-form">
+                                        <div class="form-group">
+                                            <input disabled type="text" class="form-control form-control-user" placeholder="Account name" name="register_name" autocomplete="username" aria-label="Account name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input disabled type="password" class="form-control form-control-user"
+                                                placeholder="Set a password" name="password1" autocomplete="new-password" aria-label="Password" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input disabled type="password" class="form-control form-control-user"
+                                                placeholder="Retype your password" name="password2" autocomplete="new-password" aria-label="Retype your password" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input disabled type="email" class="form-control form-control-user"
+                                                placeholder="Your email" name="email" autocomplete="email" aria-label="Your email" required>
+                                        </div>
+										<button disabled type="submit" class="btn btn-primary btn-user btn-block">
+                                            Register                                        </button>
+										<div class="alert alert-success d-none">Your account has been created, but it requires verification. We have sent you an email with a link to verify your account.</div>
+                                    </form>
+                                    <hr>
+                                    <div class="text-center mt-3">
+                                        <a href="#" class="btn btn-secondary btn-user btn-block bordered-btn login-btn">Back to login</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-none" id="reset-div">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">Reset your password</h1>
+                                    </div>
+                                    <form data-demo-only="true" class="user" method="post" id="reset-form">
+                                        <div class="form-group">
+											<label>Type your account's name</label>
+                                            <input disabled type="text" class="form-control form-control-user" placeholder="Account name" name="reset_password" autocomplete="username" aria-label="Account name" required>
+                                        </div>
+                                        
+										<button disabled type="submit" class="btn btn-primary btn-user btn-block">
+                                            Reset password                                        </button>
+										<div class="alert alert-success d-none">We have sent you an email with a link to change your password.</div>
+                                    </form>
+                                    <hr>
+                                    <div class="text-center mt-3">
+                                        <a href="#" class="btn btn-secondary btn-user btn-block bordered-btn login-btn">Back to login</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				<div class="d-flex justify-content-center">
+					<div class="dropdown">
+						<button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+							English						</button>
+						<div class="dropdown-menu">
+						<a class="dropdown-item" href="#">English</a>						</div>
+					</div>
+				</div>
+								<div class="d-flex justify-content-center mt-4">
+					<a href="../index.html" class="text-white">Back to main website</a>
+				</div>
+				            </div>
+
+        </div>
+
+    </div>
+	
+	<div class="alert-box d-none">
+		<div class="alert alert-danger" role="alert">
+			<div class="d-flex align-items-center justify-content-between">
+				<h4 class="alert-heading">Error...</h4>
+				<a href="#" class="close text-danger"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></a>
+			</div>
+			<p>Something went wrong. Please try again.</p>
+		</div>
+	</div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="assets/js/jquery.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+	<script src="assets/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="assets/js/main.js"></script>
+	
+
+<script src="assets/js/preview.js"></script></body>
+
+</html>
