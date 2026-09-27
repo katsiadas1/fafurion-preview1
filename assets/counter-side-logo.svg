@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 500" role="img" aria-labelledby="title">
+<title id="title">Lineage II Counter</title>
+<defs>
+  <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#f7fdff"/>
+    <stop offset=".2" stop-color="#cde5ea"/>
+    <stop offset=".43" stop-color="#6f9dac"/>
+    <stop offset=".58" stop-color="#edf8fa"/>
+    <stop offset=".78" stop-color="#648f9f"/>
+    <stop offset="1" stop-color="#d8edf1"/>
+  </linearGradient>
+  <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#39c8e4" stop-opacity="0"/>
+    <stop offset=".4" stop-color="#51d8ef" stop-opacity=".8"/>
+    <stop offset=".5" stop-color="#e6fbff"/>
+    <stop offset=".6" stop-color="#51d8ef" stop-opacity=".8"/>
+    <stop offset="1" stop-color="#39c8e4" stop-opacity="0"/>
+  </linearGradient>
+  <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+    <feGaussianBlur stdDeviation="8" result="b"/>
+    <feColorMatrix in="b" type="matrix" values="0 0 0 0 0.15 0 0 0 0 0.78 0 0 0 0 0.95 0 0 0 .7 0"/>
+    <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000" flood-opacity=".72"/>
+  </filter>
+</defs>
+<g opacity=".96" filter="url(#shadow)">
+  <rect x="145" y="126" width="250" height="2" fill="url(#line)" filter="url(#glow)"/>
+  <rect x="1105" y="126" width="250" height="2" fill="url(#line)" filter="url(#glow)"/>
+  <text x="750" y="155" text-anchor="middle" font-family="Cinzel, Georgia, serif" font-size="86" letter-spacing="20" fill="url(#metal)">LINEAGE II</text>
+  <text x="750" y="410" text-anchor="middle" font-family="Cinzel, Georgia, serif" font-size="258" font-weight="500" letter-spacing="-10" fill="url(#metal)" stroke="#dff7fb" stroke-opacity=".23" stroke-width="2">COUNTER</text>
+  <rect x="65" y="310" width="1370" height="3" fill="url(#line)" opacity=".85" filter="url(#glow)"/>
+</g>
+</svg>
