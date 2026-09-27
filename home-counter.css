@@ -422,3 +422,43 @@ body[data-current-page="home"] .nav button.active{
   .counter-overline,.counter-logo,.counter-tagline,.counter-lead,.counter-actions{animation:none!important;opacity:1;transform:none}
   .counter-reveal{opacity:1;transform:none;transition:none}
 }
+
+
+/* Replace the baked-in Fafurion mark in the hero artwork with a Counter watermark. */
+.counter-hero-bg::after{
+  content:"";
+  position:absolute;
+  left:0;
+  top:3%;
+  width:43%;
+  height:52%;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 28% 48%,rgba(4,13,20,.98) 0%,rgba(4,13,20,.96) 40%,rgba(4,13,20,.82) 62%,rgba(4,13,20,0) 82%),
+    linear-gradient(90deg,rgba(2,8,13,.98) 0%,rgba(2,8,13,.93) 58%,rgba(2,8,13,.55) 76%,transparent 100%);
+  filter:blur(.2px);
+}
+.counter-side-logo{
+  position:absolute;
+  left:-1.2%;
+  top:118px;
+  width:min(41vw,760px);
+  z-index:-1;
+  opacity:.22;
+  pointer-events:none;
+  filter:brightness(.76) saturate(.82) drop-shadow(0 0 22px rgba(69,205,229,.12));
+  mix-blend-mode:screen;
+}
+.counter-side-logo img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+@media(max-width:1100px){
+  .counter-hero-bg::after{width:48%;height:46%}
+  .counter-side-logo{top:108px;width:min(46vw,610px);opacity:.17}
+}
+@media(max-width:700px){
+  .counter-hero-bg::after{display:none}
+  .counter-side-logo{display:none}
+}
