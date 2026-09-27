@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+<title id="title">L2Counter</title>
+<desc id="desc">Icy blue C crest with Lineage II bars</desc>
+<defs>
+  <radialGradient id="bg" cx="50%" cy="45%" r="60%">
+    <stop offset="0" stop-color="#143b4b"/>
+    <stop offset=".55" stop-color="#081822"/>
+    <stop offset="1" stop-color="#02090e"/>
+  </radialGradient>
+  <linearGradient id="ice" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#f2fbff"/>
+    <stop offset=".22" stop-color="#a7dce7"/>
+    <stop offset=".5" stop-color="#4fa7bb"/>
+    <stop offset=".72" stop-color="#d9f3f8"/>
+    <stop offset="1" stop-color="#4a8c9d"/>
+  </linearGradient>
+  <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="3.5" result="b"/>
+    <feColorMatrix in="b" type="matrix" values="0 0 0 0 0.20 0 0 0 0 0.82 0 0 0 0 1 0 0 0 .85 0"/>
+    <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<circle cx="64" cy="64" r="58" fill="url(#bg)" stroke="#6edbed" stroke-opacity=".35" stroke-width="2"/>
+<circle cx="64" cy="64" r="51" fill="none" stroke="#bfeef5" stroke-opacity=".12"/>
+<g filter="url(#glow)">
+  <path d="M91 34c-7-7-16-10-27-10-24 0-42 17-42 40s18 40 42 40c11 0 20-3 27-10l-8-10c-5 5-11 7-19 7-16 0-28-11-28-27s12-27 28-27c8 0 14 2 19 7z" fill="url(#ice)"/>
+  <path d="M28 64h72" stroke="#61d9ef" stroke-width="2" stroke-linecap="round" opacity=".9"/>
+  <circle cx="64" cy="64" r="4" fill="#eaffff"/>
+  <path d="M60 45h5v38h-5zM70 45h5v38h-5z" fill="url(#ice)"/>
+  <path d="M60 45l2-5 3 5M70 45l2-5 3 5M60 83l2 5 3-5M70 83l2 5 3-5" fill="#bfeaf2"/>
+</g>
+</svg>
