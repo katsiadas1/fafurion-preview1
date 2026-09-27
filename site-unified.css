@@ -1,0 +1,564 @@
+/* =========================================================
+   L2COUNTER UNIFIED UI — shared visual system for every page
+   Keeps page-specific layouts/functionality, unifies the shell.
+   ========================================================= */
+
+:root{
+  --lc-bg:#030a10;
+  --lc-bg-2:#06131d;
+  --lc-panel:#081b27;
+  --lc-panel-2:#0b2431;
+  --lc-panel-soft:rgba(8,27,39,.86);
+  --lc-line:rgba(111,205,222,.18);
+  --lc-line-strong:rgba(111,205,222,.34);
+  --lc-cyan:#68d3e6;
+  --lc-cyan-soft:#a9e9f2;
+  --lc-gold:#d6b878;
+  --lc-text:#e8f4f6;
+  --lc-muted:#89a4ae;
+  --lc-radius:14px;
+  --lc-shadow:0 18px 55px rgba(0,0,0,.24);
+  --lc-max:1320px;
+}
+
+/* ---------- shared page canvas ---------- */
+body{
+  background:
+    radial-gradient(circle at 82% 5%,rgba(49,158,182,.10),transparent 28%),
+    radial-gradient(circle at 14% 42%,rgba(41,95,113,.07),transparent 30%),
+    linear-gradient(180deg,var(--lc-bg) 0%,var(--lc-bg-2) 48%,var(--lc-bg) 100%)!important;
+  color:var(--lc-text);
+}
+body::before{
+  opacity:.5;
+}
+#page-account,
+#page-rankings,
+#page-donate,
+#page-admin{
+  min-height:calc(100svh - 74px);
+  padding-top:1px;
+  background:
+    radial-gradient(circle at 86% 5%,rgba(45,156,180,.07),transparent 26%),
+    linear-gradient(180deg,#030a10,#06131d 52%,#030a10)!important;
+}
+
+/* ---------- one header language ---------- */
+.topbar,
+.inner-page .header{
+  min-height:78px!important;
+  padding:12px max(22px,4%)!important;
+  background:rgba(3,11,17,.92)!important;
+  border-bottom:1px solid var(--lc-line)!important;
+  box-shadow:0 12px 38px rgba(0,0,0,.18);
+  backdrop-filter:blur(14px);
+}
+.topbar{
+  position:sticky;
+  top:0;
+}
+.inner-page .header{
+  position:sticky!important;
+  top:0;
+  z-index:60;
+}
+.brand{
+  gap:11px!important;
+}
+.counter-brand-mark,
+.topbar .counter-brand-mark,
+.inner-page .header .counter-brand-mark{
+  width:42px!important;
+  height:42px!important;
+  flex:0 0 42px!important;
+  filter:drop-shadow(0 0 12px rgba(93,211,232,.20))!important;
+}
+.topbar .brand strong,
+.inner-page .header .brand>span{
+  font-family:Georgia,serif;
+  color:#e6f2f4;
+  font-weight:600;
+  letter-spacing:.14em;
+}
+.topbar .brand small,
+.inner-page .header .brand small{
+  margin-top:3px;
+  color:#76929d;
+  font-size:.66rem!important;
+  letter-spacing:.24em!important;
+}
+.nav button,
+.ghost,
+.inner-page .header nav a{
+  min-height:44px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:8px;
+  color:#91a9b2!important;
+  transition:color .2s,background .2s,border-color .2s,transform .2s;
+}
+.nav button:hover,
+.nav button.active,
+.ghost:hover,
+.inner-page .header nav a:hover,
+.inner-page .header nav a.active{
+  color:#eefcff!important;
+  background:rgba(78,176,195,.09)!important;
+}
+.nav button.active{
+  box-shadow:inset 0 -2px var(--lc-cyan)!important;
+}
+.inner-page .header nav a.active::after{
+  background:var(--lc-cyan)!important;
+}
+.cta,
+.inner-page .small-button,
+.button.primary,
+.primary{
+  border-color:rgba(103,213,233,.42)!important;
+  background:linear-gradient(180deg,rgba(47,154,177,.34),rgba(12,58,75,.52))!important;
+  color:#ebfcff!important;
+  box-shadow:0 8px 24px rgba(47,163,187,.10);
+}
+.lang-btn,
+.language-picker summary,
+.notification-btn{
+  border-color:rgba(109,205,222,.20)!important;
+  background:rgba(11,35,47,.72)!important;
+}
+
+/* ---------- shared headings ---------- */
+.eyebrow,
+.kicker,
+.counter-kicker,
+.profile-kicker,
+.clan-ranking-head .eyebrow{
+  color:var(--lc-cyan)!important;
+  letter-spacing:.20em!important;
+  font-weight:800!important;
+}
+.section-head,
+.characters-head,
+.rewards-head,
+.wallet-head,
+.security-head,
+.support-head,
+.settings-head,
+.events-head,
+.wheel-page-head,
+.admin-section-head,
+.admin-topline{
+  position:relative;
+}
+.section-head::after,
+.characters-head::after,
+.rewards-head::after,
+.wallet-head::after,
+.security-head::after,
+.support-head::after,
+.settings-head::after,
+.events-head::after,
+.wheel-page-head::after,
+.admin-section-head::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-14px;
+  height:1px;
+  background:linear-gradient(90deg,rgba(104,211,230,.34),rgba(104,211,230,.06),transparent);
+}
+.section h2,
+.section-head h2,
+.admin-topline h1,
+.admin-topline h2,
+.characters-head h2,
+.rewards-head h2,
+.wallet-head h2,
+.security-head h2,
+.support-head h2,
+.settings-head h2,
+.events-head h2,
+.page-heading h1,
+.profile-top h1,
+.profile-top h2{
+  font-family:Georgia,serif!important;
+  color:#edf7f8!important;
+}
+.muted,
+.section-head p,
+.characters-head p,
+.rewards-head p,
+.wallet-head p,
+.security-head p,
+.support-head p,
+.settings-head p{
+  color:var(--lc-muted)!important;
+}
+
+/* ---------- shared surfaces ---------- */
+:is(
+  .card,
+  .dashboard-card,
+  .account-stat,
+  .today-panel,
+  .badge-panel,
+  .reward-panel,
+  .wallet-panel,
+  .security-panel,
+  .support-panel,
+  .settings-panel,
+  .clan-panel,
+  .events-side-panel,
+  .wheel-panel,
+  .wheel-info-card,
+  .admin-panel,
+  .admin-kpi,
+  .admin-risk-strip,
+  .ranking-panel,
+  .rank-podium-button,
+  .rank-table-wrap,
+  .info-card,
+  .download-card,
+  .profile-shell,
+  .profile-section,
+  .profile-stat,
+  .public-profile-card,
+  .public-clan-card
+){
+  border-color:var(--lc-line)!important;
+  border-radius:var(--lc-radius)!important;
+  background:
+    radial-gradient(circle at 100% 0%,rgba(55,176,197,.055),transparent 28%),
+    linear-gradient(150deg,rgba(11,31,43,.94),rgba(4,15,23,.96))!important;
+  box-shadow:var(--lc-shadow);
+}
+:is(
+  .card,
+  .dashboard-card,
+  .account-stat,
+  .today-panel,
+  .reward-panel,
+  .wallet-panel,
+  .security-panel,
+  .support-panel,
+  .settings-panel,
+  .clan-panel,
+  .admin-panel,
+  .ranking-panel,
+  .info-card,
+  .download-card,
+  .profile-section
+):hover{
+  border-color:var(--lc-line-strong)!important;
+}
+
+/* ---------- account / player command center ---------- */
+.panel-shell,
+.account-v2{
+  max-width:var(--lc-max)!important;
+  gap:20px!important;
+}
+.account-v2 .sidebar,
+.sidebar{
+  border-color:var(--lc-line)!important;
+  border-radius:var(--lc-radius)!important;
+  background:linear-gradient(180deg,rgba(5,19,28,.97),rgba(3,12,19,.98))!important;
+  box-shadow:var(--lc-shadow);
+}
+.side-link{
+  min-height:43px;
+  border-radius:8px!important;
+  color:#829da7!important;
+}
+.side-link:hover,
+.side-link.active{
+  color:#e9fbfd!important;
+  background:linear-gradient(90deg,rgba(71,175,195,.13),rgba(71,175,195,.035))!important;
+}
+.side-link.active{
+  box-shadow:inset 2px 0 var(--lc-cyan);
+}
+.side-link .side-icon{
+  color:#78d9e8!important;
+  border-color:rgba(106,205,223,.16)!important;
+  background:rgba(53,145,162,.07)!important;
+}
+.account-hero{
+  border-color:rgba(105,207,224,.24)!important;
+  border-radius:16px!important;
+  box-shadow:var(--lc-shadow)!important;
+}
+.account-stat-value,
+.power-orb strong{
+  color:#edf9fa!important;
+}
+.account-stat-label,
+.account-stat-foot{
+  color:#77939d!important;
+}
+
+/* ---------- rankings ---------- */
+#page-rankings .rankings-v2{
+  max-width:var(--lc-max)!important;
+}
+#page-rankings .ranking-mode-tabs{
+  border-color:var(--lc-line)!important;
+  background:rgba(4,17,25,.86)!important;
+  border-radius:var(--lc-radius)!important;
+}
+#page-rankings .ranking-mode-tabs button{
+  border-radius:9px!important;
+  color:#8ca6af!important;
+}
+#page-rankings .ranking-mode-tabs button.active{
+  color:#e9fbfd!important;
+  border-color:rgba(103,210,230,.34)!important;
+  background:linear-gradient(180deg,rgba(35,112,130,.22),rgba(9,40,52,.26))!important;
+  box-shadow:inset 0 -2px var(--lc-cyan)!important;
+}
+#page-rankings .rank-podium-button:first-child{
+  border-color:rgba(214,184,120,.40)!important;
+  background:
+    radial-gradient(circle at 100% 0%,rgba(214,184,120,.07),transparent 34%),
+    linear-gradient(150deg,rgba(28,28,24,.96),rgba(6,20,28,.96))!important;
+}
+#page-rankings .rank-table-wrap th{
+  background:#0b2431!important;
+  color:#91adb7!important;
+}
+#page-rankings .rank-table-wrap td{
+  border-bottom-color:rgba(109,205,222,.10)!important;
+}
+#page-rankings .rank-table-wrap tbody tr:hover{
+  background:rgba(55,145,163,.08)!important;
+}
+
+/* ---------- donate ---------- */
+#page-donate .section{
+  max-width:var(--lc-max)!important;
+  padding-top:54px!important;
+}
+#page-donate .donate-grid{
+  gap:18px!important;
+}
+#page-donate .pack{
+  min-height:100%;
+}
+#page-donate .pack.featured{
+  border-color:rgba(214,184,120,.42)!important;
+  box-shadow:0 18px 60px rgba(0,0,0,.26),0 0 30px rgba(201,166,93,.05)!important;
+}
+#page-donate .price{
+  color:#f2f8f8!important;
+}
+#page-donate .coins{
+  color:var(--lc-gold)!important;
+}
+
+/* ---------- admin ---------- */
+.admin-wrap{
+  max-width:1540px!important;
+}
+.admin-sidebar{
+  border:1px solid var(--lc-line)!important;
+  border-radius:var(--lc-radius)!important;
+  background:linear-gradient(180deg,rgba(5,19,28,.98),rgba(3,12,19,.98))!important;
+  box-shadow:var(--lc-shadow);
+}
+.admin-kpi{
+  border-radius:12px!important;
+}
+.admin-toolbar{
+  border-color:var(--lc-line)!important;
+  background:rgba(5,20,29,.88)!important;
+}
+.admin-table-wrap,
+.permission-table-wrap{
+  border-color:var(--lc-line)!important;
+  border-radius:12px!important;
+  background:#061722!important;
+}
+.admin-table th,
+.permission-table th{
+  background:#0b2431!important;
+  color:#93afb9!important;
+}
+.admin-table td,
+.permission-table td{
+  border-bottom-color:rgba(109,205,222,.10)!important;
+}
+
+/* ---------- inner page shared shell ---------- */
+.inner-page{
+  background:
+    radial-gradient(circle at 84% 3%,rgba(45,156,180,.09),transparent 28%),
+    linear-gradient(180deg,#030a10,#06131d 50%,#030a10)!important;
+}
+.inner-page .page-heading{
+  max-width:var(--lc-max)!important;
+  padding:58px 5% 38px!important;
+}
+.inner-page .page-heading p{
+  color:var(--lc-muted)!important;
+}
+.inner-page .info-layout,
+.ranking-layout,
+.community-main{
+  max-width:var(--lc-max)!important;
+}
+.inner-page .draft-notice{
+  border-color:rgba(214,184,120,.24)!important;
+  background:linear-gradient(100deg,rgba(91,68,30,.15),rgba(5,20,29,.82))!important;
+}
+.inner-page .info-shortcuts{
+  border-color:var(--lc-line)!important;
+  background:rgba(4,16,24,.82)!important;
+}
+.inner-page .info-shortcuts a{
+  border-radius:8px;
+  border-color:rgba(109,205,222,.16)!important;
+  color:#9db6bf!important;
+}
+.inner-page .info-shortcuts a:hover,
+.inner-page .info-shortcuts a.is-active{
+  color:#effcff!important;
+  border-color:rgba(104,211,230,.34)!important;
+  background:rgba(55,145,163,.09)!important;
+}
+.inner-page .card-heading>span{
+  color:var(--lc-gold)!important;
+}
+.inner-page .info-bottom{
+  border:1px solid var(--lc-line);
+  border-radius:var(--lc-radius);
+  padding:18px 20px;
+  background:linear-gradient(145deg,rgba(10,29,40,.90),rgba(4,15,23,.94));
+}
+
+/* ---------- download ---------- */
+.download-page .download{
+  max-width:var(--lc-max)!important;
+}
+.download-page .download-card{
+  border-radius:var(--lc-radius)!important;
+}
+.download-page .download-card:hover{
+  transform:translateY(-3px);
+  border-color:var(--lc-line-strong)!important;
+}
+.download-icon{
+  color:var(--lc-cyan)!important;
+}
+.availability{
+  color:var(--lc-gold)!important;
+}
+
+/* ---------- player/clan public pages ---------- */
+.community-main{
+  padding-top:52px!important;
+}
+.profile-shell{
+  overflow:hidden;
+}
+.profile-top{
+  border-bottom-color:var(--lc-line)!important;
+  background:
+    linear-gradient(90deg,rgba(3,14,21,.94),rgba(3,14,21,.62),rgba(3,14,21,.20)),
+    url('assets/dragon-selected.webp') 72% 42%/cover!important;
+}
+.profile-top h1,
+.profile-top h2{
+  color:#eef8f9!important;
+}
+.profile-status{
+  border-color:rgba(109,205,222,.24)!important;
+  background:rgba(4,18,26,.62);
+}
+.profile-stat,
+.profile-section{
+  box-shadow:none!important;
+}
+.profile-badge{
+  border-color:var(--lc-line)!important;
+  background:#0a2330!important;
+}
+.profile-button{
+  border-color:rgba(214,184,120,.40)!important;
+  background:linear-gradient(180deg,rgba(111,84,39,.82),rgba(54,40,22,.90))!important;
+}
+
+/* ---------- shared footer ---------- */
+.inner-page footer{
+  max-width:none!important;
+  margin:40px 0 0!important;
+  padding:34px max(5%,calc((100% - var(--lc-max))/2))!important;
+  border-top:1px solid var(--lc-line)!important;
+  background:
+    radial-gradient(circle at 50% 0%,rgba(55,176,197,.06),transparent 30%),
+    linear-gradient(180deg,#06141e,#030a10)!important;
+}
+.inner-page footer p{
+  color:#708b95!important;
+}
+.inner-page footer .back-top{
+  color:#b4d1d8!important;
+}
+
+/* ---------- focus / control consistency ---------- */
+:is(button,a,input,select,textarea):focus-visible{
+  outline:2px solid rgba(104,211,230,.78)!important;
+  outline-offset:3px!important;
+}
+:is(input,select,textarea){
+  border-color:rgba(109,205,222,.18)!important;
+  background:#061722!important;
+  color:#dfeef1!important;
+  border-radius:8px!important;
+}
+
+/* ---------- responsive ---------- */
+@media(max-width:1100px){
+  .topbar,
+  .inner-page .header{
+    min-height:74px!important;
+    padding:10px 18px!important;
+  }
+  .mobile-tabs{
+    top:74px!important;
+    background:rgba(3,11,17,.96)!important;
+    border-bottom-color:var(--lc-line)!important;
+  }
+  .mobile-tabs button{
+    border-color:var(--lc-line)!important;
+    background:#061722!important;
+  }
+}
+@media(max-width:700px){
+  .topbar,
+  .inner-page .header{
+    min-height:72px!important;
+    padding:10px 14px!important;
+  }
+  .counter-brand-mark,
+  .topbar .counter-brand-mark,
+  .inner-page .header .counter-brand-mark{
+    width:36px!important;
+    height:36px!important;
+    flex-basis:36px!important;
+  }
+  .inner-page .page-heading{
+    padding:40px 16px 26px!important;
+  }
+  .inner-page .info-layout,
+  .ranking-layout,
+  .community-main{
+    width:100%;
+    padding-left:14px!important;
+    padding-right:14px!important;
+  }
+  .inner-page footer{
+    padding:28px 18px!important;
+  }
+}
