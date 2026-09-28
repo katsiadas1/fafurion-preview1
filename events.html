@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07131b">
+<link rel="icon" type="image/svg+xml" href="assets/counter-mark.svg?v=2">
+<meta name="description" content="L2Counter live event center: schedules, registrations, participants and recent winners.">
+<title>Live Event Center — L2Counter</title>
+<link rel="stylesheet" href="style.css?v=13">
+<link rel="stylesheet" href="community.css?v=13">
+<script src="translations.js?v=10" defer></script>
+<script src="i18n.js?v=10" defer></script>
+<script src="config.js?v=10" defer></script>
+<script src="community-data.js?v=10" defer></script>
+<script src="app.js?v=10" defer></script>
+<script src="community.js?v=10" defer></script>
+<link rel="stylesheet" href="realm-theme.css?v=13">
+<link rel="stylesheet" href="site-unified.css?v=6">
+<link rel="stylesheet" href="counter-cinematic.css?v=7">
+<link rel="stylesheet" href="site-polish.css?v=4">
+<link rel="stylesheet" href="events-center.css?v=1">
+<script src="counter-motion.js?v=1" defer></script>
+<script src="events-center.js?v=1" defer></script>
+</head>
+<body class="inner-page events-center-page">
+<header class="header inner-index-header">
+<a class="brand counter-logo-brand" href="index.html" aria-label="L2Counter home"><img class="counter-header-logo" src="assets/l2counter-header-logo.webp?v=2" alt="L2Counter · Lineage II"></a>
+<nav id="navigation" aria-label="Main navigation">
+  <a href="index.html" data-page="home">Home</a>
+  <a href="info.html" data-page="info">Info</a>
+  <a href="index.html#account/dashboard" data-page="account">Account</a>
+  <a href="rankings.html" data-page="rankings">Rankings</a>
+  <a href="events.html" class="active" aria-current="page" data-page="events">Events</a>
+  <a href="index.html#donate" data-page="donate">Donate</a>
+  <a href="index.html#admin/overview" class="inner-admin-link" data-page="admin"><span>◆</span> Admin</a>
+</nav>
+<div class="header-actions inner-header-actions">
+  <a class="inner-download-link" href="download.html">Download</a>
+  <div class="notifications inner-notifications">
+    <a class="notification-btn inner-notification-link" href="index.html#account/dashboard" aria-label="Notifications"><span class="bell">♢</span><span class="notification-count">5</span></a>
+  </div>
+  <div class="language-mount"></div>
+  <a class="small-button inner-start-button" href="index.html#account/dashboard">Start playing</a>
+  <button class="menu" aria-label="Open menu" aria-expanded="false">☰</button>
+</div>
+</header>
+
+<main class="event-center-main">
+  <section class="event-center-heading">
+    <div>
+      <span class="eyebrow">LIVE REALM ACTIVITY</span>
+      <h1>Live Event Center</h1>
+      <p>Upcoming battles, registration status, participants and recent winners — all in one place.</p>
+    </div>
+    <div class="event-center-live-pill"><i></i><span>SERVER TIME</span><strong id="eventServerClock">--:--:--</strong></div>
+  </section>
+
+  <aside class="event-preview-note"><span>◆</span><p><b>Preview data</b> — the page is ready for the real event API. Event status, players and results are demo values for now.</p></aside>
+
+  <section class="event-live-hero" id="eventLiveHero">
+    <div class="event-live-copy">
+      <div class="event-live-topline">
+        <span class="event-state registration" id="eventStateBadge"><i></i> REGISTRATION OPEN</span>
+        <span class="event-type-tag">PVP EVENT</span>
+      </div>
+      <h2 id="eventLiveName">Team vs Team</h2>
+      <p id="eventLiveDesc">Two teams enter the arena. Fight for kills, team score and event rewards.</p>
+      <div class="event-live-meta">
+        <span>⚔ <b>20 vs 20</b></span>
+        <span>◷ <b>20 min</b></span>
+        <span>★ <b>+250 VP</b></span>
+      </div>
+    </div>
+
+    <div class="event-countdown-panel">
+      <small id="eventCountdownLabel">REGISTRATION CLOSES IN</small>
+      <strong id="eventMainCountdown">--:--:--</strong>
+      <span>18:30 · GMT+3</span>
+      <a href="index.html#account/events" class="event-register-button">REGISTER IN ACCOUNT</a>
+    </div>
+  </section>
+
+  <section class="event-live-stats">
+    <div><small>REGISTERED</small><strong id="eventRegistered">18 / 40</strong><span class="event-progress"><i style="width:45%"></i></span></div>
+    <div><small>TEAMS</small><strong>2</strong><span>Red vs Blue</span></div>
+    <div><small>MIN LEVEL</small><strong>85</strong><span>Max 200</span></div>
+    <div><small>REWARD</small><strong>250 VP</strong><span>Winning team</span></div>
+  </section>
+
+  <section class="event-center-section">
+    <div class="event-section-head">
+      <div><span class="eyebrow">UPCOMING</span><h2>Next in the realm</h2></div>
+      <span class="event-schedule-label">SERVER TIME · GMT+3</span>
+    </div>
+
+    <div class="event-schedule-grid">
+      <article class="live-event-card is-next" data-event-hour="18" data-event-minute="30">
+        <div class="live-event-card-top"><span class="event-card-type pvp">PVP</span><time>18:30</time></div>
+        <div class="event-card-icon-large">⚔</div>
+        <h3>Team vs Team</h3>
+        <p>Balanced team PvP with score tracking and Vote Point rewards.</p>
+        <div class="event-card-footer"><span>20 vs 20</span><b data-card-countdown>Next</b></div>
+      </article>
+
+      <article class="live-event-card" data-event-hour="21" data-event-minute="0">
+        <div class="live-event-card-top"><span class="event-card-type zombie">SURVIVAL</span><time>21:00</time></div>
+        <div class="event-card-icon-large">☣</div>
+        <h3>Zombie Infection</h3>
+        <p>Survivors hold the line while infected players spread through the map.</p>
+        <div class="event-card-footer"><span>30 min</span><b data-card-countdown>Today</b></div>
+      </article>
+
+      <article class="live-event-card" data-event-hour="23" data-event-minute="30">
+        <div class="live-event-card-top"><span class="event-card-type battle">BATTLE ROYALE</span><time>23:30</time></div>
+        <div class="event-card-icon-large">◇</div>
+        <h3>Battle Royale</h3>
+        <p>Loot, adapt and survive. One battlefield, one final winner.</p>
+        <div class="event-card-footer"><span>Solo</span><b data-card-countdown>Today</b></div>
+      </article>
+
+      <article class="live-event-card gold" data-weekly="sunday" data-event-hour="20" data-event-minute="0">
+        <div class="live-event-card-top"><span class="event-card-type siege">DOMINION</span><time>SUN 20:00</time></div>
+        <div class="event-card-icon-large">♜</div>
+        <h3>Castle Dominion</h3>
+        <p>Attackers and defenders clash for Aden control, points and MVP honors.</p>
+        <div class="event-card-footer"><span>Aden Castle</span><b data-card-countdown>Sunday</b></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="event-center-grid">
+    <div class="event-center-panel">
+      <div class="event-panel-head"><div><span class="eyebrow">PARTICIPANTS</span><h2>Registration board</h2></div><span class="event-panel-count">18 / 40</span></div>
+      <div class="event-team-columns">
+        <div class="event-team red">
+          <div class="event-team-head"><span></span><b>RED TEAM</b><em>9</em></div>
+          <div class="event-player-row"><span>HY</span><div><b>Hydra</b><small>Titan · Lv.85</small></div><em>READY</em></div>
+          <div class="event-player-row"><span>NY</span><div><b>Nyx</b><small>Ghost Hunter · Lv.85</small></div><em>READY</em></div>
+          <div class="event-player-row"><span>AT</span><div><b>Athena</b><small>Cardinal · Lv.85</small></div><em>READY</em></div>
+          <div class="event-more-players">+6 registered players</div>
+        </div>
+        <div class="event-team blue">
+          <div class="event-team-head"><span></span><b>BLUE TEAM</b><em>9</em></div>
+          <div class="event-player-row"><span>VL</span><div><b>Valakas</b><small>Duelist · Lv.85</small></div><em>READY</em></div>
+          <div class="event-player-row"><span>FK</span><div><b>FafurionKnight</b><small>Duelist · Lv.85</small></div><em>READY</em></div>
+          <div class="event-player-row"><span>OS</span><div><b>OceanSoul</b><small>Cardinal · Lv.84</small></div><em>READY</em></div>
+          <div class="event-more-players">+6 registered players</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="event-center-panel event-rules-panel">
+      <div class="event-panel-head"><div><span class="eyebrow">EVENT RULES</span><h2>Team vs Team</h2></div><span class="event-rule-mark">⚔</span></div>
+      <div class="event-rule-list">
+        <div><span>01</span><p><b>Registration</b><small>Join before the countdown reaches zero.</small></p></div>
+        <div><span>02</span><p><b>Auto balance</b><small>Teams are balanced before teleport.</small></p></div>
+        <div><span>03</span><p><b>20 minute match</b><small>Highest team score wins when time expires.</small></p></div>
+        <div><span>04</span><p><b>Protected rewards</b><small>Rewards will be delivered by the server backend.</small></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="event-center-section recent-results">
+    <div class="event-section-head"><div><span class="eyebrow">RECENT RESULTS</span><h2>Last battles</h2></div><span class="event-schedule-label">PREVIEW HISTORY</span></div>
+    <div class="event-results-grid">
+      <article class="event-result-card">
+        <div class="result-icon">⚔</div><div><small>TEAM VS TEAM · 27 SEP</small><h3>Red Team Victory</h3><p>Score <b>84 – 71</b></p></div>
+        <div class="result-mvp"><small>MVP</small><strong>Hydra</strong><span>29 kills</span></div>
+      </article>
+      <article class="event-result-card">
+        <div class="result-icon">☣</div><div><small>ZOMBIE · 27 SEP</small><h3>Humans Survived</h3><p><b>3 survivors</b> remained</p></div>
+        <div class="result-mvp"><small>MVP</small><strong>Athena</strong><span>12 saves</span></div>
+      </article>
+      <article class="event-result-card">
+        <div class="result-icon">◇</div><div><small>BATTLE ROYALE · 26 SEP</small><h3>Last Player Standing</h3><p><b>47 participants</b></p></div>
+        <div class="result-mvp"><small>WINNER</small><strong>Nyx</strong><span>8 eliminations</span></div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <a class="brand" href="index.html"><img class="counter-brand-mark" src="assets/counter-mark.svg?v=2" alt=""><span>COUNTER<small>LINEAGE II</small></span></a>
+  <p>An independent Lineage II community.<br>Lineage II belongs to its respective owners.</p>
+  <a href="index.html" class="back-top">Back to home ←</a>
+</footer>
+</body>
+</html>
