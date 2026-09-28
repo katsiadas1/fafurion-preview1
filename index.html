@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="portal.css?v=13"><link rel="stylesheet" href="portal-bridge.css?v=11">
 <link rel="stylesheet" href="home-rankings.css?v=12">
 <link rel="stylesheet" href="realm-theme.css?v=14"><link rel="stylesheet" href="home-counter.css?v=4"><script src="home-counter.js?v=1" defer></script><link rel="stylesheet" href="site-unified.css?v=6">
-<link rel="stylesheet" href="counter-cinematic.css?v=7"><script src="counter-motion.js?v=1" defer></script><link rel="stylesheet" href="site-polish.css?v=2">
+<link rel="stylesheet" href="counter-cinematic.css?v=7"><script src="counter-motion.js?v=1" defer></script><link rel="stylesheet" href="site-polish.css?v=3">
 </head>
 <body data-current-page="home">
 <div class="app">
@@ -97,6 +97,16 @@
         <a class="counter-btn" href="info.html"><span data-i18n="serverInfo">Server Info</span><span aria-hidden="true">◇</span></a>
       </div>
     </div>
+
+    <a class="discord-hero-card" id="discordHeroCard" href="https://discord.gg/DyCnJmEYy" target="_blank" rel="noopener noreferrer" aria-label="Join the L2Counter Discord">
+      <span class="discord-hero-mark" aria-hidden="true">#</span>
+      <span class="discord-hero-copy">
+        <small>OFFICIAL DISCORD</small>
+        <strong id="discordGuildName">Join the Community</strong>
+        <em id="discordCommunityMeta">Community · Help · Announcements</em>
+      </span>
+      <span class="discord-hero-arrow" aria-hidden="true">↗</span>
+    </a>
 
     <aside class="realm-status-strip" aria-label="Realm status preview">
       <div class="realm-status-head">
@@ -965,7 +975,7 @@
               <div><b>Support Team</b><span data-i18n="supportHours">Coverage · 10:00–02:00 server time</span></div>
             </div>
             <div class="contact-option" onclick="openSupportModal('ticket')"><span>✉</span><div><b data-i18n="ticketSupport">Ticket support</b><small data-i18n="ticketSupportDesc">Best for account, donation and gameplay issues.</small></div><em>›</em></div>
-            <div class="contact-option" onclick="demoAction('discord')"><span>#</span><div><b>Discord</b><small data-i18n="discordDesc">Community help and announcements.</small></div><em>›</em></div>
+            <a class="contact-option discord-contact-option" href="https://discord.gg/DyCnJmEYy" target="_blank" rel="noopener noreferrer"><span>#</span><div><b>Discord</b><small data-i18n="discordDesc">Community help and announcements.</small></div><em>↗</em></a>
             <div class="contact-option" onclick="demoAction('faq')"><span>?</span><div><b>FAQ</b><small data-i18n="faqDesc">Quick answers to common questions.</small></div><em>›</em></div>
             <div class="staff-note"><b data-i18n="important">Important</b><span data-i18n="staffNeverAsks">Staff will never ask for your password, 2FA code or recovery codes.</span></div>
           </div>
@@ -1840,5 +1850,6 @@
 <script src="portal.js?v=11"></script><script src="portal-bridge.js?v=12"></script>
 <script src="realm-theme.js?v=13"></script>
 <script src="realm-status.js?v=1"></script>
+<script src="discord-integration.js?v=1"></script>
 </body>
 </html>
