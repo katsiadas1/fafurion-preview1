@@ -1,0 +1,78 @@
+/* PATCH VERSION SYSTEM */
+.patch-version-shell{
+  width:min(var(--p-max),calc(100% - 40px));
+  margin:0 auto 70px;
+  padding:28px;
+  border:1px solid var(--p-line);
+  border-radius:16px;
+  background:
+    linear-gradient(180deg,rgba(4,16,24,.92),rgba(4,16,24,.97)),
+    url("assets/counter-storm-reference.webp") center/cover no-repeat;
+  box-shadow:var(--p-shadow);
+}
+.patch-version-main{
+  display:flex;justify-content:space-between;gap:28px;align-items:flex-end;
+  padding-bottom:22px;border-bottom:1px solid rgba(105,201,219,.12);
+}
+.patch-version-main h2{margin:5px 0 8px;font-size:clamp(30px,4vw,48px)}
+.patch-version-main h2 strong{color:var(--p-gold)}
+.patch-version-main p{max-width:720px}
+.patch-release-meta{display:grid;grid-template-columns:repeat(2,minmax(130px,1fr));gap:10px}
+.patch-release-meta>div{padding:13px 15px;border:1px solid var(--p-line);border-radius:10px;background:rgba(5,21,31,.72)}
+.patch-release-meta small{display:block;color:var(--p-muted-2);font-size:.59rem;font-weight:900;letter-spacing:.1em}
+.patch-release-meta strong{display:block;margin-top:4px;font-size:.8rem}
+.patch-ready-status{color:#e4c98f!important}
+
+.patch-download-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:22px}
+.patch-download-option{
+  width:100%;min-height:145px;padding:20px;text-align:left;
+  display:grid;grid-template-columns:42px minmax(0,1fr) auto;gap:14px;align-items:center;
+  border:1px solid var(--p-line);border-radius:12px;
+  background:linear-gradient(145deg,var(--p-panel-2),var(--p-panel));
+  box-shadow:0 14px 38px rgba(0,0,0,.22);
+}
+.patch-download-option:hover{transform:translateY(-3px);border-color:var(--p-line-strong)}
+.patch-download-option.featured{border-color:rgba(214,187,128,.36);background:linear-gradient(145deg,rgba(47,39,24,.84),rgba(7,23,33,.96))}
+.patch-option-icon{
+  width:42px;height:42px;display:grid;place-items:center;border:1px solid var(--p-line-strong);border-radius:9px;
+  color:#9fe5f0;background:rgba(16,53,67,.38);font-size:1rem
+}
+.patch-download-option.featured .patch-option-icon{color:#e5ca8f;border-color:rgba(214,187,128,.38);background:rgba(86,68,36,.22)}
+.patch-download-option small{display:block;color:var(--p-muted-2);font-size:.58rem;font-weight:900;letter-spacing:.1em}
+.patch-download-option strong{display:block;margin-top:4px;font-size:1rem}
+.patch-download-option p{margin-top:4px!important;font-size:.72rem!important}
+.patch-option-meta{text-align:right}
+.patch-option-meta b{display:block;color:#dcecef;font-size:.78rem}
+.patch-option-meta span{display:block;margin-top:5px;color:#d8bd82;font-size:.62rem}
+
+.patch-integrity-row{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:16px;padding:14px 16px;
+  border:1px solid var(--p-line);border-radius:10px;background:rgba(5,20,29,.82)
+}
+.patch-integrity-row small{display:block;color:var(--p-muted-2);font-size:.58rem;font-weight:900;letter-spacing:.1em}
+.patch-integrity-row code{display:block;margin-top:4px;color:#abc6ce;font-size:.7rem;word-break:break-all}
+.patch-integrity-row button{
+  min-height:36px;padding:7px 12px;border:1px solid var(--p-line);border-radius:7px;background:rgba(17,51,64,.58);color:#dcecef;
+  font-size:.66rem;font-weight:900;letter-spacing:.08em
+}
+
+.patch-release-notes{margin-top:18px;padding:20px;border:1px solid var(--p-line);border-radius:12px;background:rgba(5,20,29,.76)}
+.patch-release-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px}
+.patch-release-head h3{margin:4px 0 0;font-size:1.5rem}
+.patch-release-head>span{color:var(--p-gold);font-size:.74rem;font-weight:900}
+.patch-note-list{display:grid;gap:8px;margin-top:14px}
+.patch-note-list>div{display:grid;grid-template-columns:34px 1fr;gap:10px;padding:11px;border:1px solid rgba(105,201,219,.08);border-radius:8px;background:rgba(4,18,27,.36)}
+.patch-note-list>div>b{width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--p-line);border-radius:8px;color:#8edce8;font-size:.68rem}
+.patch-note-list p{margin:0!important}.patch-note-list strong{display:block;font-size:.8rem}.patch-note-list span{display:block;margin-top:3px;color:#819ba5;font-size:.68rem}
+.patch-preview-note{margin-top:14px!important;font-size:.72rem!important;text-align:center}
+
+@media(max-width:1000px){
+  .patch-version-main{align-items:flex-start;flex-direction:column}
+  .patch-release-meta{width:100%}
+  .patch-download-grid{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+  .patch-version-shell{width:calc(100% - 24px);padding:18px}
+  .patch-download-option{grid-template-columns:38px 1fr}.patch-option-meta{grid-column:2;text-align:left}
+  .patch-integrity-row{align-items:flex-start;flex-direction:column}.patch-integrity-row button{width:100%}
+}
