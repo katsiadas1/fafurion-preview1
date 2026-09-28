@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="portal.css?v=13"><link rel="stylesheet" href="portal-bridge.css?v=11">
 <link rel="stylesheet" href="home-rankings.css?v=12">
 <link rel="stylesheet" href="realm-theme.css?v=14"><link rel="stylesheet" href="home-counter.css?v=4"><script src="home-counter.js?v=1" defer></script><link rel="stylesheet" href="site-unified.css?v=6">
-<link rel="stylesheet" href="counter-cinematic.css?v=7"><script src="counter-motion.js?v=1" defer></script><link rel="stylesheet" href="site-polish.css?v=4">
+<link rel="stylesheet" href="counter-cinematic.css?v=7"><script src="counter-motion.js?v=1" defer></script><link rel="stylesheet" href="site-polish.css?v=5">
 </head>
 <body data-current-page="home">
 <div class="app">
@@ -21,6 +21,7 @@
     <button data-page="account" data-i18n="navAccount">Account</button>
     <button data-page="rankings" data-i18n="navRankings">Rankings</button>
     <button onclick="location.href='events.html'">Events</button>
+    <button onclick="location.href='siege.html'">Siege</button>
     <button data-page="donate" data-i18n="navDonate">Donate</button>
     <button data-page="admin" class="admin-nav-btn"><span>◆</span> <span data-i18n="navAdmin">Admin</span></button>
   </nav>
@@ -78,6 +79,7 @@
   <button data-page="admin" class="admin-nav-btn" data-i18n="navAdmin">Admin</button>
   <button data-page="rankings" data-i18n="navRankings">Rankings</button>
   <button onclick="location.href='events.html'">Events</button>
+  <button onclick="location.href='siege.html'">Siege</button>
   <button data-page="donate" data-i18n="navDonate">Donate</button>
   <button onclick="location.href='info.html'" data-i18n="navInfo">Info</button>
   <button onclick="location.href='download.html'" data-i18n="download">Download</button>
@@ -125,10 +127,10 @@
           <span class="realm-status-icon">⚔</span>
           <div><small>NEXT EVENT</small><strong>Team vs Team</strong><em>18:30 · Open Event Center ↗</em></div>
         </a>
-        <div class="realm-status-item">
+        <a class="realm-status-item realm-status-link" href="siege.html">
           <span class="realm-status-icon">♜</span>
-          <div><small>ADEN SIEGE</small><strong id="realmSiegeCountdown">2D 04H</strong><em>Sunday · 20:00</em></div>
-        </div>
+          <div><small>ADEN SIEGE</small><strong id="realmSiegeCountdown">2D 04H</strong><em>Sunday · 20:00 · Open Siege Center ↗</em></div>
+        </a>
         <div class="realm-status-item">
           <span class="realm-status-icon">◷</span>
           <div><small>SERVER TIME</small><strong id="realmServerClock">--:--:--</strong><em>GMT+3</em></div>
