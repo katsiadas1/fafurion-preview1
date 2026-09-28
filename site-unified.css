@@ -562,3 +562,94 @@ body::before{
     padding:28px 18px!important;
   }
 }
+
+
+/* GLOBAL INDEX BACKGROUND */
+html{
+  background:#02070c!important;
+}
+body,
+body.inner-page{
+  position:relative;
+  min-height:100vh;
+  background:
+    linear-gradient(180deg,rgba(2,7,12,.52),rgba(2,7,12,.70)),
+    url("assets/dragon-selected.webp") center top / cover fixed no-repeat!important;
+}
+
+body::before,
+body.inner-page::before{
+  content:""!important;
+  position:fixed!important;
+  inset:0!important;
+  z-index:-1!important;
+  pointer-events:none!important;
+  opacity:1!important;
+  background:
+    radial-gradient(circle at 72% 18%,rgba(61,182,207,.08),transparent 28%),
+    linear-gradient(180deg,rgba(2,8,13,.16),rgba(2,8,13,.56))!important;
+}
+
+body[data-current-page="home"]{
+  background:#02070c!important;
+}
+body[data-current-page="home"]::before{
+  display:none!important;
+}
+
+/* Keep all non-home index sections on the same homepage artwork. */
+#page-account,
+#page-rankings,
+#page-donate,
+#page-admin{
+  background:transparent!important;
+}
+
+/* Standalone pages use the same background too. */
+.inner-page{
+  background:
+    linear-gradient(180deg,rgba(2,7,12,.56),rgba(2,7,12,.74)),
+    url("assets/dragon-selected.webp") center top / cover fixed no-repeat!important;
+}
+
+/* Slight glass layer behind page content for readability. */
+.inner-page main,
+#page-account,
+#page-rankings,
+#page-donate,
+#page-admin{
+  position:relative;
+}
+
+.inner-page main::before,
+#page-account::before,
+#page-rankings::before,
+#page-donate::before,
+#page-admin::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:linear-gradient(180deg,rgba(3,11,17,.18),rgba(3,11,17,.34));
+}
+
+/* Headers remain transparent so the shared artwork continues behind them. */
+.topbar,
+.inner-page .header,
+.inner-page .inner-index-header{
+  background:transparent!important;
+  background-color:transparent!important;
+}
+
+@media(max-width:800px){
+  body,
+  body.inner-page,
+  .inner-page{
+    background:
+      linear-gradient(180deg,rgba(2,7,12,.58),rgba(2,7,12,.78)),
+      url("assets/dragon-selected.webp") 62% top / auto 720px no-repeat,
+      #02070c!important;
+    background-attachment:scroll!important;
+  }
+}
