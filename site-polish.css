@@ -1367,3 +1367,73 @@ textarea:focus{
   .profile-share-bar{align-items:stretch;flex-direction:column}
   .profile-copy-link{width:100%;min-width:0}
 }
+
+
+/* ----- wide laptop header compression ----- */
+@media(max-width:1500px) and (min-width:1101px){
+  .topbar .counter-logo-brand,
+  .inner-page .inner-index-header .counter-logo-brand,
+  .inner-page .header .counter-logo-brand{
+    width:190px!important;
+    min-width:190px!important;
+    flex-basis:190px!important;
+  }
+  .topbar .counter-header-logo,
+  .inner-page .inner-index-header .counter-header-logo,
+  .inner-page .header .counter-header-logo{
+    width:170px!important;
+    height:56px!important;
+  }
+  .topbar .nav,
+  .inner-page .inner-index-header nav,
+  .inner-page .header nav{
+    gap:2px!important;
+  }
+  .topbar .nav button,
+  .inner-page .inner-index-header nav a,
+  .inner-page .header nav a{
+    padding:7px 8px!important;
+    font-size:.78rem!important;
+  }
+  .topbar .ghost,
+  .inner-page .inner-download-link{
+    display:none!important;
+  }
+  .topbar .right,
+  .inner-page .inner-header-actions,
+  .inner-page .header-actions{
+    gap:6px!important;
+  }
+}
+
+@media(max-width:1320px) and (min-width:1101px){
+  .topbar .counter-logo-brand,
+  .inner-page .inner-index-header .counter-logo-brand,
+  .inner-page .header .counter-logo-brand{
+    width:165px!important;
+    min-width:165px!important;
+    flex-basis:165px!important;
+  }
+  .topbar .counter-header-logo,
+  .inner-page .inner-index-header .counter-header-logo,
+  .inner-page .header .counter-header-logo{
+    width:148px!important;
+    height:52px!important;
+  }
+  .topbar .nav button,
+  .inner-page .inner-index-header nav a,
+  .inner-page .header nav a{
+    padding:7px 6px!important;
+    font-size:.74rem!important;
+  }
+  .topbar .notifications,
+  .inner-page .inner-notifications{
+    display:none!important;
+  }
+  .topbar .cta,
+  .inner-page .inner-start-button{
+    padding-left:10px!important;
+    padding-right:10px!important;
+    font-size:.70rem!important;
+  }
+}
