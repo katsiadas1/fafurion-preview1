@@ -147,7 +147,7 @@ window.RANKINGS_DATA = {
       "leader": "Astra",
       "level": 9,
       "reputation": 183785,
-      "castle": "Aden"
+      "castle": "Goddard"
     },
     {
       "name": "BlueDragons",
@@ -161,7 +161,7 @@ window.RANKINGS_DATA = {
       "leader": "Noctis",
       "level": 10,
       "reputation": 152767,
-      "castle": "Goddard"
+      "castle": "Aden"
     },
     {
       "name": "NightWatch",
