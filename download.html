@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#07141f"><link rel="icon" type="image/svg+xml" href="assets/counter-mark.svg?v=2"><meta name="description" content="Enter the world of Fafurion. A new Lineage II adventure beyond the horizon."><title>Download — L2Counter</title><link rel="stylesheet" href="style.css?v=13"><link rel="stylesheet" href="community.css?v=13"><script src="translations.js?v=10" defer></script><script src="i18n.js?v=10" defer></script><script src="config.js?v=10" defer></script><script src="community-data.js?v=10" defer></script><script src="app.js?v=10" defer></script><script src="community.js?v=10" defer></script><link rel="stylesheet" href="realm-theme.css?v=13"><link rel="stylesheet" href="site-unified.css?v=6"><link rel="stylesheet" href="counter-cinematic.css?v=6"><script src="counter-motion.js?v=1" defer></script><link rel="stylesheet" href="site-polish.css?v=5">
-</head>
+<link rel="stylesheet" href="patch-version.css?v=1"><script src="patch-version.js?v=1" defer></script></head>
 <body class="inner-page download-page"><header class="header inner-index-header">
 <a class="brand counter-logo-brand" href="index.html" aria-label="L2Counter home"><img class="counter-header-logo" src="assets/l2counter-header-logo.webp?v=2" alt="L2Counter · Lineage II"></a>
 <nav id="navigation" aria-label="Main navigation">
@@ -24,4 +24,60 @@
   <a class="small-button inner-start-button" href="index.html#account/dashboard" data-i18n="play">Start playing</a>
   <button class="menu" aria-label="Open menu" aria-expanded="false">☰</button>
 </div>
-</header><main><div class="page-heading"><span class="eyebrow">LINEAGE II · FAFURION</span><h1 data-i18n="downloadnav">Download</h1><p data-i18n="downloadintro">Get the client and the latest server patch.</p></div><section class="download section" id="download"><div class="ornament" aria-hidden="true">◇</div><div class="eyebrow" data-i18n="horizon">YOUR STORY IS ON THE HORIZON</div><h2 data-i18n="ready">Prepare for the awakening.</h2><p data-i18n="downloadtext">Everything you need to enter the realm, in one place.</p><div class="download-options"><button class="download-card" data-resource="client"><span class="download-icon" aria-hidden="true">↓</span><span><strong data-i18n="client">Game client</strong><small data-i18n="clientsub">Lineage II · Fafurion</small></span><span class="availability" data-i18n="soon">Coming soon</span></button><button class="download-card" data-resource="patch"><span class="download-icon" aria-hidden="true">↓</span><span><strong data-i18n="patch">Server patch</strong><small data-i18n="patchsub">Files to join our realm</small></span><span class="availability" data-i18n="soon">Coming soon</span></button></div><p class="download-note" data-i18n="downloadnote">Download links will be available before the opening.</p></section></main><footer><a class="brand" href="index.html"><img class="counter-brand-mark" src="assets/counter-mark.svg?v=2" alt=""><span>COUNTER<small>LINEAGE II</small></span></a><p data-i18n="footer">An independent Lineage II community.<br>Lineage II belongs to its respective owners.</p><a href="index.html" class="back-top" data-i18n="backhome">Back to home ←</a></footer><dialog id="notice"><button class="close" aria-label="Close dialog">×</button><span class="eyebrow">FAFURION</span><h2 data-i18n="noticetitle">The journey is coming.</h2><p data-i18n="noticebody">Downloads are not available yet. Return here for the client and server patch before opening day.</p><button class="button primary dismiss" data-i18n="understood">Understood</button></dialog></body></html>
+</header><main>
+<div class="page-heading">
+  <span class="eyebrow">LINEAGE II · FAFURION</span>
+  <h1>Download Center</h1>
+  <p>Client, full patch and lightweight updates — with version information in one place.</p>
+</div>
+
+<section class="patch-version-shell">
+  <div class="patch-version-main">
+    <div>
+      <span class="eyebrow">CURRENT RELEASE</span>
+      <h2>Patch <strong id="patchCurrentVersion">v1.0.7</strong></h2>
+      <p>Use the full patch for a fresh installation, or Update Only if your client is already current.</p>
+    </div>
+    <div class="patch-release-meta">
+      <div><small>LAST UPDATED</small><strong id="patchUpdated">28 Sep 2026</strong></div>
+      <div><small>STATUS</small><strong class="patch-ready-status">PREVIEW</strong></div>
+    </div>
+  </div>
+
+  <div class="patch-download-grid">
+    <button class="patch-download-option" data-resource="client">
+      <span class="patch-option-icon">↓</span>
+      <div><small>FULL GAME</small><strong>Game Client</strong><p>Complete Lineage II Fafurion client.</p></div>
+      <div class="patch-option-meta"><b id="patchClientSize">38.4 GB</b><span>Coming soon</span></div>
+    </button>
+
+    <button class="patch-download-option featured" data-resource="patch">
+      <span class="patch-option-icon">◆</span>
+      <div><small>RECOMMENDED</small><strong>Full Server Patch</strong><p>Everything required to connect to L2Counter.</p></div>
+      <div class="patch-option-meta"><b id="patchFullSize">2.8 GB</b><span>Coming soon</span></div>
+    </button>
+
+    <button class="patch-download-option" data-resource="update">
+      <span class="patch-option-icon">↻</span>
+      <div><small>FAST UPDATE</small><strong>Update Only</strong><p>Only the files changed in the latest release.</p></div>
+      <div class="patch-option-meta"><b id="patchUpdateSize">184 MB</b><span>Coming soon</span></div>
+    </button>
+  </div>
+
+  <div class="patch-integrity-row">
+    <div><small>CHECKSUM</small><code id="patchChecksum">SHA-256 · preview checksum will appear here before release</code></div>
+    <button type="button" id="copyChecksumButton">COPY</button>
+  </div>
+
+  <div class="patch-release-notes">
+    <div class="patch-release-head"><div><span class="eyebrow">VERSION HISTORY</span><h3>Latest changes</h3></div><span>v1.0.7</span></div>
+    <div class="patch-note-list">
+      <div><b>01</b><p><strong>Interface package</strong><span>Latest server UI and compatibility files.</span></p></div>
+      <div><b>02</b><p><strong>Event assets</strong><span>Prepared files for Live Event Center / Castle Dominion integration.</span></p></div>
+      <div><b>03</b><p><strong>Stability update</strong><span>Client-side cleanup and patch consistency improvements.</span></p></div>
+    </div>
+  </div>
+
+  <p class="patch-preview-note">Preview metadata only. Real links, file sizes and SHA-256 will be published before release.</p>
+</section>
+</main><footer><a class="brand" href="index.html"><img class="counter-brand-mark" src="assets/counter-mark.svg?v=2" alt=""><span>COUNTER<small>LINEAGE II</small></span></a><p data-i18n="footer">An independent Lineage II community.<br>Lineage II belongs to its respective owners.</p><a href="index.html" class="back-top" data-i18n="backhome">Back to home ←</a></footer><dialog id="notice"><button class="close" aria-label="Close dialog">×</button><span class="eyebrow">FAFURION</span><h2 data-i18n="noticetitle">The journey is coming.</h2><p data-i18n="noticebody">Downloads are not available yet. Return here for the client and server patch before opening day.</p><button class="button primary dismiss" data-i18n="understood">Understood</button></dialog></body></html>
