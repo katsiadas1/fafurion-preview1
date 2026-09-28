@@ -9,8 +9,15 @@
   };
   const pageNames = ['home', 'account', 'rankings', 'donate', 'admin'];
   const original = { showPage, showAccountTab, showAdminTab, showRankingMode, applyLang };
-  const infoLabels = { en: 'Info', el: 'Πληροφορίες', pt: 'Informações', ru: 'Информация' };
-  for (const [code, text] of Object.entries(infoLabels)) langs[code].t.navInfo = text;
+  const navLabels = {
+    navInfo: { en: 'Info', el: 'Πληροφορίες', pt: 'Informações', ru: 'Информация' },
+    navEvents: { en: 'Events', el: 'Events', pt: 'Eventos', ru: 'События' },
+    navSiege: { en: 'Siege', el: 'Πολιορκία', pt: 'Cerco', ru: 'Осада' },
+    navOpening: { en: 'Opening', el: 'Opening', pt: 'Abertura', ru: 'Открытие' }
+  };
+  for (const [key, labels] of Object.entries(navLabels)) {
+    for (const [code, text] of Object.entries(labels)) langs[code].t[key] = text;
+  }
 
   const homeCopy = {
   "en": {
