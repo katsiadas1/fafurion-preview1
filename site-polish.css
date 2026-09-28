@@ -1271,3 +1271,21 @@ textarea:focus{
     bottom:270px!important;
   }
 }
+
+
+/* realm status event link */
+#page-home .realm-status-link{
+  color:inherit!important;
+  text-decoration:none!important;
+}
+#page-home .realm-status-link:hover{
+  background:rgba(63,171,191,.08)!important;
+}
+#page-home .realm-status-link:hover .realm-status-icon{
+  border-color:rgba(109,211,229,.42)!important;
+  color:#c4f4fb!important;
+  box-shadow:0 0 18px rgba(82,201,224,.10)!important;
+}
+#page-home .realm-status-link:hover strong{
+  color:#ffffff!important;
+}
