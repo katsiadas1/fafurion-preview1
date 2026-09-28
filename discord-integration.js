@@ -1,34 +1,82 @@
 (() => {
+  const guildId = '1554135898105446410';
   const inviteCode = 'DyCnJmEYy';
+
   const meta = document.getElementById('discordCommunityMeta');
   const guildName = document.getElementById('discordGuildName');
-  if (!meta || !guildName) return;
+  const card = document.getElementById('discordHeroCard');
+  if (!meta || !guildName || !card) return;
 
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 5000);
+  const timeoutFetch = async (url, timeoutMs = 5000) => {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), timeoutMs);
+    try {
+      const response = await fetch(url, {
+        method: 'GET',
+        credentials: 'omit',
+        signal: controller.signal,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return await response.json();
+    } finally {
+      clearTimeout(timeout);
+    }
+  };
 
-  fetch(`https://discord.com/api/v10/invites/${inviteCode}?with_counts=true&with_expiration=true`, {
-    method: 'GET',
-    credentials: 'omit',
-    signal: controller.signal,
-    headers: { 'Accept': 'application/json' }
-  })
-    .then(response => {
-      if (!response.ok) throw new Error('Discord invite lookup failed');
-      return response.json();
-    })
-    .then(data => {
-      if (data?.guild?.name) guildName.textContent = data.guild.name;
-      const online = Number(data?.approximate_presence_count);
-      const members = Number(data?.approximate_member_count);
-      if (Number.isFinite(online) && Number.isFinite(members)) {
-        meta.textContent = `${online.toLocaleString()} online · ${members.toLocaleString()} members`;
-      } else if (Number.isFinite(members)) {
-        meta.textContent = `${members.toLocaleString()} members · Join Discord`;
-      }
-    })
-    .catch(() => {
+  const format = value => Number(value).toLocaleString();
+
+  const loadDiscord = async () => {
+    let widgetData = null;
+    let inviteData = null;
+
+    try {
+      widgetData = await timeoutFetch(
+        `https://discord.com/api/guilds/${guildId}/widget.json`
+      );
+    } catch (_) {
+      // Server Widget may be disabled; invite API remains a safe fallback.
+    }
+
+    try {
+      inviteData = await timeoutFetch(
+        `https://discord.com/api/v10/invites/${inviteCode}?with_counts=true&with_expiration=true`
+      );
+    } catch (_) {
+      // Keep the static Discord card if Discord blocks or rate-limits the lookup.
+    }
+
+    const resolvedName =
+      widgetData?.name ||
+      inviteData?.guild?.name;
+
+    const online = Number(
+      widgetData?.presence_count ??
+      inviteData?.approximate_presence_count
+    );
+
+    const members = Number(inviteData?.approximate_member_count);
+
+    if (resolvedName) {
+      guildName.textContent = resolvedName;
+    }
+
+    if (Number.isFinite(online) && Number.isFinite(members)) {
+      meta.textContent = `${format(online)} online · ${format(members)} members`;
+      card.classList.add('discord-live');
+    } else if (Number.isFinite(online)) {
+      meta.textContent = `${format(online)} online · Join Discord`;
+      card.classList.add('discord-live');
+    } else if (Number.isFinite(members)) {
+      meta.textContent = `${format(members)} members · Join Discord`;
+    } else {
       meta.textContent = 'Community · Help · Announcements';
-    })
-    .finally(() => clearTimeout(timeout));
+    }
+
+    if (widgetData?.instant_invite) {
+      card.href = widgetData.instant_invite;
+    }
+  };
+
+  loadDiscord();
 })();
