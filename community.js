@@ -67,7 +67,11 @@
   }
   function renderPage() {
     const target=document.getElementById('public-profile');if(!target)return;
-    const kind=document.body.dataset.profileKind,name=new URL(location.href).searchParams.get('name');
+    const kind=document.body.dataset.profileKind;
+    const url=new URL(location.href);
+    const pathParts=decodeURIComponent(url.pathname).split('/').filter(Boolean);
+    const routeName=(kind==='player'||kind==='clan') && pathParts.length>=2 ? pathParts[pathParts.length-1] : '';
+    const name=url.searchParams.get('name')||document.body.dataset.profileName||routeName;
     const record=kind==='player'?data.player(name):data.clan(name);
     if(!record){target.innerHTML=`<section class="profile-shell"><div class="profile-content"><h1>${esc(t('Profile unavailable'))}</h1><p>${esc(t(kind==='player'?'This character could not be found.':'This clan could not be found.'))}</p><a class="profile-button" href="rankings.html">${esc(t('Back to rankings'))}</a></div></section>`;return;}
     target.innerHTML=kind==='player'?playerHTML(record,true):clanHTML(record,true);
