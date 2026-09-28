@@ -25,6 +25,22 @@ window.RANKINGS_DATA = {
   "demo": true,
   "players": [
     {
+      "name": "Hydra",
+      "class": "Titan",
+      "level": 85,
+      "clan": "Leviathan",
+      "pvp": 2842,
+      "pk": 44
+    },
+    {
+      "name": "FafurionKnight",
+      "class": "Duelist",
+      "level": 85,
+      "clan": "Immortals",
+      "pvp": 1482,
+      "pk": 12
+    },
+    {
       "name": "Astra",
       "class": "Duelist",
       "level": 82,
@@ -146,6 +162,13 @@ window.RANKINGS_DATA = {
     }
   ],
   "clans": [
+    {
+      "name": "Leviathan",
+      "leader": "Hydra",
+      "level": 11,
+      "reputation": 171300,
+      "castle": "—"
+    },
     {
       "name": "Eclipse",
       "leader": "Astra",
