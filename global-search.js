@@ -1,6 +1,6 @@
 (() => {
-  const players=["Astra","Dracarys","Noctis","Valkyria","Kaizen","Nyx","Ragnar","Selene","Ares","Zephyr","Raven","Orion","Frostbite","Nexus","Lunara","Vex","Mira","Lucian","Sable","Ember","Kael","Thalor","Azure","Atlas","Nova","Echo","Iris","Shade","Specter","Kira","Onyx","Artemis","Lyra","Auron","Cerys","Dante","Lilith","Morgana","Kain","Bjorn","Astrid","Torin","Skadi","Eos","Solace","Seraph","Aster","Draven","Freya","Luna","Dorian","Zenith","Elara","Caelum","Vesper"];
-  const clans=["Eclipse","BlueDragons","Immortals","NightWatch","Avalon","ChaosLegion","Stormborn","Nemesis","LastHope","Aether"];
+  const players=["Hydra","FafurionKnight","Astra","Dracarys","Noctis","Valkyria","Kaizen","Nyx","Ragnar","Selene","Ares","Zephyr","Raven","Orion","Frostbite","Nexus","Lunara","Vex","Mira","Lucian","Sable","Ember","Kael","Thalor","Azure","Atlas","Nova","Echo","Iris","Shade","Specter","Kira","Onyx","Artemis","Lyra","Auron","Cerys","Dante","Lilith","Morgana","Kain","Bjorn","Astrid","Torin","Skadi","Eos","Solace","Seraph","Aster","Draven","Freya","Luna","Dorian","Zenith","Elara","Caelum","Vesper"];
+  const clans=["Leviathan","Eclipse","BlueDragons","Immortals","NightWatch","Avalon","ChaosLegion","Stormborn","Nemesis","LastHope","Aether"];
   const pages=[
     ['Server Info','Page','/info.html','INFO'],
     ['Rankings','Page','/rankings.html','R'],
