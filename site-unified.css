@@ -610,3 +610,75 @@ body::before{
     height:44px;
   }
 }
+
+
+/* ---------- header logo v2: larger + blended with navbar ---------- */
+.topbar .counter-logo-brand,
+.inner-page .header .counter-logo-brand{
+  width:390px!important;
+  height:60px!important;
+  flex:0 0 390px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  overflow:visible!important;
+  background:transparent!important;
+}
+
+.topbar .counter-header-logo,
+.inner-page .header .counter-header-logo{
+  width:350px!important;
+  max-width:none!important;
+  height:60px!important;
+  object-fit:contain!important;
+  object-position:left center!important;
+  transform:scale(1.12);
+  transform-origin:left center;
+  mix-blend-mode:screen!important;
+  filter:
+    contrast(1.55)
+    brightness(1.06)
+    saturate(1.12)
+    drop-shadow(0 0 13px rgba(75,204,229,.16))!important;
+}
+
+@media(max-width:1450px){
+  .topbar .counter-logo-brand,
+  .inner-page .header .counter-logo-brand{
+    width:310px!important;
+    flex-basis:310px!important;
+  }
+  .topbar .counter-header-logo,
+  .inner-page .header .counter-header-logo{
+    width:285px!important;
+    transform:scale(1.08);
+  }
+}
+
+@media(max-width:1200px){
+  .topbar .counter-logo-brand,
+  .inner-page .header .counter-logo-brand{
+    width:235px!important;
+    flex-basis:235px!important;
+  }
+  .topbar .counter-header-logo,
+  .inner-page .header .counter-header-logo{
+    width:220px!important;
+    height:52px!important;
+    transform:none;
+  }
+}
+
+@media(max-width:700px){
+  .topbar .counter-logo-brand,
+  .inner-page .header .counter-logo-brand{
+    width:178px!important;
+    height:44px!important;
+    flex-basis:178px!important;
+  }
+  .topbar .counter-header-logo,
+  .inner-page .header .counter-header-logo{
+    width:170px!important;
+    height:44px!important;
+  }
+}
