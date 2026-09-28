@@ -1,32 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
-<title id="title">L2Counter</title>
-<desc id="desc">Icy blue C crest with Lineage II bars</desc>
+<title id="title">Counter — Lineage II crest</title>
+<desc id="desc">Twin silver Roman numeral blades with cyan highlights and a pointed heraldic frame.</desc>
 <defs>
-  <radialGradient id="bg" cx="50%" cy="45%" r="60%">
-    <stop offset="0" stop-color="#143b4b"/>
-    <stop offset=".55" stop-color="#081822"/>
-    <stop offset="1" stop-color="#02090e"/>
-  </radialGradient>
-  <linearGradient id="ice" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#f2fbff"/>
-    <stop offset=".22" stop-color="#a7dce7"/>
-    <stop offset=".5" stop-color="#4fa7bb"/>
-    <stop offset=".72" stop-color="#d9f3f8"/>
-    <stop offset="1" stop-color="#4a8c9d"/>
-  </linearGradient>
-  <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
-    <feGaussianBlur stdDeviation="3.5" result="b"/>
-    <feColorMatrix in="b" type="matrix" values="0 0 0 0 0.20 0 0 0 0 0.82 0 0 0 0 1 0 0 0 .85 0"/>
-    <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter>
+ <linearGradient id="silver" x1="0" y1="0" x2="1" y2=".8"><stop stop-color="#fbffff"/><stop offset=".23" stop-color="#a1c4d8"/><stop offset=".43" stop-color="#f2fbff"/><stop offset=".49" stop-color="#6390aa"/><stop offset=".72" stop-color="#bedde9"/><stop offset="1" stop-color="#376982"/></linearGradient>
+ <linearGradient id="edge" x2="0" y2="1"><stop stop-color="#d7f7ff"/><stop offset=".45" stop-color="#3d819d"/><stop offset="1" stop-color="#0d3d59"/></linearGradient>
+ <radialGradient id="aura"><stop stop-color="#2096c3" stop-opacity=".32"/><stop offset="1" stop-color="#2096c3" stop-opacity="0"/></radialGradient>
+ <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="2"/></filter>
 </defs>
-<circle cx="64" cy="64" r="58" fill="url(#bg)" stroke="#6edbed" stroke-opacity=".35" stroke-width="2"/>
-<circle cx="64" cy="64" r="51" fill="none" stroke="#bfeef5" stroke-opacity=".12"/>
-<g filter="url(#glow)">
-  <path d="M91 34c-7-7-16-10-27-10-24 0-42 17-42 40s18 40 42 40c11 0 20-3 27-10l-8-10c-5 5-11 7-19 7-16 0-28-11-28-27s12-27 28-27c8 0 14 2 19 7z" fill="url(#ice)"/>
-  <path d="M28 64h72" stroke="#61d9ef" stroke-width="2" stroke-linecap="round" opacity=".9"/>
-  <circle cx="64" cy="64" r="4" fill="#eaffff"/>
-  <path d="M60 45h5v38h-5zM70 45h5v38h-5z" fill="url(#ice)"/>
-  <path d="M60 45l2-5 3 5M70 45l2-5 3 5M60 83l2 5 3-5M70 83l2 5 3-5" fill="#bfeaf2"/>
-</g>
+<ellipse cx="64" cy="65" rx="61" ry="60" fill="url(#aura)"/>
+<path d="M64 5 75 17 106 22 100 42 112 58 102 91 64 122 26 91 16 58 28 42 22 22 53 17Z" fill="#061724" fill-opacity=".6" stroke="url(#edge)" stroke-width="1.8"/>
+<path d="M64 12 72 23 98 28 94 43 104 59 95 87 64 114 33 87 24 59 34 43 30 28 56 23Z" fill="none" stroke="#8bd9ee" stroke-opacity=".23"/>
+<path d="m37 28 10-9 10 9-6 7v59l6 9-11 10-9-10 5-9V35Zm34 0 10-9 10 9-6 7v59l6 9-11 10-9-10 5-9V35Z" fill="#020a12" stroke="#020a12" stroke-width="5"/>
+<path d="M33 25h26l-8 9v59l8 10H33l8-10V34Zm36 0h26l-8 9v59l8 10H69l8-10V34Z" fill="url(#silver)" stroke="#c9e9f7" stroke-width=".75"/>
+<path d="M42 35v57m36-57v57" stroke="#f4fcff" stroke-opacity=".8" stroke-width="1.5"/>
+<path d="M50 36v57m36-57v57" stroke="#264e66" stroke-width="1.5"/>
+<path d="M15 65h98" stroke="#2bbde9" stroke-width="3" opacity=".75" filter="url(#glow)"/>
+<path d="M19 65h90" stroke="#6bdaf6" stroke-width=".65" opacity=".8"/>
+<path d="m64 53 2.3 9.7L76 65l-9.7 2.3L64 77l-2.3-9.7L52 65l9.7-2.3Z" fill="#9beaff"/>
+<path d="m64 60 1 4 4 1-4 1-1 4-1-4-4-1 4-1Z" fill="#fff"/>
+<path d="m60 14 4-6 4 6-4 6Zm0 98 4-6 4 6-4 6Z" fill="url(#silver)"/>
 </svg>
