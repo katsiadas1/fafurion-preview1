@@ -1,0 +1,43 @@
+/* GLOBAL PLAYER / CLAN SEARCH */
+.global-search-trigger{
+  width:40px;height:40px;display:grid;place-items:center;
+  border:1px solid var(--p-line)!important;border-radius:7px!important;
+  background:rgba(10,33,45,.86)!important;color:#dbe9ed!important;
+  font-size:1rem!important
+}
+.global-search-trigger:hover{border-color:var(--p-line-strong)!important;color:#fff!important}
+.global-search-overlay{
+  position:fixed;inset:0;z-index:9999;display:none;align-items:flex-start;justify-content:center;
+  padding:11vh 16px 30px;background:rgba(1,7,12,.78);backdrop-filter:blur(10px)
+}
+.global-search-overlay.open{display:flex}
+.global-search-box{
+  width:min(720px,100%);border:1px solid var(--p-line-strong);border-radius:16px;
+  background:linear-gradient(145deg,rgba(9,29,40,.98),rgba(4,15,23,.99));
+  box-shadow:0 28px 90px rgba(0,0,0,.55);overflow:hidden
+}
+.global-search-head{display:flex;align-items:center;gap:10px;padding:14px;border-bottom:1px solid var(--p-line)}
+.global-search-head input{
+  flex:1;min-height:46px!important;padding:0 14px!important;border:1px solid var(--p-line)!important;
+  background:rgba(2,13,20,.9)!important;font-size:1rem!important
+}
+.global-search-close{
+  width:42px;height:42px;border:1px solid var(--p-line)!important;border-radius:8px!important;background:rgba(13,39,51,.78)!important
+}
+.global-search-meta{padding:10px 16px;color:#7e98a2;font-size:.68rem;border-bottom:1px solid rgba(105,201,219,.08)}
+.global-search-results{max-height:58vh;overflow:auto;padding:8px}
+.global-search-result{
+  display:grid;grid-template-columns:40px 1fr auto;gap:12px;align-items:center;
+  padding:11px 12px;border:1px solid transparent;border-radius:9px;text-decoration:none!important
+}
+.global-search-result:hover,.global-search-result.active{border-color:var(--p-line)!important;background:rgba(65,164,183,.08)!important}
+.global-search-icon{
+  width:40px;height:40px;display:grid;place-items:center;border:1px solid var(--p-line);border-radius:9px;
+  background:rgba(11,37,49,.82);color:#a7e6ef;font-size:.72rem;font-weight:900
+}
+.global-search-result strong{display:block;font-size:.86rem}.global-search-result small{display:block;color:#809ba5;font-size:.67rem;margin-top:3px}
+.global-search-result em{color:#7f99a3;font-size:.65rem;font-style:normal}
+.global-search-empty{padding:28px;text-align:center;color:#8ca4ad;font-size:.8rem}
+@media(max-width:700px){
+  .global-search-overlay{padding-top:72px}.global-search-trigger{width:38px;height:38px}
+}
