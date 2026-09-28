@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="portal.css?v=13"><link rel="stylesheet" href="portal-bridge.css?v=11">
 <link rel="stylesheet" href="home-rankings.css?v=12">
 <link rel="stylesheet" href="realm-theme.css?v=14"><link rel="stylesheet" href="home-counter.css?v=4"><script src="home-counter.js?v=1" defer></script><link rel="stylesheet" href="site-unified.css?v=6">
-<link rel="stylesheet" href="counter-cinematic.css?v=7"><script src="counter-motion.js?v=1" defer></script><link rel="stylesheet" href="site-polish.css?v=1">
+<link rel="stylesheet" href="counter-cinematic.css?v=7"><script src="counter-motion.js?v=1" defer></script><link rel="stylesheet" href="site-polish.css?v=2">
 </head>
 <body data-current-page="home">
 <div class="app">
@@ -97,6 +97,32 @@
         <a class="counter-btn" href="info.html"><span data-i18n="serverInfo">Server Info</span><span aria-hidden="true">◇</span></a>
       </div>
     </div>
+
+    <aside class="realm-status-strip" aria-label="Realm status preview">
+      <div class="realm-status-head">
+        <span class="realm-live-dot" aria-hidden="true"></span>
+        <div><small>REALM STATUS</small><strong>ONLINE</strong></div>
+        <em>PREVIEW DATA</em>
+      </div>
+      <div class="realm-status-grid">
+        <div class="realm-status-item">
+          <span class="realm-status-icon">♟</span>
+          <div><small>PLAYERS ONLINE</small><strong id="realmOnlinePlayers">327</strong></div>
+        </div>
+        <div class="realm-status-item">
+          <span class="realm-status-icon">⚔</span>
+          <div><small>NEXT EVENT</small><strong>Team vs Team</strong><em>18:30</em></div>
+        </div>
+        <div class="realm-status-item">
+          <span class="realm-status-icon">♜</span>
+          <div><small>ADEN SIEGE</small><strong id="realmSiegeCountdown">2D 04H</strong><em>Sunday · 20:00</em></div>
+        </div>
+        <div class="realm-status-item">
+          <span class="realm-status-icon">◷</span>
+          <div><small>SERVER TIME</small><strong id="realmServerClock">--:--:--</strong><em>GMT+3</em></div>
+        </div>
+      </div>
+    </aside>
   </div>
 </section>
 
@@ -1813,5 +1839,6 @@
 </div>
 <script src="portal.js?v=11"></script><script src="portal-bridge.js?v=12"></script>
 <script src="realm-theme.js?v=13"></script>
+<script src="realm-status.js?v=1"></script>
 </body>
 </html>
