@@ -3,6 +3,10 @@ window.SERVER_CONFIG = {
   clientUrl: '',
   patchUrl: '',
   updateUrl: '',
+  openingDate: '',
+  betaDate: '',
+  preDownloadDate: '',
+  characterCreationDate: '',
   patch: {
     version: '1.0.7',
     updated: '28 Sep 2026',
