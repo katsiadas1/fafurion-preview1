@@ -1,5 +1,17 @@
 // Add your real HTTPS download links here when the server is ready.
-window.SERVER_CONFIG = { clientUrl: '', patchUrl: '' };
+window.SERVER_CONFIG = {
+  clientUrl: '',
+  patchUrl: '',
+  updateUrl: '',
+  patch: {
+    version: '1.0.7',
+    updated: '28 Sep 2026',
+    clientSize: '38.4 GB',
+    fullPatchSize: '2.8 GB',
+    updateSize: '184 MB',
+    checksum: 'SHA-256 · preview checksum will appear here before release'
+  }
+};
 
 // Populate with real server data when available. Never put database credentials here.
 // Players: { name, class, level, clan, pvp, pk }
