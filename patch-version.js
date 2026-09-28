@@ -14,11 +14,15 @@
       const key=btn.dataset.resource;
       const url=key==='client'?cfg.clientUrl:key==='patch'?cfg.patchUrl:cfg.updateUrl;
       if(url){window.location.href=url;return;}
-      const original=btn.querySelector('.patch-option-meta span');
-      if(original){
-        const previous=original.textContent;
-        original.textContent='Link not published yet';
-        setTimeout(()=>original.textContent=previous,2200);
+      if(typeof window.l2Toast==='function'){
+        window.l2Toast('Download not published yet','The real client / patch link will appear here before release.','warn',2800);
+      }else{
+        const original=btn.querySelector('.patch-option-meta span');
+        if(original){
+          const previous=original.textContent;
+          original.textContent='Link not published yet';
+          setTimeout(()=>original.textContent=previous,2200);
+        }
       }
     });
   });
@@ -29,6 +33,7 @@
     try{
       await navigator.clipboard.writeText(text);
       copy.textContent='COPIED';
+      if(typeof window.l2Toast==='function')window.l2Toast('Checksum copied','SHA-256 copied to clipboard.','success',1800);
       setTimeout(()=>copy.textContent='COPY',1600);
     }catch{
       copy.textContent='SELECT';
