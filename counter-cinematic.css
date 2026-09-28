@@ -1,0 +1,36 @@
+/* Reference composition: one full-screen scene and three real actions. */
+body[data-current-page="home"] .topbar{position:relative!important;min-height:64px!important;height:64px;padding:7px 4.6%!important;background:#030e16f5!important;border-bottom:1px solid #345362!important;box-shadow:0 1px 16px #4ac9ed10;backdrop-filter:blur(12px)}
+.topbar .brand{min-width:200px}.topbar .brand strong{font-size:23px;letter-spacing:.18em}.topbar .counter-brand-mark{width:48px!important;height:48px!important;flex-basis:48px!important}.topbar .nav{gap:9px}.topbar .nav button{padding:9px 14px;font-size:14px;border-radius:5px}.topbar .nav button.active{background:linear-gradient(0deg,#45c4e422,transparent)!important;box-shadow:inset 0 -2px #6fdafa,0 6px 16px -10px #64dfff!important;color:#eefcff!important}.topbar .right{gap:12px}.topbar .cta{background:linear-gradient(#133544,#075776)!important;border:1px solid #70cbe4!important;box-shadow:inset 0 0 9px #5ccce42b,0 0 13px #45d2f526!important;color:#edfaff!important;border-radius:5px!important;min-height:40px!important;font-size:13px!important;letter-spacing:.1em}.topbar .notification-btn,.topbar .lang-btn{min-height:40px!important;border-radius:5px!important}.topbar .admin-nav-btn{color:#dab970!important}
+#page-home.counter-home{margin:0!important;padding:0!important;background:#02090f!important}
+#page-home .counter-hero{min-height:640px;height:calc(100svh - 64px);max-height:1250px;display:block;border:0}
+#page-home .counter-hero-bg{inset:0;z-index:-3;background:url('assets/counter-storm-reference.webp') center center/cover no-repeat;transform:none;animation:none;filter:none;will-change:auto}
+#page-home .counter-hero:before,#page-home .counter-hero:after{display:none}
+#page-home .counter-lightning{display:none}
+#page-home .counter-fog{pointer-events:none;position:absolute;z-index:-1;inset:auto -8% -14%;height:30%;opacity:.16;background:radial-gradient(ellipse,#9ed6e930,transparent 65%);filter:blur(25px);animation:counterMist 18s ease-in-out infinite alternate}
+#page-home .counter-hero-inner{position:absolute;inset:0;width:100%;height:100%;min-height:0;padding:0;display:block;max-width:none}
+#page-home .counter-actions{position:absolute;top:71%;left:50%;transform:translateX(-50%);width:max-content;max-width:94%;margin:0;display:flex;flex-wrap:nowrap;gap:16px;opacity:1;animation:counterActionsIn .8s ease-out both}
+#page-home .counter-btn{height:58px;min-width:198px;padding:14px 27px;border-radius:3px;border:1px solid #749eaf;background:linear-gradient(180deg,#071923,#020d16);color:#e9f4fa;font-size:14px;letter-spacing:.075em;box-shadow:inset 0 0 0 3px #729dae19,0 0 0 1px #08151f,0 8px 20px #0006;backdrop-filter:blur(5px);text-shadow:0 1px 5px #000}
+#page-home .counter-btn:before{content:'';position:absolute;inset:4px;border:1px solid #7597a72b;pointer-events:none}
+#page-home .counter-btn.primary{min-width:245px;border-color:#7cecff;background:linear-gradient(180deg,#0b3a51e8,#031725f5);color:#f0fcff;box-shadow:inset 0 0 13px #2ed6ff66,0 0 0 2px #064459,0 0 0 3px #78ddec75,0 0 21px #15cfff7a,0 8px 20px #0005}
+#page-home .counter-btn.gold{border-color:#d4b17a;background:linear-gradient(180deg,#261f17ee,#0c1011f5);color:#f4dfac;box-shadow:inset 0 0 13px #c1924633,0 0 0 2px #2a241b,0 0 0 3px #b2965e55,0 0 15px #d8ad442b}
+#page-home .counter-btn:hover{transform:translateY(-3px);filter:brightness(1.16)}
+.counter-btn:focus-visible,.topbar button:focus-visible{outline:2px solid #c5f4ff;outline-offset:6px}
+@keyframes counterMist{to{transform:translateX(5%) translateY(-3%);opacity:.28}}
+@keyframes counterActionsIn{from{opacity:0;translate:0 14px}to{opacity:1;translate:0 0}}
+/* Shared restrained motion, never hide content before JS is available. */
+.page:not(#page-home).active{animation:counterPageIn .42s ease-out both}
+.account-tab.active,.admin-tab.active{animation:counterPageIn .32s ease-out both}
+@keyframes counterPageIn{from{opacity:.4;translate:0 9px}to{opacity:1;translate:0 0}}
+.counter-revealing{animation:counterCardIn .55s both;animation-delay:var(--reveal-delay,0ms)}
+@keyframes counterCardIn{from{opacity:.4;translate:0 16px}to{opacity:1;translate:0 0}}
+.info-card,.download-card,.rank-podium-card,.account-card,.stat-card,.char-card{transition:border-color .22s,box-shadow .22s,background-color .22s}
+@media(hover:hover){.info-card:hover,.download-card:hover,.char-card:hover{border-color:#65bdd17a!important;box-shadow:0 12px 34px #0004,0 0 20px #42cced0c!important}}
+.table-wrap tbody tr,.rank-table tbody tr{transition:background-color .18s}
+@media(min-width:1600px){#page-home .counter-actions{top:73%}}
+@media(max-width:1250px){.topbar .brand{min-width:155px}.topbar .nav{gap:0}.topbar .nav button{padding:8px 9px}.topbar .right{gap:8px}.topbar .right>.ghost{display:none}}
+@media(max-width:1000px){body[data-current-page="home"] .topbar{height:auto;min-height:64px!important;padding:9px 18px!important}.topbar .nav{display:none!important}.mobile-tabs{display:flex!important}.topbar .right{margin-left:auto}#page-home .counter-hero{height:calc(100svh - 118px);min-height:570px}.topbar .brand strong{font-size:20px}#page-home .counter-actions{gap:12px}#page-home .counter-btn{min-width:165px;padding:14px 18px}#page-home .counter-btn.primary{min-width:205px}}
+@media(max-width:700px){#page-home .counter-hero{height:calc(100svh - 118px);min-height:590px;max-height:1000px;background:#030b12}#page-home .counter-hero-bg{background-size:auto 100%;background-position:47% center;opacity:.78}#page-home .counter-hero-inner{padding:0;min-height:0}#page-home .counter-actions{top:auto;bottom:9%;width:88%;max-width:390px;display:grid;grid-template-columns:1fr;gap:13px}#page-home .counter-btn,#page-home .counter-btn.primary{min-width:0;width:100%;height:52px;font-size:13px}.topbar .right>.cta{display:none}.topbar .brand{min-width:0}.topbar .brand strong{font-size:17px}.topbar .counter-brand-mark{width:38px!important;height:38px!important;flex-basis:38px!important}.topbar .right{gap:7px}.topbar .lang-btn{padding:8px!important;font-size:13px!important}#page-home .counter-fog{display:none}}
+@media(prefers-reduced-motion:reduce){#page-home .counter-fog,#page-home .counter-actions,.page:not(#page-home).active,.account-tab.active,.admin-tab.active,.counter-revealing{animation:none!important}.counter-btn,.info-card,.download-card,.char-card{transition:none!important}}
+.account-view.active,.admin-view.active{animation:counterPageIn .32s ease-out both}
+@media(max-width:700px){#page-home .counter-hero-bg{background-position:right center}#page-home .counter-sr-title{position:absolute!important;left:5%;top:9%;width:90%!important;height:auto!important;clip:auto!important;overflow:visible!important;white-space:normal!important;margin:0!important;padding:0!important;font:500 clamp(34px,10vw,62px)/1.15 Georgia,serif;text-transform:uppercase;letter-spacing:.07em;color:#e5f7ff;text-shadow:0 3px 6px #00101b,0 0 24px #042738;background:none;z-index:1}}
+@media(prefers-reduced-motion:reduce){.account-view.active,.admin-view.active{animation:none!important}}
