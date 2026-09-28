@@ -1289,3 +1289,81 @@ textarea:focus{
 #page-home .realm-status-link:hover strong{
   color:#ffffff!important;
 }
+
+
+/* ----- public profile v2 ----- */
+.profile-identity{
+  display:flex!important;
+  align-items:center!important;
+  gap:18px!important;
+  min-width:0;
+}
+.profile-avatar-large{
+  width:72px;
+  height:72px;
+  flex:0 0 72px;
+  display:grid;
+  place-items:center;
+  border:1px solid var(--p-line-strong);
+  border-radius:16px;
+  background:
+    radial-gradient(circle at 35% 25%,rgba(119,220,238,.16),transparent 35%),
+    linear-gradient(145deg,rgba(15,52,66,.92),rgba(5,19,28,.96));
+  color:#dff8fb;
+  font:700 1.15rem/1 Cinzel,Georgia,serif;
+  letter-spacing:.08em;
+  box-shadow:inset 0 0 22px rgba(86,205,225,.06),0 12px 30px rgba(0,0,0,.24);
+}
+.achievement-grid{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px!important;
+}
+.achievement-badge{
+  min-height:82px;
+  border-radius:10px!important;
+}
+.achievement-badge.unlocked{
+  border-color:rgba(105,211,230,.28)!important;
+  background:
+    radial-gradient(circle at 100% 0%,rgba(73,187,208,.10),transparent 34%),
+    rgba(9,31,43,.88)!important;
+}
+.achievement-badge.unlocked>b{
+  color:#a9ebf4!important;
+}
+.achievement-badge.locked{
+  opacity:.62;
+}
+.profile-share-bar{
+  margin-top:22px;
+  padding:14px 16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  border:1px solid var(--p-line);
+  border-radius:10px;
+  background:rgba(4,18,27,.56);
+}
+.profile-share-bar>span{
+  color:#93aab3;
+  font-size:.72rem;
+  font-weight:700;
+}
+.profile-copy-link{
+  min-width:170px;
+  text-align:center;
+  cursor:pointer;
+}
+.profile-stats{
+  grid-template-columns:repeat(auto-fit,minmax(135px,1fr))!important;
+}
+
+@media(max-width:700px){
+  .profile-identity{align-items:flex-start!important}
+  .profile-avatar-large{width:56px;height:56px;flex-basis:56px;border-radius:12px}
+  .achievement-grid{grid-template-columns:1fr}
+  .profile-share-bar{align-items:stretch;flex-direction:column}
+  .profile-copy-link{width:100%;min-width:0}
+}
