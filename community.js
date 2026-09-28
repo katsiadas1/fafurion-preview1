@@ -4,7 +4,17 @@
   const t=s=>I.t(s);
   const esc=value=>String(value??'—').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const number=n=>Number.isFinite(Number(n))?Number(n).toLocaleString(I.locale):'—';
-  const pageUrl=(kind,name)=>{const url=new URL(kind+'.html',I.base);url.searchParams.set('name',name);url.searchParams.set('lang',I.language);return url.pathname+url.search;};
+  const pageUrl=(kind,name)=>{
+    if(data.demo){
+      const url=new URL(kind+'/'+encodeURIComponent(name)+'/',I.base);
+      url.searchParams.set('lang',I.language);
+      return url.pathname+url.search;
+    }
+    const url=new URL(kind+'.html',I.base);
+    url.searchParams.set('name',name);
+    url.searchParams.set('lang',I.language);
+    return url.pathname+url.search;
+  };
   const absoluteProfileUrl=(kind,name)=>new URL(pageUrl(kind,name),location.origin).href;
   const initials=name=>String(name||'?').split(/\s+/).map(x=>x[0]).join('').slice(0,2).toUpperCase();
   const link=(kind,name)=>{
