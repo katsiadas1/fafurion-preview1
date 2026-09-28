@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07131b">
+<link rel="icon" type="image/svg+xml" href="assets/counter-mark.svg?v=2">
+<meta name="description" content="L2Counter Siege Center — Aden ownership, registered clans, countdown and previous results.">
+<title>Siege Center — L2Counter</title>
+<link rel="stylesheet" href="style.css?v=13">
+<link rel="stylesheet" href="community.css?v=13">
+<script src="translations.js?v=10" defer></script>
+<script src="i18n.js?v=10" defer></script>
+<script src="config.js?v=10" defer></script>
+<script src="community-data.js?v=10" defer></script>
+<script src="app.js?v=10" defer></script>
+<script src="community.js?v=10" defer></script>
+<link rel="stylesheet" href="realm-theme.css?v=13">
+<link rel="stylesheet" href="site-unified.css?v=6">
+<link rel="stylesheet" href="counter-cinematic.css?v=7">
+<link rel="stylesheet" href="site-polish.css?v=5">
+<link rel="stylesheet" href="siege-center.css?v=1">
+<script src="counter-motion.js?v=1" defer></script>
+<script src="siege-center.js?v=1" defer></script>
+</head>
+<body class="inner-page siege-center-page">
+<header class="header inner-index-header">
+<a class="brand counter-logo-brand" href="index.html" aria-label="L2Counter home"><img class="counter-header-logo" src="assets/l2counter-header-logo.webp?v=2" alt="L2Counter · Lineage II"></a>
+<nav id="navigation" aria-label="Main navigation">
+  <a href="index.html">Home</a>
+  <a href="info.html">Info</a>
+  <a href="index.html#account/dashboard">Account</a>
+  <a href="rankings.html">Rankings</a>
+  <a href="events.html">Events</a>
+  <a href="siege.html" class="active" aria-current="page">Siege</a>
+  <a href="index.html#donate">Donate</a>
+</nav>
+<div class="header-actions inner-header-actions">
+  <a class="inner-download-link" href="download.html">Download</a>
+  <div class="language-mount"></div>
+  <a class="small-button inner-start-button" href="index.html#account/dashboard">Start playing</a>
+  <button class="menu" aria-label="Open menu" aria-expanded="false">☰</button>
+</div>
+</header>
+
+<main class="siege-main">
+  <section class="siege-heading">
+    <div>
+      <span class="eyebrow">ADEN DOMINION</span>
+      <h1>Siege Center</h1>
+      <p>Castle ownership, registered clans, the next siege countdown and the latest battle result.</p>
+    </div>
+    <div class="siege-clock-card"><small>NEXT SIEGE</small><strong id="siegeCountdown">--:--:--</strong><span>Sunday · 20:00 · GMT+3</span></div>
+  </section>
+
+  <aside class="siege-preview-note"><span>◆</span><p><b>Preview data</b> — ready to connect to Castle Dominion / siege backend data later.</p></aside>
+
+  <section class="siege-hero">
+    <div class="siege-castle-mark">♜</div>
+    <div class="siege-owner-copy">
+      <span class="siege-kicker">CURRENT CASTLE OWNER</span>
+      <h2>Aden Castle</h2>
+      <a class="siege-clan-link" href="clan.html?name=Immortals">Immortals</a>
+      <p>Controlled since the previous siege cycle.</p>
+      <div class="siege-owner-meta">
+        <span>Leader <b>Valakas</b></span>
+        <span>Clan Lv. <b>11</b></span>
+        <span>Reputation <b>184,250</b></span>
+      </div>
+    </div>
+    <div class="siege-defence-card">
+      <small>DEFENDER STATUS</small>
+      <strong>READY</strong>
+      <span>31 / 48 members marked ready</span>
+      <div class="siege-readiness"><i style="width:65%"></i></div>
+    </div>
+  </section>
+
+  <section class="siege-stat-grid">
+    <div><small>REGISTERED CLANS</small><strong>7</strong><span>1 defender · 6 attackers</span></div>
+    <div><small>MAX PARTICIPANTS</small><strong>112</strong><span>Party size 7</span></div>
+    <div><small>ROUND TIME</small><strong>5 min</strong><span>Preview test rules</span></div>
+    <div><small>CAPTURE CAST</small><strong>60 sec</strong><span>Seal of Ruler</span></div>
+  </section>
+
+  <section class="siege-grid">
+    <div class="siege-panel">
+      <div class="siege-panel-head"><div><span class="eyebrow">REGISTERED CLANS</span><h2>Battle roster</h2></div><span class="siege-count">7 CLANS</span></div>
+      <div class="siege-clan-list">
+        <div class="siege-clan-row defender"><span class="siege-crest">IM</span><div><b>Immortals</b><small>Valakas · Lv.11</small></div><strong>DEFENDER</strong><em>48 members</em></div>
+        <div class="siege-clan-row"><span class="siege-crest">LV</span><div><b>Leviathan</b><small>Hydra · Lv.11</small></div><strong>ATTACKER</strong><em>52 members</em></div>
+        <div class="siege-clan-row"><span class="siege-crest">OL</span><div><b>Olympus</b><small>Athena · Lv.10</small></div><strong>ATTACKER</strong><em>44 members</em></div>
+        <div class="siege-clan-row"><span class="siege-crest">NF</span><div><b>Nightfall</b><small>Nyx · Lv.10</small></div><strong>ATTACKER</strong><em>39 members</em></div>
+        <div class="siege-clan-row"><span class="siege-crest">OB</span><div><b>Oceanborn</b><small>OceanSoul · Lv.9</small></div><strong>ATTACKER</strong><em>35 members</em></div>
+        <div class="siege-more">+2 more registered clans</div>
+      </div>
+    </div>
+
+    <div class="siege-panel">
+      <div class="siege-panel-head"><div><span class="eyebrow">CONTROL OBJECTIVE</span><h2>Capture rules</h2></div><span class="siege-rule-icon">♜</span></div>
+      <div class="siege-rule-list">
+        <div><span>01</span><p><b>Preparation</b><small>Attackers and defenders spawn in their assigned zones.</small></p></div>
+        <div><span>02</span><p><b>Castle access</b><small>Gates unlock when preparation ends.</small></p></div>
+        <div><span>03</span><p><b>Seal of Ruler</b><small>One caster at a time · 60 second capture cast.</small></p></div>
+        <div><span>04</span><p><b>Live progress</b><small>25% · 50% · 75% · 100% announcements.</small></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="siege-results">
+    <div class="siege-panel-head"><div><span class="eyebrow">PREVIOUS RESULT</span><h2>Last Siege</h2></div><span class="siege-date">21 SEP 2026</span></div>
+    <div class="siege-result-card">
+      <div class="siege-result-winner">
+        <small>WINNER</small>
+        <span class="siege-crest large">IM</span>
+        <div><strong>Immortals</strong><em>Retained Aden Castle</em></div>
+      </div>
+      <div class="siege-result-score">
+        <div><small>CONTROL SCORE</small><strong>1,420</strong></div>
+        <div><small>CAPTURES</small><strong>2</strong></div>
+        <div><small>DOORS DESTROYED</small><strong>3</strong></div>
+      </div>
+      <div class="siege-result-mvp">
+        <small>SIEGE MVP</small>
+        <strong>Valakas</strong>
+        <span>42 contributions · 18 kills</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <a class="brand" href="index.html"><img class="counter-brand-mark" src="assets/counter-mark.svg?v=2" alt=""><span>COUNTER<small>LINEAGE II</small></span></a>
+  <p>An independent Lineage II community.<br>Lineage II belongs to its respective owners.</p>
+  <a href="index.html" class="back-top">Back to home ←</a>
+</footer>
+</body>
+</html>
