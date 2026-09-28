@@ -137,3 +137,15 @@ body[data-current-page="home"] .topbar,
     transform:none!important;
   }
 }
+
+
+/* HEADER TRANSPARENT BACKGROUND */
+body[data-current-page="home"] .topbar,
+.inner-page .header{
+  background:transparent!important;
+  background-color:transparent!important;
+  box-shadow:none!important;
+  backdrop-filter:none!important;
+  -webkit-backdrop-filter:none!important;
+  border-bottom-color:rgba(100,205,225,.12)!important;
+}
