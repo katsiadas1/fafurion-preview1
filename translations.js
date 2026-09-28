@@ -1117,3 +1117,18 @@ Object.assign(window.FAFURION_TRANSLATIONS.ru, {
   "Share this public clan profile": "Поделиться открытым профилем клана",
   "COPY PROFILE LINK": "КОПИРОВАТЬ ССЫЛКУ"
 });
+
+
+/* L2COUNTER NAV SEARCH EXTRA */
+Object.assign(window.FAFURION_TRANSLATIONS.el, {
+  "Opening":"Opening",
+  "Search players and clans":"Αναζήτηση παικτών και clans"
+});
+Object.assign(window.FAFURION_TRANSLATIONS.pt, {
+  "Opening":"Abertura",
+  "Search players and clans":"Buscar jogadores e clãs"
+});
+Object.assign(window.FAFURION_TRANSLATIONS.ru, {
+  "Opening":"Открытие",
+  "Search players and clans":"Поиск игроков и кланов"
+});
