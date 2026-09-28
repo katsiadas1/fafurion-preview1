@@ -466,7 +466,7 @@ body::before{
   border-bottom-color:var(--lc-line)!important;
   background:
     linear-gradient(90deg,rgba(3,14,21,.94),rgba(3,14,21,.62),rgba(3,14,21,.20)),
-    url('assets/dragon-selected.webp') 72% 42%/cover!important;
+    url('assets/counter-storm-reference.webp') 72% 42%/cover!important;
 }
 .profile-top h1,
 .profile-top h2{
@@ -574,7 +574,7 @@ body.inner-page{
   min-height:100vh;
   background:
     linear-gradient(180deg,rgba(2,7,12,.52),rgba(2,7,12,.70)),
-    url("assets/dragon-selected.webp") center top / cover fixed no-repeat!important;
+    url("assets/counter-storm-reference.webp") center top / cover fixed no-repeat!important;
 }
 
 body::before,
@@ -609,7 +609,7 @@ body[data-current-page="home"]::before{
 .inner-page{
   background:
     linear-gradient(180deg,rgba(2,7,12,.56),rgba(2,7,12,.74)),
-    url("assets/dragon-selected.webp") center top / cover fixed no-repeat!important;
+    url("assets/counter-storm-reference.webp") center top / cover fixed no-repeat!important;
 }
 
 /* Slight glass layer behind page content for readability. */
@@ -648,7 +648,51 @@ body[data-current-page="home"]::before{
   .inner-page{
     background:
       linear-gradient(180deg,rgba(2,7,12,.58),rgba(2,7,12,.78)),
-      url("assets/dragon-selected.webp") 62% top / auto 720px no-repeat,
+      url("assets/counter-storm-reference.webp") 62% top / auto 720px no-repeat,
+      #02070c!important;
+    background-attachment:scroll!important;
+  }
+}
+
+
+/* GLOBAL INDEX BACKGROUND V2 */
+:root{
+  --lc-index-background:url("assets/counter-storm-reference.webp");
+}
+
+body:not([data-current-page="home"]),
+body.inner-page{
+  background:
+    linear-gradient(180deg,rgba(2,7,12,.34),rgba(2,7,12,.56)),
+    var(--lc-index-background) center center / cover fixed no-repeat!important;
+}
+
+#page-account,
+#page-rankings,
+#page-donate,
+#page-admin{
+  background:transparent!important;
+}
+
+.inner-page{
+  background:
+    linear-gradient(180deg,rgba(2,7,12,.34),rgba(2,7,12,.56)),
+    var(--lc-index-background) center center / cover fixed no-repeat!important;
+}
+
+.profile-top{
+  background:
+    linear-gradient(90deg,rgba(3,14,21,.88),rgba(3,14,21,.48),rgba(3,14,21,.12)),
+    var(--lc-index-background) center center / cover no-repeat!important;
+}
+
+@media(max-width:800px){
+  body:not([data-current-page="home"]),
+  body.inner-page,
+  .inner-page{
+    background:
+      linear-gradient(180deg,rgba(2,7,12,.40),rgba(2,7,12,.64)),
+      var(--lc-index-background) 47% center / auto 100% no-repeat,
       #02070c!important;
     background-attachment:scroll!important;
   }
