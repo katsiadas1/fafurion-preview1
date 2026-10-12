@@ -23,3 +23,7 @@ public profiles are intentionally deferred to later phases.
 
 ## Public Profiles V2
 The same official race sheet is now used by the Rankings public-player modal and the standalone player page, plus the public player cards opened from clan rosters. Existing character-class icons/initials are retained if the CDN image is unavailable. Account Character List remains unchanged for the next phase.
+
+## Account Roster V3
+
+The same six-race character creation face sheet is now used for race portraits on the Account Character List and the character detail modal. This is appearance-only. The existing game data, class graphics, logout/login functions and account operations remain untouched. The three current demo character classes (Duelist, Cardinal and Sagittarius) are all Human, so their portraits correctly match the same race.

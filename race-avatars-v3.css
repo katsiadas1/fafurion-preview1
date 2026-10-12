@@ -1,0 +1,103 @@
+/* COUNTER Race Avatars V3 — Account Character Roster + character details.
+ * Uses the V1 official six-row race sprite and its single image preflight.
+ * Account card illustrations, server demo records, existing class icons
+ * and character actions are unchanged. */
+#account-characters-view .character-art .class-emblem.account-race-portrait,
+#characterModal .profile-emblem.account-race-portrait {
+  --race-face-row:0%;
+  position:relative!important;
+  isolation:isolate;
+  display:grid!important;
+  place-items:center!important;
+  flex-shrink:0!important;
+  overflow:hidden!important;
+  border:1px solid rgba(141,212,239,.54)!important;
+  border-radius:13px!important;
+  background:linear-gradient(140deg,rgba(23,62,82,.95),rgba(4,16,28,.95))!important;
+  box-shadow:inset 0 1px rgba(223,246,255,.14),0 0 0 2px rgba(6,20,29,.76),0 11px 28px rgba(0,0,0,.48),0 0 20px rgba(61,161,220,.11)!important;
+}
+#account-characters-view .character-art .class-emblem.account-race-portrait {
+  width:80px!important;
+  height:80px!important;
+  transform:translateY(5px)!important;
+}
+#characterModal .profile-emblem.account-race-portrait {
+  width:88px!important;
+  height:88px!important;
+  transform:none!important;
+}
+#account-characters-view .character-art .account-race-portrait::before,
+#characterModal .profile-emblem.account-race-portrait::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:5;
+  pointer-events:none;
+  border-radius:inherit;
+  background-image:url("https://wstatic-cdn.plaync.com/promo/lineage2/history/2012/lindvior/content4_img2.jpg");
+  background-size:600% 600%;
+  background-position:100% var(--race-face-row,0%);
+  background-repeat:no-repeat;
+  opacity:0;
+}
+html.race-portrait-ready #account-characters-view .character-art .account-race-portrait[data-race]::before,
+html.race-portrait-ready #characterModal .profile-emblem.account-race-portrait[data-race]::before {
+  opacity:1;
+}
+#account-characters-view .account-race-portrait[data-race="human"],
+#characterModal .account-race-portrait[data-race="human"] {--race-face-row:0%}
+#account-characters-view .account-race-portrait[data-race="elf"],
+#characterModal .account-race-portrait[data-race="elf"] {--race-face-row:20%}
+#account-characters-view .account-race-portrait[data-race="darkelf"],
+#characterModal .account-race-portrait[data-race="darkelf"] {--race-face-row:40%}
+#account-characters-view .account-race-portrait[data-race="orc"],
+#characterModal .account-race-portrait[data-race="orc"] {--race-face-row:60%}
+#account-characters-view .account-race-portrait[data-race="dwarf"],
+#characterModal .account-race-portrait[data-race="dwarf"] {--race-face-row:80%}
+#account-characters-view .account-race-portrait[data-race="kamael"],
+#characterModal .account-race-portrait[data-race="kamael"] {--race-face-row:100%}
+#account-characters-view .character-art .account-race-name {
+  position:absolute;
+  right:16px;
+  bottom:17px;
+  z-index:3;
+  display:inline-flex;
+  align-items:center;
+  padding:6px 10px;
+  border:1px solid rgba(119,204,234,.34);
+  border-radius:6px;
+  background:rgba(4,22,33,.84);
+  color:#c4eaf7;
+  font:800 10px/1.15 Arial,sans-serif;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  pointer-events:none;
+}
+#account-characters-view .character-card.online-char .account-race-portrait {
+  border-color:rgba(112,217,167,.57)!important;
+  box-shadow:inset 0 1px rgba(223,246,255,.14),0 0 0 2px rgba(6,27,24,.70),0 12px 29px rgba(0,0,0,.46),0 0 19px rgba(90,215,162,.13)!important;
+}
+#characterModal .profile-title .public-race-tag {
+  margin-top:9px;
+  position:relative;
+}
+@media(max-width:700px){
+  #account-characters-view .character-art .class-emblem.account-race-portrait {
+    width:69px!important;
+    height:69px!important;
+  }
+  #characterModal .profile-emblem.account-race-portrait {
+    width:68px!important;
+    height:68px!important;
+  }
+  #account-characters-view .character-art .account-race-name {
+    right:13px;
+    bottom:13px;
+    padding:5px 8px;
+    font-size:9px;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  #account-characters-view .account-race-portrait,
+  #characterModal .account-race-portrait {animation:none!important;transition:none!important;}
+}
