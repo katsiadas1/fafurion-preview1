@@ -1437,3 +1437,54 @@ textarea:focus{
     font-size:.70rem!important;
   }
 }
+
+
+/* COUNTER Dragon C emblem — unified site branding, October 2026 */
+.topbar .counter-logo-brand,
+.inner-page .inner-index-header .counter-logo-brand,
+.inner-page .header .counter-logo-brand{
+ width:220px!important;min-width:220px!important;flex:0 0 220px!important;
+ height:68px!important;gap:8px!important;display:flex!important;align-items:center!important;justify-content:flex-start!important;text-decoration:none!important;
+}
+.topbar .counter-header-logo,
+.inner-page .inner-index-header .counter-header-logo,
+.inner-page .header .counter-header-logo{
+ display:block!important;width:66px!important;height:66px!important;flex:0 0 66px!important;
+ max-width:66px!important;object-fit:contain!important;object-position:center!important;
+ margin:0!important;transform:none!important;mix-blend-mode:screen!important;
+ filter:drop-shadow(0 0 9px rgba(28,141,244,.42))!important;
+}
+.counter-dragon-wordmark{
+ display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:2px;
+ line-height:1!important;white-space:nowrap;
+}
+.counter-dragon-wordmark strong{
+ font:800 20px/1.1 Georgia,serif!important;letter-spacing:.125em!important;color:#e9f5ff!important;
+ text-shadow:0 1px 12px rgba(56,156,235,.4);
+}
+.counter-dragon-wordmark small{
+ font:600 9px/1.15 Arial,sans-serif!important;letter-spacing:.27em!important;color:#70c5ff!important;
+}
+footer img.counter-brand-mark{
+ object-fit:contain!important;mix-blend-mode:screen!important;
+ filter:drop-shadow(0 0 8px rgba(25,130,255,.32));
+}
+@media(max-width:1250px){
+ .topbar .counter-logo-brand,.inner-page .inner-index-header .counter-logo-brand,.inner-page .header .counter-logo-brand{
+ width:187px!important;min-width:187px!important;flex-basis:187px!important}
+ .topbar .counter-header-logo,.inner-page .inner-index-header .counter-header-logo,.inner-page .header .counter-header-logo{
+ width:58px!important;height:58px!important;flex-basis:58px!important}
+ .counter-dragon-wordmark strong{font-size:17px!important}
+}
+@media(max-width:700px){
+ .topbar .counter-logo-brand,.inner-page .inner-index-header .counter-logo-brand,.inner-page .header .counter-logo-brand{
+ width:155px!important;min-width:155px!important;flex-basis:155px!important;height:52px!important;gap:5px!important}
+ .topbar .counter-header-logo,.inner-page .inner-index-header .counter-header-logo,.inner-page .header .counter-header-logo{
+ width:49px!important;height:49px!important;flex-basis:49px!important}
+ .counter-dragon-wordmark strong{font-size:15px!important;letter-spacing:.08em!important}
+ .counter-dragon-wordmark small{font-size:8px!important;letter-spacing:.14em!important}
+}
+@media(prefers-reduced-motion:no-preference){
+ .counter-logo-brand .counter-header-logo{transition:filter .25s ease,scale .25s ease!important}
+ .counter-logo-brand:hover .counter-header-logo{scale:1.045;filter:drop-shadow(0 0 14px rgba(28,141,244,.65))!important}
+}
