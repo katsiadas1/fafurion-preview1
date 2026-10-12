@@ -1,0 +1,60 @@
+/* COUNTER RACE AVATARS V1 — rankings only.
+   Official Lineage II race-face sheet from NCSOFT/PLAYNC.
+   6 rows: Human, Elf, Dark Elf, Orc, Dwarf, Kamael.
+   On load failure, existing class icons remain (no broken images). */
+#ranking-pvp-panel .rank-avatar.race-avatar,
+#ranking-pvp-panel .rank-podium-portrait {
+  position:relative!important;
+  isolation:isolate;
+  display:inline-grid;
+  place-items:center;
+  flex-shrink:0!important;
+  overflow:hidden;
+  border-radius:10px!important;
+  border:1px solid rgba(126,197,225,.42)!important;
+  background:linear-gradient(135deg,#183548,#06131e)!important;
+  box-shadow:0 0 0 2px rgba(7,24,34,.65),inset 0 0 15px rgba(68,153,204,.14)!important;
+}
+#ranking-pvp-panel .rank-avatar.race-avatar {
+  width:46px!important;height:46px!important;flex-basis:46px!important;
+}
+#ranking-pvp-panel .rank-podium-portrait {
+  width:60px;height:60px;
+  margin:3px 0 8px;
+  color:#bfe0ed;
+  font:700 15px Georgia,serif;
+}
+#ranking-pvp-panel .race-avatar[data-race]::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:3;
+  pointer-events:none;
+  background-image:url("https://wstatic-cdn.plaync.com/promo/lineage2/history/2012/lindvior/content4_img2.jpg");
+  background-size:600% 600%;
+  background-repeat:no-repeat;
+  background-position:100% var(--race-face-row,0%);
+  opacity:0;
+  border-radius:inherit;
+}
+#ranking-pvp-panel .race-avatar[data-race="human"]{--race-face-row:0%}
+#ranking-pvp-panel .race-avatar[data-race="elf"]{--race-face-row:20%}
+#ranking-pvp-panel .race-avatar[data-race="darkelf"]{--race-face-row:40%}
+#ranking-pvp-panel .race-avatar[data-race="orc"]{--race-face-row:60%}
+#ranking-pvp-panel .race-avatar[data-race="dwarf"]{--race-face-row:80%}
+#ranking-pvp-panel .race-avatar[data-race="kamael"]{--race-face-row:100%}
+html.race-portrait-ready #ranking-pvp-panel .race-avatar[data-race]::before {opacity:1}
+#ranking-pvp-panel .rank-podium-button:first-child .rank-podium-portrait {
+  border-color:rgba(235,199,121,.75)!important;
+  box-shadow:0 0 0 2px rgba(59,43,17,.78),0 0 20px rgba(212,172,89,.20)!important;
+}
+#ranking-pvp-panel .rank-podium-button:nth-child(2) .rank-podium-portrait {
+  border-color:rgba(186,214,228,.67)!important;
+}
+#ranking-pvp-panel .rank-podium-button:nth-child(3) .rank-podium-portrait {
+  border-color:rgba(204,146,105,.66)!important;
+}
+@media(max-width:700px) {
+  #ranking-pvp-panel .rank-avatar.race-avatar{width:42px!important;height:42px!important;flex-basis:42px!important}
+  #ranking-pvp-panel .rank-podium-portrait{width:42px;height:42px;margin:1px 0 5px;font-size:12px}
+}
