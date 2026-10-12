@@ -44,3 +44,18 @@ not assertions about real players.
 
 Applied to Rankings PvP avatars and podium, the public player modal,
 standalone public player cards, Account character roster and character details.
+
+## Legendary Profiles V5 (visual only)
+
+Enhanced public player popup, standalone public player pages, player cards opened
+from clan rosters and the Account Character Details popup.
+
+The existing race/gender image and class-icon fallbacks are untouched. The new
+Hero and Noblesse ribbons appear **only if the record explicitly sets hero or
+noble to Yes/true/1**. The extra Account PvP kill records are numeric thresholds
+computed from the displayed existing PvP count, not server-issued achievements
+or new PvP skills/rewards. Public badges are restyled using their existing labels,
+rather than adding unearned achievements. No player/account backend is changed.
+
+Standalone public player demo data has no Hero/Noblesse flags at present; the
+new status ribbons are appropriately omitted there until backend data supplies them.
