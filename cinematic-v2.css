@@ -1,0 +1,285 @@
+/* COUNTER CINEMATIC V2
+   Premium inner-page surfaces. Visual-only, no routes/data/logic altered.
+   Kept as a standalone layer for easy review and rollback. */
+:root {
+  --cv2-edge:rgba(107,191,219,.25);
+  --cv2-edge-hover:rgba(124,214,238,.56);
+  --cv2-glint:rgba(169,229,247,.15);
+  --cv2-gold:rgba(223,188,119,.66);
+  --cv2-panel:linear-gradient(145deg,rgba(11,33,48,.96),rgba(3,15,25,.98));
+  --cv2-depth:0 18px 46px rgba(0,0,0,.36),inset 0 1px rgba(198,237,250,.06);
+}
+/* Consistent atmosphere on subpages without touching the homepage dragon. */
+body.info-experience .info-main,
+body.download-page main,
+body.events-center-page .event-center-main,
+body.siege-center-page .siege-main,
+body.timeline-page .timeline-main,
+#page-rankings .rankings-v2 {
+  background-image:
+    radial-gradient(ellipse 60% 28% at 83% 1%,rgba(26,102,151,.13),transparent 85%),
+    radial-gradient(ellipse 49% 24% at 4% 40%,rgba(24,84,116,.08),transparent 83%);
+  background-repeat:no-repeat;
+}
+body.info-experience .page-heading,
+body.download-page .page-heading,
+body.events-center-page .event-center-heading,
+body.siege-center-page .siege-heading,
+body.timeline-page .timeline-heading,
+#page-rankings .section-head {
+  position:relative;
+}
+body.info-experience .page-heading h1,
+body.download-page .page-heading h1,
+body.events-center-page .event-center-heading h1,
+body.siege-center-page .siege-heading h1,
+body.timeline-page .timeline-heading h1,
+#page-rankings .section-head h2 {
+  color:#f1f8fc!important;
+  text-shadow:0 2px 25px rgba(39,139,198,.17),0 3px 14px rgba(0,0,0,.38);
+}
+body.info-experience .page-heading .eyebrow,
+body.download-page .page-heading .eyebrow,
+body.events-center-page .event-center-heading .eyebrow,
+body.siege-center-page .siege-heading .eyebrow,
+body.timeline-page .timeline-heading .eyebrow,
+#page-rankings .section-head .eyebrow {
+  color:#c4a972!important;
+  text-shadow:0 0 14px rgba(226,192,119,.13);
+}
+/* A quiet metallic rule below the section masthead. */
+body.info-experience .page-heading::after,
+body.download-page .page-heading::after,
+body.events-center-page .event-center-heading::after,
+body.siege-center-page .siege-heading::after,
+body.timeline-page .timeline-heading::after,
+#page-rankings .section-head::after {
+  content:"";
+  display:block;
+  position:relative;
+  width:min(280px,56vw);
+  height:1px;
+  margin:18px 0 0;
+  background:linear-gradient(90deg,rgba(220,187,119,.8),rgba(93,189,222,.46) 62%,transparent);
+  box-shadow:0 0 13px rgba(107,191,219,.21);
+  pointer-events:none;
+}
+body.info-experience .page-heading::after,
+body.download-page .page-heading::after {
+  margin-left:auto;
+  margin-right:auto;
+}
+/* Tactile glass + engraved blue-metal panels. */
+body.info-experience .info-card,
+body.info-experience .info-summary-card,
+body.download-page .patch-version-shell,
+body.download-page .patch-download-option,
+body.download-page .patch-release-meta>div,
+body.download-page .patch-release-notes,
+body.events-center-page .event-center-panel,
+body.events-center-page .live-event-card,
+body.events-center-page .event-result-card,
+body.events-center-page .event-live-stats>div,
+body.siege-center-page .siege-panel,
+body.siege-center-page .siege-results,
+body.siege-center-page .siege-stat-grid>div,
+body.timeline-page .timeline-step,
+body.timeline-page .timeline-info-card,
+#page-rankings .rank-podium-button,
+#page-rankings .rank-table-wrap {
+  border:1px solid var(--cv2-edge)!important;
+  background:
+    radial-gradient(ellipse 80% 68% at 100% 0%,rgba(47,136,170,.08),transparent 75%),
+    var(--cv2-panel)!important;
+  box-shadow:var(--cv2-depth)!important;
+}
+body.download-page .patch-version-shell {
+  border-color:rgba(118,198,223,.34)!important;
+  background:
+    linear-gradient(115deg,rgba(5,22,35,.94),rgba(4,16,27,.94)),
+    url("assets/counter-storm-reference.webp") center 42% / cover no-repeat!important;
+  box-shadow:0 24px 70px rgba(0,0,0,.44),inset 0 1px rgba(204,245,255,.09)!important;
+}
+body.download-page .patch-download-option.featured,
+body.timeline-page .timeline-step.grand,
+#page-rankings .rank-podium-button:first-child {
+  border-color:rgba(227,189,116,.57)!important;
+  background:
+    radial-gradient(ellipse 85% 70% at 15% 0%,rgba(184,133,52,.15),transparent 80%),
+    linear-gradient(140deg,rgba(43,34,24,.96),rgba(8,24,34,.98))!important;
+  box-shadow:0 18px 43px rgba(0,0,0,.43),inset 0 1px rgba(241,214,161,.12)!important;
+}
+/* Stronger reading hierarchy inside Info + Download without size shifts. */
+body.info-experience .info-card .card-heading,
+body.download-page .patch-release-head,
+body.events-center-page .event-panel-head,
+body.siege-center-page .siege-panel-head {
+  border-bottom-color:rgba(129,200,220,.14);
+}
+body.info-experience .info-summary-card strong {
+  color:#e4f6ff!important;
+  text-shadow:0 0 18px rgba(86,194,242,.13);
+}
+body.info-experience .info-card .card-heading>span,
+body.timeline-page .timeline-node,
+body.download-page .patch-option-icon {
+  box-shadow:inset 0 1px rgba(199,239,251,.10),0 0 18px rgba(56,161,212,.08);
+}
+/* The three download paths read as purposeful selectable game tiles. */
+body.download-page .patch-download-option {
+  position:relative;
+  overflow:hidden;
+  transition:transform .23s ease,border-color .23s ease,box-shadow .23s ease!important;
+}
+body.download-page .patch-download-option::after {
+  content:"";
+  position:absolute;
+  pointer-events:none;
+  inset:0;
+  border-radius:inherit;
+  background:linear-gradient(115deg,transparent 30%,rgba(194,234,249,.07) 51%,transparent 67%);
+  opacity:0;
+  transition:opacity .23s ease;
+}
+body.download-page .patch-release-meta strong,
+body.download-page .patch-download-option strong {
+  color:#eaf8fc;
+}
+body.download-page .patch-download-option.featured .patch-option-meta span {
+  color:#e4c98f;
+}
+/* Rankings: medals and champions are the main visual reward. */
+#page-rankings .rank-podium-button {
+  position:relative;
+  overflow:hidden;
+  transition:transform .24s ease,border-color .24s ease,box-shadow .24s ease!important;
+}
+#page-rankings .rank-podium-button:nth-child(2) {
+  border-color:rgba(190,215,229,.46)!important;
+  background:
+    radial-gradient(ellipse 80% 68% at 20% 0%,rgba(168,204,224,.15),transparent 79%),
+    var(--cv2-panel)!important;
+}
+#page-rankings .rank-podium-button:nth-child(3) {
+  border-color:rgba(186,132,95,.46)!important;
+  background:
+    radial-gradient(ellipse 80% 68% at 20% 0%,rgba(198,114,67,.11),transparent 79%),
+    var(--cv2-panel)!important;
+}
+#page-rankings .rank-podium-button .podium-medal {
+  text-shadow:0 0 25px currentColor;
+}
+#page-rankings .rank-podium-button:first-child .place,
+#page-rankings .rank-podium-button:first-child em {
+  color:#e4c88f!important;
+}
+#page-rankings .rank-table-wrap {
+  border-color:rgba(111,196,218,.29)!important;
+}
+#page-rankings .rank-table-wrap thead th {
+  background:linear-gradient(180deg,rgba(15,45,60,.98),rgba(8,29,42,.98))!important;
+}
+#page-rankings .rank-table-wrap tbody tr {
+  transition:background-color .2s ease!important;
+}
+#page-rankings .ranking-mode-tabs button:focus-visible,
+#page-rankings .rank-podium-button:focus-visible,
+#page-rankings .rank-player-link:focus-visible,
+body.download-page .patch-download-option:focus-visible,
+body.download-page .patch-integrity-row button:focus-visible,
+body.info-experience .info-shortcuts a:focus-visible {
+  outline:2px solid #a3e4fa!important;
+  outline-offset:3px!important;
+}
+/* Special events and siege: large feature panels feel like game chapters. */
+body.events-center-page .event-live-hero,
+body.siege-center-page .siege-hero {
+  border-color:rgba(137,206,229,.37)!important;
+  box-shadow:0 27px 72px rgba(0,0,0,.45),inset 0 1px rgba(225,244,255,.08)!important;
+}
+body.events-center-page .event-countdown-panel,
+body.siege-center-page .siege-defence-card,
+body.timeline-page .timeline-countdown-card {
+  border-color:rgba(132,205,234,.30)!important;
+  box-shadow:inset 0 1px rgba(228,251,255,.09),0 13px 35px rgba(0,0,0,.24)!important;
+}
+body.siege-center-page .siege-castle-mark,
+body.events-center-page .event-card-icon-large {
+  filter:drop-shadow(0 0 14px rgba(203,175,110,.14));
+}
+body.timeline-page .timeline-step {
+  transition:border-color .22s ease,box-shadow .22s ease!important;
+}
+body.timeline-page .timeline-track::before {
+  box-shadow:0 0 11px rgba(94,184,224,.25);
+}
+/* Add depth only on devices that actually support hover. */
+@media(hover:hover) and (pointer:fine) {
+  body.info-experience .info-card:hover,
+  body.events-center-page .live-event-card:hover,
+  body.events-center-page .event-result-card:hover,
+  body.siege-center-page .siege-panel:hover,
+  body.timeline-page .timeline-step:hover {
+    border-color:var(--cv2-edge-hover)!important;
+    box-shadow:0 24px 52px rgba(0,0,0,.43),inset 0 1px rgba(215,246,255,.10),0 0 18px rgba(45,139,188,.10)!important;
+  }
+  body.download-page .patch-download-option:hover,
+  #page-rankings .rank-podium-button:hover {
+    transform:translateY(-4px)!important;
+    border-color:var(--cv2-edge-hover)!important;
+    box-shadow:0 24px 52px rgba(0,0,0,.46),inset 0 1px rgba(215,246,255,.14),0 0 23px rgba(43,151,201,.14)!important;
+  }
+  body.download-page .patch-download-option:hover::after {opacity:1;}
+  body.download-page .patch-download-option.featured:hover,
+  #page-rankings .rank-podium-button:first-child:hover {
+    border-color:rgba(235,199,125,.83)!important;
+    box-shadow:0 24px 52px rgba(0,0,0,.46),0 0 22px rgba(202,155,73,.11)!important;
+  }
+}
+/* Subtle arrival, never hide clickable content pending JS. */
+@media(prefers-reduced-motion:no-preference) {
+  body.info-experience .info-summary-card,
+  body.download-page .patch-download-option,
+  body.events-center-page .live-event-card,
+  body.siege-center-page .siege-stat-grid>div,
+  body.timeline-page .timeline-step,
+  #page-rankings .rank-podium-button {
+    animation:cv2-arrive .53s ease-out both;
+  }
+  body.download-page .patch-download-option:nth-child(2),
+  body.events-center-page .live-event-card:nth-child(2),
+  body.timeline-page .timeline-step:nth-child(2),
+  #page-rankings .rank-podium-button:nth-child(2) {animation-delay:.065s;}
+  body.download-page .patch-download-option:nth-child(3),
+  body.events-center-page .live-event-card:nth-child(3),
+  body.timeline-page .timeline-step:nth-child(3),
+  #page-rankings .rank-podium-button:nth-child(3) {animation-delay:.12s;}
+}
+@keyframes cv2-arrive {
+  from{opacity:.72;filter:brightness(.86);}
+  to{opacity:1;filter:brightness(1);}
+}
+/* Low-cost rendering on mobile and accessible reduced motion. */
+@media(max-width:700px) {
+  body.info-experience .page-heading h1,
+  body.download-page .page-heading h1,
+  body.events-center-page .event-center-heading h1,
+  body.siege-center-page .siege-heading h1,
+  body.timeline-page .timeline-heading h1 {text-shadow:0 2px 14px rgba(24,91,128,.16);}
+  body.download-page .patch-version-shell {box-shadow:0 13px 35px rgba(0,0,0,.34)!important;}
+  body.events-center-page .event-live-hero,
+  body.siege-center-page .siege-hero {box-shadow:0 14px 35px rgba(0,0,0,.34)!important;}
+  body.download-page .patch-download-option,
+  #page-rankings .rank-podium-button {transform:none;}
+}
+@media(prefers-reduced-motion:reduce) {
+  body.info-experience .info-summary-card,
+  body.download-page .patch-download-option,
+  body.events-center-page .live-event-card,
+  body.siege-center-page .siege-stat-grid>div,
+  body.timeline-page .timeline-step,
+  #page-rankings .rank-podium-button {animation:none!important;}
+  body.download-page .patch-download-option,
+  #page-rankings .rank-podium-button,
+  body.timeline-page .timeline-step {transition:none!important;}
+}
