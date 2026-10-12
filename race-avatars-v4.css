@@ -1,0 +1,29 @@
+/* COUNTER Race Avatars V4 — Male / Female portraits
+   Official character-creation sheet has six race rows and six columns:
+   cols 1-3 female, cols 4-6 male. Use centre female face and existing male.
+   Applies to Rankings, Public Profiles, Account Roster and modal.
+   When gender is unknown, V1-V3 original race image remains unchanged. */
+.race-avatar[data-gender="female"],
+.account-race-portrait[data-gender="female"]{--race-face-col:20%}
+.race-avatar[data-gender="male"],
+.account-race-portrait[data-gender="male"]{--race-face-col:100%}
+#ranking-pvp-panel .race-avatar[data-gender]::before,
+#publicProfileModal .public-avatar.race-avatar[data-gender]::before,
+body[data-profile-kind="player"] #public-profile .profile-avatar-large.race-avatar[data-gender]::before,
+.community-dialog .profile-avatar-large.race-avatar[data-gender]::before,
+#account-characters-view .character-art .class-emblem.account-race-portrait[data-gender]::before,
+#characterModal .profile-emblem.account-race-portrait[data-gender]::before{
+  background-position:var(--race-face-col,100%) var(--race-face-row,0%)!important;
+}
+#ranking-pvp-panel .race-avatar[data-gender],
+#publicProfileModal .public-avatar[data-gender],
+#account-characters-view .account-race-portrait[data-gender],
+#characterModal .account-race-portrait[data-gender]{
+  transition:box-shadow .2s ease,border-color .2s ease;
+}
+@media(prefers-reduced-motion:reduce){
+  #ranking-pvp-panel .race-avatar[data-gender],
+  #publicProfileModal .public-avatar[data-gender],
+  #account-characters-view .account-race-portrait[data-gender],
+  #characterModal .account-race-portrait[data-gender]{transition:none!important}
+}

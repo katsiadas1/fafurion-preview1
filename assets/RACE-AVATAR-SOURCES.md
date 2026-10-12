@@ -27,3 +27,20 @@ The same official race sheet is now used by the Rankings public-player modal and
 ## Account Roster V3
 
 The same six-race character creation face sheet is now used for race portraits on the Account Character List and the character detail modal. This is appearance-only. The existing game data, class graphics, logout/login functions and account operations remain untouched. The three current demo character classes (Duelist, Cardinal and Sagittarius) are all Human, so their portraits correctly match the same race.
+
+## Male/Female V4
+
+The official art sheet actually contains 6 columns per race: three female faces on the
+left, three male faces on the right. The gender-aware CSS chooses the middle female
+column (20% background position) or the original male column (100%) while using
+the same six race rows. No additional images or network requests are needed.
+
+Every gender selection comes from explicit character data. Accepted fields: `gender`,
+`sex` (0=male, 1=female) or `isFemale`, with optional `data-gender` on dynamic cards.
+No gender is inferred from name or class. Unknown genders retain the V1 race avatar.
+In the fictional preview records, Athena and OceanSoul are set to female and
+the remaining demo characters are set to male. These are demo metadata only,
+not assertions about real players.
+
+Applied to Rankings PvP avatars and podium, the public player modal,
+standalone public player cards, Account character roster and character details.
