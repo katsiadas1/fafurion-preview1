@@ -20,4 +20,6 @@ race values taking priority. Unknown classes retain their prior icon.
 
 Scope: Rankings PvP table and top-three podium only. Account character cards and
 public profiles are intentionally deferred to later phases.
-\n## Public Profiles V2\nThe same official race sheet is now used by the Rankings public-player modal and the standalone player page, plus the public player cards opened from clan rosters. Existing character-class icons/initials are retained if the CDN image is unavailable. Account Character List remains unchanged for the next phase.\n
+
+## Public Profiles V2
+The same official race sheet is now used by the Rankings public-player modal and the standalone player page, plus the public player cards opened from clan rosters. Existing character-class icons/initials are retained if the CDN image is unavailable. Account Character List remains unchanged for the next phase.
