@@ -1,0 +1,202 @@
+/* COUNTER · Cinematic Visual Upgrade V1
+   Visual-only, homepage-scoped layer. No routing, account, logo or data changes. */
+
+/* Original dragon artwork, given a slow cinematic camera breath. */
+#page-home .counter-hero {
+  isolation:isolate;
+  background:#020810!important;
+  border-bottom:1px solid rgba(113,214,242,.20)!important;
+}
+#page-home .counter-hero-bg {
+  transform:scale(1.025);
+  transform-origin:54% 44%;
+  filter:saturate(1.12) contrast(1.045)!important;
+  animation:cv1-camera-breath 26s ease-in-out infinite alternate!important;
+  will-change:transform;
+}
+
+/* Two ultra-light ambient layers replace the older, disabled overlays. */
+#page-home .counter-hero::before,
+#page-home .counter-hero::after {
+  display:block!important;
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+}
+#page-home .counter-hero::before {
+  z-index:-2;
+  background:
+    radial-gradient(ellipse 49% 58% at 78% 35%,rgba(32,144,231,.12),transparent 76%),
+    radial-gradient(ellipse 40% 34% at 16% 76%,rgba(23,85,155,.14),transparent 78%),
+    linear-gradient(115deg,rgba(0,7,16,.14),transparent 48%,rgba(4,17,34,.09));
+  opacity:.76;
+  animation:cv1-aura-breath 12s ease-in-out infinite alternate!important;
+}
+#page-home .counter-hero::after {
+  z-index:-1;
+  background:
+    linear-gradient(to top,rgba(1,8,16,.38),transparent 39%),
+    radial-gradient(ellipse 95% 44% at 50% 102%,rgba(34,122,169,.15),transparent 78%),
+    linear-gradient(90deg,rgba(0,7,15,.19),transparent 24%,transparent 83%,rgba(0,8,17,.14));
+  opacity:.77;
+}
+
+/* Calm, blue-silver mist: always behind the buttons and dock. */
+#page-home .counter-fog {
+  display:block;
+  height:30%;
+  bottom:-8%;
+  opacity:.26;
+  background:
+    radial-gradient(ellipse 48% 54% at 24% 67%,rgba(46,147,209,.22),transparent 80%),
+    radial-gradient(ellipse 42% 46% at 75% 42%,rgba(111,196,235,.12),transparent 82%);
+  filter:blur(32px)!important;
+  animation:cv1-fog-slide 18s ease-in-out infinite alternate!important;
+}
+
+/* Three recognizable actions; restrained metal edge and soft sweep. */
+#page-home .counter-actions {
+  filter:drop-shadow(0 14px 28px rgba(0,0,0,.48));
+}
+#page-home .counter-btn {
+  position:relative;
+  border-radius:6px!important;
+  letter-spacing:.11em!important;
+  box-shadow:inset 0 1px 0 rgba(211,239,255,.14),
+             inset 0 0 0 1px rgba(8,38,59,.32),
+             0 14px 31px rgba(0,0,0,.46)!important;
+  transition:transform .24s ease,filter .24s ease,box-shadow .24s ease,border-color .24s ease!important;
+}
+#page-home .counter-btn::before {
+  inset:4px!important;
+  border:1px solid rgba(176,218,240,.17)!important;
+  border-radius:3px;
+}
+#page-home .counter-btn::after {
+  pointer-events:none;
+  opacity:.46;
+  background:linear-gradient(106deg,transparent 40%,rgba(216,248,255,.25) 50%,transparent 60%);
+}
+#page-home .counter-btn.primary {
+  border-color:rgba(131,224,255,.85)!important;
+  background:linear-gradient(180deg,rgba(12,76,108,.97),rgba(3,28,48,.97))!important;
+  box-shadow:inset 0 1px 0 rgba(220,252,255,.32),
+             inset 0 0 24px rgba(56,181,233,.20),
+             0 0 0 1px rgba(49,166,215,.27),
+             0 0 26px rgba(22,155,238,.22),
+             0 16px 36px rgba(0,0,0,.45)!important;
+}
+#page-home .counter-btn.gold {
+  border-color:rgba(213,178,115,.68)!important;
+  background:linear-gradient(180deg,rgba(57,42,25,.96),rgba(17,19,21,.96))!important;
+  box-shadow:inset 0 1px 0 rgba(255,233,187,.16),
+             inset 0 0 18px rgba(213,165,77,.09),
+             0 0 0 1px rgba(159,121,63,.22),
+             0 14px 34px rgba(0,0,0,.43)!important;
+}
+@media(hover:hover) and (pointer:fine) {
+  #page-home .counter-btn:hover {
+    transform:translateY(-3px)!important;
+    filter:brightness(1.11)!important;
+    border-color:rgba(171,233,255,.84)!important;
+    box-shadow:inset 0 1px 0 rgba(231,253,255,.22),
+               0 0 0 1px rgba(65,171,214,.34),
+               0 0 24px rgba(31,169,240,.24),
+               0 19px 36px rgba(0,0,0,.48)!important;
+  }
+}
+#page-home .counter-btn:focus-visible,
+#page-home .realm-status-link:focus-visible,
+#page-home .discord-hero-card:focus-visible {
+  outline:2px solid #a0eaff!important;
+  outline-offset:4px!important;
+}
+
+/* Dark polished-glass realm dashboard, retaining its existing positioning. */
+#page-home .realm-status-strip {
+  border-color:rgba(114,195,228,.34)!important;
+  background:
+    linear-gradient(110deg,rgba(6,24,37,.95),rgba(3,16,28,.91)),
+    radial-gradient(ellipse at 15% 10%,rgba(62,160,228,.10),transparent 56%)!important;
+  box-shadow:0 23px 60px rgba(0,0,0,.53),
+             inset 0 1px 0 rgba(195,237,255,.10),
+             0 0 28px rgba(20,116,186,.07)!important;
+}
+#page-home .realm-status-strip::before {
+  height:2px!important;
+  opacity:.9!important;
+  background:linear-gradient(90deg,transparent,rgba(105,204,244,.63) 36%,rgba(185,218,244,.38) 50%,rgba(105,204,244,.57) 66%,transparent)!important;
+}
+#page-home .realm-status-head {
+  background:linear-gradient(110deg,rgba(22,81,117,.24),rgba(4,24,38,.05))!important;
+}
+#page-home .realm-status-icon {
+  border-color:rgba(120,198,235,.28)!important;
+  background:linear-gradient(145deg,rgba(31,91,128,.33),rgba(9,32,50,.25))!important;
+  box-shadow:inset 0 1px 0 rgba(183,234,254,.08)!important;
+}
+#page-home .realm-status-link {
+  transition:background-color .22s ease!important;
+}
+#page-home .discord-hero-card {
+  border-color:rgba(125,149,238,.36)!important;
+  box-shadow:0 22px 54px rgba(0,0,0,.48),
+             inset 0 1px 0 rgba(214,224,255,.07),
+             0 0 22px rgba(88,101,242,.06)!important;
+  transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease!important;
+}
+
+/* Desktop-only header polish. Preserve the current logo and header layout. */
+body[data-current-page="home"] .topbar {
+  box-shadow:0 1px 0 rgba(102,198,236,.14),0 14px 32px rgba(0,0,0,.20)!important;
+}
+body[data-current-page="home"] .topbar .nav button {
+  transition:color .2s ease,background-color .2s ease,box-shadow .2s ease!important;
+}
+@media(hover:hover) {
+  body[data-current-page="home"] .topbar .nav button:hover {
+    background:rgba(57,154,192,.11)!important;
+  }
+}
+
+@keyframes cv1-camera-breath {
+  from {transform:scale(1.025) translate3d(0,0,0);}
+  to   {transform:scale(1.068) translate3d(-.48%,.24%,0);}
+}
+@keyframes cv1-aura-breath {
+  from {opacity:.60;}
+  to   {opacity:.89;}
+}
+@keyframes cv1-fog-slide {
+  from {transform:translate3d(-2%,0,0);opacity:.21;}
+  to   {transform:translate3d(3%,-3%,0);opacity:.34;}
+}
+
+/* Lower-power devices: no large camera-scale animation or mist blur. */
+@media(max-width:700px) {
+  #page-home .counter-hero-bg {
+    animation:none!important;
+    transform:none!important;
+    will-change:auto!important;
+    filter:saturate(1.055) contrast(1.015)!important;
+  }
+  #page-home .counter-hero::before {animation:none!important;opacity:.48;}
+  #page-home .counter-hero::after {opacity:.62;}
+  #page-home .counter-fog {display:none!important;animation:none!important;}
+  #page-home .counter-actions {filter:drop-shadow(0 6px 15px rgba(0,0,0,.30));}
+  #page-home .counter-btn {min-height:52px;}
+  #page-home .realm-status-strip {-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);}
+}
+@media(prefers-reduced-motion:reduce) {
+  #page-home .counter-hero-bg,
+  #page-home .counter-hero::before,
+  #page-home .counter-fog {animation:none!important;will-change:auto!important;}
+  #page-home .counter-hero-bg {transform:none!important;}
+  #page-home .counter-btn,
+  #page-home .realm-status-link,
+  #page-home .discord-hero-card,
+  body[data-current-page="home"] .topbar .nav button {transition:none!important;}
+  #page-home .counter-btn:hover,
+  #page-home .discord-hero-card:hover {transform:none!important;}
+}
