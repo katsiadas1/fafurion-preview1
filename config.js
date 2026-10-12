@@ -18,7 +18,7 @@ window.SERVER_CONFIG = {
 };
 
 // Populate with real server data when available. Never put database credentials here.
-// Players: { name, class, level, clan, pvp, pk }
+// Players: { name, class, gender, level, clan, pvp, pk } (gender: male/female)
 // Clans: { name, leader, level, reputation, castle }
 // Fictional demo records for visual preview only. Replace with real records before launch.
 window.RANKINGS_DATA = {
@@ -27,6 +27,7 @@ window.RANKINGS_DATA = {
     {
       "name": "Hydra",
       "class": "Titan",
+      "gender": "male",
       "level": 85,
       "clan": "Leviathan",
       "pvp": 2842,
@@ -35,6 +36,7 @@ window.RANKINGS_DATA = {
     {
       "name": "FafurionKnight",
       "class": "Duelist",
+      "gender": "male",
       "level": 85,
       "clan": "Immortals",
       "pvp": 1482,
@@ -43,6 +45,7 @@ window.RANKINGS_DATA = {
     {
       "name": "Astra",
       "class": "Duelist",
+      "gender": "female",
       "level": 82,
       "clan": "Eclipse",
       "pvp": 2456,
@@ -51,6 +54,7 @@ window.RANKINGS_DATA = {
     {
       "name": "Dracarys",
       "class": "Storm Screamer",
+      "gender": "male",
       "level": 84,
       "clan": "BlueDragons",
       "pvp": 2325,
@@ -59,6 +63,7 @@ window.RANKINGS_DATA = {
     {
       "name": "Noctis",
       "class": "Sagittarius",
+      "gender": "male",
       "level": 83,
       "clan": "Immortals",
       "pvp": 2163,
@@ -67,6 +72,7 @@ window.RANKINGS_DATA = {
     {
       "name": "Valkyria",
       "class": "Ghost Hunter",
+      "gender": "female",
       "level": 82,
       "clan": "NightWatch",
       "pvp": 2026,
@@ -75,6 +81,7 @@ window.RANKINGS_DATA = {
     {
       "name": "Kaizen",
       "class": "Titan",
+      "gender": "male",
       "level": 81,
       "clan": "Avalon",
       "pvp": 1884,
@@ -83,6 +90,7 @@ window.RANKINGS_DATA = {
     {
       "name": "Nyx",
       "class": "Mystic Muse",
+      "gender": "female",
       "level": 81,
       "clan": "ChaosLegion",
       "pvp": 1763,
@@ -91,6 +99,7 @@ window.RANKINGS_DATA = {
     {
       "name": "Ragnar",
       "class": "Dreadnought",
+      "gender": "male",
       "level": 85,
       "clan": "Stormborn",
       "pvp": 1641,
@@ -99,6 +108,7 @@ window.RANKINGS_DATA = {
     {
       "name": "Selene",
       "class": "Cardinal",
+      "gender": "female",
       "level": 84,
       "clan": "Nemesis",
       "pvp": 1478,
@@ -107,6 +117,7 @@ window.RANKINGS_DATA = {
     {
       "name": "Ares",
       "class": "Grand Khavatari",
+      "gender": "male",
       "level": 83,
       "clan": "LastHope",
       "pvp": 1366,
@@ -115,6 +126,7 @@ window.RANKINGS_DATA = {
     {
       "name": "Zephyr",
       "class": "Wind Rider",
+      "gender": "male",
       "level": 83,
       "clan": "Aether",
       "pvp": 1230,
@@ -123,6 +135,7 @@ window.RANKINGS_DATA = {
     {
       "name": "Raven",
       "class": "Ghost Sentinel",
+      "gender": "female",
       "level": 81,
       "clan": "Eclipse",
       "pvp": 1078,
@@ -131,6 +144,7 @@ window.RANKINGS_DATA = {
     {
       "name": "Orion",
       "class": "Archmage",
+      "gender": "male",
       "level": 82,
       "clan": "BlueDragons",
       "pvp": 934,
@@ -139,6 +153,7 @@ window.RANKINGS_DATA = {
     {
       "name": "Frostbite",
       "class": "Soultaker",
+      "gender": "male",
       "level": 84,
       "clan": "—",
       "pvp": 819,
@@ -147,6 +162,7 @@ window.RANKINGS_DATA = {
     {
       "name": "Nexus",
       "class": "Phoenix Knight",
+      "gender": "male",
       "level": 84,
       "clan": "NightWatch",
       "pvp": 670,
@@ -155,6 +171,7 @@ window.RANKINGS_DATA = {
     {
       "name": "Lunara",
       "class": "Sword Muse",
+      "gender": "female",
       "level": 83,
       "clan": "Avalon",
       "pvp": 536,
