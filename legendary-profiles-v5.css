@@ -308,3 +308,91 @@ body[data-profile-kind="player"] #public-profile .achievement-badge.unlocked.leg
 @media(prefers-reduced-motion:reduce){
   #publicProfileModal .public-badge {transition:none!important;}
 }
+
+/* V5.1 — Compact PvP rank insignia on phones.
+   The existing mobile rule set left:20px while desktop retains right:22px:
+   both inset edges stretch the positioned rank container into a wide bar.
+   Reset left and explicitly size the trophy emblem rather than painting
+   a full-width plate across the player's portrait/title. */
+#publicProfileModal .public-profile-banner .public-profile-rank {
+  left:auto!important;
+  right:20px!important;
+  top:17px!important;
+  bottom:auto!important;
+  width:max-content!important;
+  max-width:calc(100% - 40px)!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-end!important;
+  gap:5px!important;
+  margin:0!important;
+  padding:0!important;
+  text-align:right!important;
+  z-index:5!important;
+}
+#publicProfileModal .public-profile-rank small {
+  display:block!important;
+  margin:0!important;
+  padding:0!important;
+  color:#c0b69b!important;
+  font-size:10px!important;
+  letter-spacing:.11em!important;
+  line-height:1.2!important;
+  white-space:nowrap!important;
+}
+#publicProfileModal .public-profile-rank #publicProfileRank.realm-rank-emblem {
+  display:inline-flex!important;
+  flex-direction:row!important;
+  align-items:center!important;
+  justify-content:center!important;
+  flex:0 0 auto!important;
+  gap:6px!important;
+  box-sizing:border-box!important;
+  position:relative!important;
+  inset:auto!important;
+  width:auto!important;
+  max-width:110px!important;
+  min-width:76px!important;
+  height:39px!important;
+  min-height:39px!important;
+  max-height:39px!important;
+  margin:0!important;
+  padding:7px 11px!important;
+  overflow:hidden!important;
+  border:1px solid rgba(223,192,124,.5)!important;
+  border-radius:9px!important;
+  font-size:13px!important;
+  line-height:1.2!important;
+}
+#publicProfileModal #publicProfileRank .realm-icon {
+  display:inline-block!important;
+  flex:0 0 auto!important;
+  width:auto!important;
+  height:auto!important;
+  font-size:15px!important;
+  line-height:1!important;
+}
+#publicProfileModal #publicProfileRank .realm-rank-value {
+  display:inline!important;
+  width:auto!important;
+  white-space:nowrap!important;
+  font:800 13px/1.2 system-ui,sans-serif!important;
+}
+@media(max-width:720px){
+  #publicProfileModal .public-profile-banner .public-profile-rank {
+    left:auto!important;
+    right:16px!important;
+    top:14px!important;
+    max-width:calc(100% - 32px)!important;
+  }
+  #publicProfileModal .public-profile-rank #publicProfileRank.realm-rank-emblem {
+    height:36px!important;
+    min-height:36px!important;
+    max-height:36px!important;
+    min-width:72px!important;
+    padding:6px 9px!important;
+  }
+}
+@media(max-width:380px){
+  #publicProfileModal .public-profile-banner .public-profile-rank {right:12px!important;}
+}
