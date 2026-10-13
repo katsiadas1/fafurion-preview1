@@ -145,7 +145,8 @@
     button.onclick=()=>displayPublic('player',player,button);
     return button;
   }
-  const td=value=>attach(create('td'),value);
+  // Element.append accepts DOM nodes and plain text (class, clan, K/D).
+  const td=value=>{const cell=create('td');cell.append(value??'');return cell;};
   function drawPlayers(){
     if(!ranks||!pvpTable)return;
     ranks.replaceChildren();
