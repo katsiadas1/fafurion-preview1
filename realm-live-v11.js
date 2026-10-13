@@ -161,12 +161,14 @@
       button.onclick=()=>displayPublic('player',p,button);
       const rankStatus=create('span',p.online?'rank-online':'rank-offline');
       attach(rankStatus,create('i'),create('span','',p.online?words().online:words().offline));
-      const kd=p.deaths===null?'—':p.deaths===0?(p.pvp>0?'∞':'0.00'):(p.pvp/p.deaths).toFixed(2);
+      const hasDeaths=Number.isSafeInteger(p.deaths)&&p.deaths>=0;
+      const deaths=hasDeaths?pretty(p.deaths):'—';
+      const kd=!hasDeaths?'—':p.deaths===0?(p.pvp>0?'∞':'0.00'):(p.pvp/p.deaths).toFixed(2);
       attach(row,td(n),td(button),td(p.class),td(create('strong','',pretty(p.pvp))),
-        td(p.clan||'—'),td(kd),td(rankStatus));
+        td(deaths),td(p.clan||'—'),td(kd),td(rankStatus));
       pvpTable.appendChild(row);
     }
-    if(!players.length){const tr=create('tr'),cell=create('td','v11-empty-row',words().empty);cell.colSpan=7;tr.appendChild(cell);pvpTable.appendChild(tr)}
+    if(!players.length){const tr=create('tr'),cell=create('td','v11-empty-row',words().empty);cell.colSpan=8;tr.appendChild(cell);pvpTable.appendChild(tr)}
   }
   function clanCard(clan,i){
     const card=create('article','legendary-clan-v7-card');
