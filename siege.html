@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#07131b">
 <link rel="icon" type="image/svg+xml" href="assets/counter-mark.svg?v=2">
-<meta name="description" content="L2Counter Siege Center — Aden ownership, registered clans, countdown and previous results.">
-<meta property="og:title" content="Siege Center · L2Counter"><meta property="og:description" content="Aden ownership, registered clans, siege countdown and previous results."><meta property="og:type" content="website"><meta property="og:image" content="https://l2counter.com/assets/counter-storm-reference.webp"><meta name="twitter:card" content="summary_large_image"><title>Siege Center — L2Counter</title>
+<meta name="description" content="L2Counter Cinematic Siege Center — Aden defenders versus attackers, siege countdown and historical preview results.">
+<meta property="og:title" content="Siege Center · L2Counter"><meta property="og:description" content="Aden castle ownership, defenders versus attackers, in-game siege participation, countdown and battle history."><meta property="og:type" content="website"><meta property="og:image" content="https://l2counter.com/assets/counter-storm-reference.webp"><meta name="twitter:card" content="summary_large_image"><title>Siege Center — L2Counter</title>
 <link rel="stylesheet" href="style.css?v=13">
 <link rel="stylesheet" href="community.css?v=13">
 <script src="translations.js?v=12" defer></script>
@@ -21,8 +21,8 @@
 <link rel="stylesheet" href="site-polish.css?v=9">
 <link rel="stylesheet" href="siege-center.css?v=1">
 <script src="counter-motion.js?v=1" defer></script>
-<script src="siege-center.js?v=1" defer></script>
-<link rel="stylesheet" href="global-search.css?v=1"><link rel="stylesheet" href="site-ux.css?v=1"><script src="global-search.js?v=4" defer></script><script src="site-ux.js?v=1" defer></script><link rel="stylesheet" href="cinematic-v2.css?v=1"></head>
+<script src="siege-center.js?v=1" defer></script><script src="cinematic-siege-v10.js?v=1" defer></script>
+<link rel="stylesheet" href="global-search.css?v=1"><link rel="stylesheet" href="site-ux.css?v=1"><script src="global-search.js?v=4" defer></script><script src="site-ux.js?v=1" defer></script><link rel="stylesheet" href="cinematic-v2.css?v=1"><link rel="stylesheet" href="cinematic-siege-v10.css?v=1"></head>
 <body class="inner-page siege-center-page">
 <header class="header inner-index-header">
 <a class="brand counter-logo-brand" href="index.html" aria-label="L2Counter home"><img class="counter-header-logo" src="assets/l2counter-header-logo.webp?v=2" alt="L2Counter · Lineage II"></a>
@@ -53,32 +53,62 @@
     <div>
       <span class="eyebrow">ADEN DOMINION</span>
       <h1>Siege Center</h1>
-      <p>Castle ownership, registered clans, the next siege countdown and the latest battle result.</p>
+      <p>Aden Castle ownership, Defender vs Attackers, next battle countdown and Siege History.</p>
     </div>
-    <div class="siege-clock-card"><small>NEXT SIEGE</small><strong id="siegeCountdown">--:--:--</strong><span>Sunday · 20:00 · GMT+3</span></div>
+    <div class="siege-clock-card"><small>NEXT SIEGE</small><strong id="siegeCountdown">--:--:--</strong><span>Sunday · 20:00 · Athens time · Demo</span></div>
   </section>
 
-  <aside class="siege-preview-note"><span>◆</span><p><b>Preview data</b> — ready to connect to Castle Dominion / siege backend data later.</p></aside>
+  <aside class="siege-preview-note"><span>◆</span><p><b>PREVIEW DATA</b> — the castle owner, clans, countdown schedule and past results shown here are demo content, not live server status.</p></aside>
 
   <section class="siege-hero">
-    <div class="siege-castle-mark">♜</div>
+    <div class="siege-castle-mark" aria-hidden="true">♜</div>
     <div class="siege-owner-copy">
       <span class="siege-kicker">CURRENT CASTLE OWNER</span>
       <h2>Aden Castle</h2>
       <a class="siege-clan-link" href="clan/Immortals/">Immortals</a>
       <p>Controlled since the previous siege cycle.</p>
       <div class="siege-owner-meta">
-        <span>Leader <b>Noctis</b></span>
-        <span>Clan Lv. <b>10</b></span>
-        <span>Reputation <b>152,767</b></span>
+        <span>Leader <b>Valakas</b></span>
+        <span>Clan Lv. <b>11</b></span>
+        <span>Reputation <b>184,250</b></span>
       </div>
     </div>
     <div class="siege-defence-card">
       <small>DEFENDER STATUS</small>
       <strong>READY</strong>
       <span>31 / 48 members marked ready</span>
-      <div class="siege-readiness"><i style="width:65%"></i></div>
+      <div class="siege-readiness" role="progressbar" aria-label="Defender readiness: 31 of 48 members" aria-valuemin="0" aria-valuemax="100" aria-valuenow="65"><i style="width:65%"></i></div>
     </div>
+  </section>
+
+  <section class="siege-v10-clash" aria-labelledby="siegeV10ClashTitle">
+    <div class="siege-v10-clash-head">
+      <div><span class="eyebrow" data-v10-text="battleEyebrow">NEXT BATTLE · PREVIEW</span><h2 id="siegeV10ClashTitle" data-v10-text="battleTitle">Defender vs Attackers</h2></div>
+      <span class="siege-v10-clash-badge" data-v10-text="demoBadge">DEMO LINEUP</span>
+    </div>
+    <div class="siege-v10-clash-grid">
+      <div class="siege-v10-team siege-v10-team-defender">
+        <span class="siege-v10-team-role"><span aria-hidden="true">♛</span> <span data-v10-text="defender">DEFENDER</span></span>
+        <div class="siege-v10-team-crest" aria-hidden="true">IM</div>
+        <strong>Immortals</strong>
+        <span class="siege-v10-team-copy" data-v10-text="holdAden">Defending Aden Castle</span>
+        <span class="siege-v10-team-meta">Valakas · Clan Lv.11</span>
+      </div>
+      <div class="siege-v10-versus" aria-hidden="true"><span>VS</span><small>ADEN</small></div>
+      <div class="siege-v10-team siege-v10-team-attackers">
+        <span class="siege-v10-team-role"><span aria-hidden="true">⚔</span> <span data-v10-text="attackers">ATTACKERS</span></span>
+        <div class="siege-v10-attack-crest-list" aria-label="Preview attacker crests">
+          <span class="siege-v10-attack-crest">LV</span>
+          <span class="siege-v10-attack-crest">OL</span>
+          <span class="siege-v10-attack-crest">NF</span>
+          <span class="siege-v10-attack-crest">OB</span>
+        </div>
+        <strong data-v10-text="sixAttackers">6 attacking clans</strong>
+        <span class="siege-v10-team-copy" data-v10-text="battleForAden">Challenging for Aden control</span>
+        <span class="siege-v10-team-meta" data-v10-text="rosterBelow">See the preview battle roster below</span>
+      </div>
+    </div>
+    <div class="siege-v10-ingame" role="note"><span aria-hidden="true">⚔</span><div><strong data-v10-text="inGameTitle">SIEGE PARTICIPATION IS IN-GAME ONLY</strong><small data-v10-text="inGameBody">Join the server and follow in-game siege instructions. The website does not accept registrations.</small></div></div>
   </section>
 
   <section class="siege-stat-grid">
@@ -90,11 +120,11 @@
 
   <section class="siege-grid">
     <div class="siege-panel">
-      <div class="siege-panel-head"><div><span class="eyebrow">REGISTERED CLANS</span><h2>Battle roster</h2></div><span class="siege-count">7 CLANS</span></div>
+      <div class="siege-panel-head"><div><span class="eyebrow" data-v10-text="rosterEyebrow">BATTLE ROSTER · DEMO</span><h2 data-v10-text="rosterTitle">Featured clans</h2></div><span class="siege-count">7 CLANS</span></div>
       <div class="siege-clan-list">
-        <div class="siege-clan-row defender"><span class="siege-crest">IM</span><div><b>Immortals</b><small>Noctis · Lv.10</small></div><strong>DEFENDER</strong><em>48 members</em></div>
-        <div class="siege-clan-row"><span class="siege-crest">LV</span><div><b>Leviathan</b><small>Hydra · Lv.11</small></div><strong>ATTACKER</strong><em>52 members</em></div>
-        <div class="siege-clan-row"><span class="siege-crest">OL</span><div><b>Olympus</b><small>Athena · Lv.10</small></div><strong>ATTACKER</strong><em>44 members</em></div>
+        <div class="siege-clan-row defender"><span class="siege-crest">IM</span><div><b>Immortals</b><small>Valakas · Lv.11</small></div><strong>DEFENDER</strong><em>48 members</em></div>
+        <div class="siege-clan-row"><span class="siege-crest">LV</span><div><b>Leviathan</b><small>Hydra · Lv.11</small></div><strong>ATTACKER</strong><em>45 members</em></div>
+        <div class="siege-clan-row"><span class="siege-crest">OL</span><div><b>Olympus</b><small>Athena · Lv.10</small></div><strong>ATTACKER</strong><em>42 members</em></div>
         <div class="siege-clan-row"><span class="siege-crest">NF</span><div><b>Nightfall</b><small>Nyx · Lv.10</small></div><strong>ATTACKER</strong><em>39 members</em></div>
         <div class="siege-clan-row"><span class="siege-crest">OB</span><div><b>Oceanborn</b><small>OceanSoul · Lv.9</small></div><strong>ATTACKER</strong><em>35 members</em></div>
         <div class="siege-more">+2 more registered clans</div>
@@ -113,7 +143,7 @@
   </section>
 
   <section class="siege-results">
-    <div class="siege-panel-head"><div><span class="eyebrow">PREVIOUS RESULT</span><h2>Last Siege</h2></div><span class="siege-date">21 SEP 2026</span></div>
+    <div class="siege-panel-head"><div><span class="eyebrow" data-v10-text="historyEyebrow">SIEGE HISTORY · DEMO</span><h2 data-v10-text="historyTitle">Last Battle</h2></div><span class="siege-date">21 SEP 2026</span></div>
     <div class="siege-result-card">
       <div class="siege-result-winner">
         <small>WINNER</small>

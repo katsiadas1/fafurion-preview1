@@ -1,0 +1,362 @@
+/* COUNTER — Cinematic Siege Center V10
+   Cosmetic upgrade to the existing Siege Center demo.
+   No website registration, account change or GameServer modification. */
+body.siege-center-page .siege-main{
+  background-image:
+    radial-gradient(ellipse 65% 20% at 89% 0%,rgba(190,139,65,.13),transparent 83%),
+    radial-gradient(ellipse 65% 35% at 0% 65%,rgba(34,112,167,.08),transparent 90%);
+  background-repeat:no-repeat;
+}
+body.siege-center-page .siege-heading h1{
+  color:#f2faff!important;
+  text-shadow:0 0 30px rgba(215,164,75,.17),0 2px 17px rgba(0,0,0,.48)!important;
+}
+body.siege-center-page .siege-heading .eyebrow{color:#e8c68b!important}
+body.siege-center-page .siege-heading p{color:#bcd2dc!important;line-height:1.7!important}
+body.siege-center-page .siege-clock-card{
+  border:1px solid rgba(228,189,113,.44)!important;
+  border-radius:14px!important;
+  background:linear-gradient(155deg,rgba(66,45,25,.84),rgba(7,27,40,.94))!important;
+  box-shadow:inset 0 1px rgba(247,224,175,.13),0 16px 39px rgba(0,0,0,.35),0 0 22px rgba(214,164,81,.08)!important;
+}
+body.siege-center-page .siege-clock-card small{color:#e3c68c!important}
+body.siege-center-page .siege-clock-card strong{
+  font-variant-numeric:tabular-nums;color:#ffe6b0!important;
+  text-shadow:0 0 17px rgba(229,181,86,.15)!important;
+}
+body.siege-center-page .siege-clock-card span{color:#bfd4d9!important}
+body.siege-center-page .siege-preview-note{
+  border:1px solid rgba(210,178,112,.30)!important;
+  border-radius:11px!important;
+  background:linear-gradient(110deg,rgba(68,49,26,.50),rgba(11,31,42,.68))!important;
+}
+body.siege-center-page .siege-preview-note p{color:#c8d2d6!important}
+body.siege-center-page .siege-preview-note b{color:#f0d39c!important}
+
+/* Main Aden castle cinematic feature */
+body.siege-center-page .siege-hero{
+  isolation:isolate;
+  min-height:340px!important;
+  padding:clamp(22px,3vw,42px)!important;
+  gap:clamp(16px,2.5vw,30px)!important;
+  border:1px solid rgba(225,185,112,.56)!important;
+  border-radius:20px!important;
+  background:
+    linear-gradient(105deg,rgba(8,15,24,.95),rgba(18,21,30,.72) 53%,rgba(10,24,40,.40)),
+    url("assets/counter-storm-reference.webp") center 42%/cover no-repeat!important;
+  box-shadow:inset 0 1px rgba(248,228,185,.13),0 30px 76px rgba(0,0,0,.48),0 0 36px rgba(173,126,50,.09)!important;
+}
+body.siege-center-page .siege-hero::before{
+  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(ellipse 50% 79% at 12% 74%,rgba(189,140,54,.22),transparent 78%),linear-gradient(to top,rgba(1,8,16,.56),transparent 53%);
+  animation:cv10-castle-glow 11s ease-in-out infinite alternate;
+}
+body.siege-center-page .siege-hero::after{
+  background:radial-gradient(ellipse 49% 79% at 94% 16%,rgba(78,171,229,.10),transparent 80%)!important;
+  z-index:0!important;
+}
+body.siege-center-page .siege-castle-mark,
+body.siege-center-page .siege-owner-copy,
+body.siege-center-page .siege-defence-card{position:relative!important;z-index:1!important}
+body.siege-center-page .siege-castle-mark{
+  width:100px!important;height:112px!important;
+  border:2px solid rgba(232,191,116,.67)!important;
+  border-radius:14px 14px 25px 25px!important;
+  background:radial-gradient(circle at 50% 0,rgba(206,159,77,.29),transparent 71%),linear-gradient(145deg,rgba(64,45,25,.74),rgba(5,20,32,.95))!important;
+  box-shadow:0 0 0 4px rgba(7,17,24,.64),0 0 39px rgba(204,155,65,.19),0 14px 30px rgba(0,0,0,.46)!important;
+  color:#f5d796!important;font-size:54px!important;
+}
+body.siege-center-page .siege-owner-copy{min-width:0}
+body.siege-center-page .siege-owner-copy h2{
+  font:700 clamp(37px,4.5vw,63px)/1.09 Georgia,serif!important;
+  color:#f5fbff!important;
+  text-shadow:0 0 23px rgba(227,183,98,.16),0 4px 17px rgba(0,0,0,.58)!important;
+}
+body.siege-center-page .siege-kicker{color:#f0d298!important}
+body.siege-center-page .siege-clan-link{
+  color:#ffdfaa!important;
+  font:700 clamp(21px,2.2vw,29px)/1.2 Georgia,serif!important;
+  text-decoration:none!important;
+  border-bottom:1px solid rgba(232,186,104,.27);
+}
+body.siege-center-page .siege-clan-link:hover{color:#fff0cf!important;border-bottom-color:rgba(232,186,104,.65)}
+body.siege-center-page .siege-owner-copy p{color:#bfced7!important}
+body.siege-center-page .siege-owner-meta span{
+  border-color:rgba(219,187,120,.28)!important;
+  background:rgba(7,24,38,.74)!important;color:#bfd2d9!important;
+}
+body.siege-center-page .siege-owner-meta b{color:#f5e0b2!important}
+body.siege-center-page .siege-defence-card{
+  border:1px solid rgba(220,182,108,.49)!important;
+  border-radius:14px!important;
+  background:linear-gradient(155deg,rgba(65,47,26,.85),rgba(5,23,38,.92))!important;
+  box-shadow:inset 0 1px rgba(251,223,171,.12),0 14px 34px rgba(0,0,0,.38)!important;
+}
+body.siege-center-page .siege-defence-card small{color:#e2c38a!important}
+body.siege-center-page .siege-defence-card strong{
+  color:#c5f5d8!important;font-family:Georgia,serif;font-size:28px!important;
+  text-shadow:0 0 13px rgba(107,206,160,.10);
+}
+body.siege-center-page .siege-defence-card span{color:#c6d8dc!important}
+body.siege-center-page .siege-readiness{
+  height:9px!important;border:1px solid rgba(233,203,144,.16)!important;
+  background:rgba(3,12,23,.83)!important;
+}
+body.siege-center-page .siege-readiness i{
+  background:linear-gradient(90deg,#9e7436,#edce84)!important;
+  box-shadow:0 0 16px rgba(229,180,79,.20);
+}
+
+/* Defender / Attackers face-off */
+body.siege-center-page .siege-v10-clash{margin-top:24px}
+body.siege-center-page .siege-v10-clash-head{
+  display:flex;align-items:end;justify-content:space-between;flex-wrap:wrap;gap:13px;
+  padding-bottom:15px;margin-bottom:16px;
+  border-bottom:1px solid rgba(168,192,211,.22);
+}
+body.siege-center-page .siege-v10-clash-head .eyebrow{color:#dbc089!important}
+body.siege-center-page .siege-v10-clash-head h2{
+  margin:7px 0 0;color:#eefaff;font:700 clamp(26px,3.2vw,39px)/1.17 Georgia,serif;
+  text-shadow:0 0 20px rgba(64,164,217,.11);
+}
+body.siege-center-page .siege-v10-clash-badge{
+  display:inline-flex;padding:8px 11px;border:1px solid rgba(210,178,109,.35);
+  border-radius:7px;background:rgba(67,49,26,.37);
+  color:#e5cb96;font:800 10px/1.2 system-ui,sans-serif;letter-spacing:.12em;
+}
+body.siege-center-page .siege-v10-clash-grid{
+  display:grid;grid-template-columns:minmax(0,1fr) 90px minmax(0,1fr);
+  align-items:stretch;gap:13px;
+}
+body.siege-center-page .siege-v10-team{
+  display:flex;align-items:center;justify-content:flex-start;flex-direction:column;
+  gap:0;min-width:0;min-height:324px;
+  padding:22px 15px 24px;border:1px solid rgba(132,195,217,.41);
+  border-radius:16px;
+  background:radial-gradient(ellipse 91% 50% at 50% 0,rgba(53,147,189,.16),transparent 84%),linear-gradient(140deg,rgba(11,40,59,.95),rgba(3,18,30,.96))!important;
+  box-shadow:inset 0 1px rgba(225,246,255,.07),0 16px 42px rgba(0,0,0,.29);
+}
+body.siege-center-page .siege-v10-team-defender{
+  border-color:rgba(230,194,123,.55)!important;
+  background:radial-gradient(ellipse 90% 59% at 50% 0,rgba(194,145,58,.18),transparent 86%),linear-gradient(145deg,rgba(49,36,24,.94),rgba(6,20,30,.97))!important;
+}
+body.siege-center-page .siege-v10-team-role{
+  display:inline-flex;align-items:center;gap:7px;align-self:flex-start;
+  padding:7px 10px;border:1px solid rgba(138,199,225,.33);border-radius:8px;
+  color:#c5e8f1;background:rgba(17,52,72,.43);
+  font:800 10px/1.25 system-ui,sans-serif;letter-spacing:.12em;
+}
+body.siege-center-page .siege-v10-team-defender .siege-v10-team-role{
+  border-color:rgba(227,190,125,.48);color:#f1d5a0;background:rgba(87,61,27,.38);
+}
+body.siege-center-page .siege-v10-team-role>span:first-child{font-size:14px}
+body.siege-center-page .siege-v10-team-crest{
+  display:grid;place-items:center;
+  flex:0 0 auto;width:93px;height:104px;
+  margin:14px auto 14px;
+  border:2px solid rgba(234,195,121,.67);
+  border-radius:14px 14px 26px 26px;
+  background:radial-gradient(circle at 50% 10%,rgba(222,182,98,.19),transparent 66%),linear-gradient(150deg,rgba(88,65,36,.79),rgba(7,23,36,.92));
+  box-shadow:0 0 0 4px rgba(5,15,25,.72),0 0 28px rgba(220,162,63,.19),0 12px 30px rgba(0,0,0,.32);
+  color:#f0d6a2;font:700 25px/1.1 Georgia,serif;
+}
+body.siege-center-page .siege-v10-attack-crest-list{
+  display:flex;align-items:center;justify-content:center;
+  min-height:104px;flex-wrap:wrap;gap:7px;
+  margin:14px auto 14px;
+}
+body.siege-center-page .siege-v10-attack-crest{
+  display:grid;place-items:center;flex:0 0 auto;
+  width:46px;height:55px;border:1px solid rgba(132,208,232,.52);
+  border-radius:8px 8px 14px 14px;
+  background:linear-gradient(145deg,rgba(34,83,110,.70),rgba(7,29,48,.90));
+  box-shadow:0 0 13px rgba(72,167,209,.10);color:#c3eaf9;
+  font:800 13px Georgia,serif;
+}
+body.siege-center-page .siege-v10-team>strong{
+  color:#f0f9fd;
+  font:700 clamp(22px,2.3vw,31px)/1.2 Georgia,serif;
+  text-align:center;overflow-wrap:anywhere;
+}
+body.siege-center-page .siege-v10-team-defender>strong{color:#f5dcae}
+body.siege-center-page .siege-v10-team-copy{
+  display:block;margin-top:7px;color:#bed5df;
+  font:700 12px/1.4 system-ui,sans-serif;text-align:center;
+}
+body.siege-center-page .siege-v10-team-meta{
+  display:block;margin-top:9px;color:#89b1c1;
+  font:700 11px/1.45 system-ui,sans-serif;text-align:center;
+}
+body.siege-center-page .siege-v10-versus{
+  display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;
+  align-self:center;position:relative;
+}
+body.siege-center-page .siege-v10-versus::before{
+  content:"";position:absolute;z-index:-1;width:112px;height:112px;
+  border-radius:50%;border:1px solid rgba(207,167,91,.15);
+  background:radial-gradient(circle,rgba(209,162,69,.20),transparent 72%);
+}
+body.siege-center-page .siege-v10-versus>span{
+  color:#efd3a1;font:800 34px/1 Georgia,serif;
+  text-shadow:0 0 24px rgba(235,190,111,.20);
+}
+body.siege-center-page .siege-v10-versus small{
+  color:#aec7d2;font:800 10px/1.3 system-ui,sans-serif;letter-spacing:.14em;
+}
+body.siege-center-page .siege-v10-ingame{
+  display:flex;align-items:flex-start;gap:12px;margin-top:13px;padding:15px 18px;
+  border:1px solid rgba(220,186,113,.37);border-radius:11px;
+  background:linear-gradient(110deg,rgba(66,48,26,.51),rgba(11,36,51,.69));
+}
+body.siege-center-page .siege-v10-ingame>span{
+  display:grid;place-items:center;flex:0 0 38px;width:38px;height:38px;
+  border:1px solid rgba(227,188,118,.37);border-radius:9px;
+  color:#f4d8a5;font-size:19px;
+  background:rgba(108,73,33,.23);
+}
+body.siege-center-page .siege-v10-ingame strong{
+  display:block;color:#f3d9a9;font:900 11px/1.4 system-ui,sans-serif;letter-spacing:.09em;
+}
+body.siege-center-page .siege-v10-ingame small{
+  display:block;margin-top:5px;color:#bed5de;font:600 12px/1.6 system-ui,sans-serif;
+}
+/* Stats, roster and objective rules */
+body.siege-center-page .siege-stat-grid{margin-top:17px!important}
+body.siege-center-page .siege-stat-grid>div,
+body.siege-center-page .siege-panel,
+body.siege-center-page .siege-results{
+  border:1px solid rgba(117,193,219,.29)!important;
+  background:radial-gradient(ellipse at 100% 0,rgba(39,124,163,.09),transparent 82%),linear-gradient(140deg,rgba(10,37,53,.96),rgba(4,20,31,.98))!important;
+  box-shadow:inset 0 1px rgba(215,246,255,.07),0 15px 42px rgba(0,0,0,.27)!important;
+  border-radius:14px!important;
+}
+body.siege-center-page .siege-stat-grid>div:first-child{
+  border-color:rgba(216,182,111,.41)!important;
+  background:radial-gradient(ellipse at 100% 0,rgba(158,113,44,.15),transparent 85%),linear-gradient(140deg,rgba(41,35,29,.96),rgba(7,24,35,.98))!important;
+}
+body.siege-center-page .siege-stat-grid strong{
+  color:#e9f8fe!important;font-variant-numeric:tabular-nums;
+}
+body.siege-center-page .siege-stat-grid>div:first-child strong{color:#f1d8a9!important}
+body.siege-center-page .siege-stat-grid span{color:#a8c3ce!important}
+body.siege-center-page .siege-panel-head h2{
+  color:#f1f8fe!important;text-shadow:0 0 15px rgba(76,151,201,.10);
+}
+body.siege-center-page .siege-panel-head .eyebrow{color:#d6b982!important}
+body.siege-center-page .siege-clan-row{
+  border-color:rgba(118,193,221,.23)!important;
+  background:rgba(5,27,42,.60)!important;
+  min-width:0;
+}
+body.siege-center-page .siege-clan-row.defender{
+  border-color:rgba(224,185,107,.42)!important;
+  background:linear-gradient(95deg,rgba(76,57,28,.42),rgba(9,31,43,.56))!important;
+}
+body.siege-center-page .siege-crest{
+  border-color:rgba(131,206,237,.42)!important;
+  border-radius:9px 9px 13px 13px!important;
+  background:rgba(24,71,98,.46)!important;color:#c9efff!important;
+}
+body.siege-center-page .siege-clan-row.defender .siege-crest,
+body.siege-center-page .siege-result-winner .siege-crest{
+  border-color:rgba(226,182,103,.54)!important;
+  background:rgba(91,68,32,.32)!important;color:#f2d99f!important;
+}
+body.siege-center-page .siege-clan-row b{color:#e5f4f9!important}
+body.siege-center-page .siege-clan-row small{color:#9ebdcb!important}
+body.siege-center-page .siege-clan-row>em{color:#a9bfca!important}
+body.siege-center-page .siege-clan-row.defender>strong{color:#f3d6a0!important}
+body.siege-center-page .siege-rule-list>div{
+  border-color:rgba(116,193,224,.24)!important;
+  background:rgba(6,29,44,.62)!important;
+}
+body.siege-center-page .siege-rule-list b{color:#e8f5fa!important}
+body.siege-center-page .siege-rule-list small{color:#aec6d0!important}
+body.siege-center-page .siege-rule-list>div>span{
+  border-color:rgba(125,201,225,.28)!important;
+  color:#c6e8f2!important;background:rgba(16,61,82,.24)!important;
+}
+/* Siege History: keep only the existing documented preview result. */
+body.siege-center-page .siege-results{
+  margin-top:38px!important;
+  border-color:rgba(218,180,110,.42)!important;
+  background:radial-gradient(ellipse 62% 77% at 4% 0%,rgba(174,126,53,.14),transparent 81%),linear-gradient(145deg,rgba(29,29,30,.98),rgba(5,22,34,.98))!important;
+}
+body.siege-center-page .siege-date{color:#e2c48d!important}
+body.siege-center-page .siege-result-winner{
+  padding:12px;border:1px solid rgba(222,190,124,.29);border-radius:11px;
+  background:rgba(94,68,29,.14);
+}
+body.siege-center-page .siege-result-winner strong{color:#ffdfaa!important}
+body.siege-center-page .siege-result-winner em{color:#b9ced5!important}
+body.siege-center-page .siege-result-score>div{
+  border-color:rgba(123,192,224,.25)!important;
+  background:rgba(8,31,46,.62)!important;
+}
+body.siege-center-page .siege-result-score strong{color:#edfaff!important}
+body.siege-center-page .siege-result-card small{color:#b2d1dc!important}
+body.siege-center-page .siege-result-mvp{
+  padding:13px;border:1px solid rgba(221,180,106,.34);border-radius:10px;
+  background:rgba(90,65,30,.20);
+}
+body.siege-center-page .siege-result-mvp strong{
+  color:#f7d79d!important;font:700 23px/1.18 Georgia,serif!important;
+}
+body.siege-center-page .siege-result-mvp span{color:#b6cbd2!important}
+/* Responsive: never let overlays or the VS label obscure the clan crests. */
+@media(max-width:1100px){
+  body.siege-center-page .siege-hero{grid-template-columns:95px minmax(0,1fr)!important;gap:20px!important}
+  body.siege-center-page .siege-defence-card{grid-column:1/-1!important}
+}
+@media(max-width:760px){
+  body.siege-center-page .siege-heading h1{font-size:clamp(37px,10vw,56px)!important}
+  body.siege-center-page .siege-hero{grid-template-columns:auto minmax(0,1fr)!important;gap:13px!important;padding:19px!important;min-height:0!important}
+  body.siege-center-page .siege-castle-mark{width:61px!important;height:70px!important;font-size:34px!important;border-radius:10px 10px 18px 18px!important}
+  body.siege-center-page .siege-owner-copy h2{font-size:clamp(29px,7vw,46px)!important}
+  body.siege-center-page .siege-clan-link{font-size:21px!important}
+  body.siege-center-page .siege-owner-meta{gap:6px!important;margin-top:15px!important}
+  body.siege-center-page .siege-owner-meta span{padding:7px 8px!important;font-size:10px!important}
+  body.siege-center-page .siege-defence-card{grid-column:1/-1!important;padding:17px!important}
+  body.siege-center-page .siege-v10-clash-head h2{font-size:clamp(25px,6.4vw,36px)!important}
+  body.siege-center-page .siege-v10-clash-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  body.siege-center-page .siege-v10-versus{
+    position:absolute;left:50%;margin-top:123px;z-index:2;transform:translateX(-50%);pointer-events:none;
+  }
+  body.siege-center-page .siege-v10-versus::before{
+    z-index:-1;width:54px;height:54px;
+    background:radial-gradient(circle,rgba(16,28,40,.98),rgba(11,27,39,.93));
+    border-color:rgba(219,177,99,.38);
+  }
+  body.siege-center-page .siege-v10-versus>span{font-size:19px}
+  body.siege-center-page .siege-v10-versus small{display:none}
+  body.siege-center-page .siege-v10-clash-grid{position:relative}
+  body.siege-center-page .siege-v10-team{padding:14px 8px;min-height:290px}
+  body.siege-center-page .siege-v10-team-role{font-size:9px;letter-spacing:.04em;padding:6px;gap:3px}
+  body.siege-center-page .siege-v10-team-crest{width:68px;height:78px;margin:19px auto 18px;font-size:19px}
+  body.siege-center-page .siege-v10-attack-crest-list{min-height:78px;margin:19px auto 18px;gap:4px}
+  body.siege-center-page .siege-v10-attack-crest{width:31px;height:40px;font-size:10px}
+  body.siege-center-page .siege-v10-team>strong{font-size:clamp(17px,4.8vw,23px)}
+  body.siege-center-page .siege-v10-team-copy{font-size:10px}
+  body.siege-center-page .siege-v10-team-meta{font-size:9px}
+  body.siege-center-page .siege-v10-ingame{padding:13px;gap:10px}
+  body.siege-center-page .siege-v10-ingame>span{width:34px;height:34px;flex-basis:34px}
+  body.siege-center-page .siege-clan-row{gap:7px!important;padding:10px!important}
+  body.siege-center-page .siege-clan-row>strong{font-size:9px!important}
+  body.siege-center-page .siege-results{margin-top:26px!important}
+}
+@media(max-width:420px){
+  body.siege-center-page .siege-owner-copy h2{font-size:29px!important}
+  body.siege-center-page .siege-hero{padding:13px!important;gap:10px!important}
+  body.siege-center-page .siege-stat-grid{gap:8px}
+  body.siege-center-page .siege-stat-grid>div{padding:13px!important}
+  body.siege-center-page .siege-v10-team{padding-inline:5px}
+  body.siege-center-page .siege-v10-team-crest{width:57px;height:69px}
+  body.siege-center-page .siege-v10-attack-crest{width:27px;height:34px;font-size:9px}
+  body.siege-center-page .siege-v10-team-role{font-size:8px;padding:5px}
+  body.siege-center-page .siege-clan-row{grid-template-columns:38px minmax(0,1fr) auto!important}
+  body.siege-center-page .siege-clan-row>em{grid-column:2}
+}
+@keyframes cv10-castle-glow{from{opacity:.65}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){
+  body.siege-center-page .siege-hero::before{animation:none!important;opacity:.86}
+}
