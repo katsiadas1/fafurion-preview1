@@ -43,7 +43,7 @@
 
     if(now < start){
       badge.className='event-state registration';
-      badge.innerHTML='<i></i> REGISTRATION OPEN';
+      badge.innerHTML='<i></i> UPCOMING EVENT';
       label.textContent='EVENT STARTS IN';
       mainCountdown.textContent=fmt(start-now);
     }else if(now < end){
@@ -56,7 +56,7 @@
       next.setDate(next.getDate()+1);
       badge.className='event-state finished';
       badge.innerHTML='<i></i> EVENT FINISHED';
-      label.textContent='NEXT REGISTRATION';
+      label.textContent='NEXT EVENT IN';
       mainCountdown.textContent=fmt(next-now);
     }
   }

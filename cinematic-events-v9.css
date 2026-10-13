@@ -1,0 +1,370 @@
+/* COUNTER Cinematic Events V9
+   Presentation only. Registration is available exclusively in-game.
+   All stats, dates and results are still site preview values. */
+
+/* Standalone Events Center */
+body.events-center-page .event-center-main{
+  background-image:
+    radial-gradient(ellipse 72% 23% at 82% 2%,rgba(34,118,175,.12),transparent 79%),
+    radial-gradient(ellipse 58% 32% at 7% 48%,rgba(26,75,133,.08),transparent 88%);
+  background-repeat:no-repeat;
+}
+body.events-center-page .event-center-heading h1{
+  color:#f0f9ff!important;
+  text-shadow:0 0 29px rgba(72,174,226,.21),0 3px 19px rgba(0,0,0,.37)!important;
+}
+body.events-center-page .event-center-heading .eyebrow{color:#e4c284!important}
+body.events-center-page .event-center-live-pill{
+  border-color:rgba(130,207,234,.36)!important;
+  background:linear-gradient(120deg,rgba(15,48,68,.91),rgba(6,25,39,.96))!important;
+  box-shadow:inset 0 1px rgba(210,245,255,.10),0 10px 33px rgba(0,0,0,.30)!important;
+}
+body.events-center-page .event-preview-note{
+  border-color:rgba(223,189,118,.29)!important;
+  background:linear-gradient(110deg,rgba(64,47,26,.51),rgba(18,30,37,.68))!important;
+}
+/* Give the existing static dragon scene a cinematic layered atmosphere. */
+body.events-center-page .event-live-hero{
+  isolation:isolate;
+  min-height:355px!important;
+  padding:clamp(24px,3.5vw,43px)!important;
+  gap:clamp(16px,3vw,34px)!important;
+  border:1px solid rgba(137,209,232,.43)!important;
+  border-radius:19px!important;
+  background:
+    linear-gradient(101deg,rgba(2,11,20,.96),rgba(3,15,27,.77) 48%,rgba(4,17,31,.36)),
+    url("assets/counter-storm-reference.webp") center 44%/cover no-repeat!important;
+  box-shadow:inset 0 1px rgba(211,246,255,.10),0 26px 72px rgba(0,0,0,.48),0 0 26px rgba(42,133,190,.09)!important;
+}
+body.events-center-page .event-live-hero::before{
+  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 59% 95% at 84% 17%,rgba(43,149,222,.18),transparent 82%),
+    linear-gradient(to top,rgba(1,8,17,.48),transparent 44%);
+  opacity:.88;
+  animation:cv9-atmosphere 11s ease-in-out infinite alternate;
+}
+body.events-center-page .event-live-hero::after{
+  z-index:0!important;
+  background:radial-gradient(ellipse 40% 65% at 18% 90%,rgba(31,101,162,.12),transparent 90%)!important;
+}
+body.events-center-page .event-live-copy,
+body.events-center-page .event-countdown-panel{position:relative!important;z-index:1!important}
+body.events-center-page .event-live-copy h2{
+  font:700 clamp(39px,5vw,70px)/1.08 Georgia,serif!important;
+  color:#f5fcff!important;
+  text-shadow:0 0 37px rgba(74,193,245,.24),0 3px 17px rgba(0,0,0,.58)!important;
+}
+body.events-center-page .event-live-copy p{
+  font-size:15px!important;
+  line-height:1.8!important;
+  color:#b9d3e0!important;
+}
+body.events-center-page .event-state.registration,
+body.events-center-page .event-state.running{
+  border-color:rgba(107,228,188,.36)!important;
+  background:rgba(22,85,78,.31)!important;
+  color:#c1f5dc!important;
+}
+body.events-center-page .event-state.running{
+  border-color:rgba(238,200,122,.47)!important;
+  background:rgba(103,73,29,.42)!important;
+  color:#fbe5ac!important;
+}
+body.events-center-page .event-live-meta span{
+  border-color:rgba(132,194,224,.28)!important;
+  background:rgba(7,32,47,.72)!important;
+  color:#c0e1e9!important;
+  box-shadow:inset 0 1px rgba(215,246,255,.08)!important;
+}
+body.events-center-page .event-live-meta b{color:#f0f8fb!important}
+body.events-center-page .event-countdown-panel{
+  border:1px solid rgba(141,216,240,.48)!important;
+  background:linear-gradient(155deg,rgba(10,37,59,.94),rgba(3,14,27,.95))!important;
+  box-shadow:0 19px 50px rgba(0,0,0,.42),inset 0 1px rgba(216,246,255,.12),0 0 26px rgba(48,156,213,.11)!important;
+}
+body.events-center-page .event-countdown-panel>small{
+  color:#b5d8e6!important;font-size:10px!important;
+}
+body.events-center-page .event-countdown-panel>strong{
+  color:#ecfbff!important;
+  font-size:clamp(36px,4vw,56px)!important;
+  font-variant-numeric:tabular-nums;
+  text-shadow:0 0 20px rgba(123,217,250,.15);
+}
+body.events-center-page .event-countdown-panel>span{
+  color:#a6c9d8!important;font-size:11px!important;
+}
+body.events-center-page .event-ingame-notice{
+  display:flex;align-items:flex-start;text-align:left;
+  width:100%;gap:12px;padding:14px;margin-top:19px;
+  border:1px solid rgba(220,186,111,.49);
+  border-radius:11px;
+  background:linear-gradient(120deg,rgba(76,55,30,.48),rgba(20,36,47,.73));
+  box-shadow:inset 0 1px rgba(242,220,177,.08);
+}
+body.events-center-page .event-ingame-icon{
+  display:grid;place-items:center;flex:0 0 37px;height:37px;width:37px;
+  border:1px solid rgba(242,196,119,.45);border-radius:10px;
+  background:rgba(133,91,35,.18);color:#f3d398;font-size:19px;
+}
+body.events-center-page .event-ingame-notice strong{
+  display:block;color:#f7e1b6;
+  font:900 11px/1.3 system-ui,sans-serif;letter-spacing:.09em;
+}
+body.events-center-page .event-ingame-notice small{
+  display:block;margin-top:5px;color:#c6dce4;
+  font:600 11px/1.55 system-ui,sans-serif;
+}
+body.events-center-page .event-live-stats>div,
+body.events-center-page .event-center-panel{
+  border-color:rgba(122,198,221,.30)!important;
+  background:radial-gradient(ellipse at 100% 0,rgba(29,103,146,.09),transparent 80%),linear-gradient(140deg,rgba(12,38,55,.96),rgba(3,17,29,.98))!important;
+  box-shadow:inset 0 1px rgba(199,243,255,.06),0 15px 38px rgba(0,0,0,.28)!important;
+}
+body.events-center-page .event-live-stats>div strong{
+  color:#eaf7fc!important;font-variant-numeric:tabular-nums;
+}
+body.events-center-page .event-live-stats>div:first-child strong{
+  color:#b5efff!important;
+}
+body.events-center-page .event-section-head h2,
+body.events-center-page .event-panel-head h2{
+  color:#ecf8fe!important;
+  text-shadow:0 2px 16px rgba(79,166,214,.15);
+}
+body.events-center-page .event-section-head .eyebrow,
+body.events-center-page .event-panel-head .eyebrow{color:#ddc18c!important}
+/* Four different fantasy chapters from existing image assets. */
+body.events-center-page .event-schedule-grid .live-event-card{
+  isolation:isolate;
+  min-width:0;overflow:hidden;
+  min-height:296px!important;
+  padding:21px!important;
+  border-radius:15px!important;
+  border:1px solid rgba(119,193,222,.32)!important;
+  box-shadow:inset 0 1px rgba(208,245,255,.09),0 17px 43px rgba(0,0,0,.35)!important;
+  background:
+    linear-gradient(170deg,rgba(7,28,45,.83),rgba(3,16,28,.98) 76%),
+    url("assets/counter-storm-reference.webp") center 35%/cover no-repeat!important;
+  transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease;
+}
+body.events-center-page .event-schedule-grid .live-event-card::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:2px;z-index:0;
+  background:linear-gradient(90deg,transparent,rgba(118,219,247,.74),transparent);
+}
+body.events-center-page .event-schedule-grid .live-event-card:nth-child(2){
+  border-color:rgba(122,195,155,.34)!important;
+  background:
+    linear-gradient(160deg,rgba(8,31,30,.87),rgba(4,17,24,.97) 79%),
+    url("assets/fafurion-bg.jpg") center 46%/cover no-repeat!important;
+}
+body.events-center-page .event-schedule-grid .live-event-card:nth-child(2)::before{
+  background:linear-gradient(90deg,transparent,rgba(118,205,147,.72),transparent);
+}
+body.events-center-page .event-schedule-grid .live-event-card:nth-child(3){
+  border-color:rgba(175,149,221,.32)!important;
+  background:
+    linear-gradient(170deg,rgba(33,22,52,.86),rgba(8,18,31,.98) 76%),
+    url("assets/counter-storm-reference.webp") center 40%/cover no-repeat!important;
+}
+body.events-center-page .event-schedule-grid .live-event-card:nth-child(3)::before{
+  background:linear-gradient(90deg,transparent,rgba(171,137,233,.72),transparent);
+}
+body.events-center-page .event-schedule-grid .live-event-card:nth-child(4){
+  border-color:rgba(224,187,116,.52)!important;
+  background:
+    linear-gradient(175deg,rgba(52,38,26,.78),rgba(17,21,28,.98) 81%),
+    url("assets/fafurion-bg.jpg") center 35%/cover no-repeat!important;
+}
+body.events-center-page .event-schedule-grid .live-event-card:nth-child(4)::before{
+  background:linear-gradient(90deg,transparent,rgba(238,199,115,.78),transparent);
+}
+body.events-center-page .event-schedule-grid .live-event-card .event-card-icon-large{
+  display:grid;place-items:center;
+  width:59px;height:59px;margin:25px 0 17px!important;
+  border:1px solid rgba(128,210,239,.34);border-radius:14px;
+  background:linear-gradient(145deg,rgba(30,99,129,.39),rgba(5,28,42,.39));
+  font-size:29px!important;
+  color:#c7eefb!important;
+  box-shadow:inset 0 1px rgba(220,247,255,.11),0 0 26px rgba(61,162,211,.10);
+}
+body.events-center-page .event-schedule-grid .live-event-card:nth-child(2) .event-card-icon-large{
+  border-color:rgba(116,212,160,.36);color:#b9edce!important;background:rgba(33,88,59,.28);
+}
+body.events-center-page .event-schedule-grid .live-event-card:nth-child(3) .event-card-icon-large{
+  border-color:rgba(178,152,230,.35);color:#dacbff!important;background:rgba(80,53,129,.27);
+}
+body.events-center-page .event-schedule-grid .live-event-card:nth-child(4) .event-card-icon-large{
+  border-color:rgba(233,190,118,.45);color:#f0d6a3!important;background:rgba(113,83,39,.24);
+}
+body.events-center-page .event-schedule-grid .live-event-card h3{
+  color:#f0f9fe!important;font:700 23px/1.17 Georgia,serif!important;
+}
+body.events-center-page .event-schedule-grid .live-event-card p{
+  color:#b2cbd6!important;line-height:1.58!important;
+}
+body.events-center-page .event-card-footer{
+  border-top-color:rgba(122,198,221,.23)!important;
+}
+body.events-center-page .event-team{
+  border-color:rgba(120,201,227,.23)!important;
+  background:rgba(3,17,28,.66)!important;
+}
+body.events-center-page .event-team.red .event-team-head{
+  background:rgba(127,47,53,.12);
+}
+body.events-center-page .event-team.blue .event-team-head{
+  background:rgba(40,114,157,.13);
+}
+body.events-center-page .event-player-row{border-bottom-color:rgba(128,198,219,.10)!important}
+body.events-center-page .event-player-row b{color:#e7f4f8!important}
+body.events-center-page .event-player-row small{color:#abc7d3!important}
+body.events-center-page .event-rule-list>div{
+  border-color:rgba(126,203,225,.23)!important;
+  background:rgba(6,29,44,.63)!important;
+}
+body.events-center-page .event-rule-list b{color:#e2f3f8!important}
+body.events-center-page .event-rule-list small{color:#a9c6d1!important}
+body.events-center-page .event-result-card{
+  border-color:rgba(130,200,228,.31)!important;
+  border-radius:14px!important;
+  background:radial-gradient(ellipse 60% 70% at 0 0,rgba(43,119,161,.12),transparent 87%),linear-gradient(145deg,rgba(10,36,52,.94),rgba(3,17,29,.97))!important;
+  box-shadow:inset 0 1px rgba(210,239,250,.09),0 13px 35px rgba(0,0,0,.29)!important;
+}
+body.events-center-page .event-result-card .result-icon{
+  border-color:rgba(129,212,240,.39)!important;
+  border-radius:12px!important;
+  background:rgba(31,86,121,.29)!important;
+  box-shadow:0 0 20px rgba(59,162,209,.10);
+}
+body.events-center-page .result-mvp strong{color:#eed59b!important}
+
+/* The account's event screen is a schedule and preview, never a signup panel. */
+#account-events-view .featured-event{
+  min-height:255px!important;
+  border:1px solid rgba(130,200,227,.44)!important;
+  background:
+    linear-gradient(99deg,rgba(2,13,23,.95),rgba(3,15,28,.75) 62%,rgba(9,26,40,.43)),
+    url("assets/counter-storm-reference.webp") 65% 42%/cover no-repeat!important;
+  box-shadow:inset 0 1px rgba(224,242,249,.12),0 23px 63px rgba(0,0,0,.42)!important;
+}
+#account-events-view .featured-event-copy h3{
+  color:#f3faff!important;
+  text-shadow:0 1px 20px rgba(78,161,215,.22);
+}
+#account-events-view .featured-event-meta>span{
+  border-color:rgba(120,201,227,.34)!important;
+  background:rgba(7,29,43,.68)!important;
+  color:#cee4ec!important;
+}
+#account-events-view .featured-countdown{
+  min-width:218px;
+  border:1px solid rgba(223,185,112,.43)!important;
+  background:linear-gradient(145deg,rgba(53,40,25,.80),rgba(5,25,38,.89))!important;
+  box-shadow:0 14px 38px rgba(0,0,0,.28),inset 0 1px rgba(246,215,161,.11)!important;
+}
+#account-events-view .featured-countdown>small{color:#e0c18d!important}
+#account-events-view .featured-countdown>strong{color:#ffe7b3!important;font-variant-numeric:tabular-nums}
+#account-events-view .account-ingame-notice{
+  display:flex;align-items:center;justify-content:center;gap:9px;
+  margin-top:15px;min-height:44px;width:100%;
+  border:1px solid rgba(223,183,105,.52);border-radius:9px;
+  background:rgba(101,70,29,.23);color:#f1d59f;
+  font:900 11px/1.25 system-ui,sans-serif;letter-spacing:.07em;text-align:center;
+}
+#account-events-view .account-ingame-notice>span{font-size:18px}
+#account-events-view #eventsGrid .event-card{
+  min-width:0;overflow:hidden;
+  border-color:rgba(112,190,218,.35)!important;
+  background:radial-gradient(ellipse 90% 47% at 95% 0,rgba(46,124,177,.15),transparent 80%),linear-gradient(153deg,rgba(14,45,64,.91),rgba(4,21,32,.95))!important;
+  box-shadow:inset 0 1px rgba(225,244,251,.08),0 13px 36px rgba(0,0,0,.30)!important;
+}
+#account-events-view #eventsGrid .event-card.gold,
+#account-events-view #eventsGrid .event-card.special{
+  border-color:rgba(216,180,106,.39)!important;
+  background:radial-gradient(ellipse 90% 47% at 100% 0,rgba(163,113,48,.13),transparent 79%),linear-gradient(152deg,rgba(41,34,29,.92),rgba(5,22,33,.95))!important;
+}
+#account-events-view #eventsGrid .event-card.boss{border-color:rgba(166,143,211,.36)!important}
+#account-events-view #eventsGrid .event-card h4{color:#e9f7fc!important}
+#account-events-view #eventsGrid .event-card p{color:#acc6d1!important}
+#account-events-view #eventsGrid .event-card-bottom{border-top-color:rgba(113,184,211,.18)!important}
+#account-events-view .event-ingame-tag{
+  display:inline-flex;align-items:center;justify-content:center;
+  max-width:54%;padding:8px;
+  border:1px solid rgba(225,187,120,.50);border-radius:8px;
+  background:rgba(94,65,31,.24);color:#ebd09b;
+  text-align:center;font:900 10px/1.3 system-ui,sans-serif;letter-spacing:.05em;
+  overflow-wrap:anywhere;
+}
+#account-events-view .ingame-instruction-panel{
+  border-color:rgba(218,183,115,.40)!important;
+  background:radial-gradient(ellipse at 95% 0,rgba(148,106,43,.10),transparent 75%),linear-gradient(145deg,rgba(41,35,25,.84),rgba(7,29,42,.96))!important;
+  box-shadow:inset 0 1px rgba(242,224,183,.10),0 15px 34px rgba(0,0,0,.28)!important;
+}
+#account-events-view .ingame-instruction-panel .events-side-head small{color:#dbbe84!important}
+#account-events-view .ingame-instruction-panel .events-side-head h3{color:#f2e4c6!important}
+#account-events-view .ingame-instruction-copy{
+  color:#c2d8df!important;font-size:13px!important;line-height:1.75!important;
+}
+#account-events-view .event-v9-info-link{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:max-content;max-width:100%;min-height:42px;
+  margin-top:14px;padding:11px 15px;
+  border:1px solid rgba(128,213,237,.43);border-radius:9px;
+  background:rgba(25,83,112,.32);color:#d7f4fe;
+  font:800 11px/1.3 system-ui,sans-serif;text-decoration:none!important;
+  letter-spacing:.07em;
+}
+#account-events-view .event-v9-info-link:focus-visible{
+  outline:2px solid #b2efff!important;outline-offset:3px!important;
+}
+#account-events-view .events-side-panel{
+  border-color:rgba(122,192,222,.29)!important;
+  background:linear-gradient(140deg,rgba(11,39,55,.91),rgba(5,22,34,.93))!important;
+}
+#account-events-view .events-side-panel .event-week-progress strong{color:#eaf8ff!important}
+#account-events-view .events-side-panel .event-milestone{
+  border-color:rgba(213,181,115,.40)!important;background:rgba(89,67,34,.17)!important;
+}
+@keyframes cv9-atmosphere{
+  from{opacity:.61}
+  to{opacity:.97}
+}
+@media(hover:hover) and (pointer:fine){
+  body.events-center-page .event-schedule-grid .live-event-card:hover{
+    transform:translateY(-4px)!important;
+    border-color:rgba(154,222,240,.67)!important;
+    box-shadow:inset 0 1px rgba(223,250,255,.16),0 26px 59px rgba(0,0,0,.44),0 0 18px rgba(73,170,217,.11)!important;
+  }
+  #account-events-view .event-v9-info-link:hover{
+    border-color:rgba(169,236,255,.67)!important;
+    background:rgba(36,119,157,.29);
+  }
+}
+@media(max-width:760px){
+  body.events-center-page .event-live-hero{
+    min-height:0!important;padding:20px!important;gap:18px!important;
+  }
+  body.events-center-page .event-live-copy h2{font-size:clamp(34px,9vw,52px)!important}
+  body.events-center-page .event-countdown-panel{padding:20px!important}
+  body.events-center-page .event-ingame-notice{padding:12px;gap:10px}
+  body.events-center-page .event-live-stats>div{padding:15px!important}
+  body.events-center-page .event-schedule-grid .live-event-card{min-height:265px!important}
+  body.events-center-page .event-center-panel{padding:18px!important}
+  body.events-center-page .event-result-card{gap:10px!important;padding:14px!important}
+  #account-events-view .featured-event{min-height:0!important;padding:19px!important}
+  #account-events-view .featured-countdown{min-width:0!important;width:100%!important}
+  #account-events-view .event-ingame-tag{font-size:9px;max-width:58%}
+}
+@media(max-width:390px){
+  body.events-center-page .event-live-stats{gap:7px}
+  body.events-center-page .event-live-stats>div{padding:11px!important}
+  body.events-center-page .event-live-stats strong{font-size:16px!important}
+  body.events-center-page .event-countdown-panel>strong{font-size:35px!important}
+}
+@media(prefers-reduced-motion:reduce){
+  body.events-center-page .event-live-hero::before{animation:none!important;opacity:.8}
+  body.events-center-page .event-schedule-grid .live-event-card{transition:none!important}
+  body.events-center-page .event-schedule-grid .live-event-card:hover{transform:none!important}
+}

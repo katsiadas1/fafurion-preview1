@@ -490,11 +490,6 @@ function filterEvents(type,btn){
   document.querySelectorAll(".event-filters button").forEach(b=>b.classList.toggle("active",b===btn));
   document.querySelectorAll("#eventsGrid .event-card").forEach(card=>{card.style.display=(type==="all"||card.dataset.eventType===type)?"flex":"none"});
 }
-function registerEvent(btn,name){
-  if(btn.classList.contains("registered"))return;
-  btn.classList.add("registered");btn.textContent="✓ REGISTERED";btn.disabled=true;
-  demoAction("eventRegistered");
-}
 function redeemPromoCode(){
   const input=document.getElementById("promoCodeInput");
   const result=document.getElementById("promoResult");if(!input||!result)return;

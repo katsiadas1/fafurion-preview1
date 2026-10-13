@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="realm-theme.css?v=14"><link rel="stylesheet" href="home-counter.css?v=4"><script src="home-counter.js?v=1" defer></script><link rel="stylesheet" href="site-unified.css?v=6">
 <link rel="stylesheet" href="counter-cinematic.css?v=8"><script src="counter-motion.js?v=1" defer></script><link rel="stylesheet" href="site-polish.css?v=9">
 <link rel="stylesheet" href="global-search.css?v=1"><link rel="stylesheet" href="site-ux.css?v=1"><script src="global-search.js?v=4" defer></script><script src="site-ux.js?v=1" defer></script>
-<link rel="stylesheet" href="cinematic-v1.css?v=2"><link rel="stylesheet" href="cinematic-v2.css?v=1"><link rel="stylesheet" href="race-avatars-v1.css?v=1"><link rel="stylesheet" href="race-avatars-v2.css?v=1"><link rel="stylesheet" href="race-avatars-v3.css?v=1"><link rel="stylesheet" href="race-avatars-v4.css?v=1"><link rel="stylesheet" href="legendary-profiles-v5.css?v=2"><link rel="stylesheet" href="hall-of-champions-v6.css?v=1"><link rel="stylesheet" href="legendary-clans-v7.css?v=1"><link rel="stylesheet" href="legendary-clan-profiles-v8.css?v=1"></head>
+<link rel="stylesheet" href="cinematic-v1.css?v=2"><link rel="stylesheet" href="cinematic-v2.css?v=1"><link rel="stylesheet" href="race-avatars-v1.css?v=1"><link rel="stylesheet" href="race-avatars-v2.css?v=1"><link rel="stylesheet" href="race-avatars-v3.css?v=1"><link rel="stylesheet" href="race-avatars-v4.css?v=1"><link rel="stylesheet" href="legendary-profiles-v5.css?v=2"><link rel="stylesheet" href="hall-of-champions-v6.css?v=1"><link rel="stylesheet" href="legendary-clans-v7.css?v=1"><link rel="stylesheet" href="legendary-clan-profiles-v8.css?v=1"><link rel="stylesheet" href="cinematic-events-v9.css?v=1"></head>
 <body data-current-page="home">
 <div class="app">
 <header class="topbar">
@@ -495,7 +495,7 @@
           <div class="featured-countdown">
             <small data-i18n="startsIn">STARTS IN</small>
             <strong data-event-countdown="2180">00:36:20</strong>
-            <button class="primary" onclick="registerEvent(this,'Team vs Team')" data-i18n="registerEvent">REGISTER</button>
+            <div class="account-ingame-notice" role="note"><span aria-hidden="true">⚔</span><b data-v9-text="ingameShort">JOIN IN-GAME ONLY</b></div>
           </div>
         </div>
 
@@ -524,7 +524,7 @@
           <article class="event-card" data-event-type="pvp">
             <div class="event-card-top"><span class="event-type pvp">PVP</span><span class="event-time">17:18</span></div>
             <span class="event-card-icon">⚔</span><h4>Team vs Team</h4><p data-i18n="tvtCardDesc">20v20 instanced PvP battle with Vote Point rewards.</p>
-            <div class="event-card-bottom"><div><small data-i18n="startsIn">Starts in</small><b data-event-countdown="2180">00:36:20</b></div><button onclick="registerEvent(this,'Team vs Team')" data-i18n="register">REGISTER</button></div>
+            <div class="event-card-bottom"><div><small data-i18n="startsIn">Starts in</small><b data-event-countdown="2180">00:36:20</b></div><span class="event-ingame-tag" data-v9-text="ingameShort">JOIN IN-GAME ONLY</span></div>
           </article>
           <article class="event-card" data-event-type="pvp">
             <div class="event-card-top"><span class="event-type pvp">PVP</span><span class="event-time">20:00</span></div>
@@ -554,10 +554,10 @@
         </div>
 
         <div class="calendar-bottom-grid">
-          <div class="events-side-panel">
-            <div class="events-side-head"><small data-i18n="myRegistrations">MY REGISTRATIONS</small><h3 data-i18n="registeredEvents">Registered events</h3></div>
-            <div class="registration-row"><span class="reg-icon">⚔</span><div><b>Team vs Team</b><small>17:18 · FafurionKnight</small></div><span class="reg-status ready" data-i18n="ready">READY</span></div>
-            <div class="registration-row"><span class="reg-icon">♜</span><div><b>Aden Castle Siege</b><small>Sunday · Immortals</small></div><span class="reg-status clan" data-i18n="clan">CLAN</span></div>
+          <div class="events-side-panel ingame-instruction-panel">
+            <div class="events-side-head"><small data-v9-text="whereTitle">WHERE TO JOIN</small><h3 data-v9-text="ingamePanelTitle">Participate in Lineage II</h3></div>
+            <p class="ingame-instruction-copy" data-v9-text="ingameAccountNote">Log into the game before the event and follow its in-game announcement. Event registration is not available on the website.</p>
+            <a class="event-v9-info-link" href="events.html" data-v9-text="viewSchedule">VIEW EVENT SCHEDULE ↗</a>
           </div>
           <div class="events-side-panel">
             <div class="events-side-head"><small data-i18n="eventRewards">EVENT REWARDS</small><h3 data-i18n="weeklyEventProgress">Weekly event progress</h3></div>
@@ -567,7 +567,7 @@
           </div>
         </div>
 
-        <div class="characters-note" data-i18n="eventsDemoNote">Demo event schedule. Live event times, registrations and rewards can later come directly from server event configuration.</div>
+        <div class="characters-note" data-v9-text="demoAccount">Demo event schedule and rewards. Participation and registration take place exclusively inside the game.</div>
       </div>
 
 
@@ -1864,6 +1864,7 @@
 <script src="hall-of-champions-v6.js?v=1"></script>
 <script src="legendary-clans-v7.js?v=1"></script>
 <script src="legendary-clan-profiles-v8.js?v=1"></script>
+<script src="cinematic-events-v9.js?v=1"></script>
 <script src="realm-status.js?v=2"></script>
 <script src="discord-integration.js?v=2"></script>
 </body>

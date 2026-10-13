@@ -102,16 +102,6 @@
 .event-countdown-panel small{color:#7f9da8;font-size:.62rem;font-weight:900;letter-spacing:.13em}
 .event-countdown-panel>strong{margin:10px 0 3px;font-size:clamp(34px,4vw,52px);letter-spacing:.04em;color:#f2fbfd}
 .event-countdown-panel>span{color:#89a3ad;font-size:.74rem}
-.event-register-button{
-  margin-top:20px;
-  width:100%;min-height:44px;
-  display:flex;align-items:center;justify-content:center;
-  border:1px solid rgba(102,214,234,.44);
-  border-radius:8px;
-  background:linear-gradient(180deg,rgba(40,139,162,.48),rgba(10,54,70,.66));
-  color:#eefcff;
-  font-size:.72rem;font-weight:900;letter-spacing:.08em;
-}
 
 .event-live-stats{
   display:grid;grid-template-columns:repeat(4,1fr);gap:12px;
