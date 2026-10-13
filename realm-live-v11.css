@@ -105,3 +105,7 @@
 @media(prefers-reduced-motion:reduce){
   .v11-live-overlay{scroll-behavior:auto}
 }
+
+/* Force author-level hiding over the old portal status display rules. */
+#page-rankings .section-head .status [hidden],
+#page-rankings .clan-rank-live[hidden]{display:none!important}
