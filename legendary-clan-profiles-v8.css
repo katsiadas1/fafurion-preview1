@@ -1,0 +1,273 @@
+/* COUNTER · Legendary Clan Profiles V8.
+   Presentation only: existing official site assets and preview clan data.
+   Keeps V7 compact rank emblems, all member actions, and mobile scroll. */
+#publicClanModal .public-clan-card.legendary-clan-v8{
+  --v8-clan-metal:rgba(121,203,230,.42);
+  --v8-clan-aura:rgba(57,146,210,.14);
+  --v8-clan-accent:#a8e4f4;
+  border:1px solid var(--v8-clan-metal)!important;
+  background:linear-gradient(175deg,rgba(10,31,46,.995),rgba(4,16,27,.99) 64%,rgba(3,13,22,.99))!important;
+  box-shadow:0 32px 100px rgba(0,0,0,.76),inset 0 1px rgba(221,246,255,.10),0 0 36px var(--v8-clan-aura)!important;
+  max-width:min(850px,100%);
+}
+#publicClanModal .public-clan-card.legendary-clan-v8[data-clan-owner="true"]{
+  --v8-clan-metal:rgba(230,191,116,.56);
+  --v8-clan-aura:rgba(202,155,64,.19);
+  --v8-clan-accent:#f3d39a;
+}
+#publicClanModal .legendary-clan-v8 .public-clan-banner{
+  position:relative;isolation:isolate;
+  min-height:267px!important;
+  gap:22px!important;
+  padding:77px 26px 26px!important;
+  border-bottom:1px solid var(--v8-clan-metal)!important;
+  background:linear-gradient(105deg,rgba(4,18,29,.88),rgba(5,22,35,.70) 61%,rgba(8,23,36,.42)),url("assets/fafurion-bg.jpg") 66% 44% / cover no-repeat!important;
+}
+#publicClanModal .legendary-clan-v8 .public-clan-banner::before{
+  content:"";inset:0;position:absolute;z-index:0;pointer-events:none;
+  background:radial-gradient(ellipse 54% 78% at 11% 75%,var(--v8-clan-aura),transparent 84%),linear-gradient(to top,rgba(2,10,17,.54),transparent 55%);
+}
+#publicClanModal .legendary-clan-v8[data-clan-owner="true"] .public-clan-banner::before{
+  background:radial-gradient(ellipse 63% 85% at 8% 71%,rgba(195,145,57,.22),transparent 83%),linear-gradient(to top,rgba(10,11,14,.50),transparent 58%);
+}
+#publicClanModal .legendary-clan-v8 .public-clan-banner>.public-clan-crest,
+#publicClanModal .legendary-clan-v8 .public-clan-banner>.public-clan-title,
+#publicClanModal .legendary-clan-v8 .public-clan-banner>.public-clan-castle{
+  position:relative;z-index:1;
+}
+#publicClanModal .legendary-clan-v8 .public-clan-crest.realm-clan-crest{
+  width:116px!important;height:126px!important;flex:0 0 116px!important;
+  display:inline-grid!important;place-items:center!important;
+  border:2px solid var(--v8-clan-metal)!important;
+  border-radius:14px 14px 29px 29px!important;
+  color:var(--v8-clan-accent)!important;
+  background:radial-gradient(circle at 47% 17%,var(--v8-clan-aura),transparent 76%),linear-gradient(145deg,rgba(18,53,72,.98),rgba(3,15,24,.98))!important;
+  box-shadow:0 0 0 4px rgba(4,19,30,.72),0 0 30px var(--v8-clan-aura),0 16px 37px rgba(0,0,0,.47)!important;
+}
+#publicClanModal .legendary-clan-v8 .public-clan-crest .realm-icon{
+  font-size:57px!important;
+}
+#publicClanModal .legendary-clan-v8 .public-clan-title{
+  min-width:0;
+}
+#publicClanModal .legendary-clan-v8 .public-clan-title h2{
+  color:#f6fbff!important;
+  font-size:clamp(28px,3.5vw,39px)!important;
+  line-height:1.13!important;
+  overflow-wrap:anywhere;
+  text-shadow:0 2px 23px rgba(61,147,194,.17),0 4px 18px rgba(0,0,0,.43)!important;
+}
+#publicClanModal .legendary-clan-v8[data-clan-owner="true"] .public-clan-title h2{
+  color:#ffebc2!important;
+  text-shadow:0 2px 22px rgba(226,178,81,.17),0 4px 18px rgba(0,0,0,.52)!important;
+}
+#publicClanModal .legendary-clan-v8 .public-clan-title p{color:#bed3dc!important}
+#publicClanModal .legendary-clan-v8 .public-clan-title .eyebrow{color:#ceb883!important}
+#publicClanModal .legendary-clan-v8 .v8-clan-status-row{
+  display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:15px;
+}
+#publicClanModal .legendary-clan-v8 .v8-clan-status-chip{
+  display:inline-flex;align-items:center;gap:6px;min-height:27px;
+  padding:6px 9px;border:1px solid rgba(117,206,236,.38);border-radius:7px;
+  background:rgba(7,35,52,.78);color:#bdeaf9;
+  font:800 10px/1.2 system-ui,sans-serif;letter-spacing:.095em;text-transform:uppercase;
+}
+#publicClanModal .legendary-clan-v8 .v8-clan-status-chip.castle-owner{
+  color:#f7dca9;border-color:rgba(226,191,125,.65);
+  background:linear-gradient(115deg,rgba(88,62,26,.73),rgba(35,27,18,.78));
+  box-shadow:0 0 17px rgba(210,164,79,.10);
+}
+#publicClanModal .legendary-clan-v8 .v8-clan-status-chip.defender{
+  color:#e9d49f;border-color:rgba(219,189,121,.40);
+  background:rgba(69,53,29,.52);
+}
+#publicClanModal .legendary-clan-v8 .v8-clan-status-chip.attacker{
+  color:#bdeaf9;border-color:rgba(101,206,245,.43);
+  background:rgba(18,72,98,.58);
+}
+#publicClanModal .legendary-clan-v8 .public-clan-castle{
+  border-color:var(--v8-clan-metal)!important;
+  background:rgba(6,28,42,.72)!important;
+  box-shadow:inset 0 1px rgba(219,242,250,.09)!important;
+  backdrop-filter:blur(5px);
+}
+#publicClanModal .legendary-clan-v8[data-clan-owner="true"] .public-clan-castle{
+  background:rgba(56,39,20,.70)!important;
+}
+#publicClanModal .legendary-clan-v8 .public-clan-castle b{
+  color:var(--v8-clan-accent)!important;
+}
+#publicClanModal .legendary-clan-v8 .public-clan-castle small,
+#publicClanModal .legendary-clan-v8 .public-clan-castle span{
+  color:#bfd1d8!important;
+}
+#publicClanModal .legendary-clan-v8 .public-clan-body{
+  padding:25px!important;
+}
+#publicClanModal .legendary-clan-v8 .v8-clan-operation{
+  display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;
+  gap:18px;margin:0 0 17px;padding:20px 22px;
+  border:1px solid var(--v8-clan-metal);border-radius:14px;
+  background:radial-gradient(ellipse 60% 90% at 0% 0%,var(--v8-clan-aura),transparent 88%),linear-gradient(115deg,rgba(11,42,61,.9),rgba(5,23,37,.95));
+  box-shadow:inset 0 1px rgba(228,247,255,.07),0 12px 30px rgba(0,0,0,.19);
+}
+#publicClanModal .legendary-clan-v8 .v8-clan-operation-caption{
+  color:#b2dce9;font:800 10px/1.3 system-ui,sans-serif;
+  letter-spacing:.16em;text-transform:uppercase;
+}
+#publicClanModal .legendary-clan-v8 .v8-clan-operation-title{
+  display:block;margin-top:7px;color:#f0f9fd;
+  font:700 clamp(19px,2.4vw,25px)/1.2 Georgia,serif;
+  overflow-wrap:anywhere;
+}
+#publicClanModal .legendary-clan-v8 .v8-clan-operation-note{
+  display:block;max-width:52ch;margin-top:8px;color:#afc7d2;
+  font:600 11px/1.5 system-ui,sans-serif;
+}
+#publicClanModal .legendary-clan-v8 .v8-clan-operation-action{
+  color:var(--v8-clan-accent);font:900 11px/1.3 system-ui,sans-serif;
+  letter-spacing:.10em;text-transform:uppercase;
+  text-align:right;max-width:140px;overflow-wrap:anywhere;
+}
+#publicClanModal .legendary-clan-v8 .public-clan-stats>div{
+  border:1px solid rgba(125,193,220,.23)!important;
+  background:linear-gradient(140deg,rgba(22,54,70,.64),rgba(6,26,38,.78))!important;
+  box-shadow:inset 0 1px rgba(213,239,250,.05)!important;
+}
+#publicClanModal .legendary-clan-v8 .public-clan-stats strong{
+  color:#edf8fe!important;font-variant-numeric:tabular-nums;
+}
+#publicClanModal .legendary-clan-v8 .public-clan-stats>div:nth-child(3){
+  border-color:var(--v8-clan-metal)!important;
+}
+#publicClanModal .legendary-clan-v8 .public-clan-stats>div:nth-child(3) strong{color:var(--v8-clan-accent)!important}
+#publicClanModal .legendary-clan-v8 .public-clan-panel{
+  border:1px solid rgba(116,186,214,.27)!important;
+  background:linear-gradient(145deg,rgba(12,40,57,.89),rgba(5,24,37,.94))!important;
+  box-shadow:inset 0 1px rgba(220,247,255,.055),0 10px 29px rgba(0,0,0,.16)!important;
+  border-radius:13px!important;
+}
+#publicClanModal .legendary-clan-v8 .public-panel-head{
+  border-bottom:1px solid rgba(122,186,209,.16);
+  padding-bottom:12px;margin-bottom:15px!important;
+}
+#publicClanModal .legendary-clan-v8 .public-panel-head h3{color:#eaf6fb!important}
+#publicClanModal .legendary-clan-v8 .public-panel-head small{color:#b3cddd!important}
+#publicClanModal .legendary-clan-v8 .public-clan-leader{
+  border-color:var(--v8-clan-metal)!important;
+  background:linear-gradient(110deg,rgba(34,74,92,.43),rgba(5,30,44,.72))!important;
+  border-radius:11px!important;
+  min-height:75px;
+}
+#publicClanModal .legendary-clan-v8 .public-clan-leader-avatar.realm-class-icon{
+  width:53px!important;height:53px!important;flex-shrink:0!important;
+  border:1px solid var(--v8-clan-metal)!important;
+  border-radius:11px!important;background:rgba(13,45,64,.77)!important;
+}
+#publicClanModal .legendary-clan-v8 .public-clan-leader b{color:#e9f6fb!important}
+#publicClanModal .legendary-clan-v8 .clan-siege-ready{
+  padding:6px 9px;border:1px solid var(--v8-clan-metal);border-radius:7px;
+  background:rgba(9,43,61,.57);
+  color:var(--v8-clan-accent)!important;letter-spacing:.09em;
+  white-space:nowrap;
+}
+#publicClanModal .legendary-clan-v8 .public-clan-siege-copy{
+  padding:12px!important;
+  border-color:rgba(113,184,211,.19)!important;
+  background:rgba(6,26,39,.52)!important;
+  color:#bbd2dc!important;
+  font-size:12px!important;
+}
+#publicClanModal .legendary-clan-v8 .v8-siege-readiness{
+  padding:15px;margin-top:13px;
+  border:1px solid rgba(125,190,215,.24);border-radius:10px;
+  background:rgba(5,25,37,.63);
+}
+#publicClanModal .legendary-clan-v8 .v8-siege-readiness-top{
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+  color:#b1cbd5;font:800 10px/1.4 system-ui,sans-serif;
+  letter-spacing:.08em;text-transform:uppercase;
+}
+#publicClanModal .legendary-clan-v8 .v8-siege-readiness-top strong{
+  font-size:13px!important;color:var(--v8-clan-accent)!important;
+  font-variant-numeric:tabular-nums;white-space:nowrap;
+}
+#publicClanModal .legendary-clan-v8 .v8-siege-progress-track{
+  width:100%;height:8px;margin:13px 0 8px;overflow:hidden;
+  border-radius:20px;background:rgba(0,12,20,.85);
+  border:1px solid rgba(145,207,228,.16);
+}
+#publicClanModal .legendary-clan-v8 .v8-siege-progress-bar{
+  height:100%;width:var(--v8-readiness,0%);
+  background:linear-gradient(90deg,rgba(59,142,192,.9),rgba(122,220,249,.95));
+  box-shadow:0 0 17px rgba(102,211,248,.22);
+  border-radius:20px;
+}
+#publicClanModal .legendary-clan-v8[data-clan-owner="true"] .v8-siege-progress-bar{
+  background:linear-gradient(90deg,#a47b37,#efd294);
+  box-shadow:0 0 13px rgba(215,171,81,.24);
+}
+#publicClanModal .legendary-clan-v8 .v8-siege-readiness-foot{
+  display:block;color:#9ebcc9;font:700 11px/1.4 system-ui,sans-serif;
+}
+#publicClanModal .legendary-clan-v8 .public-clan-member{
+  min-width:0;min-height:68px;
+  border-color:rgba(105,186,217,.19)!important;
+  background:rgba(8,32,47,.58)!important;
+}
+#publicClanModal .legendary-clan-v8 .public-clan-member-avatar.realm-class-icon{
+  border-color:rgba(128,204,226,.30)!important;
+  background:rgba(18,66,85,.45)!important;
+}
+#publicClanModal .legendary-clan-v8 .public-clan-member b{color:#e0eff5!important}
+#publicClanModal .legendary-clan-v8 .public-clan-member small{color:#a1bdc8!important}
+#publicClanModal .legendary-clan-v8 .public-clan-war,
+#publicClanModal .legendary-clan-v8 .public-clan-activity{
+  padding:12px 0!important;border-bottom-color:rgba(128,197,216,.12)!important;
+}
+#publicClanModal .legendary-clan-v8 .public-clan-war b,
+#publicClanModal .legendary-clan-v8 .public-clan-activity b{color:#e0eff5!important}
+#publicClanModal .legendary-clan-v8 .public-clan-war small,
+#publicClanModal .legendary-clan-v8 .public-clan-activity small{color:#a4bfca!important}
+#publicClanModal .legendary-clan-v8 .public-clan-war em,
+#publicClanModal .legendary-clan-v8 .public-clan-activity em{color:#cdb987!important}
+@media(max-width:720px){
+  #publicClanModal .legendary-clan-v8 .public-clan-banner{
+    min-height:270px!important;gap:13px!important;padding:77px 17px 18px!important;
+    grid-template-columns:auto minmax(0,1fr)!important;
+  }
+  #publicClanModal .legendary-clan-v8 .public-clan-crest.realm-clan-crest{
+    width:72px!important;height:82px!important;flex-basis:72px!important;
+    border-radius:11px 11px 20px 20px!important;
+  }
+  #publicClanModal .legendary-clan-v8 .public-clan-crest .realm-icon{font-size:38px!important}
+  #publicClanModal .legendary-clan-v8 .public-clan-title h2{font-size:clamp(24px,6vw,31px)!important}
+  #publicClanModal .legendary-clan-v8 .v8-clan-status-row{gap:6px;margin-top:10px}
+  #publicClanModal .legendary-clan-v8 .v8-clan-status-chip{font-size:9px;letter-spacing:.04em;padding:5px 7px}
+  #publicClanModal .legendary-clan-v8 .public-clan-castle{
+    grid-column:1/-1!important;width:100%;max-width:none;
+    padding:12px 14px!important;
+  }
+  #publicClanModal .legendary-clan-v8 .public-clan-body{padding:15px!important}
+  #publicClanModal .legendary-clan-v8 .v8-clan-operation{
+    grid-template-columns:1fr;gap:10px;padding:17px!important;
+  }
+  #publicClanModal .legendary-clan-v8 .v8-clan-operation-action{text-align:left;max-width:none}
+  #publicClanModal .legendary-clan-v8 .public-clan-panel{padding:16px!important}
+  #publicClanModal .legendary-clan-v8 .public-clan-leader-avatar.realm-class-icon{
+    width:44px!important;height:44px!important;
+  }
+}
+@media(max-width:420px){
+  #publicClanModal .legendary-clan-v8 .public-clan-banner{gap:9px!important;padding-inline:12px!important}
+  #publicClanModal .legendary-clan-v8 .public-clan-crest.realm-clan-crest{
+    width:59px!important;height:70px!important;flex-basis:59px!important;
+  }
+  #publicClanModal .legendary-clan-v8 .public-clan-crest .realm-icon{font-size:31px!important}
+  #publicClanModal .legendary-clan-v8 .public-clan-title h2{font-size:24px!important}
+  #publicClanModal .legendary-clan-v8 .v8-clan-status-chip{font-size:8px;padding:5px}
+  #publicClanModal .legendary-clan-v8 .public-clan-body{padding:12px!important}
+}
+@media(prefers-reduced-motion:reduce){
+  #publicClanModal .legendary-clan-v8 .v8-siege-progress-bar{transition:none!important}
+}
