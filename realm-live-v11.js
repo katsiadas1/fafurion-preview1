@@ -15,10 +15,10 @@
   const attach=(parent,...children)=>{for(const child of children)if(child)parent.appendChild(child);return parent};
   const pretty=value=>Number(value).toLocaleString('en-US');
   const locales={
-    en:{live:'LIVE · GameServer DB',demo:'DEMO · Preview only',stale:'DATA UNAVAILABLE · Last verified snapshot',player:'Player',clan:'Clan',pvp:'PvP',pk:'PK',level:'Level',online:'Online',offline:'Offline',deaths:'PvP deaths',kd:'K/D',members:'Members',leader:'Leader',reputation:'Reputation',castle:'Castle',nocastle:'No castle',class:'Class',public:'PUBLIC GAME STATS',clanStats:'PUBLIC CLAN STATS',view:'VIEW PUBLIC STATS',last:'From GameServer database · read-only',empty:'No public records yet',preview:'DB SNAPSHOT'},
-    el:{live:'LIVE · Βάση GameServer',demo:'DEMO · Δοκιμαστικά στοιχεία',stale:'ΑΔΥΝΑΜΙΑ ΣΥΝΔΕΣΗΣ · Τελευταία επιβεβαιωμένα',player:'Παίκτης',clan:'Clan',pvp:'PvP',pk:'PK',level:'Level',online:'Online',offline:'Offline',deaths:'PvP θάνατοι',kd:'K/D',members:'Μέλη',leader:'Αρχηγός',reputation:'Φήμη',castle:'Κάστρο',nocastle:'Χωρίς κάστρο',class:'Class',public:'ΔΗΜΟΣΙΑ ΣΤΑΤΙΣΤΙΚΑ',clanStats:'ΔΗΜΟΣΙΑ CLAN STATS',view:'ΔΗΜΟΣΙΑ ΣΤΟΙΧΕΙΑ',last:'Από τη βάση GameServer · μόνο ανάγνωση',empty:'Δεν υπάρχουν ακόμη δημόσια στοιχεία',preview:'ΣΤΟΙΧΕΙΑ ΒΑΣΗΣ'},
-    pt:{live:'LIVE · Banco do GameServer',demo:'DEMO · Dados de exemplo',stale:'DADOS INDISPONÍVEIS · Última atualização',player:'Jogador',clan:'Clã',pvp:'PvP',pk:'PK',level:'Nível',online:'Online',offline:'Offline',deaths:'Mortes PvP',kd:'K/D',members:'Membros',leader:'Líder',reputation:'Reputação',castle:'Castelo',nocastle:'Sem castelo',class:'Classe',public:'DADOS PÚBLICOS DO JOGO',clanStats:'DADOS PÚBLICOS DO CLÃ',view:'VER ESTATÍSTICAS',last:'Banco do GameServer · somente leitura',empty:'Nenhum registro público',preview:'BANCO DE DADOS'},
-    ru:{live:'LIVE · База GameServer',demo:'ДЕМО · Пример данных',stale:'НЕТ СОЕДИНЕНИЯ · Последние данные',player:'Игрок',clan:'Клан',pvp:'PvP',pk:'PK',level:'Уровень',online:'Онлайн',offline:'Офлайн',deaths:'Смерти PvP',kd:'K/D',members:'Участники',leader:'Лидер',reputation:'Репутация',castle:'Замок',nocastle:'Без замка',class:'Класс',public:'ПУБЛИЧНАЯ СТАТИСТИКА',clanStats:'ДАННЫЕ КЛАНА',view:'ПОСМОТРЕТЬ СТАТИСТИКУ',last:'Из базы GameServer · только чтение',empty:'Нет публичных данных',preview:'ДАННЫЕ БАЗЫ'}
+    en:{live:'LIVE · GameServer DB',demo:'DEMO · Preview only',stale:'DATA UNAVAILABLE · Last verified snapshot',player:'Player',clan:'Clan',pvp:'PvP',pk:'PK',level:'Level',online:'Online',offline:'Offline',deaths:'PvP deaths',kd:'K/D',members:'Members',leader:'Leader',reputation:'Reputation',castle:'Castle',nocastle:'No castle',class:'Class',public:'PUBLIC GAME STATS',clanStats:'PUBLIC CLAN STATS',view:'VIEW PUBLIC STATS',last:'From GameServer database · read-only',empty:'No public records yet',preview:'DB SNAPSHOT',currentStreak:'Current streak',bestStreak:'Best streak',noblesse:'Noblesse',yes:'Yes',no:'No'},
+    el:{live:'LIVE · Βάση GameServer',demo:'DEMO · Δοκιμαστικά στοιχεία',stale:'ΑΔΥΝΑΜΙΑ ΣΥΝΔΕΣΗΣ · Τελευταία επιβεβαιωμένα',player:'Παίκτης',clan:'Clan',pvp:'PvP',pk:'PK',level:'Level',online:'Online',offline:'Offline',deaths:'PvP θάνατοι',kd:'K/D',members:'Μέλη',leader:'Αρχηγός',reputation:'Φήμη',castle:'Κάστρο',nocastle:'Χωρίς κάστρο',class:'Class',public:'ΔΗΜΟΣΙΑ ΣΤΑΤΙΣΤΙΚΑ',clanStats:'ΔΗΜΟΣΙΑ CLAN STATS',view:'ΔΗΜΟΣΙΑ ΣΤΟΙΧΕΙΑ',last:'Από τη βάση GameServer · μόνο ανάγνωση',empty:'Δεν υπάρχουν ακόμη δημόσια στοιχεία',preview:'ΣΤΟΙΧΕΙΑ ΒΑΣΗΣ',currentStreak:'Τρέχον streak',bestStreak:'Καλύτερο streak',noblesse:'Noblesse',yes:'Ναι',no:'Όχι'},
+    pt:{live:'LIVE · Banco do GameServer',demo:'DEMO · Dados de exemplo',stale:'DADOS INDISPONÍVEIS · Última atualização',player:'Jogador',clan:'Clã',pvp:'PvP',pk:'PK',level:'Nível',online:'Online',offline:'Offline',deaths:'Mortes PvP',kd:'K/D',members:'Membros',leader:'Líder',reputation:'Reputação',castle:'Castelo',nocastle:'Sem castelo',class:'Classe',public:'DADOS PÚBLICOS DO JOGO',clanStats:'DADOS PÚBLICOS DO CLÃ',view:'VER ESTATÍSTICAS',last:'Banco do GameServer · somente leitura',empty:'Nenhum registro público',preview:'BANCO DE DADOS',currentStreak:'Sequência atual',bestStreak:'Melhor sequência',noblesse:'Noblesse',yes:'Sim',no:'Não'},
+    ru:{live:'LIVE · База GameServer',demo:'ДЕМО · Пример данных',stale:'НЕТ СОЕДИНЕНИЯ · Последние данные',player:'Игрок',clan:'Клан',pvp:'PvP',pk:'PK',level:'Уровень',online:'Онлайн',offline:'Офлайн',deaths:'Смерти PvP',kd:'K/D',members:'Участники',leader:'Лидер',reputation:'Репутация',castle:'Замок',nocastle:'Без замка',class:'Класс',public:'ПУБЛИЧНАЯ СТАТИСТИКА',clanStats:'ДАННЫЕ КЛАНА',view:'ПОСМОТРЕТЬ СТАТИСТИКУ',last:'Из базы GameServer · только чтение',empty:'Нет публичных данных',preview:'ДАННЫЕ БАЗЫ',currentStreak:'Текущая серия',bestStreak:'Лучшая серия',noblesse:'Noblesse',yes:'Да',no:'Нет'}
   };
   const words=()=>locales[document.documentElement.lang?.toLowerCase().slice(0,2)]||locales.en;
   const tag=place=>{
@@ -115,6 +115,14 @@
       [w.online,pretty(item.online)],[w.reputation,pretty(item.reputation)],
       [w.level,pretty(item.level)],[w.castle,item.castle||w.nocastle]
     ];
+    // Show verified custom-stat variables only when the GameServer supplies them.
+    if(kind==='player'){
+      if(typeof item.noblesse==='boolean')rows.push([w.noblesse,item.noblesse?w.yes:w.no]);
+      if(Number.isSafeInteger(item.currentStreak)&&item.currentStreak>=0)
+        rows.push([w.currentStreak,pretty(item.currentStreak)]);
+      if(Number.isSafeInteger(item.bestStreak)&&item.bestStreak>=0)
+        rows.push([w.bestStreak,pretty(item.bestStreak)]);
+    }
     for(const [label,value] of rows){
       const field=create('div');
       attach(field,create('small','',label),create('b','',value));
