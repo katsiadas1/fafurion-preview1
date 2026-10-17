@@ -1,0 +1,163 @@
+/* COUNTER / Realm Guide. A standalone Info design; no shared component overrides. */
+body.info-realm-page{--rg-header:88px;--rg-jump-height:66px;background-color:#061019}
+body.info-realm-page main.realm-guide{--rg-ink:#eef5f8;--rg-muted:#a6bcc8;--rg-gold:#d9b980;--rg-line:#2b4555;--rg-panel:#0c202e;width:min(1200px,calc(100% - 64px));max-width:1200px!important;margin:0 auto!important;padding:30px 0 0!important;color:var(--rg-ink);font:400 16px/1.6 Arial,sans-serif;overflow:visible}
+.realm-guide *{box-sizing:border-box;min-width:0}
+.realm-guide :is(h1,h2,h3,p){margin:0;overflow-wrap:anywhere}
+.realm-guide :is(h1,h2,h3){color:var(--rg-ink);text-transform:none;letter-spacing:0;font-family:Georgia,'Times New Roman',serif;font-weight:400}
+.realm-guide p{font:400 15px/1.75 Arial,sans-serif!important;color:var(--rg-muted)!important}
+.realm-guide a{color:inherit;text-decoration:none!important}
+.realm-guide button{font-family:inherit;cursor:pointer;text-transform:none}
+.realm-guide button:disabled{cursor:not-allowed}
+.realm-guide [hidden]{display:none!important}
+.realm-guide .rg-overline,.realm-guide .rg-kicker{font:700 10px/1.5 Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--rg-gold)}
+.realm-guide .rg-kicker{display:flex;align-items:center;justify-content:space-between;gap:15px;color:#92adbd;margin:0 0 17px}
+.realm-guide .rg-kicker>span:last-child{color:#d5e2e9;letter-spacing:.2em}
+.realm-guide .rg-hero{position:relative;isolation:isolate;overflow:hidden;min-height:534px;padding:58px 52px 0;border:1px solid #375266;border-radius:18px;background:#0b1d2b;box-shadow:0 25px 64px #0005}
+.realm-guide .rg-hero-art{position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,#071722 1%,#071722f5 29%,#071722b5 50%,#07172218 77%),linear-gradient(0deg,#081a27 0%,#081a2710 58%),url('assets/counter-storm-reference.webp') 73% 40%/cover no-repeat;opacity:.86}
+.realm-guide .rg-hero-copy{max-width:690px;position:relative}
+.realm-guide .rg-hero-copy>.rg-overline{display:flex;align-items:center;gap:12px}
+.realm-guide .rg-hero-copy>.rg-overline:before{content:'';width:28px;height:1px;background:var(--rg-gold)}
+.realm-guide h1{font-size:clamp(42px,4.8vw,66px);line-height:1.09;letter-spacing:-.035em;margin:22px 0;text-shadow:0 4px 28px #0009}
+.realm-guide h1>span,.realm-guide h1>em{display:block}
+.realm-guide h1>em{font-style:italic;color:#b3d9ee}
+.realm-guide .rg-hero-copy>p{max-width:495px;font-size:16px!important;color:#b7cedb!important}
+.realm-guide .rg-hero-actions{display:flex;align-items:center;flex-wrap:wrap;gap:26px;margin:28px 0 42px}
+.realm-guide .rg-button{display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:51px;padding:15px 21px;border-radius:7px;font:700 11px/1.4 Arial,sans-serif;letter-spacing:.09em;text-align:center;transition:background .2s,border-color .2s}
+.realm-guide .rg-button-gold{color:#151a1b;background:#dfc38f;border:1px solid #f6dfb2;box-shadow:inset 0 1px #fff4,0 7px 28px #0003}
+.realm-guide .rg-button-gold:hover{background:#f0d8ad;border-color:#fff0d3}
+.realm-guide .rg-text-link{display:inline-flex;align-items:center;gap:18px;font:700 12px/1.5 Arial,sans-serif;color:#c4dfec}
+.realm-guide .rg-text-link:hover{color:#fff}
+.realm-guide .rg-hero-foot{display:flex;align-items:center;gap:19px;min-height:89px;border-top:1px solid #b0d7ef25}
+.realm-guide .rg-hero-foot p{color:#9ab8c9!important;font:italic 17px/1.5 Georgia,serif!important}
+.realm-guide .rg-hero-stamp{position:relative;font:400 44px/1 Georgia,serif;color:#7797aa}
+.realm-guide .rg-hero-stamp>span{position:absolute;top:9px;left:11px;font-size:23px;color:#e0c389}
+.realm-guide .rg-hero-index{margin-left:auto;white-space:nowrap;color:#92aebf;font:11px/1.5 monospace;letter-spacing:.1em}
+.realm-guide .rg-preview{display:flex;align-items:center;gap:15px;margin:21px 0 28px;padding:16px 21px;border:1px solid #5e533a;border-radius:10px;background:linear-gradient(110deg,#28281f,#12222c)}
+.realm-guide .rg-preview-icon{align-self:flex-start;color:#dcb979;font:29px/1 Georgia,serif}
+.realm-guide .rg-preview>div{flex:1}
+.realm-guide .rg-preview strong{display:block;font:700 10px/1.6 Arial,sans-serif;letter-spacing:.09em;color:#e6cc9b}
+.realm-guide .rg-preview p{font-size:12px!important;line-height:1.65!important;margin-top:4px;color:#c2c7bd!important}
+.realm-guide .rg-preview>a{display:flex;align-items:center;justify-content:space-between;gap:17px;flex:0 0 auto;color:#e6d8bb;font:700 11px/1.5 Arial,sans-serif}
+.realm-guide .rg-jump{position:sticky;top:var(--rg-header);z-index:25;display:flex;align-items:stretch;margin:0 -1px;background:#091b29f5;border:1px solid #345263;border-radius:10px;box-shadow:0 8px 25px #0005;overflow-x:auto;scrollbar-width:thin;scrollbar-color:#4c7188 #0b202f;backdrop-filter:blur(12px)}
+.realm-guide .rg-jump>a{flex:1 0 auto;display:flex;align-items:center;justify-content:center;gap:13px;min-height:63px;padding:12px 19px;color:#b4c9d5;font:700 12px/1.3 Arial,sans-serif;border-bottom:2px solid transparent;white-space:nowrap}
+.realm-guide .rg-jump>a:hover{color:#e6f4fb;background:#143347}
+.realm-guide .rg-jump>a[aria-current]{color:#f1dfbb;background:#233034;border-bottom-color:#d1b279}
+.realm-guide .rg-jump-num{font:10px/1 monospace;color:#66889b}
+.realm-guide .rg-jump>a[aria-current] .rg-jump-num{color:#d3b679}
+.realm-guide .rg-section{padding-top:67px;scroll-margin-top:calc(var(--rg-header) + var(--rg-jump-height) + 22px);outline:none}
+.realm-guide .rg-section-title{display:flex;align-items:flex-start;gap:18px;margin-bottom:29px}
+.realm-guide .rg-section-no{font:12px/1.4 monospace;color:#b6955f;flex:0 0 31px;padding-top:11px;border-top:1px solid #997f4e;margin-top:4px}
+.realm-guide .rg-section-title h2{font-size:clamp(28px,3.1vw,40px);line-height:1.2;letter-spacing:-.02em;margin-bottom:10px}
+.realm-guide .rg-section-title p{max-width:780px}
+.realm-guide .rg-world-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:19px}
+.realm-guide .rg-world-feature{position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;min-height:302px;padding:32px;border:1px solid #456070;border-radius:12px;background:radial-gradient(ellipse at 100% 90%,#21415888,transparent 80%),#0d2638}
+.realm-guide .rg-world-feature:after{content:'';position:absolute;inset:7px;border:1px solid #b5def510;border-radius:7px;pointer-events:none;z-index:-1}
+.realm-guide .rg-world-copy{max-width:365px;z-index:1}
+.realm-guide .rg-world-copy h3{font-size:31px;line-height:1.18;max-width:330px;margin:18px 0 13px}
+.realm-guide .rg-world-copy p{font-size:14px!important;max-width:340px}
+.realm-guide .rg-world-copy>a{margin-top:25px;color:#d6bf91}
+.realm-guide .rg-world-seal{position:absolute;right:-6px;bottom:-35px;font:340px/.9 Georgia,serif;color:#8bc6e50a;letter-spacing:-.12em;z-index:0;pointer-events:none}
+.realm-guide .rg-world-specs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid #314d61;border-radius:12px;background:#0b202f;overflow:hidden}
+.realm-guide .rg-spec{display:flex;position:relative;flex-direction:column;align-items:flex-start;justify-content:center;padding:19px 20px;border-right:1px solid #2a4254;border-bottom:1px solid #2a4254}
+.realm-guide .rg-spec:nth-child(3n){border-right:0}.realm-guide .rg-spec:nth-child(n+4){border-bottom:0}
+.realm-guide .rg-spec>strong{font:400 35px/1.2 Georgia,serif;letter-spacing:-.025em;color:#dceaf2}
+.realm-guide .rg-spec>span{margin-top:9px;color:#9fbbcb;font:11px/1.55 Arial,sans-serif}
+.realm-guide .rg-spec:first-child>strong{color:#e4c691}
+.realm-guide .rg-inline-note{display:flex;align-items:baseline;gap:10px;margin:16px 2px 0;color:#8daaba;font:12px/1.65 Arial,sans-serif}
+.realm-guide .rg-inline-note>span:first-child{color:#d3b279}
+.realm-guide .rg-rate-layout{display:grid;grid-template-columns:minmax(240px,.7fr) minmax(0,1.6fr);gap:38px}
+.realm-guide .rg-rate-aside{padding:22px 5px 0 0}
+.realm-guide .rg-rate-aside>h3{font-size:30px;line-height:1.16;margin:15px 0}
+.realm-guide .rg-rate-aside>p{font-size:14px!important}
+.realm-guide .rg-premium-note{padding:20px 18px;margin-top:25px;border-left:2px solid #aa8f5c;background:#222923;border-radius:0 9px 9px 0}
+.realm-guide .rg-premium-note>strong{font:700 12px/1.5 Arial,sans-serif;color:#e6ca96}
+.realm-guide .rg-premium-note p{font-size:12px!important;line-height:1.75!important;margin-top:8px}
+.realm-guide .rg-rates-panel{border:1px solid #3b5b70;border-radius:12px;overflow:hidden;background:#0c2232}
+.realm-guide .rg-panel-bar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 20px;border-bottom:1px solid #304c60;background:#102a3c}
+.realm-guide .rg-tier-toggle{display:flex;align-items:stretch;gap:3px;padding:3px;background:#071b29;border:1px solid #3a586b;border-radius:8px}
+.realm-guide .rg-tier-toggle>button{border:0;border-radius:5px;padding:10px 14px;min-height:38px;background:transparent;color:#9ab9ca;font:700 11px/1.4 Arial,sans-serif}
+.realm-guide .rg-tier-toggle>button[aria-pressed=true]{background:#345268;color:#f0f8fc}
+.realm-guide .rg-tier-toggle>button[data-tier-button=premium][aria-pressed=true]{background:#5a4d32;color:#f2deb8}
+.realm-guide .rg-table-wrap{overflow:auto;scrollbar-width:thin;scrollbar-color:#4e6c83 #0d2234}
+.realm-guide .rg-rates-table{width:100%;min-width:350px;border-collapse:collapse;font-size:13px}
+.realm-guide .rg-rates-table caption{padding:0}
+.realm-guide .rg-rates-table :is(th,td){border-bottom:1px solid #2b4559;padding:18px 20px;background:transparent;color:#b0c9d7;white-space:normal;text-align:left;font-family:Arial,sans-serif}
+.realm-guide .rg-rates-table thead th{font-size:11px;letter-spacing:.07em;color:#8eafc3;font-weight:700}
+.realm-guide .rg-rates-table tbody th{font-size:13px;font-weight:400;width:49%}
+.realm-guide .rg-rates-table td{font:400 23px/1.2 Georgia,serif;width:25.5%;color:#bdd6e6}
+.realm-guide .rg-rates-table td small{font:10px/1.6 Arial,sans-serif;display:block;color:#96b5c8;margin-top:4px}
+.realm-guide .rg-rates-panel[data-tier=standard] .rg-standard{background:#173b514d;color:#e4f5ff}
+.realm-guide .rg-rates-panel[data-tier=premium] .rg-premium{background:#9a773825;color:#f2d69f}
+.realm-guide .rg-panel-note{font-size:11px!important;line-height:1.65!important;padding:14px 20px!important;color:#98b2c3!important}
+.realm-guide .rg-enchant-layout{display:grid;grid-template-columns:.7fr 1.6fr;gap:38px}
+.realm-guide .rg-enchant-summary{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-content:center;padding:31px 18px;border:1px solid #594e36;border-radius:12px;background:radial-gradient(ellipse at 70% 15%,#a2813b10,transparent 90%),#232b29;text-align:center}
+.realm-guide .rg-enchant-summary .rg-overline{font-size:9px;letter-spacing:.08em;color:#adbcbd}
+.realm-guide .rg-enchant-summary strong{display:block;margin-top:12px;color:#e8d0a0;font:400 60px/1 Georgia,serif;letter-spacing:-.05em}
+.realm-guide .rg-enchant-arrow{align-self:center;color:#8ba4ac;font:25px Georgia,serif;padding-top:28px}
+.realm-guide .rg-enchant-summary>p{grid-column:1/-1;font-size:12px!important;line-height:1.7!important;margin:8px 0 0!important}
+.realm-guide .rg-enchant-console{padding:24px;border:1px solid #395a71;border-radius:12px;background:#0d2435}
+.realm-guide .rg-enchant-readout{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.realm-guide .rg-enchant-readout>div:last-child{text-align:right}
+.realm-guide .rg-enchant-readout .rg-overline{font-size:9px;letter-spacing:.08em;color:#9fbdce}
+.realm-guide .rg-enchant-readout strong{display:block;margin:8px 0 18px;font:400 45px/1 Georgia,serif;color:#d9edf8}
+.realm-guide .rg-enchant-readout #rg-enchant-chance{color:#e6c997}
+.realm-guide #rg-enchant-chance span{font-size:25px;padding-left:2px;color:#a6afb0}
+.realm-guide .rg-chance-track{height:3px;background:#294353;margin:0 0 24px;overflow:hidden;border-radius:6px}
+.realm-guide .rg-chance-track>span{display:block;height:100%;background:linear-gradient(90deg,#789eac,#e6c88e);transition:width .25s ease}
+.realm-guide .rg-enchant-steps{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:7px}
+.realm-guide .rg-enchant-steps button{padding:11px 4px 9px;border:1px solid #38576e;border-radius:7px;background:#102d40;min-height:57px;color:#c1d9e6}
+.realm-guide .rg-enchant-steps button b{display:block;font:700 15px/1.4 Georgia,serif}
+.realm-guide .rg-enchant-steps button span{display:block;margin-top:4px;font:10px/1.4 Arial,sans-serif;color:#8aaabf}
+.realm-guide .rg-enchant-steps button[aria-pressed=true]{background:#534930;border-color:#c6a970;color:#f7e1bb}
+.realm-guide .rg-enchant-steps button[aria-pressed=true] span{color:#e4cda4}
+.realm-guide .rg-enchant-steps button:hover{border-color:#a5cedf}
+.realm-guide .rg-enchant-console>.rg-panel-note{padding:13px 0 0!important}
+.realm-guide .rg-command-toolbar{display:flex;align-items:center;gap:17px;flex-wrap:wrap;margin-bottom:17px}
+.realm-guide .rg-command-toolbar>label{font:700 12px/1.4 Arial,sans-serif;color:#b5cbd8}
+.realm-guide .rg-search-box{display:flex;align-items:center;gap:10px;flex:1;max-width:430px;padding:0 13px;border:1px solid #3f647b;background:#0c2536;border-radius:8px}
+.realm-guide .rg-search-box>span{color:#86acbf;font-size:23px}
+.realm-guide input#rg-command-search{background:transparent!important;box-shadow:none!important;border:0!important;outline:none!important;color:#e1f0f9!important;border-radius:0;font:14px/1.5 Arial,sans-serif;width:100%;height:46px;padding:8px 0}
+.realm-guide input#rg-command-search::placeholder{color:#8cabbc}
+.realm-guide .rg-search-box:focus-within{outline:2px solid #acddf1;outline-offset:3px}
+.realm-guide .rg-command-count{margin-left:auto;color:#708fa2;font:11px/1.5 monospace;white-space:nowrap}
+.realm-guide .rg-command-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.realm-guide .rg-command{display:flex;align-items:center;justify-content:space-between;gap:13px;padding:21px;border:1px solid #2f4c61;border-radius:10px;background:#0b2333}
+.realm-guide .rg-command code{font:500 20px/1.3 monospace;letter-spacing:-.05em;color:#c2e7f8;background:transparent;padding:0}
+.realm-guide .rg-command p{font-size:12px!important;line-height:1.55!important;margin-top:8px}
+.realm-guide .rg-command button{display:flex;align-items:center;justify-content:center;gap:7px;flex:0 0 auto;min-width:69px;min-height:43px;padding:10px;border:1px solid #48667b;border-radius:7px;background:#18364a;color:#c5dfe9;font:700 11px/1.2 Arial,sans-serif}
+.realm-guide .rg-command button>span:first-child{font-size:16px}
+.realm-guide .rg-command button:hover{background:#23475e;border-color:#80b2c7}
+.realm-guide .rg-copy-status:not(:empty){margin-top:15px;padding:12px 16px;border:1px solid #40676a;border-radius:8px;background:#142e36;color:#c6eadf!important;font-size:12px!important}
+.realm-guide .rg-search-empty{padding:25px;text-align:center;border:1px dashed #425e71;border-radius:9px}
+.realm-guide .rg-events-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
+.realm-guide .rg-event{--event-accent:#d4b16c;position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;min-height:319px;padding:23px 20px 16px;border:1px solid #6a5839;border-radius:12px;background:radial-gradient(ellipse at 90% 0,#79512f33,transparent 73%),linear-gradient(160deg,#262c2a,#0a1d2b);transition:transform .2s,border-color .2s}
+.realm-guide .rg-event-zombie{--event-accent:#8ab89f;border-color:#3b6359;background:radial-gradient(ellipse at 90% 0,#3d755033,transparent 73%),linear-gradient(160deg,#17332f,#0a1e2b)}
+.realm-guide .rg-event-tvt{--event-accent:#88bedc;border-color:#3b5c78;background:radial-gradient(ellipse at 90% 0,#397aa433,transparent 73%),linear-gradient(160deg,#19374b,#0a1e2b)}
+.realm-guide .rg-event-royale{--event-accent:#b3a2d5;border-color:#564d76;background:radial-gradient(ellipse at 90% 0,#7855a333,transparent 73%),linear-gradient(160deg,#272940,#0a1e2b)}
+.realm-guide .rg-event-num{position:absolute;right:12px;top:3px;font:90px/1.3 Georgia,serif;color:#cceaf507;pointer-events:none}
+.realm-guide .rg-event-type{font:700 9px/1.4 Arial,sans-serif;letter-spacing:.08em;color:var(--event-accent);max-width:160px}
+.realm-guide .rg-event-symbol{width:47px;height:51px;display:grid;place-items:center;margin:27px 0 20px;border:1px solid var(--event-accent);border-radius:8px 8px 13px 13px;background:#08152030;color:var(--event-accent);font:27px/1 Georgia,serif}
+.realm-guide .rg-event h3{font-size:26px;line-height:1.14;margin-bottom:12px;color:#ecf3f7}
+.realm-guide .rg-event p{font-size:13px!important;line-height:1.65!important;color:#b0c6d0!important}
+.realm-guide .rg-event-action{display:flex;justify-content:space-between;gap:8px;margin-top:auto;padding-top:22px;color:var(--event-accent);font:700 11px/1.4 Arial,sans-serif}
+.realm-guide .rg-event-action i{font-style:normal;font-size:16px}
+.realm-guide .rg-event:hover{border-color:var(--event-accent);transform:translateY(-3px)}
+.realm-guide .rg-ingame{display:flex;gap:15px;align-items:center;border-left:2px solid #c3a36b;background:#1d2b2d;margin-top:18px;padding:17px 21px;border-radius:0 9px 9px 0}
+.realm-guide .rg-ingame>span{color:#dbbd82;font:23px Georgia,serif}
+.realm-guide .rg-ingame strong{font:700 10px/1.5 Arial,sans-serif;letter-spacing:.09em;color:#e2c791}
+.realm-guide .rg-ingame p{font-size:12px!important;line-height:1.6!important;margin-top:5px}
+.realm-guide .rg-finale{position:relative;display:flex;align-items:center;justify-content:space-between;gap:25px;margin-top:66px;padding:37px 33px;border:1px solid #586268;border-radius:13px;background:radial-gradient(ellipse at 0 0,#40657a30,transparent 80%),linear-gradient(110deg,#1c303d,#121e28);box-shadow:0 18px 44px #0003}
+.realm-guide .rg-finale h2{font-size:clamp(30px,3.5vw,44px);line-height:1.2;margin:13px 0}
+.realm-guide .rg-finale p{max-width:590px;font-size:14px!important}
+.realm-guide .rg-finale>.rg-button{flex:0 0 auto}
+.realm-guide .rg-endline{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:25px 0 45px;color:#7795a8;font:10px/1.5 Arial,sans-serif;letter-spacing:.09em}
+.realm-guide .rg-endline a{color:#bfd3df}
+.realm-guide .rg-sr{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip-path:inset(50%);white-space:nowrap!important;border:0!important}
+.realm-guide :is(a,button,input,[tabindex="0"]):focus-visible{outline:2px solid #b7e8fa!important;outline-offset:4px!important}
+.realm-guide :is(#general,#rates,#enchant,#commands,#events):focus{outline:0}
+@media(min-width:1000px){.realm-guide .rg-hero-art{animation:rg-mist 18s ease-in-out infinite alternate}}
+@keyframes rg-mist{from{opacity:.78}to{opacity:.98}}
+@media(max-width:1060px){body.info-realm-page main.realm-guide{width:calc(100% - 44px)}.realm-guide .rg-hero{padding:45px 35px 0;min-height:500px}.realm-guide .rg-world-grid{grid-template-columns:1fr 1fr}.realm-guide .rg-world-specs{grid-template-columns:repeat(2,minmax(0,1fr))}.realm-guide .rg-spec:nth-child(3n){border-right:1px solid #2a4254}.realm-guide .rg-spec:nth-child(2n){border-right:0}.realm-guide .rg-spec:nth-child(n+4){border-bottom:1px solid #2a4254}.realm-guide .rg-spec:nth-child(n+5){border-bottom:0}.realm-guide .rg-rate-layout,.realm-guide .rg-enchant-layout{grid-template-columns:.8fr 1.6fr;gap:23px}.realm-guide .rg-panel-bar{align-items:flex-start;flex-direction:column}.realm-guide .rg-events-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.realm-guide .rg-event{min-height:285px}.realm-guide .rg-event h3{font-size:29px}}
+@media(max-width:760px){body.info-realm-page main.realm-guide{width:calc(100% - 28px);padding-top:22px!important}.realm-guide .rg-kicker{font-size:8px;letter-spacing:.07em;margin-bottom:12px}.realm-guide .rg-kicker>span:last-child{letter-spacing:.08em}.realm-guide .rg-hero{padding:32px 24px 0;min-height:0}.realm-guide h1{font-size:clamp(37px,7.6vw,57px);margin:22px 0;line-height:1.1}.realm-guide .rg-hero-copy>p{font-size:14px!important;max-width:470px}.realm-guide .rg-hero-art{background-position:64% center;opacity:.63}.realm-guide .rg-hero-actions{gap:21px;margin:25px 0 29px}.realm-guide .rg-hero-foot{gap:13px;min-height:77px}.realm-guide .rg-hero-foot p{font-size:15px!important}.realm-guide .rg-hero-index{display:none}.realm-guide .rg-preview{align-items:flex-start;gap:10px;padding:15px;flex-wrap:wrap;margin:16px 0 19px}.realm-guide .rg-preview>div{flex:1 1 calc(100% - 45px)}.realm-guide .rg-preview>a{margin-left:31px;font-size:10px}.realm-guide .rg-preview p{font-size:11px!important}.realm-guide .rg-jump{border-radius:8px;gap:0}.realm-guide .rg-jump>a{gap:8px;min-height:54px;padding:12px 15px;font-size:11px}.realm-guide .rg-section{padding-top:43px}.realm-guide .rg-section-title{gap:12px;margin-bottom:23px}.realm-guide .rg-section-no{flex-basis:24px;font-size:10px}.realm-guide .rg-section-title h2{font-size:30px}.realm-guide .rg-section-title p{font-size:13px!important;line-height:1.7!important}.realm-guide .rg-world-grid{grid-template-columns:1fr}.realm-guide .rg-world-feature{min-height:275px;padding:25px}.realm-guide .rg-world-copy h3{font-size:31px}.realm-guide .rg-world-specs{grid-template-columns:repeat(3,minmax(0,1fr))}.realm-guide .rg-spec{min-height:119px;padding:18px 15px}.realm-guide .rg-spec>strong{font-size:30px}.realm-guide .rg-spec>span{font-size:10px}.realm-guide .rg-spec:nth-child(n){border-right:1px solid #2a4254;border-bottom:1px solid #2a4254}.realm-guide .rg-spec:nth-child(3n){border-right:0}.realm-guide .rg-spec:nth-child(n+4){border-bottom:0}.realm-guide .rg-inline-note{font-size:11px}.realm-guide .rg-rate-layout,.realm-guide .rg-enchant-layout{grid-template-columns:1fr;gap:19px}.realm-guide .rg-rate-aside{padding:0}.realm-guide .rg-rate-aside>h3{font-size:26px;margin:10px 0}.realm-guide .rg-premium-note{margin-top:18px;padding:15px}.realm-guide .rg-panel-bar{flex-direction:row;align-items:center;padding:15px}.realm-guide .rg-panel-bar>.rg-overline{font-size:9px;letter-spacing:.07em}.realm-guide .rg-tier-toggle>button{padding:9px 10px;font-size:10px}.realm-guide .rg-rates-table{min-width:0}.realm-guide .rg-rates-table :is(th,td){padding:15px 12px}.realm-guide .rg-rates-table thead th{font-size:10px;letter-spacing:.03em}.realm-guide .rg-rates-table tbody th{font-size:12px;width:48%}.realm-guide .rg-rates-table td{font-size:21px}.realm-guide .rg-enchant-summary{padding:24px;grid-template-columns:1fr auto 1fr}.realm-guide .rg-enchant-summary strong{font-size:52px}.realm-guide .rg-enchant-console{padding:20px}.realm-guide .rg-enchant-readout strong{font-size:41px}.realm-guide .rg-enchant-steps{gap:6px}.realm-guide .rg-command-toolbar{gap:11px}.realm-guide .rg-command-toolbar>label{width:100%}.realm-guide .rg-search-box{max-width:none}.realm-guide .rg-command-grid{grid-template-columns:1fr;gap:9px}.realm-guide .rg-command{padding:18px}.realm-guide .rg-command code{font-size:19px}.realm-guide .rg-events-grid{gap:11px}.realm-guide .rg-event{min-height:320px;padding:20px 16px 16px}.realm-guide .rg-event h3{font-size:24px}.realm-guide .rg-event p{font-size:12px!important}.realm-guide .rg-event-type{font-size:8px}.realm-guide .rg-event-symbol{margin:22px 0 19px}.realm-guide .rg-ingame{align-items:flex-start;padding:15px;gap:12px}.realm-guide .rg-ingame strong{font-size:9px}.realm-guide .rg-ingame p{font-size:11px!important}.realm-guide .rg-finale{flex-direction:column;align-items:flex-start;margin-top:42px;padding:28px 23px;gap:21px}.realm-guide .rg-finale h2{font-size:32px}.realm-guide .rg-finale>.rg-button{align-self:stretch;justify-content:space-between}.realm-guide .rg-endline{font-size:8px;margin-bottom:30px}}
+@media(max-width:380px){.realm-guide .rg-hero{padding-inline:20px}.realm-guide h1{font-size:36px}.realm-guide .rg-kicker>span:last-child{display:none}.realm-guide .rg-world-specs{grid-template-columns:repeat(2,minmax(0,1fr))}.realm-guide .rg-spec:nth-child(n){border-right:1px solid #2a4254;border-bottom:1px solid #2a4254}.realm-guide .rg-spec:nth-child(2n){border-right:0}.realm-guide .rg-spec:nth-child(n+5){border-bottom:0}.realm-guide .rg-enchant-steps{grid-template-columns:repeat(4,minmax(0,1fr))}.realm-guide .rg-panel-bar{flex-direction:column;align-items:flex-start}.realm-guide .rg-events-grid{grid-template-columns:1fr}.realm-guide .rg-event{min-height:269px}.realm-guide .rg-event-symbol{margin:19px 0 15px}}
+@media(prefers-reduced-motion:reduce){.realm-guide *{animation:none!important;transition:none!important;scroll-behavior:auto!important}.realm-guide .rg-event:hover{transform:none}}
